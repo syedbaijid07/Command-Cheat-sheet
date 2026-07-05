@@ -1,0 +1,80 @@
+[
+  {
+    "tool": "git",
+    "command": "git checkout -b <name>",
+    "desc": "creates a new branch and switches to it",
+    "keywords": ["new branch", "create branch", "switch branch"]
+  },
+  {
+    "tool": "git",
+    "command": "git branch -d <name>",
+    "desc": "deletes a local branch",
+    "keywords": ["delete branch", "remove branch"]
+  },
+  {
+    "tool": "git",
+    "command": "git reset --soft HEAD~1",
+    "desc": "undoes the last commit but keeps the changes",
+    "keywords": ["undo commit", "revert commit", "remove last commit"]
+  },
+  {
+    "tool": "git",
+    "command": "git stash",
+    "desc": "temporarily saves uncommitted changes",
+    "keywords": ["save changes", "stash changes", "hide changes"]
+  },
+  {
+    "tool": "git",
+    "command": "git push -u origin <branch>",
+    "desc": "pushes a new branch to remote and tracks it",
+    "keywords": ["push branch", "upload branch", "first push"]
+  },
+  {
+    "tool": "docker",
+    "command": "docker ps -a",
+    "desc": "lists all containers, running and stopped",
+    "keywords": ["list containers", "show containers", "all containers"]
+  },
+  {
+    "tool": "docker",
+    "command": "docker rm -f <id>",
+    "desc": "force removes a container",
+    "keywords": ["delete container", "remove container", "kill container"]
+  },
+  {
+    "tool": "docker",
+    "command": "docker exec -it <id> bash",
+    "desc": "opens a shell inside a running container",
+    "keywords": ["enter container", "container shell", "access container"]
+  },
+  {
+    "tool": "linux",
+    "command": "chmod +x <file>",
+    "desc": "makes a file executable",
+    "keywords": ["make executable", "run permission", "script permission"]
+  },
+  {
+    "tool": "linux",
+    "command": "kill -9 <pid>",
+    "desc": "force stops a process",
+    "keywords": ["stop process", "force kill", "end process"]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sV <target-ip>",
+    "desc": "scans open ports and detects service versions",
+    "keywords": ["open port with version", "scan open ports", "service version scan"]
+  },
+  {
+    "tool": "nikto",
+    "command": "nikto -h <target-url>",
+    "desc": "scans a web server for known vulnerabilities",
+    "keywords": ["web vuln scan", "scan website vulnerabilities", "http scan"]
+  },
+  {
+    "tool": "sqlmap",
+    "command": "sqlmap -u <url> --dbs",
+    "desc": "finds sql injection points and lists databases",
+    "keywords": ["sql injection test", "find databases", "sqli scan"]
+  }
+]
