@@ -2659,5 +2659,278 @@
       "smb brute force",
       "windows share password guessing"
     ]
+  },
+  {
+    "tool": ":quit",
+    "command": "",
+    "desc": "",
+    "keywords": []
+  },
+  {
+    "tool": "dig",
+    "command": "dig -x <ip>",
+    "desc": "finds the domain name for a given ip address (reverse dns lookup)",
+    "keywords": [
+      "ip to domain",
+      "find domain from ip",
+      "reverse dns",
+      "reverse lookup"
+    ]
+  },
+  {
+    "tool": "dig",
+    "command": "dig <domain> +short",
+    "desc": "finds the ip address for a given domain name",
+    "keywords": [
+      "domain to ip",
+      "find ip from domain",
+      "forward dns",
+      "resolve domain"
+    ]
+  },
+  {
+    "tool": "host",
+    "command": "host <ip>",
+    "desc": "finds the domain name for a given ip address (reverse dns lookup)",
+    "keywords": [
+      "ip to domain",
+      "find domain from ip",
+      "reverse dns"
+    ]
+  },
+  {
+    "tool": "host",
+    "command": "host <domain>",
+    "desc": "finds the ip address for a given domain name",
+    "keywords": [
+      "domain to ip",
+      "find ip from domain",
+      "resolve domain"
+    ]
+  },
+  {
+    "tool": "nslookup",
+    "command": "nslookup <ip>",
+    "desc": "finds the domain name for a given ip address (reverse dns lookup)",
+    "keywords": [
+      "ip to domain",
+      "find domain from ip",
+      "reverse dns"
+    ]
+  },
+  {
+    "tool": "nslookup",
+    "command": "nslookup <domain>",
+    "desc": "finds the ip address for a given domain name",
+    "keywords": [
+      "domain to ip",
+      "find ip from domain",
+      "resolve domain"
+    ]
+  },
+  {
+    "tool": "zip2john",
+    "command": "zip2john <zip-file> > hash.txt",
+    "desc": "extracts the password hash from a zip file so john can crack it",
+    "keywords": [
+      "create hash from zip file",
+      "extract zip password hash",
+      "get hash for zip file",
+      "prepare zip file for cracking"
+    ]
+  },
+  {
+    "tool": "rar2john",
+    "command": "rar2john <rar-file> > hash.txt",
+    "desc": "extracts the password hash from a rar archive so john can crack it",
+    "keywords": [
+      "create hash from rar file",
+      "extract rar password hash",
+      "get hash for rar file",
+      "prepare rar file for cracking"
+    ]
+  },
+  {
+    "tool": "ssh2john",
+    "command": "ssh2john <private-key-file> > hash.txt",
+    "desc": "extracts the passphrase hash from an ssh private key so john can crack it",
+    "keywords": [
+      "create hash from ssh key",
+      "extract ssh private key passphrase",
+      "crack ssh key passphrase"
+    ]
+  },
+  {
+    "tool": "pdf2john",
+    "command": "pdf2john <pdf-file> > hash.txt",
+    "desc": "extracts the password hash from a protected pdf file so john can crack it",
+    "keywords": [
+      "create hash from pdf file",
+      "extract pdf password hash",
+      "crack pdf password"
+    ]
+  },
+  {
+    "tool": "office2john",
+    "command": "office2john <office-file> > hash.txt",
+    "desc": "extracts the password hash from a password protected word or excel file so john can crack it",
+    "keywords": [
+      "create hash from office file",
+      "extract word excel password hash",
+      "crack office document password"
+    ]
+  },
+  {
+    "tool": "unshadow",
+    "command": "unshadow /etc/passwd /etc/shadow > unshadowed.txt",
+    "desc": "combines the passwd and shadow files into one file that john can crack",
+    "keywords": [
+      "combine passwd and shadow file",
+      "prepare linux password file for cracking",
+      "unshadow command",
+      "crack linux user passwords"
+    ]
+  },
+  {
+    "tool": "john",
+    "command": "john <hash-file>",
+    "desc": "cracks a password hash using john's default mode order (single crack, then wordlist, then incremental)",
+    "keywords": [
+      "crack the password",
+      "recover the password",
+      "run john the ripper",
+      "default password crack"
+    ]
+  },
+  {
+    "tool": "john",
+    "command": "john --wordlist=<wordlist-file> <hash-file>",
+    "desc": "cracks a password hash using a wordlist, also known as a dictionary attack",
+    "keywords": [
+      "bruteforce the zip file",
+      "unlock zip using the wordlist",
+      "unlock the file using a wordlist",
+      "dictionary attack",
+      "crack password with wordlist",
+      "wordlist attack"
+    ]
+  },
+  {
+    "tool": "john",
+    "command": "john --wordlist=<wordlist-file> --rules <hash-file>",
+    "desc": "runs a dictionary attack with word-mangling rules applied to each wordlist entry, e.g. adding numbers or symbols",
+    "keywords": [
+      "wordlist attack with rules",
+      "mangling rules attack",
+      "improve dictionary attack",
+      "rule based cracking"
+    ]
+  },
+  {
+    "tool": "john",
+    "command": "john --incremental <hash-file>",
+    "desc": "tries every possible character combination, a true brute-force attack (slow but thorough)",
+    "keywords": [
+      "bruteforce attack",
+      "brute force the password",
+      "try all combinations",
+      "incremental mode"
+    ]
+  },
+  {
+    "tool": "john",
+    "command": "john --mask=<mask-pattern> <hash-file>",
+    "desc": "cracks a password using a defined pattern, for example four digits only",
+    "keywords": [
+      "mask attack",
+      "pattern based attack",
+      "crack password with known pattern"
+    ]
+  },
+  {
+    "tool": "john",
+    "command": "john --single <hash-file>",
+    "desc": "tries passwords derived from the username and account information, fast and a good first attempt",
+    "keywords": [
+      "single crack mode",
+      "quick password guess",
+      "username based attack"
+    ]
+  },
+  {
+    "tool": "john",
+    "command": "john --format=<hash-format> <hash-file>",
+    "desc": "manually specifies the hash type when john can't auto-detect it",
+    "keywords": [
+      "specify hash format",
+      "set hash type",
+      "manual format detection"
+    ]
+  },
+  {
+    "tool": "john",
+    "command": "john --show <hash-file>",
+    "desc": "displays passwords that have already been cracked",
+    "keywords": [
+      "show cracked password",
+      "view recovered password",
+      "display cracked hash"
+    ]
+  },
+  {
+    "tool": "john",
+    "command": "john --user=<username> <hash-file>",
+    "desc": "cracks the password for one specific user only",
+    "keywords": [
+      "crack specific user password",
+      "target single account"
+    ]
+  },
+  {
+    "tool": "john",
+    "command": "john --session=<session-name> <hash-file>",
+    "desc": "names the current cracking session so it can be paused and resumed later",
+    "keywords": [
+      "name cracking session",
+      "save john session"
+    ]
+  },
+  {
+    "tool": "john",
+    "command": "john --restore=<session-name>",
+    "desc": "resumes a previously paused cracking session",
+    "keywords": [
+      "resume cracking session",
+      "continue john session",
+      "restore session"
+    ]
+  },
+  {
+    "tool": "john",
+    "command": "john --fork=<number-of-cores> <hash-file>",
+    "desc": "splits the cracking job across multiple cpu cores to speed it up",
+    "keywords": [
+      "speed up cracking",
+      "use multiple cores",
+      "parallel cracking"
+    ]
+  },
+  {
+    "tool": "john",
+    "command": "john --test",
+    "desc": "benchmarks john's cracking speed on the current machine",
+    "keywords": [
+      "benchmark john",
+      "test cracking speed"
+    ]
+  },
+  {
+    "tool": "john",
+    "command": "john --list=formats",
+    "desc": "lists every hash format that john supports",
+    "keywords": [
+      "list supported hash formats",
+      "show hash types"
+    ]
   }
 ]
