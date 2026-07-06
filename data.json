@@ -5458,5 +5458,115 @@
       "encoding layout standardizer",
       "repair file text crash bugs"
     ]
+  },
+  {
+    "tool": "echo",
+    "command": "echo \"admin\" > users.txt",
+    "desc": "creates a brand new wordlist file and writes a single username into it (completely overwrites the file if it already exists)",
+    "keywords": [
+      "create new wordlist",
+      "overwrite file",
+      "single user list",
+      "initialize wordlist"
+    ]
+  },
+  {
+    "tool": "echo",
+    "command": "echo \"password123\" >> passwords.txt",
+    "desc": "appends or adds a new custom password to the bottom of an existing list without deleting any old data",
+    "keywords": [
+      "add password to list",
+      "append wordlist",
+      "update dictionary",
+      "insert custom word"
+    ]
+  },
+  {
+    "tool": "echo",
+    "command": "echo -e \"admin\\nroot\\nuser\\nadministrator\" > users.txt",
+    "desc": "uses backslash escape characters to write multiple default usernames on separate new lines instantly",
+    "keywords": [
+      "multi line wordlist",
+      "quick username list",
+      "generate text rows",
+      "echo newline list"
+    ]
+  },
+  {
+    "tool": "echo",
+    "command": "echo {00..99} | tr ' ' '\\n' > numbers.txt",
+    "desc": "uses bash brace expansion to instantly generate a continuous list of double-digit numbers from 00 to 99 on new lines",
+    "keywords": [
+      "quick number generator",
+      "sequential pin list",
+      "numeric wordlist build",
+      "brace expansion"
+    ]
+  },
+  {
+    "tool": "echo",
+    "command": "echo root{1..5} | tr ' ' '\\n' >> users.txt",
+    "desc": "generates a pattern list of usernames like root1, root2 up to root5 and adds them to an existing file",
+    "keywords": [
+      "pattern wordlist generator",
+      "username sequence",
+      "batch add users",
+      "sequential name list"
+    ]
+  },
+  {
+    "tool": "echo",
+    "command": "echo \"admin:password\" >> combo.txt",
+    "desc": "adds a pre-formatted user and password combination line separated by a colon for specific credential tools",
+    "keywords": [
+      "create combo line",
+      "user pass pair",
+      "formatted login entry",
+      "colon separated combo"
+    ]
+  },
+  {
+    "tool": "echo",
+    "command": "echo -e \"Password!\\nPassword@\\nPassword#\" >> mutations.txt",
+    "desc": "quickly creates a list of common password variations with standard special characters at the end",
+    "keywords": [
+      "password mutations",
+      "add special characters",
+      "quick text list",
+      "custom word injection"
+    ]
+  },
+  {
+    "tool": "echo",
+    "command": "echo {a..z} | tr ' ' '\\n' > alphabet.txt",
+    "desc": "creates a reference wordlist containing every single letter of the lowercase alphabet from a to z on new lines",
+    "keywords": [
+      "single char wordlist",
+      "generate alphabet",
+      "character dictionary build",
+      "letter sequence"
+    ]
+  },
+  {
+    "tool": "echo",
+    "command": "echo \"test_user\" | cat - existing_list.txt > new_list.txt",
+    "desc": "forces a specific high-priority target username to be added to the absolute top or first line of an existing wordlist",
+    "keywords": [
+      "prepend word to list",
+      "add to top of dictionary",
+      "priority username injection",
+      "insert at start"
+    ]
+  },
+  {
+    "tool": "echo",
+    "command": "echo -e \"\\n\" >> target_list.txt",
+    "desc": "appends a clean empty newline row at the bottom of a text file to prevent parsing crashes in old brute force tools",
+    "keywords": [
+      "fix trailing newline",
+      "add empty row",
+      "wordlist format repair",
+      "patch messy text file"
+    ]
   }
 ]
