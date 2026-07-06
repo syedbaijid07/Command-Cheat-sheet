@@ -3216,5 +3216,343 @@
       "list supported hash formats",
       "show hash types"
     ]
+  },
+  {
+    "tool": "hydra",
+    "command": "hydra -l admin -P passwords.txt  ssh",
+    "desc": "brute forces the ssh service for a specific user named admin using a password list",
+    "keywords": [
+      "ssh brute force",
+      "hydra ssh",
+      "crack ssh password",
+      "single user ssh"
+    ]
+  },
+  {
+    "tool": "hydra",
+    "command": "hydra -L users.txt -P passwords.txt  ssh",
+    "desc": "brute forces the ssh service using a list of multiple usernames and a list of passwords",
+    "keywords": [
+      "ssh crack",
+      "multiple users ssh",
+      "credential stuffing ssh",
+      "network attack"
+    ]
+  },
+  {
+    "tool": "hydra",
+    "command": "hydra -L users.txt -P passwords.txt  ftp",
+    "desc": "brute forces the ftp service on metasploitable using lists for both users and passwords",
+    "keywords": [
+      "ftp brute force",
+      "crack ftp",
+      "hydra ftp",
+      "file transfer protocol attack"
+    ]
+  },
+  {
+    "tool": "hydra",
+    "command": "hydra -l root -P passwords.txt  telnet",
+    "desc": "brute forces old unsafe telnet services often found open on metasploitable targets",
+    "keywords": [
+      "telnet brute force",
+      "crack telnet",
+      "cleartext login attack",
+      "legacy service crack"
+    ]
+  },
+  {
+    "tool": "hydra",
+    "command": "hydra -l root -P passwords.txt  mysql",
+    "desc": "attacks the mysql database management service to gain root or admin db access",
+    "keywords": [
+      "mysql brute force",
+      "database crack",
+      "crack mysql password",
+      "db attack"
+    ]
+  },
+  {
+    "tool": "hydra",
+    "command": "hydra -l postgres -P passwords.txt  postgres",
+    "desc": "brute forces the postgresql database service using the default username postgres",
+    "keywords": [
+      "postgresql brute force",
+      "postgres crack",
+      "database hacking",
+      "sql login crack"
+    ]
+  },
+  {
+    "tool": "hydra",
+    "command": "hydra -P passwords.txt  vnc",
+    "desc": "cracks the graphical remote access vnc service which usually only requires a password and no username",
+    "keywords": [
+      "vnc brute force",
+      "screen sharing crack",
+      "remote desktop attack",
+      "bypass vnc authentication"
+    ]
+  },
+  {
+    "tool": "hydra",
+    "command": "hydra -L users.txt -P passwords.txt  rdp",
+    "desc": "attempts to crack standard windows remote desktop protocol credentials",
+    "keywords": [
+      "rdp brute force",
+      "windows login crack",
+      "remote desktop protocol attack",
+      "crack rdp"
+    ]
+  },
+  {
+    "tool": "hydra",
+    "command": "hydra -L users.txt -P passwords.txt  smb",
+    "desc": "brute forces server message block file sharing protocols to gain network file access",
+    "keywords": [
+      "smb brute force",
+      "file share crack",
+      "samba hacking",
+      "netbios attack"
+    ]
+  },
+  {
+    "tool": "hydra",
+    "command": "hydra -l admin -P passwords.txt  http-get /protected/",
+    "desc": "brute forces a web page protected by a basic pop-up login prompt (http basic auth)",
+    "keywords": [
+      "http basic auth",
+      "web pop up login",
+      "website brute force",
+      "crack web portal"
+    ]
+  },
+  {
+    "tool": "hydra",
+    "command": "hydra -l admin -P passwords.txt  http-post-form \"/login.php:username=^USER^&password=^PASS^:Login Failed\"",
+    "desc": "brute forces standard web login forms like dvwa on metasploitable by checking for failure messages",
+    "keywords": [
+      "web form brute force",
+      "http post crack",
+      "dvwa login bypass",
+      "website hack"
+    ]
+  },
+  {
+    "tool": "hydra",
+    "command": "hydra -l admin -P passwords.txt -s 2222  ssh",
+    "desc": "attacks the ssh service when it is running on a non-standard port like 2222 instead of 22",
+    "keywords": [
+      "custom port ssh",
+      "hydra port change",
+      "non standard ssh port",
+      "bypass port defense"
+    ]
+  },
+  {
+    "tool": "hydra",
+    "command": "hydra -l admin -P passwords.txt -t 4  ssh",
+    "desc": "runs the attack with exactly 4 parallel tasks to prevent crashing the target service or triggering alerts",
+    "keywords": [
+      "slow brute force",
+      "adjust threads",
+      "stealth login attack",
+      "stable cracking"
+    ]
+  },
+  {
+    "tool": "hydra",
+    "command": "hydra -l admin -P passwords.txt  smtp -V",
+    "desc": "attacks mail server relay systems to find working email credentials",
+    "keywords": [
+      "smtp brute force",
+      "mail server hack",
+      "email login crack",
+      "hydra smtp"
+    ]
+  },
+  {
+    "tool": "hydra",
+    "command": "hydra -P community.txt  snmp",
+    "desc": "sweeps for active or weak snmp community strings to gather network monitoring data",
+    "keywords": [
+      "snmp brute force",
+      "public community string",
+      "network data gathering",
+      "simple network management protocol"
+    ]
+  },
+  {
+    "tool": "medusa",
+    "command": "medusa -h  -u admin -P passwords.txt -M ssh",
+    "desc": "alternative fast tool to brute force ssh services using clean modular structures",
+    "keywords": [
+      "medusa ssh",
+      "alternative to hydra",
+      "modular brute force",
+      "protocol crack"
+    ]
+  },
+  {
+    "tool": "medusa",
+    "command": "medusa -h  -U users.txt -P passwords.txt -M ftp",
+    "desc": "uses medusa to attack an ftp server with lists of usernames and passwords",
+    "keywords": [
+      "medusa ftp",
+      "fast ftp crack",
+      "multi threaded login attack"
+    ]
+  },
+  {
+    "tool": "ncrack",
+    "command": "ncrack --user admin -P passwords.txt ssh://",
+    "desc": "dynamic network authentication cracking tool designed for high speed scaling",
+    "keywords": [
+      "ncrack ssh",
+      "fast network authentication crack",
+      "aggressive brute force"
+    ]
+  },
+  {
+    "tool": "ncrack",
+    "command": "ncrack ftp:// ssh:// -P passwords.txt",
+    "desc": "scans and attacks both ftp and ssh simultaneously to maximize exam efficiency",
+    "keywords": [
+      "multi service attack",
+      "parallel brute force",
+      "fast scanning hack"
+    ]
+  },
+  {
+    "tool": "patator",
+    "command": "patator ssh_login host= user=admin password=FILE0 0=passwords.txt",
+    "desc": "highly modular multi purpose tool used to crack authentication protocols with extreme control over raw outputs",
+    "keywords": [
+      "patator ssh",
+      "advanced brute force",
+      "multi protocol cracking tool",
+      "granular control attack"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/ssh/ssh_login; set RHOSTS ; set USER_FILE users.txt; set PASS_FILE passwords.txt; run",
+    "desc": "built-in metasploit module to test valid ssh credentials and automatically open system sessions",
+    "keywords": [
+      "metasploit ssh",
+      "ssh login scanner",
+      "automatic session shell",
+      "msf brute force"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/ftp/ftp_login; set RHOSTS ; set USER_FILE users.txt; set PASS_FILE passwords.txt; run",
+    "desc": "checks a range of ip hosts for weak or default ftp server credentials inside metasploit",
+    "keywords": [
+      "metasploit ftp",
+      "ftp scanner auxiliary",
+      "check default ftp",
+      "automatic credential harvesting"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/smb/smb_login; set RHOSTS ; set USER_FILE users.txt; set PASS_FILE passwords.txt; run",
+    "desc": "scans metasploit target networks for open and weak windows file share authentications",
+    "keywords": [
+      "metasploit smb",
+      "smb login crack",
+      "windows file share audit",
+      "credential verification"
+    ]
+  },
+  {
+    "tool": "gobuster",
+    "command": "gobuster dir -u http:/// -w /usr/share/wordlists/dirb/common.txt",
+    "desc": "discovers hidden web directories and pages on a web server via path guessing",
+    "keywords": [
+      "directory brute force",
+      "find hidden files",
+      "website directory scan",
+      "web directory discover"
+    ]
+  },
+  {
+    "tool": "gobuster",
+    "command": "gobuster dir -u http:/// -w wordlist.txt -x php,txt,html",
+    "desc": "searches for specific hidden file extensions like backups or configuration data on web servers",
+    "keywords": [
+      "find php files",
+      "web extension brute force",
+      "sensitive file leak",
+      "gobuster file discovery"
+    ]
+  },
+  {
+    "tool": "dirb",
+    "command": "dirb http:/// /usr/share/wordlists/dirb/common.txt",
+    "desc": "classic automatic recursive web content finder that scans for deep hidden directory folders",
+    "keywords": [
+      "dirb scanner",
+      "recursive directory search",
+      "web path brute force",
+      "web vulnerability search"
+    ]
+  },
+  {
+    "tool": "wfuzz",
+    "command": "wfuzz -c -z file,/usr/share/wordlists/dirb/common.txt --hc 404 http:///index.php?FUZZ=test",
+    "desc": "brute forces hidden input parameters inside a website url query string to find hidden fields",
+    "keywords": [
+      "parameter fuzzing",
+      "web parameter discovery",
+      "wfuzz test",
+      "url parameters hack"
+    ]
+  },
+  {
+    "tool": "john",
+    "command": "john --wordlist=passwords.txt hashes.txt",
+    "desc": "offline brute force tool used to crack encrypted user password hashes collected from targets",
+    "keywords": [
+      "john the ripper",
+      "hash cracker",
+      "brute force hashes",
+      "offline password crack"
+    ]
+  },
+  {
+    "tool": "john",
+    "command": "john --format=Raw-MD5 --wordlist=passwords.txt hashes.txt",
+    "desc": "forces john to use strict md5 database algorithm tracking for quick exam hash resolutions",
+    "keywords": [
+      "crack md5",
+      "hash format john",
+      "md5 algorithm brute force",
+      "break md5 hash"
+    ]
+  },
+  {
+    "tool": "hashcat",
+    "command": "hashcat -m 0 -a 0 hashes.txt passwords.txt",
+    "desc": "standard high speed gpu accelerated hash cracker targeting raw md5 algorithms",
+    "keywords": [
+      "hashcat md5",
+      "offline hash crack",
+      "speed cracking",
+      "database password break"
+    ]
+  },
+  {
+    "tool": "hashcat",
+    "command": "hashcat -m 1400 -a 0 hashes.txt passwords.txt",
+    "desc": "utilizes hashcat to break down stronger linux or website sha256 encrypted string structures",
+    "keywords": [
+      "crack sha256",
+      "hashcat sha256",
+      "secure hash algorithm crack",
+      "offline decryption"
+    ]
   }
 ]
