@@ -35,6 +35,8 @@ python3 --version
 clone the repo directly into that folder:
 
 ```bash
+mkdir cheatsheet
+cd cheatsheet
 git clone https://github.com/syedbaijid07/Command-Cheat-sheet.git ~/.cheatsheet
 ```
 
