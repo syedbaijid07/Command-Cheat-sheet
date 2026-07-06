@@ -3554,5 +3554,320 @@
       "secure hash algorithm crack",
       "offline decryption"
     ]
+  },
+  {
+    "tool": "chmod",
+    "command": "chmod +x script.sh",
+    "desc": "gives execution permission to a script or file so it can be run in terminal",
+    "keywords": [
+      "make executable",
+      "give permission",
+      "script execution",
+      "run permission"
+    ]
+  },
+  {
+    "tool": "chmod",
+    "command": "chmod 755 script.sh",
+    "desc": "sets read, write, and execute permissions for owner, and read/execute for others",
+    "keywords": [
+      "standard permission",
+      "script access",
+      "read write execute",
+      "chmod 755"
+    ]
+  },
+  {
+    "tool": "chmod",
+    "command": "chmod 600 id_rsa",
+    "desc": "restricts file access so only the owner can read and write it (essential for ssh private keys)",
+    "keywords": [
+      "secure private key",
+      "restrict access",
+      "ssh key permission",
+      "secure file"
+    ]
+  },
+  {
+    "tool": "chown",
+    "command": "chown root:root file.txt",
+    "desc": "changes both the owner user and owner group of a file to root",
+    "keywords": [
+      "change owner",
+      "change group",
+      "root ownership",
+      "file permissions"
+    ]
+  },
+  {
+    "tool": "echo",
+    "command": "echo \"text\" >> file.txt",
+    "desc": "appends or adds a line of text to the end of a file without overwriting content",
+    "keywords": [
+      "write to file",
+      "append text",
+      "save output",
+      "add line"
+    ]
+  },
+  {
+    "tool": "apt",
+    "command": "sudo apt update && sudo apt upgrade -y",
+    "desc": "updates the local package database and automatically upgrades all installed tools",
+    "keywords": [
+      "update system",
+      "upgrade software",
+      "apt update",
+      "linux update"
+    ]
+  },
+  {
+    "tool": "apt",
+    "command": "sudo apt install -y curl",
+    "desc": "installs a tool from the official repository automatically without asking for confirmation",
+    "keywords": [
+      "install package",
+      "download tool",
+      "apt install",
+      "silent install"
+    ]
+  },
+  {
+    "tool": "apt",
+    "command": "sudo apt remove --purge <package_name>",
+    "desc": "completely uninstalls a tool along with all of its custom configuration files",
+    "keywords": [
+      "remove tool",
+      "uninstall software",
+      "completely delete",
+      "clean configuration"
+    ]
+  },
+  {
+    "tool": "snap",
+    "command": "sudo snap install micro --classic",
+    "desc": "installs a package using the snap store with classic system confinement permissions",
+    "keywords": [
+      "snap store",
+      "install snap",
+      "absolute package install",
+      "ubuntu software"
+    ]
+  },
+  {
+    "tool": "snap",
+    "command": "sudo snap remove <package_name>",
+    "desc": "cleanly uninstalls and deletes a software package installed via snap",
+    "keywords": [
+      "remove snap",
+      "uninstall snap",
+      "delete snap tool"
+    ]
+  },
+  {
+    "tool": "pip",
+    "command": "pip install -r requirements.txt",
+    "desc": "automatically downloads and installs all python libraries listed in a text file",
+    "keywords": [
+      "python setup",
+      "install requirements",
+      "pip dependencies",
+      "python libraries"
+    ]
+  },
+  {
+    "tool": "pip",
+    "command": "pip uninstall <library_name>",
+    "desc": "removes a specific python library or package from the system environment",
+    "keywords": [
+      "delete python library",
+      "uninstall pip",
+      "clean python package"
+    ]
+  },
+  {
+    "tool": "python",
+    "command": "python3 -m http.server 80",
+    "desc": "starts an instant lightweight web server on port 80 to easily transfer files or exploits",
+    "keywords": [
+      "python web server",
+      "file transfer",
+      "instant hosting",
+      "local server"
+    ]
+  },
+  {
+    "tool": "python",
+    "command": "python3 script.py",
+    "desc": "runs and executes a python script or automation tool directly through the terminal",
+    "keywords": [
+      "execute python",
+      "run script",
+      "launch tool",
+      "python runner"
+    ]
+  },
+  {
+    "tool": "zip",
+    "command": "zip -r archive.zip folder/",
+    "desc": "compresses an entire folder and all of its subdirectories into a standard zip file",
+    "keywords": [
+      "create zip",
+      "zip folder",
+      "compress files",
+      "archive package"
+    ]
+  },
+  {
+    "tool": "unzip",
+    "command": "unzip archive.zip",
+    "desc": "extracts all files and folders from a standard compressed zip archive",
+    "keywords": [
+      "unzip file",
+      "extract zip",
+      "unpack files",
+      "open zip"
+    ]
+  },
+  {
+    "tool": "unzip",
+    "command": "unzip archive.zip -d /path/to/destination/",
+    "desc": "extracts the contents of a zip file into a specific chosen folder directory",
+    "keywords": [
+      "unzip custom path",
+      "extract elsewhere",
+      "unpack destination"
+    ]
+  },
+  {
+    "tool": "tar",
+    "command": "tar -cvf archive.tar folder/",
+    "desc": "bundles multiple files or an entire folder into a single uncompressed tarball file",
+    "keywords": [
+      "create tar",
+      "bundle files",
+      "archive no compression",
+      "tar package"
+    ]
+  },
+  {
+    "tool": "tar",
+    "command": "tar -xvf archive.tar",
+    "desc": "extracts all files and structure from an uncompressed tarball archive",
+    "keywords": [
+      "extract tar",
+      "untar file",
+      "unpack tarball",
+      "open tar"
+    ]
+  },
+  {
+    "tool": "tar",
+    "command": "tar -czvf archive.tar.gz folder/",
+    "desc": "bundles and heavily compresses a folder using both tar and gzip algorithms (.tar.gz)",
+    "keywords": [
+      "create tar.gz",
+      "gzip compression",
+      "compress folder",
+      "tar archive"
+    ]
+  },
+  {
+    "tool": "tar",
+    "command": "tar -xzvf archive.tar.gz",
+    "desc": "extracts and decompresses a standard gzip compressed tarball archive (.tar.gz)",
+    "keywords": [
+      "extract tar.gz",
+      "decompress gzip",
+      "unpack tar.gz",
+      "open archive"
+    ]
+  },
+  {
+    "tool": "tar",
+    "command": "tar -cjvf archive.tar.bz2 folder/",
+    "desc": "creates a highly compressed archive using the bzip2 algorithm for smaller file sizes (.tar.bz2)",
+    "keywords": [
+      "create tar.bz2",
+      "bzip2 compression",
+      "high compression",
+      "small file archive"
+    ]
+  },
+  {
+    "tool": "tar",
+    "command": "tar -xjvf archive.tar.bz2",
+    "desc": "extracts and decompresses an archive compressed with the bzip2 format (.tar.bz2)",
+    "keywords": [
+      "extract tar.bz2",
+      "unpack bzip2",
+      "open small archive"
+    ]
+  },
+  {
+    "tool": "gzip",
+    "command": "gzip file.txt",
+    "desc": "compresses a single individual file into a .gz format (deletes the original file)",
+    "keywords": [
+      "single file compression",
+      "create gzip",
+      "compress text file",
+      "quick gzip"
+    ]
+  },
+  {
+    "tool": "gunzip",
+    "command": "gunzip file.txt.gz",
+    "desc": "decompresses a single .gz file back into its original uncompressed format",
+    "keywords": [
+      "decompress single file",
+      "unpack gz",
+      "restore file",
+      "gunzip text"
+    ]
+  },
+  {
+    "tool": "7z",
+    "command": "7z a archive.7z folder/",
+    "desc": "uses ultra-high 7-zip compression to create a highly optimized archive file (.7z)",
+    "keywords": [
+      "create 7z",
+      "maximum compression",
+      "7zip folder",
+      "secure archive"
+    ]
+  },
+  {
+    "tool": "7z",
+    "command": "7z x archive.7z",
+    "desc": "extracts a 7z archive while keeping the full exact folder structure intact",
+    "keywords": [
+      "extract 7z",
+      "unpack 7zip",
+      "open 7z file",
+      "restore structure"
+    ]
+  },
+  {
+    "tool": "rar",
+    "command": "rar a archive.rar folder/",
+    "desc": "creates a standard compressed rar archive package from a folder or file list",
+    "keywords": [
+      "create rar",
+      "pack rar",
+      "rar compression",
+      "archive folder"
+    ]
+  },
+  {
+    "tool": "unrar",
+    "command": "unrar x archive.rar",
+    "desc": "extracts the complete contents of a rar file along with its full internal paths",
+    "keywords": [
+      "extract rar",
+      "unrar file",
+      "unpack rar",
+      "open rar package"
+    ]
   }
 ]
