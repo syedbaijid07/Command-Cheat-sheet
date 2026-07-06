@@ -1,274 +1,352 @@
 # cheat-sit
 
-A terminal command-line cheat sheet. Search any command by keyword, get live
-suggestions as you type, and manage everything (add / edit / delete) from
-the terminal itself. Data lives in a git repo, so updating on one device and
-running `git pull` on another keeps every device in sync.
+A fast terminal-based command-line cheat sheet with live search, interactive suggestions, and built-in command management.
 
-## What's in this repo
-
-| File            | Purpose                                                              |
-| --------------- | --------------------------------------------------------------------- |
-| `cheat-sit`     | the tool itself (Python script)                                      |
-| `data.json`     | your actual cheat sheet data (tools, commands, keywords)             |
-| `data_add.txt`  | a template file — fill this in to bulk-import new commands           |
+Search any command by keyword, add/edit/delete entries directly from the terminal, and keep every device synchronized automatically through Git.
 
 ---
 
-## 1. Requirements
+# Features
 
-- Python 3.8 or newer
-- `pip`
-- `git`
+- 🔍 Fast keyword search
+- ⚡ Live search suggestions while typing
+- ➕ Add new commands
+- ✏️ Edit existing commands
+- 🗑 Delete commands
+- 📥 Bulk import from a text file
+- 🔄 Automatic Git pull on every launch
+- ☁️ Git-based synchronization across devices
+- 🐍 Built with Python
 
-Check your Python version:
+---
+
+# Repository Structure
+
+| File | Description |
+|------|-------------|
+| `cheat-sit.py` | Main application |
+| `data.json` | Cheat sheet database |
+| `data_add.txt` | Bulk import template |
+| `install.sh` | Automatic installer |
+
+---
+
+# Requirements
+
+- Python 3.8+
+- pip
+- Git
+
+Verify Python:
 
 ```bash
 python3 --version
 ```
 
-## 2. Install
+---
 
-### Step 1 — clone this repo to a fixed location
+# Installation
 
-`cheat-sit` looks for its data at `~/.cheatsheet/data.json` by default, so
-clone the repo directly into that folder:
+## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/syedbaijid07/Command-Cheat-sheet.git ~/.cheatsheet
+git clone https://github.com/syedbaijid07/Command-Cheat-sheet.git
+
+cd Command-Cheat-sheet
 ```
 
-Your folder should now look like:
+---
 
-```
-~/.cheatsheet/
-├── cheat-sit
-├── data.json
-└── data_add.txt
-```
-
-### Step 2 — install the one Python dependency
+## 2. Install Dependency
 
 ```bash
 pip install prompt_toolkit --break-system-packages
 ```
 
-(If you're inside a virtual environment, drop `--break-system-packages`.)
-
-### Step 3 — make it runnable from anywhere
-
-Copy the script into a folder that's on your `PATH` and make it executable:
+If you're using a virtual environment:
 
 ```bash
-mkdir -p ~/.local/bin
-cp ~/.cheatsheet/cheat-sit ~/.local/bin/cheat-sit
-chmod +x ~/.local/bin/cheat-sit
+pip install prompt_toolkit
 ```
-
-### Step 4 — make sure that folder is on your PATH
-
-Add this line to `~/.bashrc` (or `~/.zshrc` if you use zsh):
-
-```bash
-export PATH="$HOME/.local/bin:$PATH"
-```
-
-Then reload your shell:
-
-```bash
-source ~/.bashrc
-```
-
-### Step 5 — confirm it works
-
-```bash
-cheat-sit delete branch
-```
-
-If you see a matching command printed, you're done.
-
-> Want a shorter name like `cheat` instead of `cheat-sit`? Just change what
-> you name the copy in Step 3: `cp ~/.cheatsheet/cheat-sit ~/.local/bin/cheat`
 
 ---
 
-## 3. How to use it
-
-### Search directly
+## 3. Run Installer
 
 ```bash
-cheat-sit open port
-cheat-sit delete branch
+chmod +x install.sh
+
+./install.sh
 ```
 
-### Interactive mode (live suggestions as you type)
+The installer automatically:
+
+- Creates the `cheat-sit` terminal command
+- Places it inside `~/.local/bin`
+- Enables automatic Git updates every time the tool starts
+
+---
+
+## 4. Add ~/.local/bin to PATH
+
+If running
 
 ```bash
 cheat-sit
 ```
 
-Start typing and matching commands appear as suggestions, the same way a
-search bar shows results while you type. Press Enter to run the search,
-then type the result number to open it.
+returns
 
-Inside interactive mode you can also type:
+```text
+command not found
+```
 
-| Command                  | What it does                          |
-| ------------------------ | -------------------------------------- |
-| `:add`                   | add one new entry via prompts          |
-| `:import data_add.txt`   | bulk-import entries from a text file   |
-| `:quit` or `:q`          | exit                                   |
+add this to your shell configuration:
 
-### Opening a result
+```bash
+export PATH="$HOME/.local/bin:$PATH"
+```
 
-After a search, pick a result number to open its detail view. From there:
+Reload your shell:
 
-| Key | Action                        |
-| --- | ------------------------------ |
-| `e` | edit this entry                |
-| `d` | delete this entry (asks to confirm) |
-| `b` | go back to search              |
+```bash
+source ~/.bashrc
+```
+
+or
+
+```bash
+source ~/.zshrc
+```
 
 ---
 
-## 4. Adding new commands
+## 5. Launch
 
-### Option A — one at a time
+```bash
+cheat-sit
+```
+
+If the interactive interface appears, installation is complete.
+
+---
+
+# Usage
+
+## Search
+
+```bash
+cheat-sit open port
+
+cheat-sit delete branch
+
+cheat-sit sql injection
+```
+
+---
+
+## Interactive Mode
+
+```bash
+cheat-sit
+```
+
+Start typing and matching commands appear instantly.
+
+Available commands:
+
+| Command | Description |
+|---------|-------------|
+| `:add` | Add a new command |
+| `:import data_add.txt` | Bulk import commands |
+| `:quit` or `:q` | Exit |
+
+---
+
+## Opening Results
+
+Choose the result number.
+
+Inside the details page:
+
+| Key | Action |
+|-----|--------|
+| `e` | Edit |
+| `d` | Delete |
+| `b` | Back |
+
+---
+
+# Adding Commands
+
+## Option 1 — Interactive
 
 ```bash
 cheat-sit --add
 ```
 
-It will ask, in order:
+You'll be asked for:
 
-1. **Tool name** — e.g. `nmap`
-2. **Command** — e.g. `nmap -sV <target-ip>`
-3. **Main keyword** — e.g. `open port with version`
-4. **More keywords** (optional, comma separated) — extra phrases that should
-   also match this command
-5. **Description** (optional) — a short one-line explanation
+1. Tool name
+2. Command
+3. Main keyword
+4. Additional keywords
+5. Description
 
-### Option B — bulk import from a file
-
-Open `data_add.txt` and fill it in using this exact format — one entry per
-block, blocks separated by a blank line:
+Example
 
 ```
+Tool:
+nmap
+
+Command:
+nmap -sV <target>
+
+Keyword:
+open port
+
+Extra keywords:
+version detection, service scan
+
+Description:
+Detect services running on open ports.
+```
+
+---
+
+## Option 2 — Bulk Import
+
+Edit `data_add.txt`
+
+Example:
+
+```text
 tool: nmap
 command: nmap -sV <target-ip>
-desc: scans open ports and detects service versions
-keywords: open port with version, scan open ports, service version scan
+desc: Detect service versions
+keywords: open port, service version, scan ports
 
 tool: sqlmap
 command: sqlmap -u <url> --dbs
-desc: finds sql injection points and lists databases
-keywords: sql injection test, find databases, sqli scan
+desc: Enumerate databases
+keywords: sql injection, database enumeration, sqli
 ```
 
-Then run:
+Import:
 
 ```bash
 cheat-sit --import data_add.txt
 ```
 
-or, from inside interactive mode:
+or inside interactive mode:
 
-```
+```text
 :import data_add.txt
 ```
 
-Every entry in the file gets appended to `data.json`.
-
-**Field notes:**
-- `tool:` and `command:` are required — an entry without both is skipped
-- `desc:` is optional but recommended
-- `keywords:` is a comma-separated list — write these in plain English,
-  the way you'd naturally describe what the command does
-
 ---
 
-## 5. Editing or removing a bad entry
+# Editing & Deleting
 
-If a command was added wrong (typo, wrong flag, bad keyword):
+Search for the command.
+
+Example:
 
 ```bash
-cheat-sit <search term that finds it>
+cheat-sit nmap
 ```
 
-Pick the result number, then press `e` to edit or `d` to delete. Editing
-shows the current value in brackets — press Enter to keep it, or type a new
-value to replace it.
+Choose the result.
+
+Press:
+
+- `e` to edit
+- `d` to delete
 
 ---
 
-## 6. Keeping devices in sync with git
+# Git Synchronization
 
-`data.json` is just a tracked file in this repo. After any add / edit /
-delete / import, `cheat-sit` will ask:
+Every launch automatically executes:
 
+```bash
+git pull origin main
 ```
+
+to fetch the newest commands.
+
+Whenever you add, edit, or delete an entry you'll be asked:
+
+```text
 Commit and push changes now? (y/n)
 ```
 
-Answer `y` and it runs `git add`, `git commit`, and `git push` for you.
-
-On any other device, pull the update:
+Selecting **y** automatically runs:
 
 ```bash
-cd ~/.cheatsheet && git pull
+git add data.json
+
+git commit -m "update commands"
+
+git push
 ```
 
-The next time you run `cheat-sit` there, the new commands are already
-available — no reinstall needed.
-
-If you'd rather commit manually, answer `n` and run it yourself whenever
-you're ready:
+You can also push manually:
 
 ```bash
-cd ~/.cheatsheet
+cd Command-Cheat-sheet
+
 git add data.json
-git commit -m "add new commands"
+
+git commit -m "update"
+
 git push
 ```
 
 ---
 
-## 7. Using a different data file location
+# data.json Format
 
-By default `cheat-sit` reads `~/.cheatsheet/data.json`. To point it at a
-different file or repo path, set the `CHEAT_DATA` environment variable:
-
-```bash
-export CHEAT_DATA="/path/to/your/data.json"
-```
-
-Add that line to `~/.bashrc` to make it permanent.
-
----
-
-## 8. data.json structure (for reference)
-
-Each entry looks like this:
+Each record looks like:
 
 ```json
 {
   "tool": "nmap",
   "command": "nmap -sV <target-ip>",
-  "desc": "scans open ports and detects service versions",
-  "keywords": ["open port with version", "scan open ports", "service version scan"]
+  "desc": "Detect service versions",
+  "keywords": [
+    "open port",
+    "service version",
+    "scan ports"
+  ]
 }
 ```
 
-You normally won't need to edit this file by hand — use `--add`, `--import`,
-or the edit/delete menu instead, so the JSON stays valid.
+Normally you should use:
+
+- `--add`
+- `--import`
+- Edit menu
+
+instead of editing JSON manually.
 
 ---
 
-## 9. Troubleshooting
+# Troubleshooting
 
-| Problem                              | Fix                                                                 |
-| ------------------------------------- | -------------------------------------------------------------------- |
-| `command not found: cheat-sit`        | `~/.local/bin` isn't on your PATH — redo Step 4, then `source ~/.bashrc` |
-| `prompt_toolkit not installed`        | run `pip install prompt_toolkit --break-system-packages`            |
-| Data file not found                    | make sure `~/.cheatsheet/data.json` exists, or set `CHEAT_DATA`     |
-| Added a command but it's gone on my other laptop | run `git pull` inside `~/.cheatsheet` on that laptop        |
+| Problem | Solution |
+|----------|----------|
+| `command not found: cheat-sit` | Add `~/.local/bin` to PATH |
+| `prompt_toolkit not installed` | Install with `pip install prompt_toolkit` |
+| Permission denied | Run `chmod +x install.sh` |
+| Git update failed | Check internet connection and Git authentication |
+
+---
+
+# License
+
+This project is open source.
+
+---
+
+Made with ❤️ for developers, students, and cybersecurity enthusiasts.
