@@ -3,78 +3,1395 @@
     "tool": "git",
     "command": "git checkout -b <name>",
     "desc": "creates a new branch and switches to it",
-    "keywords": ["new branch", "create branch", "switch branch"]
+    "keywords": [
+      "new branch",
+      "create branch",
+      "switch branch"
+    ]
   },
   {
     "tool": "git",
     "command": "git branch -d <name>",
     "desc": "deletes a local branch",
-    "keywords": ["delete branch", "remove branch"]
+    "keywords": [
+      "delete branch",
+      "remove branch"
+    ]
   },
   {
     "tool": "git",
     "command": "git reset --soft HEAD~1",
     "desc": "undoes the last commit but keeps the changes",
-    "keywords": ["undo commit", "revert commit", "remove last commit"]
+    "keywords": [
+      "undo commit",
+      "revert commit",
+      "remove last commit"
+    ]
   },
   {
     "tool": "git",
     "command": "git stash",
     "desc": "temporarily saves uncommitted changes",
-    "keywords": ["save changes", "stash changes", "hide changes"]
+    "keywords": [
+      "save changes",
+      "stash changes",
+      "hide changes"
+    ]
   },
   {
     "tool": "git",
     "command": "git push -u origin <branch>",
     "desc": "pushes a new branch to remote and tracks it",
-    "keywords": ["push branch", "upload branch", "first push"]
+    "keywords": [
+      "push branch",
+      "upload branch",
+      "first push"
+    ]
   },
   {
     "tool": "docker",
     "command": "docker ps -a",
     "desc": "lists all containers, running and stopped",
-    "keywords": ["list containers", "show containers", "all containers"]
+    "keywords": [
+      "list containers",
+      "show containers",
+      "all containers"
+    ]
   },
   {
     "tool": "docker",
     "command": "docker rm -f <id>",
     "desc": "force removes a container",
-    "keywords": ["delete container", "remove container", "kill container"]
+    "keywords": [
+      "delete container",
+      "remove container",
+      "kill container"
+    ]
   },
   {
     "tool": "docker",
     "command": "docker exec -it <id> bash",
     "desc": "opens a shell inside a running container",
-    "keywords": ["enter container", "container shell", "access container"]
+    "keywords": [
+      "enter container",
+      "container shell",
+      "access container"
+    ]
   },
   {
     "tool": "linux",
     "command": "chmod +x <file>",
     "desc": "makes a file executable",
-    "keywords": ["make executable", "run permission", "script permission"]
+    "keywords": [
+      "make executable",
+      "run permission",
+      "script permission"
+    ]
   },
   {
     "tool": "linux",
     "command": "kill -9 <pid>",
     "desc": "force stops a process",
-    "keywords": ["stop process", "force kill", "end process"]
+    "keywords": [
+      "stop process",
+      "force kill",
+      "end process"
+    ]
   },
   {
     "tool": "nmap",
     "command": "nmap -sV <target-ip>",
     "desc": "scans open ports and detects service versions",
-    "keywords": ["open port with version", "scan open ports", "service version scan"]
+    "keywords": [
+      "open port with version",
+      "scan open ports",
+      "service version scan"
+    ]
   },
   {
     "tool": "nikto",
     "command": "nikto -h <target-url>",
     "desc": "scans a web server for known vulnerabilities",
-    "keywords": ["web vuln scan", "scan website vulnerabilities", "http scan"]
+    "keywords": [
+      "web vuln scan",
+      "scan website vulnerabilities",
+      "http scan"
+    ]
   },
   {
     "tool": "sqlmap",
     "command": "sqlmap -u <url> --dbs",
     "desc": "finds sql injection points and lists databases",
-    "keywords": ["sql injection test", "find databases", "sqli scan"]
+    "keywords": [
+      "sql injection test",
+      "find databases",
+      "sqli scan"
+    ]
+  },
+  {
+    "tool": "ping",
+    "command": "ping <target-ip>",
+    "desc": "sends icmp echo requests to check if a host is alive",
+    "keywords": [
+      "ping sweep",
+      "check host alive",
+      "icmp ping"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sn <target-ip>",
+    "desc": "ping sweep scan, checks if the host is up without port scanning",
+    "keywords": [
+      "ping sweep scan",
+      "host discovery",
+      "check host up"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "sudo nmap -PR -sn <target-ip>",
+    "desc": "arp ping scan, discovers hosts on the local network using arp",
+    "keywords": [
+      "arp ping scan",
+      "arp host discovery",
+      "local network scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "sudo nmap -PE -sn --disable-arp-ping <target-ip>",
+    "desc": "echo (icmp) ping scan, forces icmp instead of arp for host discovery",
+    "keywords": [
+      "echo ping scan",
+      "icmp ping scan",
+      "disable arp ping"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sL <target-ip>",
+    "desc": "list scan, lists targets and does reverse dns lookup without sending any packets",
+    "keywords": [
+      "list scan",
+      "reverse dns lookup",
+      "no packet scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "sudo nmap <target-ip>",
+    "desc": "standard scan on local network, uses arp ping and scans default 1000 ports",
+    "keywords": [
+      "arp port scan",
+      "standard port scan",
+      "default nmap scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "sudo nmap -T5 -F <target-ip>",
+    "desc": "insane timing, fast scan of the 100 most common ports",
+    "keywords": [
+      "insane speed scan",
+      "fast scan",
+      "quick port scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "sudo nmap -T4 -p 80,443,8080 --open -Pn <target-ip>/24",
+    "desc": "fast scan of an entire subnet for open web service ports, skips host discovery",
+    "keywords": [
+      "fast web service search",
+      "scan subnet for web ports",
+      "find web servers on network"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -p 21 <target-ip>",
+    "desc": "scans a single specific port",
+    "keywords": [
+      "port 21 scan",
+      "scan single port",
+      "check specific port"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sS <target-ip>",
+    "desc": "syn stealth scan, half-open scan that doesn't complete the tcp handshake",
+    "keywords": [
+      "syn scan",
+      "syn stealth scan",
+      "half open scan",
+      "stealth port scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sT <target-ip>",
+    "desc": "tcp connect scan, completes the full tcp handshake (noisier than syn scan)",
+    "keywords": [
+      "connect scan",
+      "tcp connect scan",
+      "full handshake scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sF <target-ip>",
+    "desc": "fin scan, sends a fin flag packet to try to slip past simple firewalls",
+    "keywords": [
+      "fin scan",
+      "firewall evasion scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sX <target-ip>",
+    "desc": "xmas scan, sends fin, psh, and urg flags together to evade basic firewalls",
+    "keywords": [
+      "xmas scan",
+      "christmas scan",
+      "firewall evasion"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sN <target-ip>",
+    "desc": "null scan, sends a packet with no flags set to evade basic packet filters",
+    "keywords": [
+      "null scan",
+      "no flag scan",
+      "firewall evasion"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sA <target-ip>",
+    "desc": "ack scan, used to map out firewall rulesets rather than find open ports",
+    "keywords": [
+      "ack scan",
+      "firewall ruleset mapping",
+      "filtered port check"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sW <target-ip>",
+    "desc": "window scan, similar to ack scan but examines the tcp window field to guess port state",
+    "keywords": [
+      "window scan",
+      "tcp window scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sM <target-ip>",
+    "desc": "maimon scan, sends fin/ack packets, useful against certain bsd-derived systems",
+    "keywords": [
+      "maimon scan",
+      "fin ack scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -f <target-ip>",
+    "desc": "fragments packets into smaller pieces to bypass some firewalls and ids",
+    "keywords": [
+      "firewall evasion scan",
+      "fragmented packets",
+      "ids evasion",
+      "bypass firewall"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -S <spoofed-ip> -e <interface> <target-ip>",
+    "desc": "spoofs the source ip address of the scan (needs the correct network interface)",
+    "keywords": [
+      "spoof source ip",
+      "fake source ip scan",
+      "ip spoofing scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sI <zombie-host> <target-ip>",
+    "desc": "idle scan, uses a third-party zombie host to scan a target anonymously",
+    "keywords": [
+      "idle scan",
+      "zombie scan",
+      "anonymous scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --badsum <target-ip>",
+    "desc": "sends packets with an intentionally invalid checksum to test how a firewall reacts",
+    "keywords": [
+      "firewall bypass scan",
+      "bad checksum scan",
+      "invalid checksum test"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -b <ftp-relay-host> <target-ip>",
+    "desc": "attempts an ftp bounce scan through a vulnerable ftp server as a proxy",
+    "keywords": [
+      "ftp bounce attack",
+      "ftp proxy scan",
+      "bounce scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "sudo nmap -sU <target-ip>",
+    "desc": "scans udp ports instead of tcp",
+    "keywords": [
+      "udp port scan",
+      "scan udp ports"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sY <target-ip>",
+    "desc": "sctp init scan, similar to a syn scan but for the sctp protocol",
+    "keywords": [
+      "sctp scan",
+      "sctp init scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sO <target-ip>",
+    "desc": "scans which ip protocols (tcp, udp, icmp, etc) are supported by the host",
+    "keywords": [
+      "ip protocol scan",
+      "protocol scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "sudo nmap -O <target-ip>",
+    "desc": "attempts to detect the operating system of the target",
+    "keywords": [
+      "os detection",
+      "detect operating system",
+      "standard os scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -A <target-ip>",
+    "desc": "aggressive scan, enables os detection, version detection, script scanning, and traceroute together",
+    "keywords": [
+      "enables os detection",
+      "aggressive scan",
+      "all in one scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sV -sC <target-ip>",
+    "desc": "detects service versions and runs default nse scripts, reveals details like rpc services",
+    "keywords": [
+      "rpc scan",
+      "version and script scan",
+      "default script scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --traceroute <target-ip>",
+    "desc": "shows the network hops between you and the target",
+    "keywords": [
+      "traceroute scan",
+      "traceroute hop analysis",
+      "hop analysis"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --traceroute --script ip-geolocation-maxmind <target-ip>",
+    "desc": "traces the route to the target and attempts to geolocate each hop",
+    "keywords": [
+      "traceroute geolocation scan",
+      "geolocate ip",
+      "ip geolocation"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script whois-ip <target-ip>",
+    "desc": "performs a whois lookup on the target ip",
+    "keywords": [
+      "whois lookup",
+      "whois ip query",
+      "domain ownership lookup"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script http-sitemap-generator <target-ip>",
+    "desc": "crawls a web server and generates a directory/sitemap structure",
+    "keywords": [
+      "http sitemap generator",
+      "website structure scan",
+      "crawl website"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script dns-brute <target-ip>",
+    "desc": "brute forces common subdomains for a domain",
+    "keywords": [
+      "brute force dns subdomains",
+      "subdomain brute force",
+      "find subdomains"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script dns-zone-transfer -p 53 <target-ip>",
+    "desc": "attempts a dns zone transfer to dump all dns records",
+    "keywords": [
+      "dns zone transfer",
+      "zone transfer check",
+      "dump dns records"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script dns-cache-snoop -p 53 <target-ip>",
+    "desc": "checks a dns server's cache for previously resolved domains",
+    "keywords": [
+      "dns cache snoop",
+      "dns cache check"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script broadcast <target-subnet>",
+    "desc": "runs all broadcast discovery scripts to find devices on the local network (dhcp, upnp, etc)",
+    "keywords": [
+      "broadcast neighbor discovery",
+      "discover network devices",
+      "broadcast scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script malware <target-ip>",
+    "desc": "checks common ports for signs of known malware/backdoors",
+    "keywords": [
+      "malware detection scan",
+      "backdoor check"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script vuln <target-ip>",
+    "desc": "runs all nse vulnerability detection scripts against the target",
+    "keywords": [
+      "basic vuln scan",
+      "nse vulnerability scan",
+      "full vulnerability check"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script vuln -p 80,443,21,22,3306 <target-ip>",
+    "desc": "runs vulnerability scripts against a specific set of ports only",
+    "keywords": [
+      "vuln scan specific ports",
+      "targeted vulnerability scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sV --script vuln <target-ip>",
+    "desc": "detects service versions together with vulnerability scanning",
+    "keywords": [
+      "service version vuln scan",
+      "version plus vuln scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sV -sC --script vuln -O -A <target-ip>",
+    "desc": "full aggressive scan combining version detection, default scripts, vuln scripts, and os detection",
+    "keywords": [
+      "full aggressive vuln scan",
+      "complete vulnerability assessment",
+      "all-in-one vuln scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script http-sql-injection -p 80,443 <target-ip>",
+    "desc": "checks a web application for sql injection points",
+    "keywords": [
+      "sql injection check",
+      "web sqli scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script http-stored-xss -p 80,443 <target-ip>",
+    "desc": "checks a web application for stored cross-site scripting vulnerabilities",
+    "keywords": [
+      "xss check",
+      "cross site scripting scan",
+      "stored xss"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script http-fi-traversal -p 80,443 <target-ip>",
+    "desc": "checks a web application for local file inclusion / path traversal issues",
+    "keywords": [
+      "lfi check",
+      "local file inclusion scan",
+      "path traversal check"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script http-waf-detect -p 80,443 <target-ip>",
+    "desc": "detects if a web application firewall is present in front of the site",
+    "keywords": [
+      "waf detect",
+      "web application firewall detect"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script http-admin-enum -p 80,443 <target-ip>",
+    "desc": "attempts to find common admin panel login paths",
+    "keywords": [
+      "admin panel find",
+      "find login page",
+      "admin page enum"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script http-enum -p 80,443 <target-ip>",
+    "desc": "brute forces common directories and files on a web server",
+    "keywords": [
+      "directory brute force",
+      "web directory enum",
+      "find hidden paths"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script http-shellshock -p 80,443 <target-ip>",
+    "desc": "checks if a web server is vulnerable to the shellshock bash bug",
+    "keywords": [
+      "shellshock check",
+      "bash bug check",
+      "cve-2014-6271"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script http-wordpress-enum -p 80,443 <target-ip>",
+    "desc": "enumerates wordpress plugins, themes, and users on a target site",
+    "keywords": [
+      "wordpress vulnerability scan",
+      "wordpress enum",
+      "wp plugin scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script ftp-anon,ftp-vuln* -p 21 <target-ip>",
+    "desc": "checks for anonymous ftp login and runs all known ftp vulnerability scripts",
+    "keywords": [
+      "ftp anonymous login check",
+      "ftp vulnerability scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script ftp-brute -p 21 <target-ip>",
+    "desc": "brute forces ftp login credentials",
+    "keywords": [
+      "ftp brute force",
+      "ftp password brute force"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script ftp-vsftpd-backdoor -p 21 <target-ip>",
+    "desc": "checks specifically for the known vsftpd 2.3.4 backdoor vulnerability",
+    "keywords": [
+      "vsftpd backdoor check",
+      "cve-2011-2523"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script ftp-proftpd-backdoor -p 21 <target-ip>",
+    "desc": "checks specifically for the known proftpd backdoor vulnerability",
+    "keywords": [
+      "proftpd backdoor check"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script ssh-brute -p 22 <target-ip>",
+    "desc": "brute forces ssh login credentials",
+    "keywords": [
+      "ssh brute force",
+      "ssh password guessing"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script ssh-auth-methods -p 22 <target-ip>",
+    "desc": "lists the authentication methods supported by an ssh server",
+    "keywords": [
+      "ssh auth methods",
+      "ssh authentication check"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script ssh-hostkey -p 22 <target-ip>",
+    "desc": "retrieves the ssh server's host key fingerprint",
+    "keywords": [
+      "ssh hostkey check",
+      "ssh fingerprint"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script smtp-open-relay -p 25,465,587 <target-ip>",
+    "desc": "checks if an smtp server can be used as an open mail relay",
+    "keywords": [
+      "smtp open relay check",
+      "open mail relay test"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script smtp-enum-users -p 25 <target-ip>",
+    "desc": "enumerates valid usernames on an smtp server",
+    "keywords": [
+      "smtp user enumeration",
+      "find valid smtp users"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script smtp-commands -p 25 <target-ip>",
+    "desc": "lists the commands supported by an smtp server",
+    "keywords": [
+      "smtp commands check",
+      "smtp capability check"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script mysql-empty-password -p 3306 <target-ip>",
+    "desc": "checks for mysql accounts that have an empty root password",
+    "keywords": [
+      "mysql empty password check",
+      "mysql weak password"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script mysql-brute -p 3306 <target-ip>",
+    "desc": "brute forces mysql login credentials",
+    "keywords": [
+      "mysql brute force",
+      "mysql password guessing"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script mysql-info,mysql-databases -p 3306 <target-ip>",
+    "desc": "retrieves mysql server info and lists available databases",
+    "keywords": [
+      "mysql info dump",
+      "list mysql databases"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script pgsql-brute -p 5432 <target-ip>",
+    "desc": "brute forces postgresql login credentials",
+    "keywords": [
+      "postgresql brute force",
+      "postgres password guessing"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script smb-vuln-ms17-010 -p 445 <target-ip>",
+    "desc": "checks specifically for the eternalblue (ms17-010) smb vulnerability",
+    "keywords": [
+      "eternalblue check",
+      "ms17-010 check",
+      "smb vulnerability"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script smb-vuln* -p 445 <target-ip>",
+    "desc": "runs all known smb vulnerability detection scripts",
+    "keywords": [
+      "all smb vuln check",
+      "smb vulnerability scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script smb-brute -p 445 <target-ip>",
+    "desc": "brute forces smb login credentials",
+    "keywords": [
+      "smb brute force",
+      "windows share password guessing"
+    ]
+  },
+  {
+    "tool": "ping",
+    "command": "ping <target-ip>",
+    "desc": "sends icmp echo requests to check if a host is alive",
+    "keywords": [
+      "ping sweep",
+      "check host alive",
+      "icmp ping"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sn <target-ip>",
+    "desc": "ping sweep scan, checks if the host is up without port scanning",
+    "keywords": [
+      "ping sweep scan",
+      "host discovery",
+      "check host up"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "sudo nmap -PR -sn <target-ip>",
+    "desc": "arp ping scan, discovers hosts on the local network using arp",
+    "keywords": [
+      "arp ping scan",
+      "arp host discovery",
+      "local network scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "sudo nmap -PE -sn --disable-arp-ping <target-ip>",
+    "desc": "echo (icmp) ping scan, forces icmp instead of arp for host discovery",
+    "keywords": [
+      "echo ping scan",
+      "icmp ping scan",
+      "disable arp ping"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sL <target-ip>",
+    "desc": "list scan, lists targets and does reverse dns lookup without sending any packets",
+    "keywords": [
+      "list scan",
+      "reverse dns lookup",
+      "no packet scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "sudo nmap <target-ip>",
+    "desc": "standard scan on local network, uses arp ping and scans default 1000 ports",
+    "keywords": [
+      "arp port scan",
+      "standard port scan",
+      "default nmap scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "sudo nmap -T5 -F <target-ip>",
+    "desc": "insane timing, fast scan of the 100 most common ports",
+    "keywords": [
+      "insane speed scan",
+      "fast scan",
+      "quick port scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "sudo nmap -T4 -p 80,443,8080 --open -Pn <target-ip>/24",
+    "desc": "fast scan of an entire subnet for open web service ports, skips host discovery",
+    "keywords": [
+      "fast web service search",
+      "scan subnet for web ports",
+      "find web servers on network"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -p 21 <target-ip>",
+    "desc": "scans a single specific port",
+    "keywords": [
+      "port 21 scan",
+      "scan single port",
+      "check specific port"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sS <target-ip>",
+    "desc": "syn stealth scan, half-open scan that doesn't complete the tcp handshake",
+    "keywords": [
+      "syn scan",
+      "syn stealth scan",
+      "half open scan",
+      "stealth port scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sT <target-ip>",
+    "desc": "tcp connect scan, completes the full tcp handshake (noisier than syn scan)",
+    "keywords": [
+      "connect scan",
+      "tcp connect scan",
+      "full handshake scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sF <target-ip>",
+    "desc": "fin scan, sends a fin flag packet to try to slip past simple firewalls",
+    "keywords": [
+      "fin scan",
+      "firewall evasion scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sX <target-ip>",
+    "desc": "xmas scan, sends fin, psh, and urg flags together to evade basic firewalls",
+    "keywords": [
+      "xmas scan",
+      "christmas scan",
+      "firewall evasion"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sN <target-ip>",
+    "desc": "null scan, sends a packet with no flags set to evade basic packet filters",
+    "keywords": [
+      "null scan",
+      "no flag scan",
+      "firewall evasion"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sA <target-ip>",
+    "desc": "ack scan, used to map out firewall rulesets rather than find open ports",
+    "keywords": [
+      "ack scan",
+      "firewall ruleset mapping",
+      "filtered port check"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sW <target-ip>",
+    "desc": "window scan, similar to ack scan but examines the tcp window field to guess port state",
+    "keywords": [
+      "window scan",
+      "tcp window scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sM <target-ip>",
+    "desc": "maimon scan, sends fin/ack packets, useful against certain bsd-derived systems",
+    "keywords": [
+      "maimon scan",
+      "fin ack scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -f <target-ip>",
+    "desc": "fragments packets into smaller pieces to bypass some firewalls and ids",
+    "keywords": [
+      "firewall evasion scan",
+      "fragmented packets",
+      "ids evasion",
+      "bypass firewall"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -S <spoofed-ip> -e <interface> <target-ip>",
+    "desc": "spoofs the source ip address of the scan (needs the correct network interface)",
+    "keywords": [
+      "spoof source ip",
+      "fake source ip scan",
+      "ip spoofing scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sI <zombie-host> <target-ip>",
+    "desc": "idle scan, uses a third-party zombie host to scan a target anonymously",
+    "keywords": [
+      "idle scan",
+      "zombie scan",
+      "anonymous scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --badsum <target-ip>",
+    "desc": "sends packets with an intentionally invalid checksum to test how a firewall reacts",
+    "keywords": [
+      "firewall bypass scan",
+      "bad checksum scan",
+      "invalid checksum test"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -b <ftp-relay-host> <target-ip>",
+    "desc": "attempts an ftp bounce scan through a vulnerable ftp server as a proxy",
+    "keywords": [
+      "ftp bounce attack",
+      "ftp proxy scan",
+      "bounce scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "sudo nmap -sU <target-ip>",
+    "desc": "scans udp ports instead of tcp",
+    "keywords": [
+      "udp port scan",
+      "scan udp ports"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sY <target-ip>",
+    "desc": "sctp init scan, similar to a syn scan but for the sctp protocol",
+    "keywords": [
+      "sctp scan",
+      "sctp init scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sO <target-ip>",
+    "desc": "scans which ip protocols (tcp, udp, icmp, etc) are supported by the host",
+    "keywords": [
+      "ip protocol scan",
+      "protocol scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "sudo nmap -O <target-ip>",
+    "desc": "attempts to detect the operating system of the target",
+    "keywords": [
+      "os detection",
+      "detect operating system",
+      "standard os scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -A <target-ip>",
+    "desc": "aggressive scan, enables os detection, version detection, script scanning, and traceroute together",
+    "keywords": [
+      "enables os detection",
+      "aggressive scan",
+      "all in one scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sV -sC <target-ip>",
+    "desc": "detects service versions and runs default nse scripts, reveals details like rpc services",
+    "keywords": [
+      "rpc scan",
+      "version and script scan",
+      "default script scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --traceroute <target-ip>",
+    "desc": "shows the network hops between you and the target",
+    "keywords": [
+      "traceroute scan",
+      "traceroute hop analysis",
+      "hop analysis"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --traceroute --script ip-geolocation-maxmind <target-ip>",
+    "desc": "traces the route to the target and attempts to geolocate each hop",
+    "keywords": [
+      "traceroute geolocation scan",
+      "geolocate ip",
+      "ip geolocation"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script whois-ip <target-ip>",
+    "desc": "performs a whois lookup on the target ip",
+    "keywords": [
+      "whois lookup",
+      "whois ip query",
+      "domain ownership lookup"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script http-sitemap-generator <target-ip>",
+    "desc": "crawls a web server and generates a directory/sitemap structure",
+    "keywords": [
+      "http sitemap generator",
+      "website structure scan",
+      "crawl website"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script dns-brute <target-ip>",
+    "desc": "brute forces common subdomains for a domain",
+    "keywords": [
+      "brute force dns subdomains",
+      "subdomain brute force",
+      "find subdomains"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script dns-zone-transfer -p 53 <target-ip>",
+    "desc": "attempts a dns zone transfer to dump all dns records",
+    "keywords": [
+      "dns zone transfer",
+      "zone transfer check",
+      "dump dns records"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script dns-cache-snoop -p 53 <target-ip>",
+    "desc": "checks a dns server's cache for previously resolved domains",
+    "keywords": [
+      "dns cache snoop",
+      "dns cache check"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script broadcast <target-subnet>",
+    "desc": "runs all broadcast discovery scripts to find devices on the local network (dhcp, upnp, etc)",
+    "keywords": [
+      "broadcast neighbor discovery",
+      "discover network devices",
+      "broadcast scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script malware <target-ip>",
+    "desc": "checks common ports for signs of known malware/backdoors",
+    "keywords": [
+      "malware detection scan",
+      "backdoor check"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script vuln <target-ip>",
+    "desc": "runs all nse vulnerability detection scripts against the target",
+    "keywords": [
+      "basic vuln scan",
+      "nse vulnerability scan",
+      "full vulnerability check"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script vuln -p 80,443,21,22,3306 <target-ip>",
+    "desc": "runs vulnerability scripts against a specific set of ports only",
+    "keywords": [
+      "vuln scan specific ports",
+      "targeted vulnerability scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sV --script vuln <target-ip>",
+    "desc": "detects service versions together with vulnerability scanning",
+    "keywords": [
+      "service version vuln scan",
+      "version plus vuln scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap -sV -sC --script vuln -O -A <target-ip>",
+    "desc": "full aggressive scan combining version detection, default scripts, vuln scripts, and os detection",
+    "keywords": [
+      "full aggressive vuln scan",
+      "complete vulnerability assessment",
+      "all-in-one vuln scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script http-sql-injection -p 80,443 <target-ip>",
+    "desc": "checks a web application for sql injection points",
+    "keywords": [
+      "sql injection check",
+      "web sqli scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script http-stored-xss -p 80,443 <target-ip>",
+    "desc": "checks a web application for stored cross-site scripting vulnerabilities",
+    "keywords": [
+      "xss check",
+      "cross site scripting scan",
+      "stored xss"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script http-fi-traversal -p 80,443 <target-ip>",
+    "desc": "checks a web application for local file inclusion / path traversal issues",
+    "keywords": [
+      "lfi check",
+      "local file inclusion scan",
+      "path traversal check"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script http-waf-detect -p 80,443 <target-ip>",
+    "desc": "detects if a web application firewall is present in front of the site",
+    "keywords": [
+      "waf detect",
+      "web application firewall detect"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script http-admin-enum -p 80,443 <target-ip>",
+    "desc": "attempts to find common admin panel login paths",
+    "keywords": [
+      "admin panel find",
+      "find login page",
+      "admin page enum"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script http-enum -p 80,443 <target-ip>",
+    "desc": "brute forces common directories and files on a web server",
+    "keywords": [
+      "directory brute force",
+      "web directory enum",
+      "find hidden paths"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script http-shellshock -p 80,443 <target-ip>",
+    "desc": "checks if a web server is vulnerable to the shellshock bash bug",
+    "keywords": [
+      "shellshock check",
+      "bash bug check",
+      "cve-2014-6271"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script http-wordpress-enum -p 80,443 <target-ip>",
+    "desc": "enumerates wordpress plugins, themes, and users on a target site",
+    "keywords": [
+      "wordpress vulnerability scan",
+      "wordpress enum",
+      "wp plugin scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script ftp-anon,ftp-vuln* -p 21 <target-ip>",
+    "desc": "checks for anonymous ftp login and runs all known ftp vulnerability scripts",
+    "keywords": [
+      "ftp anonymous login check",
+      "ftp vulnerability scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script ftp-brute -p 21 <target-ip>",
+    "desc": "brute forces ftp login credentials",
+    "keywords": [
+      "ftp brute force",
+      "ftp password brute force"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script ftp-vsftpd-backdoor -p 21 <target-ip>",
+    "desc": "checks specifically for the known vsftpd 2.3.4 backdoor vulnerability",
+    "keywords": [
+      "vsftpd backdoor check",
+      "cve-2011-2523"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script ftp-proftpd-backdoor -p 21 <target-ip>",
+    "desc": "checks specifically for the known proftpd backdoor vulnerability",
+    "keywords": [
+      "proftpd backdoor check"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script ssh-brute -p 22 <target-ip>",
+    "desc": "brute forces ssh login credentials",
+    "keywords": [
+      "ssh brute force",
+      "ssh password guessing"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script ssh-auth-methods -p 22 <target-ip>",
+    "desc": "lists the authentication methods supported by an ssh server",
+    "keywords": [
+      "ssh auth methods",
+      "ssh authentication check"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script ssh-hostkey -p 22 <target-ip>",
+    "desc": "retrieves the ssh server's host key fingerprint",
+    "keywords": [
+      "ssh hostkey check",
+      "ssh fingerprint"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script smtp-open-relay -p 25,465,587 <target-ip>",
+    "desc": "checks if an smtp server can be used as an open mail relay",
+    "keywords": [
+      "smtp open relay check",
+      "open mail relay test"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script smtp-enum-users -p 25 <target-ip>",
+    "desc": "enumerates valid usernames on an smtp server",
+    "keywords": [
+      "smtp user enumeration",
+      "find valid smtp users"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script smtp-commands -p 25 <target-ip>",
+    "desc": "lists the commands supported by an smtp server",
+    "keywords": [
+      "smtp commands check",
+      "smtp capability check"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script mysql-empty-password -p 3306 <target-ip>",
+    "desc": "checks for mysql accounts that have an empty root password",
+    "keywords": [
+      "mysql empty password check",
+      "mysql weak password"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script mysql-brute -p 3306 <target-ip>",
+    "desc": "brute forces mysql login credentials",
+    "keywords": [
+      "mysql brute force",
+      "mysql password guessing"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script mysql-info,mysql-databases -p 3306 <target-ip>",
+    "desc": "retrieves mysql server info and lists available databases",
+    "keywords": [
+      "mysql info dump",
+      "list mysql databases"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script pgsql-brute -p 5432 <target-ip>",
+    "desc": "brute forces postgresql login credentials",
+    "keywords": [
+      "postgresql brute force",
+      "postgres password guessing"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script smb-vuln-ms17-010 -p 445 <target-ip>",
+    "desc": "checks specifically for the eternalblue (ms17-010) smb vulnerability",
+    "keywords": [
+      "eternalblue check",
+      "ms17-010 check",
+      "smb vulnerability"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script smb-vuln* -p 445 <target-ip>",
+    "desc": "runs all known smb vulnerability detection scripts",
+    "keywords": [
+      "all smb vuln check",
+      "smb vulnerability scan"
+    ]
+  },
+  {
+    "tool": "nmap",
+    "command": "nmap --script smb-brute -p 445 <target-ip>",
+    "desc": "brute forces smb login credentials",
+    "keywords": [
+      "smb brute force",
+      "windows share password guessing"
+    ]
   }
 ]
