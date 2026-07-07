@@ -5568,5 +5568,613 @@
       "wordlist format repair",
       "patch messy text file"
     ]
+  },
+  {
+    "tool": "netdiscover",
+    "command": "netdiscover -r <ip-range>",
+    "desc": "passively discovers live hosts on a local network range",
+    "keywords": [
+      "discover hosts on network",
+      "find live hosts",
+      "netdiscover scan"
+    ]
+  },
+  {
+    "tool": "arp-scan",
+    "command": "arp-scan -l",
+    "desc": "scans the local network segment using arp requests to find live hosts",
+    "keywords": [
+      "arp scan local network",
+      "find hosts with arp",
+      "local network discovery"
+    ]
+  },
+  {
+    "tool": "arp-scan",
+    "command": "arp-scan <ip-range>",
+    "desc": "scans a specific ip range using arp requests",
+    "keywords": [
+      "arp scan ip range",
+      "targeted arp discovery"
+    ]
+  },
+  {
+    "tool": "hping3",
+    "command": "hping3 -S <target-ip> -p <port>",
+    "desc": "sends custom crafted tcp syn packets to a specific port, useful for testing firewall rules",
+    "keywords": [
+      "custom syn packet",
+      "hping3 port test",
+      "craft tcp packet",
+      "test firewall rule"
+    ]
+  },
+  {
+    "tool": "masscan",
+    "command": "masscan -p1-65535 <target-ip> --rate=1000",
+    "desc": "very fast port scanner that checks all 65535 ports quickly across large ranges",
+    "keywords": [
+      "fast port scan",
+      "scan all ports quickly",
+      "masscan full port scan"
+    ]
+  },
+  {
+    "tool": "nc",
+    "command": "nc -zv <target-ip> <port-range>",
+    "desc": "uses netcat to check whether specific ports are open on a target",
+    "keywords": [
+      "netcat port scan",
+      "check open ports with netcat",
+      "nc port check"
+    ]
+  },
+  {
+    "tool": "traceroute",
+    "command": "traceroute <target-ip>",
+    "desc": "shows the path (hops) packets take to reach a target host",
+    "keywords": [
+      "trace route to host",
+      "show network path",
+      "traceroute command"
+    ]
+  },
+  {
+    "tool": "mtr",
+    "command": "mtr <target-ip>",
+    "desc": "combines traceroute and ping into a continuously updating network diagnostic tool",
+    "keywords": [
+      "live traceroute",
+      "combined ping traceroute",
+      "network path diagnostics"
+    ]
+  },
+  {
+    "tool": "whois",
+    "command": "whois <domain>",
+    "desc": "looks up domain registration and ownership information",
+    "keywords": [
+      "domain registration lookup",
+      "who owns this domain",
+      "whois query"
+    ]
+  },
+  {
+    "tool": "theharvester",
+    "command": "theharvester -d <domain> -b google",
+    "desc": "gathers emails, subdomains, and names related to a domain from public sources",
+    "keywords": [
+      "gather emails from domain",
+      "osint domain recon",
+      "find subdomains and emails"
+    ]
+  },
+  {
+    "tool": "dnsenum",
+    "command": "dnsenum <domain>",
+    "desc": "enumerates dns information and attempts to find subdomains for a domain",
+    "keywords": [
+      "dns enumeration",
+      "find subdomains",
+      "dnsenum scan"
+    ]
+  },
+  {
+    "tool": "enum4linux",
+    "command": "enum4linux -a <target-ip>",
+    "desc": "enumerates smb shares, users, groups, and os info on a windows/samba target",
+    "keywords": [
+      "enumerate smb",
+      "windows share enumeration",
+      "enum4linux scan",
+      "find smb users"
+    ]
+  },
+  {
+    "tool": "smbclient",
+    "command": "smbclient -L //<target-ip>",
+    "desc": "lists the available smb shares on a target",
+    "keywords": [
+      "list smb shares",
+      "view network shares",
+      "smbclient list shares"
+    ]
+  },
+  {
+    "tool": "smbclient",
+    "command": "smbclient //<target-ip>/<share-name>",
+    "desc": "connects to a specific smb share to browse or download files",
+    "keywords": [
+      "connect to smb share",
+      "access windows share",
+      "browse smb files"
+    ]
+  },
+  {
+    "tool": "smbmap",
+    "command": "smbmap -H <target-ip>",
+    "desc": "shows smb share permissions and access levels for the current user",
+    "keywords": [
+      "check smb permissions",
+      "smb share access levels",
+      "smbmap enumeration"
+    ]
+  },
+  {
+    "tool": "crackmapexec",
+    "command": "crackmapexec smb <target-ip>",
+    "desc": "checks smb connectivity and gathers host information across one or more targets",
+    "keywords": [
+      "crackmapexec smb scan",
+      "mass smb enumeration",
+      "cme scan"
+    ]
+  },
+  {
+    "tool": "rpcclient",
+    "command": "rpcclient -U \"\" <target-ip>",
+    "desc": "connects to a target's rpc service, often used for anonymous enumeration",
+    "keywords": [
+      "rpc enumeration",
+      "anonymous rpc connection",
+      "rpcclient null session"
+    ]
+  },
+  {
+    "tool": "showmount",
+    "command": "showmount -e <target-ip>",
+    "desc": "lists the nfs shares exported by a target host",
+    "keywords": [
+      "list nfs shares",
+      "show exported shares",
+      "nfs enumeration"
+    ]
+  },
+  {
+    "tool": "gobuster",
+    "command": "gobuster dir -u <url> -w <wordlist-file>",
+    "desc": "brute forces directories and files on a web server",
+    "keywords": [
+      "directory brute force",
+      "gobuster scan",
+      "find hidden directories",
+      "web directory enum"
+    ]
+  },
+  {
+    "tool": "dirb",
+    "command": "dirb <url>",
+    "desc": "brute forces common directories and files on a web server using a built-in wordlist",
+    "keywords": [
+      "dirb directory scan",
+      "find web directories",
+      "brute force web paths"
+    ]
+  },
+  {
+    "tool": "whatweb",
+    "command": "whatweb <url>",
+    "desc": "identifies the technologies, cms, and server software running on a website",
+    "keywords": [
+      "identify website technology",
+      "detect cms",
+      "whatweb fingerprint",
+      "web tech stack scan"
+    ]
+  },
+  {
+    "tool": "wpscan",
+    "command": "wpscan --url <url>",
+    "desc": "scans a wordpress site for vulnerable plugins, themes, and users",
+    "keywords": [
+      "wordpress vulnerability scan",
+      "wpscan enumeration",
+      "find wordpress plugins"
+    ]
+  },
+  {
+    "tool": "ffuf",
+    "command": "ffuf -u <url>/FUZZ -w <wordlist-file>",
+    "desc": "fast web fuzzer used to discover hidden directories, files, or parameters",
+    "keywords": [
+      "fuzz web directories",
+      "ffuf fuzzing",
+      "discover hidden paths",
+      "fast directory brute force"
+    ]
+  },
+  {
+    "tool": "curl",
+    "command": "curl -v <url>",
+    "desc": "fetches a url while showing full request and response details, useful for inspecting headers and behavior",
+    "keywords": [
+      "verbose http request",
+      "inspect request response",
+      "curl verbose mode"
+    ]
+  },
+  {
+    "tool": "wget",
+    "command": "wget <url>",
+    "desc": "downloads a file or webpage from a url",
+    "keywords": [
+      "download file from url",
+      "wget download",
+      "fetch webpage"
+    ]
+  },
+  {
+    "tool": "hydra",
+    "command": "hydra -l <username> -P <wordlist-file> <target-ip> ssh",
+    "desc": "brute forces an ssh login using a single username and a password wordlist",
+    "keywords": [
+      "ssh brute force hydra",
+      "hydra ssh attack",
+      "guess ssh password"
+    ]
+  },
+  {
+    "tool": "hydra",
+    "command": "hydra -L <userlist-file> -P <wordlist-file> <target-ip> ftp",
+    "desc": "brute forces an ftp login using lists of usernames and passwords",
+    "keywords": [
+      "ftp brute force hydra",
+      "hydra ftp attack",
+      "guess ftp login"
+    ]
+  },
+  {
+    "tool": "medusa",
+    "command": "medusa -h <target-ip> -u <username> -P <wordlist-file> -M ssh",
+    "desc": "brute forces a login service (here ssh) using a password wordlist",
+    "keywords": [
+      "medusa brute force",
+      "medusa ssh attack",
+      "password guessing medusa"
+    ]
+  },
+  {
+    "tool": "hashcat",
+    "command": "hashcat -m <hash-mode> -a 0 <hash-file> <wordlist-file>",
+    "desc": "cracks password hashes using gpu acceleration and a wordlist (dictionary attack)",
+    "keywords": [
+      "gpu hash cracking",
+      "hashcat dictionary attack",
+      "crack hash fast",
+      "hashcat wordlist mode"
+    ]
+  },
+  {
+    "tool": "crunch",
+    "command": "crunch <min-length> <max-length> <charset> -o <output-file>",
+    "desc": "generates a custom wordlist based on length and character set rules",
+    "keywords": [
+      "generate custom wordlist",
+      "create wordlist crunch",
+      "build password list"
+    ]
+  },
+  {
+    "tool": "cewl",
+    "command": "cewl <url> -w <output-wordlist-file>",
+    "desc": "builds a custom wordlist by scraping words found on a target website",
+    "keywords": [
+      "build wordlist from website",
+      "cewl wordlist generator",
+      "scrape site for wordlist"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "msfconsole",
+    "desc": "starts the metasploit framework console",
+    "keywords": [
+      "start metasploit",
+      "open msfconsole",
+      "launch metasploit framework"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "search <exploit-or-module-name>",
+    "desc": "searches for exploits, scanners, or modules inside msfconsole",
+    "keywords": [
+      "search metasploit modules",
+      "find exploit msfconsole",
+      "search msf module"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "use <module-path>",
+    "desc": "selects a specific module to work with inside msfconsole",
+    "keywords": [
+      "select metasploit module",
+      "use exploit module",
+      "load msf module"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "set RHOSTS <target-ip>",
+    "desc": "sets the target host(s) for the currently selected module",
+    "keywords": [
+      "set target metasploit",
+      "configure rhosts",
+      "set target ip msf"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "show options",
+    "desc": "displays the configurable options for the currently selected module",
+    "keywords": [
+      "show module options",
+      "view msf settings",
+      "check required options"
+    ]
+  },
+  {
+    "tool": "msfconsole",
+    "command": "exploit",
+    "desc": "runs the currently selected and configured module against the target",
+    "keywords": [
+      "run metasploit module",
+      "launch exploit msf",
+      "execute module"
+    ]
+  },
+  {
+    "tool": "sudo",
+    "command": "sudo -l",
+    "desc": "lists the commands the current user is allowed to run with sudo",
+    "keywords": [
+      "check sudo permissions",
+      "list sudo rights",
+      "privilege escalation check"
+    ]
+  },
+  {
+    "tool": "find",
+    "command": "find / -perm -4000 -type f 2>/dev/null",
+    "desc": "finds all suid binaries on the system, a common privilege escalation vector",
+    "keywords": [
+      "find suid binaries",
+      "privilege escalation suid",
+      "find setuid files"
+    ]
+  },
+  {
+    "tool": "find",
+    "command": "find / -writable -type d 2>/dev/null",
+    "desc": "finds all world-writable directories on the system",
+    "keywords": [
+      "find writable directories",
+      "world writable folders",
+      "privesc writable paths"
+    ]
+  },
+  {
+    "tool": "uname",
+    "command": "uname -a",
+    "desc": "shows kernel version and system architecture, useful for finding kernel exploits",
+    "keywords": [
+      "check kernel version",
+      "system info for privesc",
+      "uname system details"
+    ]
+  },
+  {
+    "tool": "cat",
+    "command": "cat /etc/os-release",
+    "desc": "shows the linux distribution name and version",
+    "keywords": [
+      "check linux distro version",
+      "os release info",
+      "identify linux distribution"
+    ]
+  },
+  {
+    "tool": "id",
+    "command": "id",
+    "desc": "shows the current user's uid, gid, and group memberships",
+    "keywords": [
+      "check current user id",
+      "view user groups",
+      "whoami detailed"
+    ]
+  },
+  {
+    "tool": "tcpdump",
+    "command": "tcpdump -i <interface>",
+    "desc": "captures and displays live network traffic on an interface",
+    "keywords": [
+      "capture network traffic",
+      "live packet capture",
+      "tcpdump sniffing"
+    ]
+  },
+  {
+    "tool": "tcpdump",
+    "command": "tcpdump -i <interface> -w <output-file.pcap>",
+    "desc": "captures network traffic and saves it to a file for later analysis",
+    "keywords": [
+      "save packet capture to file",
+      "tcpdump write pcap",
+      "capture traffic to disk"
+    ]
+  },
+  {
+    "tool": "tshark",
+    "command": "tshark -i <interface>",
+    "desc": "command-line version of wireshark for capturing and analyzing traffic",
+    "keywords": [
+      "command line wireshark",
+      "tshark packet capture",
+      "cli traffic analysis"
+    ]
+  },
+  {
+    "tool": "arpspoof",
+    "command": "arpspoof -i <interface> -t <target-ip> <gateway-ip>",
+    "desc": "performs arp spoofing to redirect a target's traffic through your machine for a man-in-the-middle setup",
+    "keywords": [
+      "arp spoofing attack",
+      "man in the middle setup",
+      "redirect target traffic",
+      "arpspoof mitm"
+    ]
+  },
+  {
+    "tool": "airmon-ng",
+    "command": "airmon-ng start <interface>",
+    "desc": "puts a wireless interface into monitor mode",
+    "keywords": [
+      "enable monitor mode",
+      "airmon-ng start",
+      "wireless monitor mode"
+    ]
+  },
+  {
+    "tool": "airodump-ng",
+    "command": "airodump-ng <interface>",
+    "desc": "captures wireless traffic and lists nearby access points and connected clients",
+    "keywords": [
+      "capture wireless traffic",
+      "list nearby wifi networks",
+      "airodump-ng scan"
+    ]
+  },
+  {
+    "tool": "aireplay-ng",
+    "command": "aireplay-ng --deauth <count> -a <bssid> <interface>",
+    "desc": "sends deauthentication packets to force a client to reconnect, used to capture a wpa handshake",
+    "keywords": [
+      "deauth attack",
+      "force wifi reconnect",
+      "capture wpa handshake",
+      "aireplay deauth"
+    ]
+  },
+  {
+    "tool": "aircrack-ng",
+    "command": "aircrack-ng <capture-file.cap> -w <wordlist-file>",
+    "desc": "cracks a captured wpa/wpa2 handshake using a wordlist",
+    "keywords": [
+      "crack wifi password",
+      "crack wpa handshake",
+      "aircrack-ng wordlist attack"
+    ]
+  },
+  {
+    "tool": "steghide",
+    "command": "steghide embed -cf <cover-file> -ef <secret-file>",
+    "desc": "hides a secret file inside a cover file (image or audio) using steganography",
+    "keywords": [
+      "hide file in image",
+      "steganography embed",
+      "steghide hide data"
+    ]
+  },
+  {
+    "tool": "steghide",
+    "command": "steghide extract -sf <stego-file>",
+    "desc": "extracts a hidden file from a steganography cover file",
+    "keywords": [
+      "extract hidden file",
+      "steganography extract",
+      "steghide reveal data"
+    ]
+  },
+  {
+    "tool": "ifconfig",
+    "command": "ifconfig",
+    "desc": "shows network interface configuration (legacy command, still widely used)",
+    "keywords": [
+      "show network interfaces",
+      "check ip address",
+      "ifconfig command"
+    ]
+  },
+  {
+    "tool": "ip",
+    "command": "ip a",
+    "desc": "shows network interface configuration (modern replacement for ifconfig)",
+    "keywords": [
+      "show ip addresses",
+      "check network interfaces",
+      "ip address command"
+    ]
+  },
+  {
+    "tool": "netstat",
+    "command": "netstat -tulnp",
+    "desc": "shows listening ports and the programs using them",
+    "keywords": [
+      "show listening ports",
+      "check open ports locally",
+      "netstat command"
+    ]
+  },
+  {
+    "tool": "ss",
+    "command": "ss -tulnp",
+    "desc": "modern replacement for netstat, shows listening ports and sockets",
+    "keywords": [
+      "show sockets",
+      "check listening ports",
+      "ss command modern netstat"
+    ]
+  },
+  {
+    "tool": "ip",
+    "command": "ip route",
+    "desc": "shows the system's routing table",
+    "keywords": [
+      "show routing table",
+      "check default gateway",
+      "ip route command"
+    ]
+  },
+  {
+    "tool": "arp",
+    "command": "arp -a",
+    "desc": "shows the local arp cache (ip to mac address mappings)",
+    "keywords": [
+      "show arp table",
+      "check mac address mapping",
+      "arp cache"
+    ]
+  },
+  {
+    "tool": "nc",
+    "command": "nc -lvnp <port>",
+    "desc": "starts netcat listening on a port, commonly used to catch an incoming connection",
+    "keywords": [
+      "netcat listener",
+      "start a listener",
+      "catch connection nc",
+      "nc listen port"
+    ]
   }
 ]
