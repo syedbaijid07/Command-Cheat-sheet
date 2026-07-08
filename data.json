@@ -3964,5 +3964,350 @@
       "catch connection nc",
       "nc listen port"
     ]
+  },
+  {
+    "tool": "secretsdump.py",
+    "command": "secretsdump.py <domain>/<username>:<password>@<target-ip>",
+    "desc": "dumps password hashes (ntlm, kerberos keys) from a domain controller or local sam database",
+    "keywords": [
+      "dump password hashes ad",
+      "secretsdump ntlm hashes",
+      "extract domain hashes",
+      "dump sam database",
+      "active directory hash dump",
+      "dump domain hashes"
+    ]
+  },
+  {
+    "tool": "GetNPUsers.py",
+    "command": "GetNPUsers.py <domain>/ -usersfile <userlist-file> -no-pass -dc-ip <dc-ip>",
+    "desc": "finds domain users that don't require kerberos pre-authentication and requests crackable hashes for them (as-rep roasting)",
+    "keywords": [
+      "as-rep roasting",
+      "kerberos pre-auth not required",
+      "getnpusers attack",
+      "find asrep roastable users"
+    ]
+  },
+  {
+    "tool": "GetUserSPNs.py",
+    "command": "GetUserSPNs.py <domain>/<username>:<password> -dc-ip <dc-ip> -request",
+    "desc": "requests kerberos service tickets for accounts with an spn, which can then be cracked offline (kerberoasting)",
+    "keywords": [
+      "kerberoasting attack",
+      "request service tickets",
+      "getuserspns command",
+      "crack service account password",
+      "kerberoast"
+    ]
+  },
+  {
+    "tool": "psexec.py",
+    "command": "psexec.py <domain>/<username>:<password>@<target-ip>",
+    "desc": "gets a remote command shell on a windows host using valid credentials, similar to sysinternals psexec",
+    "keywords": [
+      "remote shell windows credentials",
+      "impacket psexec",
+      "get shell with password",
+      "remote command execution smb"
+    ]
+  },
+  {
+    "tool": "wmiexec.py",
+    "command": "wmiexec.py <domain>/<username>:<password>@<target-ip>",
+    "desc": "gets a semi-interactive remote command shell on a windows host using wmi instead of smb service creation",
+    "keywords": [
+      "wmi remote execution",
+      "wmiexec shell",
+      "execute commands via wmi",
+      "stealthier remote shell"
+    ]
+  },
+  {
+    "tool": "smbexec.py",
+    "command": "smbexec.py <domain>/<username>:<password>@<target-ip>",
+    "desc": "gets a remote command shell on a windows host by creating and running a temporary service over smb",
+    "keywords": [
+      "smbexec remote shell",
+      "execute commands via smb service",
+      "impacket smbexec"
+    ]
+  },
+  {
+    "tool": "responder",
+    "command": "responder -I <interface>",
+    "desc": "listens on the network and poisons llmnr/nbt-ns/mdns requests to capture password hashes from windows hosts",
+    "keywords": [
+      "llmnr poisoning",
+      "nbt-ns poisoning",
+      "capture ntlm hash on network",
+      "responder attack",
+      "mitm hash capture"
+    ]
+  },
+  {
+    "tool": "bloodhound-python",
+    "command": "bloodhound-python -u <username> -p <password> -ns <dc-ip> -d <domain> -c all",
+    "desc": "collects active directory data (users, groups, permissions, sessions) for analysis in bloodhound",
+    "keywords": [
+      "collect ad data",
+      "bloodhound data collection",
+      "map active directory attack paths",
+      "find privilege escalation paths ad"
+    ]
+  },
+  {
+    "tool": "neo4j",
+    "command": "neo4j console",
+    "desc": "starts the neo4j graph database that bloodhound uses to store and visualize collected ad data",
+    "keywords": [
+      "start bloodhound database",
+      "neo4j console command",
+      "run bloodhound backend"
+    ]
+  },
+  {
+    "tool": "searchsploit",
+    "command": "searchsploit <search-term>",
+    "desc": "searches the local exploit-db database for exploits matching a keyword, software name, or version",
+    "keywords": [
+      "search for exploits",
+      "find known exploit",
+      "exploit-db search",
+      "searchsploit command",
+      "look up exploit for software"
+    ]
+  },
+  {
+    "tool": "searchsploit",
+    "command": "searchsploit -m <exploit-id>",
+    "desc": "copies (mirrors) a specific exploit's source code to the current directory",
+    "keywords": [
+      "copy exploit code",
+      "download exploit locally",
+      "searchsploit mirror exploit"
+    ]
+  },
+  {
+    "tool": "searchsploit",
+    "command": "searchsploit -x <exploit-id>",
+    "desc": "displays an exploit's source code without copying it, useful for a quick read",
+    "keywords": [
+      "view exploit code",
+      "examine exploit",
+      "searchsploit read exploit"
+    ]
+  },
+  {
+    "tool": "ssh",
+    "command": "ssh -L <local-port>:<target-ip>:<target-port> <user>@<ssh-host>",
+    "desc": "local port forwarding, makes a remote service reachable through a local port on your machine",
+    "keywords": [
+      "local port forward",
+      "ssh tunnel local",
+      "access internal service through ssh",
+      "pivot to internal network"
+    ]
+  },
+  {
+    "tool": "ssh",
+    "command": "ssh -R <remote-port>:<local-ip>:<local-port> <user>@<ssh-host>",
+    "desc": "remote port forwarding, exposes a local service to the remote ssh server",
+    "keywords": [
+      "remote port forward",
+      "ssh reverse tunnel",
+      "expose local service remotely"
+    ]
+  },
+  {
+    "tool": "ssh",
+    "command": "ssh -D <local-port> <user>@<ssh-host>",
+    "desc": "dynamic port forwarding, turns the ssh connection into a socks proxy for routing traffic through it",
+    "keywords": [
+      "dynamic port forward",
+      "ssh socks proxy",
+      "create socks proxy",
+      "pivot through ssh"
+    ]
+  },
+  {
+    "tool": "proxychains",
+    "command": "proxychains <command>",
+    "desc": "routes a command's network traffic through a chain of configured proxies, often paired with an ssh socks tunnel",
+    "keywords": [
+      "route traffic through proxy",
+      "proxychains pivoting",
+      "run tool through socks proxy",
+      "chain proxies"
+    ]
+  },
+  {
+    "tool": "python3",
+    "command": "python3 -m http.server <port>",
+    "desc": "starts a simple web server in the current directory, useful for quickly transferring files to or from a target",
+    "keywords": [
+      "quick file transfer server",
+      "python simple http server",
+      "serve files for download",
+      "transfer files ctf"
+    ]
+  },
+  {
+    "tool": "scp",
+    "command": "scp <file> <user>@<remote-host>:<remote-path>",
+    "desc": "copies a file from the local machine to a remote host over ssh",
+    "keywords": [
+      "copy file to remote host",
+      "upload file over ssh",
+      "scp upload"
+    ]
+  },
+  {
+    "tool": "scp",
+    "command": "scp <user>@<remote-host>:<remote-path> <local-path>",
+    "desc": "copies a file from a remote host to the local machine over ssh",
+    "keywords": [
+      "download file from remote host",
+      "copy file from server",
+      "scp download"
+    ]
+  },
+  {
+    "tool": "hashid",
+    "command": "hashid <hash-string>",
+    "desc": "analyzes a hash string and lists the possible hash algorithms it could be",
+    "keywords": [
+      "identify hash type",
+      "what type of hash is this",
+      "hashid command",
+      "determine hash algorithm"
+    ]
+  },
+  {
+    "tool": "hash-identifier",
+    "command": "hash-identifier",
+    "desc": "interactive tool that prompts for a hash and lists the possible algorithms it matches",
+    "keywords": [
+      "interactive hash identifier",
+      "identify hash algorithm interactive",
+      "hash-identifier tool"
+    ]
+  },
+  {
+    "tool": "base64",
+    "command": "base64 <file>",
+    "desc": "encodes a file's contents into base64 text",
+    "keywords": [
+      "encode file to base64",
+      "base64 encode command",
+      "convert file to base64"
+    ]
+  },
+  {
+    "tool": "base64",
+    "command": "base64 -d <encoded-file>",
+    "desc": "decodes a base64 encoded file back into its original form",
+    "keywords": [
+      "decode base64",
+      "base64 decode command",
+      "convert base64 back to file"
+    ]
+  },
+  {
+    "tool": "xxd",
+    "command": "xxd <file>",
+    "desc": "shows a hexadecimal and ascii dump of a file's raw bytes",
+    "keywords": [
+      "hex dump file",
+      "view raw bytes",
+      "xxd command",
+      "inspect binary file hex"
+    ]
+  },
+  {
+    "tool": "hexdump",
+    "command": "hexdump -C <file>",
+    "desc": "shows a canonical hex plus ascii dump of a file, similar to xxd",
+    "keywords": [
+      "hexdump file",
+      "canonical hex dump",
+      "view file in hex and ascii"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl s_client -connect <target-ip>:<port>",
+    "desc": "connects to a service over ssl/tls and displays its certificate chain and connection details",
+    "keywords": [
+      "check ssl certificate",
+      "view tls certificate details",
+      "view ssl certificate",
+      "connect to https service openssl",
+      "inspect ssl connection"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl x509 -in <cert-file> -text -noout",
+    "desc": "displays the full readable details of a certificate file (issuer, validity, subject, etc)",
+    "keywords": [
+      "view certificate details",
+      "decode certificate file",
+      "read x509 certificate",
+      "inspect cert file"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl req -x509 -newkey rsa:4096 -keyout <key-file> -out <cert-file> -days 365 -nodes",
+    "desc": "generates a new self-signed ssl certificate and private key",
+    "keywords": [
+      "create self signed certificate",
+      "generate ssl certificate",
+      "make private key and cert",
+      "openssl generate cert"
+    ]
+  },
+  {
+    "tool": "volatility",
+    "command": "volatility -f <memory-dump-file> imageinfo",
+    "desc": "identifies the operating system profile of a memory dump, needed before running other volatility plugins",
+    "keywords": [
+      "identify memory dump os",
+      "volatility imageinfo",
+      "find memory dump profile"
+    ]
+  },
+  {
+    "tool": "volatility",
+    "command": "volatility -f <memory-dump-file> --profile=<profile> pslist",
+    "desc": "lists the running processes found in a memory dump",
+    "keywords": [
+      "list processes from memory dump",
+      "volatility pslist",
+      "find running processes memory forensics"
+    ]
+  },
+  {
+    "tool": "volatility",
+    "command": "volatility -f <memory-dump-file> --profile=<profile> netscan",
+    "desc": "lists network connections found in a memory dump",
+    "keywords": [
+      "find network connections memory dump",
+      "volatility netscan",
+      "memory forensics network activity"
+    ]
+  },
+  {
+    "tool": "exiftool",
+    "command": "exiftool <file>",
+    "desc": "shows metadata embedded in a file, such as author, gps coordinates, camera model, or creation date",
+    "keywords": [
+      "view file metadata",
+      "check exif data",
+      "find gps location in photo",
+      "exiftool command",
+      "inspect hidden file info"
+    ]
   }
 ]
