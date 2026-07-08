@@ -4309,5 +4309,263 @@
       "exiftool command",
       "inspect hidden file info"
     ]
+  },
+  {
+    "tool": "airmon-ng",
+    "command": "airmon-ng",
+    "desc": "lists the wireless interfaces on the system and whether they support monitor mode",
+    "keywords": [
+      "list wireless interfaces",
+      "check wifi adapter",
+      "airmon-ng status",
+      "show wireless cards"
+    ]
+  },
+  {
+    "tool": "airmon-ng",
+    "command": "airmon-ng check kill",
+    "desc": "kills processes (like networkmanager or wpa_supplicant) that can interfere with monitor mode",
+    "keywords": [
+      "kill interfering processes",
+      "stop networkmanager",
+      "airmon check kill",
+      "fix monitor mode conflict"
+    ]
+  },
+  {
+    "tool": "airmon-ng",
+    "command": "airmon-ng start <interface>",
+    "desc": "puts a wireless interface into monitor mode so it can capture all nearby wireless traffic",
+    "keywords": [
+      "enable monitor mode",
+      "start monitor mode",
+      "airmon-ng start",
+      "put wifi card in monitor mode"
+    ]
+  },
+  {
+    "tool": "airmon-ng",
+    "command": "airmon-ng stop <interface>",
+    "desc": "takes a wireless interface out of monitor mode back to normal (managed) mode",
+    "keywords": [
+      "disable monitor mode",
+      "stop monitor mode",
+      "airmon-ng stop",
+      "return to managed mode"
+    ]
+  },
+  {
+    "tool": "airodump-ng",
+    "command": "airodump-ng <interface>",
+    "desc": "scans and lists all nearby wireless access points and connected clients",
+    "keywords": [
+      "scan for wifi networks",
+      "list nearby access points",
+      "airodump-ng scan",
+      "find wifi clients",
+      "discover wireless networks"
+    ]
+  },
+  {
+    "tool": "airodump-ng",
+    "command": "airodump-ng -c <channel> --bssid <bssid> -w <output-file> <interface>",
+    "desc": "captures traffic from one specific access point on its channel and saves it to a file, used to capture the wpa handshake",
+    "keywords": [
+      "capture wpa handshake",
+      "targeted airodump capture",
+      "capture traffic from specific ap",
+      "save handshake to file"
+    ]
+  },
+  {
+    "tool": "airodump-ng",
+    "command": "airodump-ng --band abg <interface>",
+    "desc": "scans both 2.4ghz and 5ghz bands for wireless networks",
+    "keywords": [
+      "scan 5ghz wifi",
+      "scan all wifi bands",
+      "airodump-ng band option",
+      "find 5ghz networks"
+    ]
+  },
+  {
+    "tool": "aireplay-ng",
+    "command": "aireplay-ng -9 <interface>",
+    "desc": "tests whether the wireless card and driver support packet injection",
+    "keywords": [
+      "test packet injection",
+      "check injection support",
+      "aireplay-ng injection test"
+    ]
+  },
+  {
+    "tool": "aireplay-ng",
+    "command": "aireplay-ng --deauth <count> -a <bssid> <interface>",
+    "desc": "sends deauthentication packets to all clients on an access point, forcing them to reconnect and reveal the wpa handshake",
+    "keywords": [
+      "deauth attack",
+      "broadcast deauth",
+      "force wifi reconnect",
+      "capture wpa handshake",
+      "aireplay deauth all clients"
+    ]
+  },
+  {
+    "tool": "aireplay-ng",
+    "command": "aireplay-ng --deauth <count> -a <bssid> -c <client-mac> <interface>",
+    "desc": "sends deauthentication packets targeted at one specific client instead of the whole network",
+    "keywords": [
+      "targeted deauth attack",
+      "deauth specific client",
+      "kick single client off wifi"
+    ]
+  },
+  {
+    "tool": "aireplay-ng",
+    "command": "aireplay-ng --fakeauth <delay> -a <bssid> <interface>",
+    "desc": "performs a fake authentication with a wep access point so the card is allowed to send packets to it",
+    "keywords": [
+      "fake authentication wep",
+      "wep fake auth attack",
+      "associate with wep ap"
+    ]
+  },
+  {
+    "tool": "aireplay-ng",
+    "command": "aireplay-ng --arpreplay -b <bssid> -h <client-mac> <interface>",
+    "desc": "replays captured arp packets to generate new traffic, used to speed up wep key cracking",
+    "keywords": [
+      "arp replay attack",
+      "speed up wep cracking",
+      "generate wep traffic",
+      "aireplay arp replay"
+    ]
+  },
+  {
+    "tool": "aircrack-ng",
+    "command": "aircrack-ng <capture-file.cap> -w <wordlist-file>",
+    "desc": "cracks a captured wpa/wpa2 handshake using a wordlist (dictionary attack)",
+    "keywords": [
+      "crack wifi password",
+      "crack wpa handshake",
+      "aircrack-ng wordlist attack",
+      "crack wpa2 password"
+    ]
+  },
+  {
+    "tool": "aircrack-ng",
+    "command": "aircrack-ng -b <bssid> <capture-file.cap> -w <wordlist-file>",
+    "desc": "cracks the handshake for one specific network (by bssid) when the capture file contains multiple networks",
+    "keywords": [
+      "crack specific network handshake",
+      "aircrack-ng bssid filter",
+      "target one network in capture"
+    ]
+  },
+  {
+    "tool": "aircrack-ng",
+    "command": "aircrack-ng <capture-file.cap> -J <output-file>",
+    "desc": "converts a captured handshake into hashcat-compatible format for gpu-accelerated cracking",
+    "keywords": [
+      "convert handshake to hashcat",
+      "aircrack-ng export hashcat",
+      "prepare handshake for hashcat"
+    ]
+  },
+  {
+    "tool": "airbase-ng",
+    "command": "airbase-ng -e <ssid-name> -c <channel> <interface>",
+    "desc": "creates a fake (rogue) access point with a chosen name, useful for phishing or evil twin attacks",
+    "keywords": [
+      "create fake access point",
+      "rogue ap",
+      "evil twin attack",
+      "airbase-ng fake wifi"
+    ]
+  },
+  {
+    "tool": "airdecap-ng",
+    "command": "airdecap-ng -w <wep-key> <capture-file.cap>",
+    "desc": "decrypts a wep-encrypted capture file using the known key",
+    "keywords": [
+      "decrypt wep capture",
+      "airdecap-ng wep",
+      "remove wep encryption from capture"
+    ]
+  },
+  {
+    "tool": "airdecap-ng",
+    "command": "airdecap-ng -p <wpa-password> -e <ssid> <capture-file.cap>",
+    "desc": "decrypts a wpa/wpa2 capture file using the known password and network name",
+    "keywords": [
+      "decrypt wpa capture",
+      "airdecap-ng wpa",
+      "remove wpa encryption from capture",
+      "view decrypted wifi traffic"
+    ]
+  },
+  {
+    "tool": "airolib-ng",
+    "command": "airolib-ng <database-file> --import essid <essid-file>",
+    "desc": "imports a list of network names (essids) into an airolib-ng database",
+    "keywords": [
+      "import essid list",
+      "airolib-ng database setup",
+      "add network names to database"
+    ]
+  },
+  {
+    "tool": "airolib-ng",
+    "command": "airolib-ng <database-file> --import passwd <wordlist-file>",
+    "desc": "imports a wordlist of passwords into an airolib-ng database",
+    "keywords": [
+      "import password list airolib",
+      "add wordlist to database",
+      "airolib-ng import passwords"
+    ]
+  },
+  {
+    "tool": "airolib-ng",
+    "command": "airolib-ng <database-file> --batch",
+    "desc": "precomputes the pairwise master keys (pmk) for every essid/password combination, speeding up future cracking",
+    "keywords": [
+      "precompute pmk",
+      "batch process airolib",
+      "speed up future wpa cracking",
+      "generate pmk database"
+    ]
+  },
+  {
+    "tool": "besside-ng",
+    "command": "besside-ng <interface>",
+    "desc": "automatically finds nearby networks, captures wep keys or wpa handshakes, and saves them without manual steps",
+    "keywords": [
+      "automated wifi cracking",
+      "besside-ng auto attack",
+      "automatic handshake capture",
+      "hands off wifi cracking"
+    ]
+  },
+  {
+    "tool": "wpaclean",
+    "command": "wpaclean <output-file> <capture-file.cap>",
+    "desc": "cleans a large capture file down to only the packets needed for a handshake, making it smaller and faster to crack",
+    "keywords": [
+      "clean capture file",
+      "reduce handshake file size",
+      "wpaclean command",
+      "trim capture file"
+    ]
+  },
+  {
+    "tool": "packetforge-ng",
+    "command": "packetforge-ng --arp -a <bssid> -h <client-mac> -k <dest-ip> -l <source-ip> -y <xor-file> -w <output-file>",
+    "desc": "forges a custom arp packet for injection, used together with the arp replay attack against wep",
+    "keywords": [
+      "forge arp packet",
+      "packetforge-ng arp",
+      "create packet for wep attack",
+      "craft injection packet"
+    ]
   }
 ]
