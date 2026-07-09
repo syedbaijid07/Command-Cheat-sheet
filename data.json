@@ -4584,5 +4584,191 @@
       "evil twin 4 steps",
       "exam question evil twin"
     ]
+  },
+  {
+    "tool": "nikto",
+    "command": "nikto -h <target-url> -p <port>",
+    "desc": "scans a web server on a specific non-standard port",
+    "keywords": [
+      "nikto scan custom port",
+      "scan web server on specific port",
+      "nikto port option"
+    ]
+  },
+  {
+    "tool": "nikto",
+    "command": "nikto -h <target-url> -ssl",
+    "desc": "forces nikto to scan the target over ssl/https",
+    "keywords": [
+      "nikto ssl scan",
+      "force https scan",
+      "scan ssl web server",
+      "nikto https option"
+    ]
+  },
+  {
+    "tool": "nikto",
+    "command": "nikto -h <target-url> -nossl",
+    "desc": "forces nikto to scan the target without ssl, even if it would auto-detect https",
+    "keywords": [
+      "nikto disable ssl",
+      "force http scan",
+      "skip ssl nikto"
+    ]
+  },
+  {
+    "tool": "nikto",
+    "command": "nikto -h <target-url> -o <output-file>",
+    "desc": "saves the scan results to a file, format is guessed from the file extension",
+    "keywords": [
+      "save nikto scan results",
+      "nikto output to file",
+      "export nikto report"
+    ]
+  },
+  {
+    "tool": "nikto",
+    "command": "nikto -h <target-url> -o <output-file> -Format htm",
+    "desc": "saves the scan results as a formatted html report",
+    "keywords": [
+      "nikto html report",
+      "save scan as html",
+      "nikto output format html"
+    ]
+  },
+  {
+    "tool": "nikto",
+    "command": "nikto -h <target-url> -Tuning <tuning-codes>",
+    "desc": "limits the scan to specific vulnerability categories using tuning codes (e.g. 9 for sql injection, 8 for command execution)",
+    "keywords": [
+      "nikto tuning option",
+      "scan specific vulnerability type",
+      "nikto sql injection tuning",
+      "targeted nikto scan",
+      "limit scan categories"
+    ]
+  },
+  {
+    "tool": "nikto",
+    "command": "nikto -h <target-url> -Cgidirs all",
+    "desc": "checks all common cgi-bin directories for vulnerable scripts",
+    "keywords": [
+      "nikto cgi scan",
+      "check cgi-bin directories",
+      "scan cgi scripts"
+    ]
+  },
+  {
+    "tool": "nikto",
+    "command": "nikto -h <target-url> -evasion <evasion-technique>",
+    "desc": "applies an ids/ips evasion technique (like url encoding or directory self-reference) while scanning",
+    "keywords": [
+      "nikto ids evasion",
+      "bypass ids nikto",
+      "evasion technique scan",
+      "nikto stealth scan"
+    ]
+  },
+  {
+    "tool": "nikto",
+    "command": "nikto -h <target-url> -useproxy <proxy-url>",
+    "desc": "routes the nikto scan through a proxy server",
+    "keywords": [
+      "nikto scan through proxy",
+      "proxy web scan",
+      "route nikto traffic"
+    ]
+  },
+  {
+    "tool": "nikto",
+    "command": "nikto -h <target-url> -id <username:password>",
+    "desc": "supplies basic authentication credentials so nikto can scan password protected areas of a site",
+    "keywords": [
+      "nikto basic auth",
+      "scan password protected site",
+      "nikto with credentials",
+      "authenticated web scan"
+    ]
+  },
+  {
+    "tool": "nikto",
+    "command": "nikto -h <target-url> -timeout <seconds>",
+    "desc": "sets how long nikto waits for a response before timing out a single request",
+    "keywords": [
+      "nikto request timeout",
+      "set nikto timeout",
+      "adjust response wait time"
+    ]
+  },
+  {
+    "tool": "nikto",
+    "command": "nikto -h <target-url> -maxtime <time>",
+    "desc": "limits the total run time of the scan, e.g. 30s, 1h, before nikto stops itself",
+    "keywords": [
+      "limit nikto scan duration",
+      "nikto maxtime option",
+      "stop scan after time limit"
+    ]
+  },
+  {
+    "tool": "nikto",
+    "command": "nikto -h <target-url> -vhost <hostname>",
+    "desc": "scans a specific virtual host on a server that hosts multiple websites on one ip",
+    "keywords": [
+      "nikto virtual host scan",
+      "scan specific vhost",
+      "multiple sites one ip scan"
+    ]
+  },
+  {
+    "tool": "nikto",
+    "command": "nikto -h <target-url> -mutate <mutation-technique>",
+    "desc": "guesses additional files, usernames, or subdomains using a chosen mutation technique",
+    "keywords": [
+      "nikto mutation technique",
+      "guess hidden files nikto",
+      "nikto subdomain guessing",
+      "mutate scan option"
+    ]
+  },
+  {
+    "tool": "nikto",
+    "command": "nikto -h <target-url> -Display V",
+    "desc": "shows verbose output, including every item tested, not just the vulnerabilities found",
+    "keywords": [
+      "nikto verbose output",
+      "show all tested items",
+      "nikto display option"
+    ]
+  },
+  {
+    "tool": "nikto",
+    "command": "nikto -update",
+    "desc": "updates nikto's vulnerability database and plugins to the latest version",
+    "keywords": [
+      "update nikto database",
+      "update nikto plugins",
+      "refresh nikto signatures"
+    ]
+  },
+  {
+    "tool": "nikto",
+    "command": "nikto -list-plugins",
+    "desc": "lists all plugins available in the current nikto installation",
+    "keywords": [
+      "list nikto plugins",
+      "show available nikto plugins",
+      "nikto plugin list"
+    ]
+  },
+  {
+    "tool": "nikto",
+    "command": "nikto -Help",
+    "desc": "shows the full list of nikto command line options",
+    "keywords": [
+      "nikto help menu",
+      "show all nikto options",
+      "nikto usage help"
+    ]
   }
 ]
