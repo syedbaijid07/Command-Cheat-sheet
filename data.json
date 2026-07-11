@@ -4918,5 +4918,523 @@
       "live hosts to url discovery",
       "chain httpx and gau"
     ]
+  },
+  {
+    "tool": "dig",
+    "command": "dig -x <ip>",
+    "desc": "finds the domain name for a given ip address (reverse dns lookup)",
+    "keywords": [
+      "ip to domain",
+      "find domain from ip",
+      "reverse dns",
+      "reverse lookup"
+    ]
+  },
+  {
+    "tool": "dig",
+    "command": "dig <domain> +short",
+    "desc": "finds the ip address for a given domain name",
+    "keywords": [
+      "domain to ip",
+      "find ip from domain",
+      "forward dns",
+      "resolve domain"
+    ]
+  },
+  {
+    "tool": "host",
+    "command": "host <ip>",
+    "desc": "finds the domain name for a given ip address (reverse dns lookup)",
+    "keywords": [
+      "ip to domain",
+      "find domain from ip",
+      "reverse dns"
+    ]
+  },
+  {
+    "tool": "host",
+    "command": "host <domain>",
+    "desc": "finds the ip address for a given domain name",
+    "keywords": [
+      "domain to ip",
+      "find ip from domain",
+      "resolve domain"
+    ]
+  },
+  {
+    "tool": "nslookup",
+    "command": "nslookup <ip>",
+    "desc": "finds the domain name for a given ip address (reverse dns lookup)",
+    "keywords": [
+      "ip to domain",
+      "find domain from ip",
+      "reverse dns"
+    ]
+  },
+  {
+    "tool": "nslookup",
+    "command": "nslookup <domain>",
+    "desc": "finds the ip address for a given domain name",
+    "keywords": [
+      "domain to ip",
+      "find ip from domain",
+      "resolve domain"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl enc -aes-256-cbc -salt -in <file> -out <encrypted-file> -pass pass:<password>",
+    "desc": "encrypts a file using aes-256 with a password, providing confidentiality",
+    "keywords": [
+      "encrypt file with password",
+      "aes encryption command",
+      "openssl encrypt file",
+      "confidentiality encryption"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl enc -aes-256-cbc -d -in <encrypted-file> -out <decrypted-file> -pass pass:<password>",
+    "desc": "decrypts a file that was encrypted with aes-256 using the same password",
+    "keywords": [
+      "decrypt file with password",
+      "aes decryption command",
+      "openssl decrypt file"
+    ]
+  },
+  {
+    "tool": "gpg",
+    "command": "gpg -c <file>",
+    "desc": "symmetrically encrypts a file using a passphrase (no key pair needed)",
+    "keywords": [
+      "gpg symmetric encryption",
+      "encrypt file with passphrase",
+      "gpg password encrypt"
+    ]
+  },
+  {
+    "tool": "gpg",
+    "command": "gpg <encrypted-file>.gpg",
+    "desc": "decrypts a gpg encrypted file, prompting for the passphrase or using the matching private key",
+    "keywords": [
+      "gpg decrypt file",
+      "decrypt gpg encrypted file",
+      "open gpg file"
+    ]
+  },
+  {
+    "tool": "ccrypt",
+    "command": "ccrypt -e <file>",
+    "desc": "encrypts a file using ccrypt, prompting for a passphrase",
+    "keywords": [
+      "ccrypt encrypt file",
+      "encrypt with ccrypt",
+      "simple file encryption"
+    ]
+  },
+  {
+    "tool": "ccrypt",
+    "command": "ccrypt -d <file>",
+    "desc": "decrypts a file that was encrypted with ccrypt",
+    "keywords": [
+      "ccrypt decrypt file",
+      "decrypt with ccrypt"
+    ]
+  },
+  {
+    "tool": "gpg",
+    "command": "gpg --gen-key",
+    "desc": "generates a new gpg public/private key pair",
+    "keywords": [
+      "generate gpg key pair",
+      "create pgp keys",
+      "gpg gen-key command",
+      "make public private key"
+    ]
+  },
+  {
+    "tool": "gpg",
+    "command": "gpg -e -r <recipient> <file>",
+    "desc": "encrypts a file using the recipient's public key, so only their private key can decrypt it",
+    "keywords": [
+      "gpg encrypt for recipient",
+      "public key encryption",
+      "encrypt file for someone",
+      "asymmetric encryption gpg"
+    ]
+  },
+  {
+    "tool": "gpg",
+    "command": "gpg -d <encrypted-file>.gpg -o <output-file>",
+    "desc": "decrypts a gpg file using your private key and saves it to a chosen output file",
+    "keywords": [
+      "gpg decrypt to file",
+      "decrypt with private key",
+      "gpg output decrypted file"
+    ]
+  },
+  {
+    "tool": "gpg",
+    "command": "gpg --list-keys",
+    "desc": "lists all public keys currently in your gpg keyring",
+    "keywords": [
+      "list gpg keys",
+      "show public keys",
+      "view gpg keyring"
+    ]
+  },
+  {
+    "tool": "gpg",
+    "command": "gpg --export -a <key-id> > public.key",
+    "desc": "exports a public key in ascii-armored format so it can be shared with others",
+    "keywords": [
+      "export gpg public key",
+      "share public key",
+      "gpg export ascii armor"
+    ]
+  },
+  {
+    "tool": "gpg",
+    "command": "gpg --import <key-file>",
+    "desc": "imports someone else's public key into your gpg keyring so you can encrypt files for them or verify their signatures",
+    "keywords": [
+      "import gpg public key",
+      "add public key to keyring",
+      "gpg import command"
+    ]
+  },
+  {
+    "tool": "sha1sum",
+    "command": "sha1sum <file>",
+    "desc": "calculates the sha1 hash of a file, used to verify it hasn't been altered",
+    "keywords": [
+      "sha1 hash file",
+      "check file integrity sha1",
+      "sha1sum command"
+    ]
+  },
+  {
+    "tool": "sha512sum",
+    "command": "sha512sum <file>",
+    "desc": "calculates the sha512 hash of a file, a stronger alternative to sha1 or md5 for integrity checks",
+    "keywords": [
+      "sha512 hash file",
+      "check file integrity sha512",
+      "sha512sum command"
+    ]
+  },
+  {
+    "tool": "cksum",
+    "command": "cksum <file>",
+    "desc": "calculates a crc checksum and byte count of a file, a simple integrity check",
+    "keywords": [
+      "cksum command",
+      "checksum file",
+      "crc checksum",
+      "simple file integrity check"
+    ]
+  },
+  {
+    "tool": "gpg",
+    "command": "gpg --verify <signature-file> <file>",
+    "desc": "verifies a file's digital signature to confirm both its integrity and the identity of the signer",
+    "keywords": [
+      "verify digital signature",
+      "gpg verify file",
+      "check file authenticity",
+      "verify integrity and origin"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl rand -hex <number-of-bytes>",
+    "desc": "generates a random hex string, useful for keys, tokens, or passwords",
+    "keywords": [
+      "generate random hex",
+      "create random key",
+      "openssl rand command",
+      "generate secure token"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl passwd -6 <password>",
+    "desc": "generates a sha-512 crypt-style password hash, the format used in linux /etc/shadow",
+    "keywords": [
+      "generate password hash",
+      "create shadow file hash",
+      "openssl passwd command",
+      "linux password hash"
+    ]
+  },
+  {
+    "tool": "ssh-keygen",
+    "command": "ssh-keygen -t rsa -b 4096",
+    "desc": "generates a new rsa public/private key pair, commonly used for ssh authentication",
+    "keywords": [
+      "generate ssh key pair",
+      "create rsa keys",
+      "ssh-keygen command",
+      "make ssh public private key"
+    ]
+  },
+  {
+    "tool": "dig",
+    "command": "dig -x <ip>",
+    "desc": "finds the domain name for a given ip address (reverse dns lookup)",
+    "keywords": [
+      "ip to domain",
+      "find domain from ip",
+      "reverse dns",
+      "reverse lookup"
+    ]
+  },
+  {
+    "tool": "dig",
+    "command": "dig <domain> +short",
+    "desc": "finds the ip address for a given domain name",
+    "keywords": [
+      "domain to ip",
+      "find ip from domain",
+      "forward dns",
+      "resolve domain"
+    ]
+  },
+  {
+    "tool": "host",
+    "command": "host <ip>",
+    "desc": "finds the domain name for a given ip address (reverse dns lookup)",
+    "keywords": [
+      "ip to domain",
+      "find domain from ip",
+      "reverse dns"
+    ]
+  },
+  {
+    "tool": "host",
+    "command": "host <domain>",
+    "desc": "finds the ip address for a given domain name",
+    "keywords": [
+      "domain to ip",
+      "find ip from domain",
+      "resolve domain"
+    ]
+  },
+  {
+    "tool": "nslookup",
+    "command": "nslookup <ip>",
+    "desc": "finds the domain name for a given ip address (reverse dns lookup)",
+    "keywords": [
+      "ip to domain",
+      "find domain from ip",
+      "reverse dns"
+    ]
+  },
+  {
+    "tool": "nslookup",
+    "command": "nslookup <domain>",
+    "desc": "finds the ip address for a given domain name",
+    "keywords": [
+      "domain to ip",
+      "find ip from domain",
+      "resolve domain"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl enc -aes-256-cbc -salt -in <file> -out <encrypted-file> -pass pass:<password>",
+    "desc": "encrypts a file using aes-256 with a password, providing confidentiality",
+    "keywords": [
+      "encrypt file with password",
+      "aes encryption command",
+      "openssl encrypt file",
+      "confidentiality encryption"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl enc -aes-256-cbc -d -in <encrypted-file> -out <decrypted-file> -pass pass:<password>",
+    "desc": "decrypts a file that was encrypted with aes-256 using the same password",
+    "keywords": [
+      "decrypt file with password",
+      "aes decryption command",
+      "openssl decrypt file"
+    ]
+  },
+  {
+    "tool": "gpg",
+    "command": "gpg -c <file>",
+    "desc": "symmetrically encrypts a file using a passphrase (no key pair needed)",
+    "keywords": [
+      "gpg symmetric encryption",
+      "encrypt file with passphrase",
+      "gpg password encrypt"
+    ]
+  },
+  {
+    "tool": "gpg",
+    "command": "gpg <encrypted-file>.gpg",
+    "desc": "decrypts a gpg encrypted file, prompting for the passphrase or using the matching private key",
+    "keywords": [
+      "gpg decrypt file",
+      "decrypt gpg encrypted file",
+      "open gpg file"
+    ]
+  },
+  {
+    "tool": "ccrypt",
+    "command": "ccrypt -e <file>",
+    "desc": "encrypts a file using ccrypt, prompting for a passphrase",
+    "keywords": [
+      "ccrypt encrypt file",
+      "encrypt with ccrypt",
+      "simple file encryption"
+    ]
+  },
+  {
+    "tool": "ccrypt",
+    "command": "ccrypt -d <file>",
+    "desc": "decrypts a file that was encrypted with ccrypt",
+    "keywords": [
+      "ccrypt decrypt file",
+      "decrypt with ccrypt"
+    ]
+  },
+  {
+    "tool": "gpg",
+    "command": "gpg --gen-key",
+    "desc": "generates a new gpg public/private key pair",
+    "keywords": [
+      "generate gpg key pair",
+      "create pgp keys",
+      "gpg gen-key command",
+      "make public private key"
+    ]
+  },
+  {
+    "tool": "gpg",
+    "command": "gpg -e -r <recipient> <file>",
+    "desc": "encrypts a file using the recipient's public key, so only their private key can decrypt it",
+    "keywords": [
+      "gpg encrypt for recipient",
+      "public key encryption",
+      "encrypt file for someone",
+      "asymmetric encryption gpg"
+    ]
+  },
+  {
+    "tool": "gpg",
+    "command": "gpg -d <encrypted-file>.gpg -o <output-file>",
+    "desc": "decrypts a gpg file using your private key and saves it to a chosen output file",
+    "keywords": [
+      "gpg decrypt to file",
+      "decrypt with private key",
+      "gpg output decrypted file"
+    ]
+  },
+  {
+    "tool": "gpg",
+    "command": "gpg --list-keys",
+    "desc": "lists all public keys currently in your gpg keyring",
+    "keywords": [
+      "list gpg keys",
+      "show public keys",
+      "view gpg keyring"
+    ]
+  },
+  {
+    "tool": "gpg",
+    "command": "gpg --export -a <key-id> > public.key",
+    "desc": "exports a public key in ascii-armored format so it can be shared with others",
+    "keywords": [
+      "export gpg public key",
+      "share public key",
+      "gpg export ascii armor"
+    ]
+  },
+  {
+    "tool": "gpg",
+    "command": "gpg --import <key-file>",
+    "desc": "imports someone else's public key into your gpg keyring so you can encrypt files for them or verify their signatures",
+    "keywords": [
+      "import gpg public key",
+      "add public key to keyring",
+      "gpg import command"
+    ]
+  },
+  {
+    "tool": "sha1sum",
+    "command": "sha1sum <file>",
+    "desc": "calculates the sha1 hash of a file, used to verify it hasn't been altered",
+    "keywords": [
+      "sha1 hash file",
+      "check file integrity sha1",
+      "sha1sum command"
+    ]
+  },
+  {
+    "tool": "sha512sum",
+    "command": "sha512sum <file>",
+    "desc": "calculates the sha512 hash of a file, a stronger alternative to sha1 or md5 for integrity checks",
+    "keywords": [
+      "sha512 hash file",
+      "check file integrity sha512",
+      "sha512sum command"
+    ]
+  },
+  {
+    "tool": "cksum",
+    "command": "cksum <file>",
+    "desc": "calculates a crc checksum and byte count of a file, a simple integrity check",
+    "keywords": [
+      "cksum command",
+      "checksum file",
+      "crc checksum",
+      "simple file integrity check"
+    ]
+  },
+  {
+    "tool": "gpg",
+    "command": "gpg --verify <signature-file> <file>",
+    "desc": "verifies a file's digital signature to confirm both its integrity and the identity of the signer",
+    "keywords": [
+      "verify digital signature",
+      "gpg verify file",
+      "check file authenticity",
+      "verify integrity and origin"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl rand -hex <number-of-bytes>",
+    "desc": "generates a random hex string, useful for keys, tokens, or passwords",
+    "keywords": [
+      "generate random hex",
+      "create random key",
+      "openssl rand command",
+      "generate secure token"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl passwd -6 <password>",
+    "desc": "generates a sha-512 crypt-style password hash, the format used in linux /etc/shadow",
+    "keywords": [
+      "generate password hash",
+      "create shadow file hash",
+      "openssl passwd command",
+      "linux password hash"
+    ]
+  },
+  {
+    "tool": "ssh-keygen",
+    "command": "ssh-keygen -t rsa -b 4096",
+    "desc": "generates a new rsa public/private key pair, commonly used for ssh authentication",
+    "keywords": [
+      "generate ssh key pair",
+      "create rsa keys",
+      "ssh-keygen command",
+      "make ssh public private key"
+    ]
   }
 ]

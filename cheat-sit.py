@@ -29,35 +29,308 @@ try:
     from prompt_toolkit import prompt
     from prompt_toolkit.completion import Completer, Completion
     from prompt_toolkit.shortcuts import CompleteStyle
+    from prompt_toolkit.styles import Style
 except ImportError:
     print("prompt_toolkit not installed. Run: pip install prompt_toolkit --break-system-packages")
     sys.exit(1)
 
+VERSION = "2.0"
+
+RESET = "\033[0m"
 BOLD = "\033[1m"
 DIM = "\033[2m"
 CYAN = "\033[36m"
 YELLOW = "\033[33m"
 RED = "\033[31m"
 GREEN = "\033[32m"
-RESET = "\033[0m"
+MAGENTA = "\033[35m"
+BLUE = "\033[34m"
+WHITE = "\033[37m"
+BG_BLACK = "\033[40m"
+
+THEMES = {
+    "default": {
+        "label": "Default (Normal)",
+        "bold": "\033[1m",
+        "dim": "\033[2m",
+        "primary": "\033[36m",
+        "secondary": "\033[33m",
+        "accent": "\033[35m",
+        "success": "\033[32m",
+        "error": "\033[31m",
+        "muted": "\033[90m",
+        "highlight": "\033[97m",
+        "border": "\033[36m",
+        "prompt": "cheat",
+        "banner": (
+            "  ____ _   _ _____    _  _____       ___ ___ _____ \n"
+            " / ___| | | | ____|  / \\|_   _|     / __|_ _|_   _|\n"
+            "| |   | |_| |  _|   / _ \\ | | _____ \\__ \\| |  | |  \n"
+            "| |___|  _  | |___ / ___ \\| | |_____|___/| |  | |  \n"
+            " \\____|_| |_|_____/_/   \\_\\_|       |___/___| |_|  "
+        ),
+        "prompt_style": Style.from_dict({
+            "prompt": "bold fg:#00ffff",
+            "completion-menu": "bg:#1e1e2e fg:#cdd6f4",
+            "completion-menu.completion": "fg:#89b4fa",
+            "completion-menu.completion.current": "bg:#45475a fg:#f9e2af bold",
+            "completion-menu.meta": "fg:#6c7086",
+            "completion-menu.meta.current": "fg:#a6adc8",
+        }),
+    },
+    "light": {
+        "label": "Light",
+        "bold": "\033[1m",
+        "dim": "\033[2m",
+        "primary": "\033[34m",
+        "secondary": "\033[35m",
+        "accent": "\033[36m",
+        "success": "\033[32m",
+        "error": "\033[31m",
+        "muted": "\033[90m",
+        "highlight": "\033[97m",
+        "border": "\033[34m",
+        "prompt": "cheat",
+        "banner": (
+            "  ╔══════════════════════════════════════╗\n"
+            "  ║       CHEAT-SIT  ·  LIGHT MODE       ║\n"
+            "  ╚══════════════════════════════════════╝"
+        ),
+        "prompt_style": Style.from_dict({
+            "prompt": "bold fg:#1e66f5",
+            "completion-menu": "bg:#eff1f5 fg:#4c4f69",
+            "completion-menu.completion": "fg:#1e66f5",
+            "completion-menu.completion.current": "bg:#ccd0da fg:#8839ef bold",
+            "completion-menu.meta": "fg:#9ca0b0",
+            "completion-menu.meta.current": "fg:#6c6f85",
+        }),
+    },
+    "dark": {
+        "label": "Dark",
+        "bold": "\033[1m",
+        "dim": "\033[2m",
+        "primary": "\033[90m",
+        "secondary": "\033[37m",
+        "accent": "\033[97m",
+        "success": "\033[32m",
+        "error": "\033[31m",
+        "muted": "\033[2;37m",
+        "highlight": "\033[1;37m",
+        "border": "\033[90m",
+        "prompt": "cheat",
+        "banner": (
+            "  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓\n"
+            "  ▓  C H E A T - S I T  ·  D A R K  ▓\n"
+            "  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"
+        ),
+        "prompt_style": Style.from_dict({
+            "prompt": "bold fg:#a6adc8",
+            "completion-menu": "bg:#11111b fg:#bac2de",
+            "completion-menu.completion": "fg:#89b4fa",
+            "completion-menu.completion.current": "bg:#313244 fg:#cdd6f4 bold",
+            "completion-menu.meta": "fg:#585b70",
+            "completion-menu.meta.current": "fg:#7f849c",
+        }),
+    },
+    "colorful": {
+        "label": "Colorful",
+        "bold": "\033[1m",
+        "dim": "\033[2m",
+        "primary": "\033[96m",
+        "secondary": "\033[93m",
+        "accent": "\033[95m",
+        "success": "\033[92m",
+        "error": "\033[91m",
+        "muted": "\033[2m",
+        "highlight": "\033[1;97m",
+        "border": "\033[95m",
+        "prompt": "cheat",
+        "banner": (
+            "  \033[91m█\033[93m█\033[92m█\033[96m█\033[94m█\033[95m█  CHEAT-SIT  \033[91m█\033[93m█\033[92m█\033[96m█\033[94m█\033[95m█\n"
+            "       \033[96m╭─────────────────────────────╮\033[0m\n"
+            "       \033[93m│  \033[92mR\033[96mA\033[95mI\033[94mN\033[91mB\033[93mO\033[92mW\033[96m  \033[95mM\033[94mO\033[91mD\033[93mE\033[92m  \033[93m│\033[0m\n"
+            "       \033[96m╰─────────────────────────────╯\033[0m"
+        ),
+        "prompt_style": Style.from_dict({
+            "prompt": "bold fg:#f5c2e7",
+            "completion-menu": "bg:#1e1e2e fg:#cdd6f4",
+            "completion-menu.completion": "fg:#89dceb",
+            "completion-menu.completion.current": "bg:#45475a fg:#f9e2af bold",
+            "completion-menu.meta": "fg:#cba6f7",
+            "completion-menu.meta.current": "fg:#fab387",
+        }),
+    },
+    "hacker": {
+        "label": "Hacker Vibe",
+        "bold": "\033[1m",
+        "dim": "\033[2m",
+        "primary": "\033[32m",
+        "secondary": "\033[92m",
+        "accent": "\033[1;32m",
+        "success": "\033[92m",
+        "error": "\033[31m",
+        "muted": "\033[2;32m",
+        "highlight": "\033[1;92m",
+        "border": "\033[32m",
+        "prompt": "root@cheat",
+        "banner": (
+            "\033[32m"
+            "  ┌─────────────────────────────────────────┐\n"
+            "  │  > ACCESS GRANTED                       │\n"
+            "  │  > INITIALIZING COMMAND MATRIX...       │\n"
+            "  │  > CHEAT-SIT v2.0 [HACKER MODE]         │\n"
+            "  └─────────────────────────────────────────┘"
+            "\033[0m"
+        ),
+        "prompt_style": Style.from_dict({
+            "prompt": "bold fg:#00ff00",
+            "completion-menu": "bg:#000000 fg:#00ff00",
+            "completion-menu.completion": "fg:#00cc00",
+            "completion-menu.completion.current": "bg:#003300 fg:#00ff00 bold",
+            "completion-menu.meta": "fg:#006600",
+            "completion-menu.meta.current": "fg:#00aa00",
+        }),
+    },
+    "anonymous": {
+        "label": "Anonymous",
+        "bold": "\033[1m",
+        "dim": "\033[2m",
+        "primary": "\033[97m",
+        "secondary": "\033[92m",
+        "accent": "\033[1;97m",
+        "success": "\033[92m",
+        "error": "\033[31m",
+        "muted": "\033[2;37m",
+        "highlight": "\033[1;97m",
+        "border": "\033[90m",
+        "prompt": "anon",
+        "banner": (
+            "\033[97m"
+            "       █████╗ ███╗   ██╗ ██████╗ ███╗   ██╗\n"
+            "      ██╔══██╗████╗  ██║██╔═══██╗████╗  ██║\n"
+            "      ███████║██╔██╗ ██║██║   ██║██╔██╗ ██║\n"
+            "      ██╔══██║██║╚██╗██║██║   ██║██║╚██╗██║\n"
+            "      ██║  ██║██║ ╚████║╚██████╔╝██║ ╚████║\n"
+            "      ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═══╝\n"
+            "\033[92m      WE ARE ANONYMOUS · WE ARE CHEAT-SIT\033[0m"
+        ),
+        "prompt_style": Style.from_dict({
+            "prompt": "bold fg:#ffffff",
+            "completion-menu": "bg:#0a0a0a fg:#ffffff",
+            "completion-menu.completion": "fg:#00ff41",
+            "completion-menu.completion.current": "bg:#1a1a1a fg:#00ff41 bold",
+            "completion-menu.meta": "fg:#555555",
+            "completion-menu.meta.current": "fg:#888888",
+        }),
+    },
+}
+
+CURRENT_THEME = THEMES["default"]
+PROMPT_STYLE = CURRENT_THEME["prompt_style"]
 
 
-# ---------- data path ----------
+def apply_theme(theme_key):
+    global CURRENT_THEME, PROMPT_STYLE, BOLD, DIM, CYAN, YELLOW, RED, GREEN, MAGENTA, BLUE, WHITE
+    theme = THEMES.get(theme_key, THEMES["default"])
+    CURRENT_THEME = theme
+    PROMPT_STYLE = theme["prompt_style"]
+    BOLD = theme["bold"]
+    DIM = theme["dim"]
+    CYAN = theme["primary"]
+    YELLOW = theme["secondary"]
+    MAGENTA = theme["accent"]
+    GREEN = theme["success"]
+    RED = theme["error"]
+    BLUE = theme["border"]
+
+
+# ---------- paths & settings ----------
+
+def cheatsheet_dir():
+    if os.environ.get("CHEAT_DATA"):
+        return os.path.dirname(os.path.abspath(os.environ["CHEAT_DATA"]))
+    home_path = os.path.expanduser("~/.cheatsheet/data.json")
+    if os.path.exists(home_path):
+        return os.path.dirname(home_path)
+    return os.path.expanduser("~/.cheatsheet")
+
+
+def bundled_data_path():
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), "data.json")
+
+
+def is_valid_data_file(path):
+    if not os.path.exists(path) or os.path.getsize(path) == 0:
+        return False
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return isinstance(data, list)
+    except (json.JSONDecodeError, OSError):
+        return False
+
 
 def data_path():
     if os.environ.get("CHEAT_DATA"):
         return os.environ["CHEAT_DATA"]
     home_path = os.path.expanduser("~/.cheatsheet/data.json")
-    if os.path.exists(home_path):
+    if os.path.isdir(os.path.dirname(home_path)):
         return home_path
-    return os.path.join(os.path.dirname(os.path.abspath(__file__)), "data.json")
+    if is_valid_data_file(home_path):
+        return home_path
+    return bundled_data_path()
+
+
+def settings_path():
+    return os.path.join(cheatsheet_dir(), "settings.json")
+
+
+def load_settings():
+    path = settings_path()
+    defaults = {"theme": "default"}
+    if not os.path.exists(path):
+        return defaults
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            saved = json.load(f)
+        if saved.get("theme") not in THEMES:
+            saved["theme"] = "default"
+        return {**defaults, **saved}
+    except (json.JSONDecodeError, OSError):
+        return defaults
+
+
+def save_settings(settings):
+    dirname = os.path.dirname(settings_path())
+    if dirname:
+        os.makedirs(dirname, exist_ok=True)
+    with open(settings_path(), "w", encoding="utf-8") as f:
+        json.dump(settings, f, indent=2, ensure_ascii=False)
+
+
+def init_theme():
+    settings = load_settings()
+    apply_theme(settings.get("theme", "default"))
+    return settings
 
 
 def load_data(path):
-    if not os.path.exists(path):
+    if is_valid_data_file(path):
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+
+    bundled = bundled_data_path()
+    if not is_valid_data_file(bundled):
         return []
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
+
+    with open(bundled, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    home_path = os.path.expanduser("~/.cheatsheet/data.json")
+    if path == home_path or (os.path.exists(path) and os.path.getsize(path) == 0):
+        save_data(home_path, data)
+        print(f"{YELLOW}Repaired empty ~/.cheatsheet/data.json from bundled copy.{RESET}")
+    return data
 
 
 def save_data(path, data):
@@ -66,6 +339,60 @@ def save_data(path, data):
         os.makedirs(dirname, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
+
+
+# ---------- UI helpers ----------
+
+def hr(char="─", width=52):
+    return f"{CURRENT_THEME['border']}{char * width}{RESET}"
+
+
+def print_banner():
+    banner = CURRENT_THEME["banner"]
+    if CURRENT_THEME is THEMES["colorful"]:
+        print(banner)
+    else:
+        print(f"{CURRENT_THEME['primary']}{BOLD}{banner}{RESET}")
+    print(f"{DIM}  v{VERSION}  ·  {len(load_data(data_path()))} commands  ·  theme: {CURRENT_THEME['label']}{RESET}")
+    print(hr())
+
+
+def print_help():
+    print(f"\n{BOLD}{CURRENT_THEME['accent']}Commands{RESET}")
+    print(f"  {CURRENT_THEME['secondary']}:setting{RESET}  {DIM}open theme & settings menu{RESET}")
+    print(f"  {CURRENT_THEME['secondary']}:add{RESET}     {DIM}add a new entry{RESET}")
+    print(f"  {CURRENT_THEME['secondary']}:import <file>{RESET}  {DIM}bulk import{RESET}")
+    print(f"  {CURRENT_THEME['secondary']}:help{RESET}    {DIM}show this help{RESET}")
+    print(f"  {CURRENT_THEME['secondary']}:clear{RESET}   {DIM}clear screen{RESET}")
+    print(f"  {CURRENT_THEME['secondary']}:quit{RESET}    {DIM}exit{RESET}")
+    print(f"\n{DIM}Type any keyword to search. Tab/Enter picks a live suggestion.{RESET}\n")
+
+
+def settings_menu(settings):
+    theme_keys = list(THEMES.keys())
+    while True:
+        print(f"\n{BOLD}{CURRENT_THEME['accent']}═══ Settings ═══{RESET}")
+        print(f"{DIM}Config file: {settings_path()}{RESET}")
+        print(f"\n{BOLD}Theme{RESET}  {DIM}(current: {CURRENT_THEME['label']}){RESET}\n")
+        for i, key in enumerate(theme_keys, 1):
+            marker = f" {GREEN}◀ active{RESET}" if settings.get("theme") == key else ""
+            print(f"  {CURRENT_THEME['secondary']}{i}.{RESET} {THEMES[key]['label']}{marker}")
+        print(f"\n{DIM}[1-{len(theme_keys)}] pick theme  ·  [b] back  ·  [h] help{RESET}")
+        choice = input(f"{CURRENT_THEME['secondary']}> {RESET}").strip().lower()
+        if choice in ("b", "back", ""):
+            return
+        if choice == "h":
+            print_help()
+            continue
+        if choice.isdigit() and 1 <= int(choice) <= len(theme_keys):
+            selected = theme_keys[int(choice) - 1]
+            settings["theme"] = selected
+            save_settings(settings)
+            apply_theme(selected)
+            print(f"\n{GREEN}Theme set to {CURRENT_THEME['label']}.{RESET}")
+            print_banner()
+            continue
+        print(f"{RED}Invalid choice.{RESET}")
 
 
 # ---------- search ----------
@@ -138,16 +465,22 @@ def build_completer(data):
     return CheatCompleter(data)
 
 
+def prompt_message():
+    return [
+        ("class:prompt", f"{CURRENT_THEME['prompt']}> "),
+    ]
+
+
 # ---------- add / edit / delete ----------
 
 def ask(label, default=""):
     suffix = f" [{default}]" if default else ""
-    val = input(f"{label}{suffix}: ").strip()
+    val = input(f"{CURRENT_THEME['primary']}{label}{RESET}{suffix}: ").strip()
     return val if val else default
 
 
 def add_entry(data):
-    print(f"\n{BOLD}Add new entry{RESET}")
+    print(f"\n{BOLD}{CURRENT_THEME['accent']}Add new entry{RESET}")
     tool = ask("Tool name (e.g. nmap)")
     if not tool:
         print(f"{DIM}Cancelled.{RESET}")
@@ -166,7 +499,7 @@ def add_entry(data):
 
 
 def edit_entry(entry):
-    print(f"\n{BOLD}Edit entry{RESET} ({DIM}press enter to keep current value{RESET})")
+    print(f"\n{BOLD}{CURRENT_THEME['accent']}Edit entry{RESET} ({DIM}press enter to keep current value{RESET})")
     entry["tool"] = ask("Tool name", entry["tool"])
     entry["command"] = ask("Command", entry["command"])
     entry["desc"] = ask("Description", entry.get("desc", ""))
@@ -245,11 +578,13 @@ def offer_git_sync(path):
 # ---------- detail / menu screens ----------
 
 def print_entry(entry):
-    print(f"\n{CYAN}[{entry['tool']}]{RESET} {BOLD}{entry['command']}{RESET}")
+    print(f"\n{hr('═')}")
+    print(f"{CYAN}[{entry['tool']}]{RESET} {BOLD}{CURRENT_THEME['highlight']}{entry['command']}{RESET}")
     if entry.get("desc"):
         print(f"  {DIM}{entry['desc']}{RESET}")
     if entry.get("keywords"):
         print(f"  {DIM}keywords: {', '.join(entry['keywords'])}{RESET}")
+    print(hr("═"))
 
 
 def matched_keyword_for(item, query):
@@ -264,22 +599,28 @@ def matched_keyword_for(item, query):
 
 def print_results(results, query=""):
     if not results:
-        print(f"{DIM}No matching command found.{RESET}")
+        print(f"\n{DIM}No matching command found.{RESET}")
         return
+    count_label = f"{len(results)} result{'s' if len(results) != 1 else ''}"
+    print(f"\n{BOLD}{CURRENT_THEME['accent']}{count_label}{RESET} {DIM}for \"{query}\"{RESET}" if query else f"\n{BOLD}{count_label}{RESET}")
+    print(hr())
     for i, item in enumerate(results, 1):
-        print(f"{YELLOW}{i}.{RESET} {CYAN}[{item['tool']}]{RESET} {item['command']}")
+        num = f"{CURRENT_THEME['secondary']}{i:>2}.{RESET}"
+        tool = f"{CYAN}[{item['tool']}]{RESET}"
+        print(f" {num} {tool} {item['command']}")
         kw = matched_keyword_for(item, query)
         if kw:
-            print(f"   {DIM}matched \"{kw}\"  -  {item.get('desc','')}{RESET}")
-        else:
-            print(f"   {DIM}{item.get('desc','')}{RESET}")
+            print(f"     {DIM}▸ matched \"{kw}\"  ·  {item.get('desc', '')}{RESET}")
+        elif item.get("desc"):
+            print(f"     {DIM}▸ {item['desc']}{RESET}")
+    print(hr())
 
 
 def detail_menu(data, entry, path):
     while True:
         print_entry(entry)
-        print(f"{DIM}[e] edit  [d] delete  [b] back{RESET}")
-        choice = input(f"{YELLOW}> {RESET}").strip().lower()
+        print(f"{DIM}[e] edit  [d] delete  [c] copy command  [b] back{RESET}")
+        choice = input(f"{CURRENT_THEME['secondary']}> {RESET}").strip().lower()
         if choice == "e":
             edit_entry(entry)
             save_data(path, data)
@@ -289,30 +630,55 @@ def detail_menu(data, entry, path):
                 save_data(path, data)
                 offer_git_sync(path)
             return
+        elif choice == "c":
+            try:
+                subprocess.run(
+                    ["xclip", "-selection", "clipboard"],
+                    input=entry["command"].encode(),
+                    check=True,
+                    stdout=subprocess.DEVNULL,
+                )
+                print(f"{GREEN}Copied to clipboard.{RESET}")
+            except (FileNotFoundError, subprocess.CalledProcessError):
+                print(f"{DIM}Clipboard copy needs xclip. Command: {entry['command']}{RESET}")
         elif choice == "b" or choice == "":
             return
 
 
-def interactive(data, path):
-    print(f"{DIM}Type to search (suggestions appear as you type). Tab/Enter to pick a suggestion.{RESET}")
-    print(f"{DIM}Commands: type a query and press enter | :add | :import <file> | :quit{RESET}\n")
+def interactive(data, path, settings):
+    os.system("clear" if os.name != "nt" else "cls")
+    print_banner()
+    print_help()
 
     while True:
         completer = build_completer(data)
         try:
             query = prompt(
-                "cheat> ",
+                prompt_message(),
                 completer=completer,
                 complete_while_typing=True,
                 complete_style=CompleteStyle.COLUMN,
+                style=PROMPT_STYLE,
             ).strip()
         except (EOFError, KeyboardInterrupt):
+            print(f"\n{DIM}Goodbye.{RESET}")
             break
 
         if not query:
             continue
         if query in (":quit", ":q"):
+            print(f"{DIM}Goodbye.{RESET}")
             break
+        if query in (":setting", ":settings"):
+            settings_menu(settings)
+            continue
+        if query == ":help":
+            print_help()
+            continue
+        if query == ":clear":
+            os.system("clear" if os.name != "nt" else "cls")
+            print_banner()
+            continue
         if query == ":add":
             add_entry(data)
             save_data(path, data)
@@ -331,7 +697,7 @@ def interactive(data, path):
         results = search(data, query)
         print_results(results, query)
         if results:
-            pick = input(f"{DIM}Open a result number, or press enter to search again: {RESET}").strip()
+            pick = input(f"{DIM}Open result #, or enter to search again: {RESET}").strip()
             if pick.isdigit() and 1 <= int(pick) <= len(results):
                 detail_menu(data, results[int(pick) - 1], path)
         print()
@@ -360,9 +726,7 @@ def dedupe_data(data):
 
 
 def main():
-
-
-
+    settings = init_theme()
     path = data_path()
     data = load_data(path)
 
@@ -384,7 +748,7 @@ def main():
         offer_git_sync(path)
         return
     if not args:
-        interactive(data, path)
+        interactive(data, path, settings)
         return
 
     query = " ".join(args)
