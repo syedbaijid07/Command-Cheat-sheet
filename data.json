@@ -6177,5 +6177,252 @@
       "gitleaks output file",
       "export secret scan findings"
     ]
+  },
+  {
+    "tool": "dalfox",
+    "command": "dalfox url <url>",
+    "desc": "scans a single url for xss vulnerabilities automatically",
+    "keywords": [
+      "automated xss scan",
+      "dalfox scan url",
+      "find xss vulnerability",
+      "xss scanner"
+    ]
+  },
+  {
+    "tool": "dalfox",
+    "command": "dalfox file <url-list-file>",
+    "desc": "scans a list of urls from a file for xss vulnerabilities",
+    "keywords": [
+      "bulk xss scan",
+      "dalfox multiple urls",
+      "scan url list for xss"
+    ]
+  },
+  {
+    "tool": "dalfox",
+    "command": "dalfox url <url> --blind <interactsh-url>",
+    "desc": "tests for blind xss by injecting a payload that calls back to an out-of-band server",
+    "keywords": [
+      "blind xss testing",
+      "dalfox blind xss",
+      "out of band xss detection"
+    ]
+  },
+  {
+    "tool": "dalfox",
+    "command": "dalfox url <url> -o <output-file>",
+    "desc": "scans a url for xss and saves the findings to a file",
+    "keywords": [
+      "save dalfox results",
+      "dalfox output file",
+      "export xss findings"
+    ]
+  },
+  {
+    "tool": "dalfox",
+    "command": "dalfox pipe",
+    "desc": "scans urls piped in from another tool (e.g. gau or waybackurls) for xss",
+    "keywords": [
+      "dalfox pipe mode",
+      "chain dalfox with other tools",
+      "scan piped urls for xss"
+    ]
+  },
+  {
+    "tool": "xsstrike",
+    "command": "python3 xsstrike.py -u <url>",
+    "desc": "scans a single url for xss, generating and testing custom payloads",
+    "keywords": [
+      "xsstrike scan",
+      "xss payload generation",
+      "test url for xss"
+    ]
+  },
+  {
+    "tool": "xsstrike",
+    "command": "python3 xsstrike.py -u <url> --crawl",
+    "desc": "crawls a website and tests every discovered form and parameter for xss",
+    "keywords": [
+      "xsstrike crawl mode",
+      "test all forms for xss",
+      "crawl and scan site"
+    ]
+  },
+  {
+    "tool": "xsstrike",
+    "command": "python3 xsstrike.py -u <url> --fuzzer",
+    "desc": "fuzzes parameters to understand filter/waf behavior and find bypasses",
+    "keywords": [
+      "xsstrike fuzzer",
+      "test waf filter bypass",
+      "fuzz parameters for xss"
+    ]
+  },
+  {
+    "tool": "kxss",
+    "command": "cat <url-list-file> | kxss",
+    "desc": "checks a list of urls and reports which parameters are reflected in the response, good xss candidates",
+    "keywords": [
+      "find reflected parameters",
+      "kxss command",
+      "reflected xss candidates",
+      "quick xss parameter check"
+    ]
+  },
+  {
+    "tool": "interactsh-client",
+    "command": "interactsh-client",
+    "desc": "starts a client and generates a unique domain to detect out-of-band interactions, useful for blind ssrf/xss/rce",
+    "keywords": [
+      "out of band detection",
+      "interactsh generate domain",
+      "blind vulnerability testing",
+      "burp collaborator alternative"
+    ]
+  },
+  {
+    "tool": "interactsh-client",
+    "command": "interactsh-client -v",
+    "desc": "runs the client in verbose mode, showing full details whenever an interaction is triggered",
+    "keywords": [
+      "interactsh verbose mode",
+      "detailed oob interaction log",
+      "view full callback details"
+    ]
+  },
+  {
+    "tool": "ssrfmap",
+    "command": "python3 ssrfmap.py -r <request-file> -p <param-name> -m <module-name>",
+    "desc": "tests a known ssrf-vulnerable parameter using a specific ssrfmap module (e.g. to probe internal services)",
+    "keywords": [
+      "ssrfmap scan",
+      "automated ssrf testing",
+      "test ssrf vulnerable parameter",
+      "ssrf module scan"
+    ]
+  },
+  {
+    "tool": "jwt_tool",
+    "command": "python3 jwt_tool.py <jwt-token>",
+    "desc": "decodes a jwt token and shows its header, payload, and signature details",
+    "keywords": [
+      "decode jwt token",
+      "analyze jwt",
+      "view jwt claims",
+      "jwt_tool decode"
+    ]
+  },
+  {
+    "tool": "jwt_tool",
+    "command": "python3 jwt_tool.py <jwt-token> -T",
+    "desc": "interactively tampers with a jwt's claims to test how the application handles a modified token",
+    "keywords": [
+      "tamper jwt token",
+      "modify jwt claims",
+      "jwt_tool tamper mode"
+    ]
+  },
+  {
+    "tool": "jwt_tool",
+    "command": "python3 jwt_tool.py <jwt-token> -X a",
+    "desc": "tests the classic alg:none vulnerability, attempting to bypass signature verification entirely",
+    "keywords": [
+      "jwt alg none attack",
+      "jwt signature bypass",
+      "algorithm confusion attack",
+      "jwt authentication bypass"
+    ]
+  },
+  {
+    "tool": "jwt_tool",
+    "command": "python3 jwt_tool.py <jwt-token> -C -d <wordlist-file>",
+    "desc": "attempts to crack the secret key used to sign the jwt using a wordlist",
+    "keywords": [
+      "crack jwt secret",
+      "jwt_tool crack mode",
+      "brute force jwt signing key"
+    ]
+  },
+  {
+    "tool": "arjun",
+    "command": "arjun -u <url>",
+    "desc": "discovers hidden or undocumented parameters accepted by a url",
+    "keywords": [
+      "find hidden parameters",
+      "arjun parameter discovery",
+      "discover undocumented get parameters"
+    ]
+  },
+  {
+    "tool": "arjun",
+    "command": "arjun -u <url> -m POST",
+    "desc": "discovers hidden parameters accepted via post requests",
+    "keywords": [
+      "find hidden post parameters",
+      "arjun post method",
+      "discover post parameters"
+    ]
+  },
+  {
+    "tool": "arjun",
+    "command": "arjun -u <url> -oT <output-file>",
+    "desc": "discovers hidden parameters and saves the results to a text file",
+    "keywords": [
+      "save arjun results",
+      "arjun output file",
+      "export discovered parameters"
+    ]
+  },
+  {
+    "tool": "linkfinder",
+    "command": "python3 linkfinder.py -i <url-or-js-file> -o cli",
+    "desc": "extracts endpoints and links hidden inside a javascript file",
+    "keywords": [
+      "find endpoints in javascript",
+      "linkfinder command",
+      "extract js endpoints",
+      "discover hidden api paths"
+    ]
+  },
+  {
+    "tool": "trufflehog",
+    "command": "trufflehog filesystem <path>",
+    "desc": "scans a local directory for leaked secrets like api keys and credentials",
+    "keywords": [
+      "scan for leaked secrets",
+      "trufflehog filesystem scan",
+      "find api keys in code"
+    ]
+  },
+  {
+    "tool": "trufflehog",
+    "command": "trufflehog git <repo-url>",
+    "desc": "scans a git repository's entire commit history for leaked secrets, including ones later removed",
+    "keywords": [
+      "scan git history for secrets",
+      "trufflehog git scan",
+      "find secrets in old commits"
+    ]
+  },
+  {
+    "tool": "gitleaks",
+    "command": "gitleaks detect -s <repo-path>",
+    "desc": "scans a local git repository for leaked secrets and credentials",
+    "keywords": [
+      "gitleaks scan repository",
+      "detect leaked credentials",
+      "find secrets in git repo"
+    ]
+  },
+  {
+    "tool": "gitleaks",
+    "command": "gitleaks detect -s <repo-path> -r <report-file>",
+    "desc": "scans a git repository for leaked secrets and saves the findings to a report file",
+    "keywords": [
+      "save gitleaks report",
+      "gitleaks output file",
+      "export secret scan findings"
+    ]
   }
 ]
