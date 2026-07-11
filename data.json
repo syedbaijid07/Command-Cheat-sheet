@@ -6439,5 +6439,67 @@
       "live hosts to url discovery",
       "chain httpx and gau"
     ]
+  },
+  {
+    "tool": "dig",
+    "command": "dig -x <ip>",
+    "desc": "finds the domain name for a given ip address (reverse dns lookup)",
+    "keywords": [
+      "ip to domain",
+      "find domain from ip",
+      "reverse dns",
+      "reverse lookup"
+    ]
+  },
+  {
+    "tool": "dig",
+    "command": "dig <domain> +short",
+    "desc": "finds the ip address for a given domain name",
+    "keywords": [
+      "domain to ip",
+      "find ip from domain",
+      "forward dns",
+      "resolve domain"
+    ]
+  },
+  {
+    "tool": "host",
+    "command": "host <ip>",
+    "desc": "finds the domain name for a given ip address (reverse dns lookup)",
+    "keywords": [
+      "ip to domain",
+      "find domain from ip",
+      "reverse dns"
+    ]
+  },
+  {
+    "tool": "host",
+    "command": "host <domain>",
+    "desc": "finds the ip address for a given domain name",
+    "keywords": [
+      "domain to ip",
+      "find ip from domain",
+      "resolve domain"
+    ]
+  },
+  {
+    "tool": "nslookup",
+    "command": "nslookup <ip>",
+    "desc": "finds the domain name for a given ip address (reverse dns lookup)",
+    "keywords": [
+      "ip to domain",
+      "find domain from ip",
+      "reverse dns"
+    ]
+  },
+  {
+    "tool": "nslookup",
+    "command": "nslookup <domain>",
+    "desc": "finds the ip address for a given domain name",
+    "keywords": [
+      "domain to ip",
+      "find ip from domain",
+      "resolve domain"
+    ]
   }
 ]
