@@ -194,4 +194,4 @@ keywords: full recon to vuln scan pipeline, subfinder httpx nuclei chain, automa
 tool: recon-pipeline
 command: cat <subdomain-list-file> | httpx -silent | gau
 desc: takes a list of live hosts and fetches all known archived/discovered urls for them
-keywords: httpx gau pipeline, live hosts to url discovery, chain httpx and gau
+keywords: httpx gau pipeline, live hosts to url discovery, chain httpx and gaua

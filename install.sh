@@ -91,6 +91,7 @@ sleep 0.5
 # ==========================================
 # SUCCESS OUTRO
 # ==========================================
+<<<<<<< Updated upstream
 echo ""
 echo -e "${GREEN}${BOLD}[ UPLOAD COMPLETE ]${NC} ${CYAN}$COMMAND_NAME${NC} has been injected into your system."
 echo -e "Deploy the tool anywhere in the grid by executing: ${YELLOW}${BOLD}$COMMAND_NAME${NC}"
@@ -98,3 +99,12 @@ echo ""
 echo -e "${RED}[ WARNING ]${NC} If the terminal rejects the command, synchronize your neural pathways:"
 echo -e "            ${BOLD}source ~/.bashrc${NC}  or  ${BOLD}source ~/.zshrc${NC}"
 echo ""
+=======
+echo ""
+echo -e "${GREEN}${BOLD}[ UPLOAD COMPLETE ]${NC} ${CYAN}$COMMAND_NAME${NC} has been injected into your system."
+echo -e "Deploy the tool anywhere in the grid by executing: ${YELLOW}${BOLD}$COMMAND_NAME${NC}"
+echo ""
+echo -e "${RED}[ WARNING ]${NC} If the terminal rejects the command, synchronize your neural pathways:"
+echo -e "            ${BOLD}source ~/.bashrc${NC}  or  ${BOLD}source ~/.zshrc${NC}"
+echo ""
+>>>>>>> Stashed changes
