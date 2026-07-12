@@ -6587,5 +6587,140 @@
       "list openvas scan tasks",
       "automate openvas via cli"
     ]
+  },
+  {
+    "tool": "bbqsql",
+    "command": "bbqsql --generate-conf",
+    "desc": "generates a template config file where you define the injection point, request format, and custom payloads to use",
+    "keywords": [
+      "bbqsql custom payload config",
+      "generate bbqsql template",
+      "customize sql injection payload"
+    ]
+  },
+  {
+    "tool": "bbqsql",
+    "command": "bbqsql --config <config-file>",
+    "desc": "runs bbqsql using a config file that defines the exact request, injection point, and payload list to test blind sql injection with",
+    "keywords": [
+      "blind sql injection framework",
+      "bbqsql run scan",
+      "custom wordlist blind sqli",
+      "bbqsql config file scan"
+    ]
+  },
+  {
+    "tool": "ghauri",
+    "command": "ghauri -u <url> --dbs",
+    "desc": "automatically tests a url for sql injection and lists available databases, similar workflow to sqlmap",
+    "keywords": [
+      "ghauri sql injection scan",
+      "ghauri list databases",
+      "automated sqli tool alternative to sqlmap"
+    ]
+  },
+  {
+    "tool": "ghauri",
+    "command": "ghauri -u <url> --level 3",
+    "desc": "increases the thoroughness of the injection test, trying more parameters and payload variations",
+    "keywords": [
+      "ghauri increase test level",
+      "thorough sql injection test ghauri",
+      "ghauri level option"
+    ]
+  },
+  {
+    "tool": "ghauri",
+    "command": "ghauri -r <request-file>",
+    "desc": "uses a saved raw http request file (e.g. exported from burp suite) as the input for testing",
+    "keywords": [
+      "ghauri request file",
+      "use burp request ghauri",
+      "import http request for sqli test"
+    ]
+  },
+  {
+    "tool": "nosqlmap",
+    "command": "nosqlmap",
+    "desc": "starts nosqlmap's interactive menu for testing nosql databases like mongodb for injection vulnerabilities",
+    "keywords": [
+      "nosql injection testing",
+      "nosqlmap interactive menu",
+      "test mongodb injection",
+      "nosqlmap start"
+    ]
+  },
+  {
+    "tool": "nosqlmap",
+    "command": "python2 nosqlmap.py -u <url>",
+    "desc": "scans a url directly for nosql injection vulnerabilities using command line arguments",
+    "keywords": [
+      "nosqlmap command line scan",
+      "scan url for nosql injection",
+      "mongodb injection scanner"
+    ]
+  },
+  {
+    "tool": "sqlninja",
+    "command": "sqlninja -m test -f <config-file>",
+    "desc": "tests whether the sql injection defined in a config file successfully connects to the target ms sql server, the config file defines the custom injection payload and request",
+    "keywords": [
+      "sqlninja test connection",
+      "mssql sql injection tool",
+      "sqlninja custom config payload",
+      "test sql server injection"
+    ]
+  },
+  {
+    "tool": "sqlninja",
+    "command": "sqlninja -m fingerprint -f <config-file>",
+    "desc": "fingerprints the backend ms sql server version and configuration using the blind injection defined in the config file",
+    "keywords": [
+      "sqlninja fingerprint database",
+      "identify mssql version",
+      "sqlninja fingerprint mode"
+    ]
+  },
+  {
+    "tool": "dsss",
+    "command": "python3 dsss.py -u <url>",
+    "desc": "a small, single-file python sql injection scanner, easy to read and modify the payloads directly in the script",
+    "keywords": [
+      "lightweight sql injection scanner",
+      "dsss scan url",
+      "damn small sqli scanner",
+      "editable sqli payloads script"
+    ]
+  },
+  {
+    "tool": "sqliv",
+    "command": "python3 sqliv.py -t <url>",
+    "desc": "scans a single target url for sql injection vulnerabilities",
+    "keywords": [
+      "sqliv scan target",
+      "sql injection vulnerability scanner",
+      "sqliv single url scan"
+    ]
+  },
+  {
+    "tool": "sqliv",
+    "command": "python3 sqliv.py -d \"<google-dork>\" -e google",
+    "desc": "searches for potentially vulnerable urls using a google dork and automatically tests each one for sql injection",
+    "keywords": [
+      "sqliv google dork scan",
+      "mass sql injection scanning",
+      "dork based sqli discovery",
+      "search engine sql injection scan"
+    ]
+  },
+  {
+    "tool": "jsql-injection",
+    "command": "java -jar jsql-injection.jar",
+    "desc": "launches jsql injection, a java-based gui tool for automated sql injection with support for custom payload lists",
+    "keywords": [
+      "jsql injection launch",
+      "java sql injection tool",
+      "gui automated sqli tool"
+    ]
   }
 ]
