@@ -5362,5 +5362,687 @@
       "gitleaks output file",
       "export secret scan findings"
     ]
+  },
+  {
+    "tool": "dalfox",
+    "command": "dalfox url <url>",
+    "desc": "scans a single url for xss vulnerabilities automatically",
+    "keywords": [
+      "automated xss scan",
+      "dalfox scan url",
+      "find xss vulnerability",
+      "xss scanner"
+    ]
+  },
+  {
+    "tool": "dalfox",
+    "command": "dalfox file <url-list-file>",
+    "desc": "scans a list of urls from a file for xss vulnerabilities",
+    "keywords": [
+      "bulk xss scan",
+      "dalfox multiple urls",
+      "scan url list for xss"
+    ]
+  },
+  {
+    "tool": "dalfox",
+    "command": "dalfox url <url> --blind <interactsh-url>",
+    "desc": "tests for blind xss by injecting a payload that calls back to an out-of-band server",
+    "keywords": [
+      "blind xss testing",
+      "dalfox blind xss",
+      "out of band xss detection"
+    ]
+  },
+  {
+    "tool": "dalfox",
+    "command": "dalfox url <url> -o <output-file>",
+    "desc": "scans a url for xss and saves the findings to a file",
+    "keywords": [
+      "save dalfox results",
+      "dalfox output file",
+      "export xss findings"
+    ]
+  },
+  {
+    "tool": "dalfox",
+    "command": "dalfox pipe",
+    "desc": "scans urls piped in from another tool (e.g. gau or waybackurls) for xss",
+    "keywords": [
+      "dalfox pipe mode",
+      "chain dalfox with other tools",
+      "scan piped urls for xss"
+    ]
+  },
+  {
+    "tool": "xsstrike",
+    "command": "python3 xsstrike.py -u <url>",
+    "desc": "scans a single url for xss, generating and testing custom payloads",
+    "keywords": [
+      "xsstrike scan",
+      "xss payload generation",
+      "test url for xss"
+    ]
+  },
+  {
+    "tool": "xsstrike",
+    "command": "python3 xsstrike.py -u <url> --crawl",
+    "desc": "crawls a website and tests every discovered form and parameter for xss",
+    "keywords": [
+      "xsstrike crawl mode",
+      "test all forms for xss",
+      "crawl and scan site"
+    ]
+  },
+  {
+    "tool": "xsstrike",
+    "command": "python3 xsstrike.py -u <url> --fuzzer",
+    "desc": "fuzzes parameters to understand filter/waf behavior and find bypasses",
+    "keywords": [
+      "xsstrike fuzzer",
+      "test waf filter bypass",
+      "fuzz parameters for xss"
+    ]
+  },
+  {
+    "tool": "kxss",
+    "command": "cat <url-list-file> | kxss",
+    "desc": "checks a list of urls and reports which parameters are reflected in the response, good xss candidates",
+    "keywords": [
+      "find reflected parameters",
+      "kxss command",
+      "reflected xss candidates",
+      "quick xss parameter check"
+    ]
+  },
+  {
+    "tool": "interactsh-client",
+    "command": "interactsh-client",
+    "desc": "starts a client and generates a unique domain to detect out-of-band interactions, useful for blind ssrf/xss/rce",
+    "keywords": [
+      "out of band detection",
+      "interactsh generate domain",
+      "blind vulnerability testing",
+      "burp collaborator alternative"
+    ]
+  },
+  {
+    "tool": "interactsh-client",
+    "command": "interactsh-client -v",
+    "desc": "runs the client in verbose mode, showing full details whenever an interaction is triggered",
+    "keywords": [
+      "interactsh verbose mode",
+      "detailed oob interaction log",
+      "view full callback details"
+    ]
+  },
+  {
+    "tool": "ssrfmap",
+    "command": "python3 ssrfmap.py -r <request-file> -p <param-name> -m <module-name>",
+    "desc": "tests a known ssrf-vulnerable parameter using a specific ssrfmap module (e.g. to probe internal services)",
+    "keywords": [
+      "ssrfmap scan",
+      "automated ssrf testing",
+      "test ssrf vulnerable parameter",
+      "ssrf module scan"
+    ]
+  },
+  {
+    "tool": "jwt_tool",
+    "command": "python3 jwt_tool.py <jwt-token>",
+    "desc": "decodes a jwt token and shows its header, payload, and signature details",
+    "keywords": [
+      "decode jwt token",
+      "analyze jwt",
+      "view jwt claims",
+      "jwt_tool decode"
+    ]
+  },
+  {
+    "tool": "jwt_tool",
+    "command": "python3 jwt_tool.py <jwt-token> -T",
+    "desc": "interactively tampers with a jwt's claims to test how the application handles a modified token",
+    "keywords": [
+      "tamper jwt token",
+      "modify jwt claims",
+      "jwt_tool tamper mode"
+    ]
+  },
+  {
+    "tool": "jwt_tool",
+    "command": "python3 jwt_tool.py <jwt-token> -X a",
+    "desc": "tests the classic alg:none vulnerability, attempting to bypass signature verification entirely",
+    "keywords": [
+      "jwt alg none attack",
+      "jwt signature bypass",
+      "algorithm confusion attack",
+      "jwt authentication bypass"
+    ]
+  },
+  {
+    "tool": "jwt_tool",
+    "command": "python3 jwt_tool.py <jwt-token> -C -d <wordlist-file>",
+    "desc": "attempts to crack the secret key used to sign the jwt using a wordlist",
+    "keywords": [
+      "crack jwt secret",
+      "jwt_tool crack mode",
+      "brute force jwt signing key"
+    ]
+  },
+  {
+    "tool": "arjun",
+    "command": "arjun -u <url>",
+    "desc": "discovers hidden or undocumented parameters accepted by a url",
+    "keywords": [
+      "find hidden parameters",
+      "arjun parameter discovery",
+      "discover undocumented get parameters"
+    ]
+  },
+  {
+    "tool": "arjun",
+    "command": "arjun -u <url> -m POST",
+    "desc": "discovers hidden parameters accepted via post requests",
+    "keywords": [
+      "find hidden post parameters",
+      "arjun post method",
+      "discover post parameters"
+    ]
+  },
+  {
+    "tool": "arjun",
+    "command": "arjun -u <url> -oT <output-file>",
+    "desc": "discovers hidden parameters and saves the results to a text file",
+    "keywords": [
+      "save arjun results",
+      "arjun output file",
+      "export discovered parameters"
+    ]
+  },
+  {
+    "tool": "linkfinder",
+    "command": "python3 linkfinder.py -i <url-or-js-file> -o cli",
+    "desc": "extracts endpoints and links hidden inside a javascript file",
+    "keywords": [
+      "find endpoints in javascript",
+      "linkfinder command",
+      "extract js endpoints",
+      "discover hidden api paths"
+    ]
+  },
+  {
+    "tool": "trufflehog",
+    "command": "trufflehog filesystem <path>",
+    "desc": "scans a local directory for leaked secrets like api keys and credentials",
+    "keywords": [
+      "scan for leaked secrets",
+      "trufflehog filesystem scan",
+      "find api keys in code"
+    ]
+  },
+  {
+    "tool": "trufflehog",
+    "command": "trufflehog git <repo-url>",
+    "desc": "scans a git repository's entire commit history for leaked secrets, including ones later removed",
+    "keywords": [
+      "scan git history for secrets",
+      "trufflehog git scan",
+      "find secrets in old commits"
+    ]
+  },
+  {
+    "tool": "gitleaks",
+    "command": "gitleaks detect -s <repo-path>",
+    "desc": "scans a local git repository for leaked secrets and credentials",
+    "keywords": [
+      "gitleaks scan repository",
+      "detect leaked credentials",
+      "find secrets in git repo"
+    ]
+  },
+  {
+    "tool": "gitleaks",
+    "command": "gitleaks detect -s <repo-path> -r <report-file>",
+    "desc": "scans a git repository for leaked secrets and saves the findings to a report file",
+    "keywords": [
+      "save gitleaks report",
+      "gitleaks output file",
+      "export secret scan findings# --- Mobile app security ---"
+    ]
+  },
+  {
+    "tool": "apktool",
+    "command": "apktool d <apk-file>",
+    "desc": "decodes an apk file into readable smali code and resources for analysis",
+    "keywords": [
+      "decompile apk",
+      "decode android app",
+      "apktool decode",
+      "extract apk resources"
+    ]
+  },
+  {
+    "tool": "apktool",
+    "command": "apktool b <decoded-folder> -o <output-apk>",
+    "desc": "rebuilds an apk from a previously decoded folder, useful after modifying smali code",
+    "keywords": [
+      "rebuild apk",
+      "apktool build",
+      "repackage android app"
+    ]
+  },
+  {
+    "tool": "jadx",
+    "command": "jadx -d <output-dir> <apk-file>",
+    "desc": "decompiles an apk into readable java source code",
+    "keywords": [
+      "decompile apk to java",
+      "jadx decompiler",
+      "view android java source",
+      "apk source code"
+    ]
+  },
+  {
+    "tool": "frida",
+    "command": "frida -U -f <package-name> -l <script.js>",
+    "desc": "launches an app on a usb-connected device with a frida script attached, for runtime instrumentation",
+    "keywords": [
+      "frida hook app",
+      "dynamic instrumentation android",
+      "run frida script",
+      "frida launch app"
+    ]
+  },
+  {
+    "tool": "frida",
+    "command": "frida-ps -U",
+    "desc": "lists running processes on a usb-connected device",
+    "keywords": [
+      "list processes frida",
+      "frida-ps command",
+      "view running apps device"
+    ]
+  },
+  {
+    "tool": "frida",
+    "command": "frida-trace -U -i \"<function-name>\" <package-name>",
+    "desc": "traces calls to a specific function in an app in real time",
+    "keywords": [
+      "trace function calls",
+      "frida-trace command",
+      "monitor app function calls"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb devices",
+    "desc": "lists android devices currently connected and recognized by adb",
+    "keywords": [
+      "list connected android devices",
+      "adb devices command",
+      "check device connection"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb install <apk-file>",
+    "desc": "installs an apk file onto a connected android device",
+    "keywords": [
+      "install apk adb",
+      "adb install command",
+      "deploy app to device"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb shell",
+    "desc": "opens an interactive command shell on the connected android device",
+    "keywords": [
+      "adb shell command",
+      "get shell on android device",
+      "android device terminal"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb pull <device-path> <local-path>",
+    "desc": "copies a file from the android device to the local machine",
+    "keywords": [
+      "adb pull file",
+      "download file from android",
+      "copy from device"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb push <local-path> <device-path>",
+    "desc": "copies a file from the local machine to the android device",
+    "keywords": [
+      "adb push file",
+      "upload file to android",
+      "copy to device"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb logcat",
+    "desc": "shows a live stream of the android device's system and app logs",
+    "keywords": [
+      "view android logs",
+      "adb logcat command",
+      "live device log stream"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb shell pm list packages",
+    "desc": "lists all packages (apps) installed on the connected device",
+    "keywords": [
+      "list installed apps",
+      "adb list packages",
+      "view installed android apps"
+    ]
+  },
+  {
+    "tool": "mobsf",
+    "command": "docker run -it -p 8000:8000 opensecurity/mobile-security-framework-mobsf",
+    "desc": "starts the mobile security framework (mobsf) server via docker for automated apk/ipa analysis",
+    "keywords": [
+      "start mobsf",
+      "run mobile security framework",
+      "mobsf docker setup",
+      "automated mobile app scan"
+    ]
+  },
+  {
+    "tool": "objdump",
+    "command": "objdump -d <binary-file>",
+    "desc": "disassembles a binary file's executable sections into assembly",
+    "keywords": [
+      "disassemble binary objdump",
+      "objdump -d command",
+      "view assembly code"
+    ]
+  },
+  {
+    "tool": "objdump",
+    "command": "objdump -T <binary-file>",
+    "desc": "shows the dynamic symbol table of a binary, listing linked functions",
+    "keywords": [
+      "view dynamic symbols",
+      "objdump symbol table",
+      "list linked functions"
+    ]
+  },
+  {
+    "tool": "objdump",
+    "command": "objdump -x <binary-file>",
+    "desc": "shows all available header information for a binary",
+    "keywords": [
+      "view binary headers",
+      "objdump -x command",
+      "inspect binary file structure"
+    ]
+  },
+  {
+    "tool": "strace",
+    "command": "strace <binary-file>",
+    "desc": "traces every system call a program makes while it runs",
+    "keywords": [
+      "trace system calls",
+      "strace command",
+      "monitor syscalls",
+      "debug program behavior"
+    ]
+  },
+  {
+    "tool": "strace",
+    "command": "strace -p <pid>",
+    "desc": "attaches to an already-running process and traces its system calls",
+    "keywords": [
+      "strace attach process",
+      "trace running process syscalls",
+      "monitor pid"
+    ]
+  },
+  {
+    "tool": "strace",
+    "command": "strace -f <binary-file>",
+    "desc": "traces system calls including those made by any child processes it spawns",
+    "keywords": [
+      "strace follow forks",
+      "trace child processes",
+      "strace -f option"
+    ]
+  },
+  {
+    "tool": "ltrace",
+    "command": "ltrace <binary-file>",
+    "desc": "traces the dynamic library function calls a program makes while it runs",
+    "keywords": [
+      "trace library calls",
+      "ltrace command",
+      "monitor library function calls"
+    ]
+  },
+  {
+    "tool": "ltrace",
+    "command": "ltrace -p <pid>",
+    "desc": "attaches to an already-running process and traces its library calls",
+    "keywords": [
+      "ltrace attach process",
+      "trace running process library calls"
+    ]
+  },
+  {
+    "tool": "aws",
+    "command": "aws sts get-caller-identity",
+    "desc": "shows which aws identity (user or role) the current credentials belong to",
+    "keywords": [
+      "check aws identity",
+      "aws whoami",
+      "verify aws credentials",
+      "sts get-caller-identity"
+    ]
+  },
+  {
+    "tool": "aws",
+    "command": "aws s3 ls",
+    "desc": "lists s3 buckets accessible with the current credentials",
+    "keywords": [
+      "list s3 buckets",
+      "aws s3 enumeration",
+      "check accessible buckets"
+    ]
+  },
+  {
+    "tool": "aws",
+    "command": "aws iam list-users",
+    "desc": "lists iam users in the aws account",
+    "keywords": [
+      "list aws iam users",
+      "enumerate aws accounts",
+      "aws iam enumeration"
+    ]
+  },
+  {
+    "tool": "aws",
+    "command": "aws ec2 describe-instances",
+    "desc": "lists ec2 instances and their details in the current region",
+    "keywords": [
+      "list ec2 instances",
+      "aws ec2 enumeration",
+      "view running instances"
+    ]
+  },
+  {
+    "tool": "aws",
+    "command": "aws configure list",
+    "desc": "shows the current aws cli configuration, including which profile and credentials are active",
+    "keywords": [
+      "check aws cli config",
+      "view active aws profile",
+      "aws configure list"
+    ]
+  },
+  {
+    "tool": "scoutsuite",
+    "command": "scout aws",
+    "desc": "runs an automated security audit against an aws account and generates a report",
+    "keywords": [
+      "scoutsuite aws audit",
+      "automated cloud security scan",
+      "aws security assessment"
+    ]
+  },
+  {
+    "tool": "scoutsuite",
+    "command": "scout azure",
+    "desc": "runs an automated security audit against an azure account and generates a report",
+    "keywords": [
+      "scoutsuite azure audit",
+      "azure security scan",
+      "azure security assessment"
+    ]
+  },
+  {
+    "tool": "prowler",
+    "command": "prowler aws",
+    "desc": "runs a full set of aws security best-practice checks against an account",
+    "keywords": [
+      "prowler aws scan",
+      "aws compliance check",
+      "aws security best practices audit"
+    ]
+  },
+  {
+    "tool": "prowler",
+    "command": "prowler aws -c <check-id>",
+    "desc": "runs a single specific security check against an aws account instead of the full set",
+    "keywords": [
+      "prowler specific check",
+      "run single aws check",
+      "targeted prowler scan"
+    ]
+  },
+  {
+    "tool": "pacu",
+    "command": "pacu",
+    "desc": "starts the pacu console, an aws exploitation framework for post-compromise testing",
+    "keywords": [
+      "start pacu",
+      "aws exploitation framework",
+      "pacu console"
+    ]
+  },
+  {
+    "tool": "pacu",
+    "command": "run <module-name>",
+    "desc": "(inside pacu) runs a specific pacu module against the current aws session",
+    "keywords": [
+      "pacu run module",
+      "execute pacu module",
+      "aws attack module"
+    ]
+  },
+  {
+    "tool": "trivy",
+    "command": "trivy image <image-name>",
+    "desc": "scans a docker image for known vulnerabilities in its os packages and dependencies",
+    "keywords": [
+      "scan docker image vulnerabilities",
+      "trivy image scan",
+      "container image vuln check"
+    ]
+  },
+  {
+    "tool": "trivy",
+    "command": "trivy fs <path>",
+    "desc": "scans a local filesystem or directory for known vulnerabilities and misconfigurations",
+    "keywords": [
+      "scan filesystem vulnerabilities",
+      "trivy fs scan",
+      "directory vulnerability check"
+    ]
+  },
+  {
+    "tool": "trivy",
+    "command": "trivy repo <repo-url>",
+    "desc": "scans a git repository for known vulnerabilities without needing to clone it manually",
+    "keywords": [
+      "scan git repo vulnerabilities",
+      "trivy repo scan",
+      "remote repository vuln check"
+    ]
+  },
+  {
+    "tool": "kubectl",
+    "command": "kubectl get pods --all-namespaces",
+    "desc": "lists all pods running across every namespace in the cluster",
+    "keywords": [
+      "list all kubernetes pods",
+      "kubectl get pods",
+      "enumerate cluster pods"
+    ]
+  },
+  {
+    "tool": "kubectl",
+    "command": "kubectl get nodes",
+    "desc": "lists all nodes in the kubernetes cluster",
+    "keywords": [
+      "list kubernetes nodes",
+      "kubectl get nodes",
+      "enumerate cluster nodes"
+    ]
+  },
+  {
+    "tool": "kubectl",
+    "command": "kubectl auth can-i --list",
+    "desc": "shows what actions the current user or service account is permitted to perform",
+    "keywords": [
+      "check kubernetes permissions",
+      "kubectl auth can-i",
+      "enumerate rbac permissions"
+    ]
+  },
+  {
+    "tool": "kubectl",
+    "command": "kubectl get secrets --all-namespaces",
+    "desc": "lists all secrets stored across every namespace in the cluster",
+    "keywords": [
+      "list kubernetes secrets",
+      "kubectl get secrets",
+      "enumerate cluster secrets"
+    ]
+  },
+  {
+    "tool": "kubectl",
+    "command": "kubectl describe pod <pod-name>",
+    "desc": "shows detailed configuration and status information about a specific pod",
+    "keywords": [
+      "kubectl describe pod",
+      "view pod details",
+      "inspect kubernetes pod"
+    ]
+  },
+  {
+    "tool": "kube-hunter",
+    "command": "kube-hunter --remote <target-ip>",
+    "desc": "scans a remote kubernetes cluster from outside for known vulnerabilities and misconfigurations",
+    "keywords": [
+      "kube-hunter remote scan",
+      "scan kubernetes cluster externally",
+      "find k8s vulnerabilities"
+    ]
+  },
+  {
+    "tool": "kube-hunter",
+    "command": "kube-hunter --pod",
+    "desc": "runs kube-hunter from inside a pod to test the cluster's security from within",
+    "keywords": [
+      "kube-hunter internal scan",
+      "test cluster from inside pod",
+      "kube-hunter pod mode"
+    ]
   }
 ]
