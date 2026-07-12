@@ -6044,5 +6044,152 @@
       "test cluster from inside pod",
       "kube-hunter pod mode"
     ]
+  },
+  {
+    "tool": "gowitness",
+    "command": "gowitness single <url>",
+    "desc": "takes a screenshot of a single website",
+    "keywords": [
+      "screenshot single website",
+      "gowitness single url",
+      "capture webpage screenshot"
+    ]
+  },
+  {
+    "tool": "gowitness",
+    "command": "gowitness scan -f <url-list-file>",
+    "desc": "takes screenshots of a list of websites from a file",
+    "keywords": [
+      "bulk website screenshots",
+      "gowitness scan multiple urls",
+      "mass screenshot recon"
+    ]
+  },
+  {
+    "tool": "gowitness",
+    "command": "gowitness report serve",
+    "desc": "starts a local web server to browse all captured screenshots in a gallery view",
+    "keywords": [
+      "view gowitness screenshots",
+      "browse screenshot report",
+      "gowitness report serve"
+    ]
+  },
+  {
+    "tool": "aquatone",
+    "command": "cat <subdomain-list-file> | aquatone",
+    "desc": "takes screenshots of a list of hosts piped in, useful after subdomain enumeration",
+    "keywords": [
+      "aquatone screenshot hosts",
+      "mass screenshot subdomains",
+      "visual recon of subdomains"
+    ]
+  },
+  {
+    "tool": "droopescan",
+    "command": "droopescan scan drupal -u <url>",
+    "desc": "scans a drupal website for version information and known vulnerabilities",
+    "keywords": [
+      "drupal vulnerability scan",
+      "droopescan drupal",
+      "scan drupal site",
+      "identify drupal version"
+    ]
+  },
+  {
+    "tool": "joomscan",
+    "command": "joomscan -u <url>",
+    "desc": "scans a joomla website for version information and known vulnerabilities",
+    "keywords": [
+      "joomla vulnerability scan",
+      "joomscan command",
+      "scan joomla site",
+      "identify joomla version"
+    ]
+  },
+  {
+    "tool": "git-dumper",
+    "command": "git-dumper <url>/.git/ <output-dir>",
+    "desc": "downloads an exposed .git directory from a website, recovering the full source code and history",
+    "keywords": [
+      "dump exposed git directory",
+      "recover source code from git",
+      "git-dumper command",
+      "exploit exposed .git folder"
+    ]
+  },
+  {
+    "tool": "gitrob",
+    "command": "gitrob <organization-or-username>",
+    "desc": "scans a github organization or user's repositories for accidentally committed sensitive files",
+    "keywords": [
+      "find leaked files github",
+      "gitrob scan organization",
+      "github secret recon",
+      "scan github repos for sensitive data"
+    ]
+  },
+  {
+    "tool": "dnsrecon",
+    "command": "dnsrecon -d <domain>",
+    "desc": "performs general dns enumeration on a domain, gathering all available record types",
+    "keywords": [
+      "dnsrecon scan",
+      "general dns enumeration",
+      "gather dns records"
+    ]
+  },
+  {
+    "tool": "dnsrecon",
+    "command": "dnsrecon -d <domain> -t axfr",
+    "desc": "attempts a dns zone transfer against a domain's name servers",
+    "keywords": [
+      "dnsrecon zone transfer",
+      "attempt axfr",
+      "dns zone transfer check"
+    ]
+  },
+  {
+    "tool": "dnsrecon",
+    "command": "dnsrecon -d <domain> -t brt -D <wordlist-file>",
+    "desc": "brute forces subdomains for a domain using a wordlist",
+    "keywords": [
+      "dnsrecon brute force subdomains",
+      "subdomain brute force wordlist",
+      "dnsrecon brt mode"
+    ]
+  },
+  {
+    "tool": "spoofcheck",
+    "command": "python3 spoofcheck.py <domain>",
+    "desc": "checks whether a domain's email can be spoofed by looking for missing or weak spf, dkim, and dmarc records",
+    "keywords": [
+      "check email spoofing",
+      "spoofcheck domain",
+      "spf dmarc dkim check",
+      "test if domain can be spoofed"
+    ]
+  },
+  {
+    "tool": "dig",
+    "command": "dig txt <domain>",
+    "desc": "shows a domain's txt records, which is where the spf policy is published",
+    "keywords": [
+      "check spf record",
+      "view dns txt records",
+      "dig spf lookup",
+      "find spf policy"
+    ]
+  },
+  {
+    "tool": "dig",
+    "command": "dig txt _dmarc.<domain>",
+    "desc": "shows a domain's dmarc policy record",
+    "keywords": [
+      "check dmarc record",
+      "view dmarc policy",
+      "dig dmarc lookup",
+      "find dmarc configuration"
+    ]
   }
 ]
