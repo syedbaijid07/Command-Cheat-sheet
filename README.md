@@ -332,6 +332,26 @@ instead of editing JSON manually.
 
 ---
 
+# Uninstall
+
+To remove `cheat-sit` from your system, run `uninstall.sh` from the repo folder:
+
+```bash
+chmod +x uninstall.sh
+./uninstall.sh
+```
+
+This removes the installed executable from `~/.local/bin`. It will also ask
+whether you want to delete `~/.cheatsheet` (your data + local git repo) —
+say `n` if you just want to remove the command but keep your data, or `y`
+to wipe everything.
+
+If you added a `PATH` line for this tool in `~/.bashrc` or `~/.zshrc`, the
+uninstaller leaves it alone (other tools may use that folder too) — remove
+it by hand if you no longer need it.
+
+---
+
 # Troubleshooting
 
 | Problem | Solution |
