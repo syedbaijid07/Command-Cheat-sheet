@@ -6441,5 +6441,151 @@
       "choose wireless adapter wifite",
       "wifite interface option"
     ]
+  },
+  {
+    "tool": "deepce",
+    "command": "./deepce.sh",
+    "desc": "runs a full enumeration of the current docker container, checking for privilege escalation and container escape opportunities",
+    "keywords": [
+      "docker container enumeration",
+      "deepce full scan",
+      "container escape check",
+      "enumerate docker environment"
+    ]
+  },
+  {
+    "tool": "deepce",
+    "command": "./deepce.sh -e fs",
+    "desc": "runs only the filesystem-related checks, such as looking for mounted host directories",
+    "keywords": [
+      "deepce filesystem checks",
+      "check mounted volumes docker",
+      "find host filesystem mounts"
+    ]
+  },
+  {
+    "tool": "deepce",
+    "command": "curl -sL https://raw.githubusercontent.com/stealthcopter/deepce/main/deepce.sh | sh",
+    "desc": "downloads and runs deepce directly in memory without saving the script to disk",
+    "keywords": [
+      "run deepce without downloading",
+      "fileless deepce",
+      "deepce one liner"
+    ]
+  },
+  {
+    "tool": "kiterunner",
+    "command": "kr scan <url> -w <routes-wordlist-file>",
+    "desc": "scans a target api for hidden endpoints using a routes wordlist built for common api structures",
+    "keywords": [
+      "api endpoint discovery",
+      "kiterunner scan",
+      "find hidden api routes",
+      "discover api endpoints"
+    ]
+  },
+  {
+    "tool": "kiterunner",
+    "command": "kr scan <url> -A=<api-spec-name>",
+    "desc": "scans a target using one of kiterunner's built-in api specifications instead of a custom wordlist",
+    "keywords": [
+      "kiterunner api specification scan",
+      "scan with builtin api spec",
+      "kr scan -A option"
+    ]
+  },
+  {
+    "tool": "kiterunner",
+    "command": "kr brute <url> -w <wordlist-file>",
+    "desc": "brute forces api endpoints on a target using a plain wordlist",
+    "keywords": [
+      "brute force api endpoints",
+      "kiterunner brute mode",
+      "kr brute command"
+    ]
+  },
+  {
+    "tool": "foremost",
+    "command": "foremost -i <disk-image-file> -o <output-dir>",
+    "desc": "recovers (carves) files from a disk image by scanning for known file signatures, regardless of the filesystem structure",
+    "keywords": [
+      "file carving disk image",
+      "foremost recover files",
+      "forensic file recovery",
+      "extract deleted files disk image"
+    ]
+  },
+  {
+    "tool": "foremost",
+    "command": "foremost -t <file-type> -i <disk-image-file> -o <output-dir>",
+    "desc": "carves only a specific file type (e.g. jpg, pdf, doc) from a disk image instead of all supported types",
+    "keywords": [
+      "carve specific file type",
+      "foremost filter file type",
+      "recover only jpg pdf files"
+    ]
+  },
+  {
+    "tool": "photorec",
+    "command": "photorec",
+    "desc": "starts photorec's interactive wizard to recover lost or deleted files from a disk or image",
+    "keywords": [
+      "recover deleted files",
+      "photorec interactive recovery",
+      "file undelete tool",
+      "disk file recovery wizard"
+    ]
+  },
+  {
+    "tool": "photorec",
+    "command": "photorec /d <output-dir> /cmd <disk-image>",
+    "desc": "runs photorec non-interactively with a specified output directory and command options",
+    "keywords": [
+      "photorec non-interactive mode",
+      "automate photorec recovery",
+      "photorec command line options"
+    ]
+  },
+  {
+    "tool": "gvm",
+    "command": "gvm-setup",
+    "desc": "performs the initial setup of the greenbone vulnerability management (openvas) service",
+    "keywords": [
+      "openvas initial setup",
+      "gvm-setup command",
+      "install openvas service",
+      "configure greenbone"
+    ]
+  },
+  {
+    "tool": "gvm",
+    "command": "gvm-start",
+    "desc": "starts the openvas/greenbone vulnerability management services",
+    "keywords": [
+      "start openvas",
+      "start gvm services",
+      "launch greenbone vulnerability manager"
+    ]
+  },
+  {
+    "tool": "gvm",
+    "command": "gvm-check-setup",
+    "desc": "checks whether openvas/gvm is correctly installed and configured, reporting any missing pieces",
+    "keywords": [
+      "check openvas setup",
+      "verify gvm installation",
+      "troubleshoot openvas configuration"
+    ]
+  },
+  {
+    "tool": "gvm-cli",
+    "command": "gvm-cli --gmp-username <username> --gmp-password <password> socket --xml \"<get_tasks/>\"",
+    "desc": "queries the openvas/gvm api over the command line to list existing scan tasks",
+    "keywords": [
+      "gvm-cli query tasks",
+      "openvas api command line",
+      "list openvas scan tasks",
+      "automate openvas via cli"
+    ]
   }
 ]
