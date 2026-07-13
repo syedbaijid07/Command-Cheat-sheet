@@ -339,6 +339,8 @@ To remove `cheat-sit` from your system, run `uninstall.sh` from the repo folder:
 ```bash
 chmod +x uninstall.sh
 ./uninstall.sh
+cd
+rm -r Command-Cheat-sheet
 ```
 
 This removes the installed executable from `~/.local/bin`. It will also ask
