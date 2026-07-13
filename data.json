@@ -7325,5 +7325,608 @@
       "temporary hostname",
       "change hostname"
     ]
+  },
+  {
+    "tool": "systemctl",
+    "command": "systemctl status",
+    "desc": "shows the overall system status along with failed units and active services",
+    "keywords": [
+      "systemctl status",
+      "check system status",
+      "failed services",
+      "systemd overview"
+    ]
+  },
+  {
+    "tool": "systemctl",
+    "command": "systemctl status <service>",
+    "desc": "displays the current status, logs, and process information of a specific service",
+    "keywords": [
+      "systemctl service status",
+      "check service status",
+      "systemd service info"
+    ]
+  },
+  {
+    "tool": "systemctl",
+    "command": "systemctl start <service>",
+    "desc": "starts a systemd service immediately",
+    "keywords": [
+      "start service",
+      "systemctl start",
+      "enable running service"
+    ]
+  },
+  {
+    "tool": "systemctl",
+    "command": "systemctl stop <service>",
+    "desc": "stops a running systemd service",
+    "keywords": [
+      "stop service",
+      "systemctl stop",
+      "disable running service"
+    ]
+  },
+  {
+    "tool": "systemctl",
+    "command": "systemctl restart <service>",
+    "desc": "restarts a service by stopping and starting it again",
+    "keywords": [
+      "restart service",
+      "systemctl restart",
+      "reload service"
+    ]
+  },
+  {
+    "tool": "systemctl",
+    "command": "systemctl reload <service>",
+    "desc": "reloads a service configuration without fully restarting the service if supported",
+    "keywords": [
+      "reload service config",
+      "systemctl reload"
+    ]
+  },
+  {
+    "tool": "systemctl",
+    "command": "systemctl enable <service>",
+    "desc": "enables a service to start automatically during system boot",
+    "keywords": [
+      "enable startup service",
+      "auto start service",
+      "systemctl enable"
+    ]
+  },
+  {
+    "tool": "systemctl",
+    "command": "systemctl disable <service>",
+    "desc": "disables automatic startup of a service during boot",
+    "keywords": [
+      "disable startup service",
+      "systemctl disable"
+    ]
+  },
+  {
+    "tool": "systemctl",
+    "command": "systemctl is-active <service>",
+    "desc": "checks whether a service is currently active",
+    "keywords": [
+      "systemctl active check",
+      "service running status"
+    ]
+  },
+  {
+    "tool": "systemctl",
+    "command": "systemctl list-units --type=service",
+    "desc": "lists all active system services managed by systemd",
+    "keywords": [
+      "list services",
+      "systemctl services",
+      "active units"
+    ]
+  },
+  {
+    "tool": "journalctl",
+    "command": "journalctl",
+    "desc": "displays all systemd journal logs",
+    "keywords": [
+      "system logs",
+      "journalctl logs",
+      "systemd journal"
+    ]
+  },
+  {
+    "tool": "journalctl",
+    "command": "journalctl -xe",
+    "desc": "displays recent log messages with detailed explanations for troubleshooting",
+    "keywords": [
+      "journalctl errors",
+      "recent logs",
+      "debug system"
+    ]
+  },
+  {
+    "tool": "journalctl",
+    "command": "journalctl -u <service>",
+    "desc": "displays logs for a specific systemd service",
+    "keywords": [
+      "service logs",
+      "journalctl service",
+      "systemd logs"
+    ]
+  },
+  {
+    "tool": "journalctl",
+    "command": "journalctl -f",
+    "desc": "follows journal logs in real time similar to tail -f",
+    "keywords": [
+      "live logs",
+      "journalctl follow",
+      "realtime journal"
+    ]
+  },
+  {
+    "tool": "journalctl",
+    "command": "journalctl --since today",
+    "desc": "shows logs generated since the beginning of the current day",
+    "keywords": [
+      "today's logs",
+      "journalctl today"
+    ]
+  },
+  {
+    "tool": "service",
+    "command": "service <service> status",
+    "desc": "displays the current status of a service using the legacy service command",
+    "keywords": [
+      "service status",
+      "linux service manager"
+    ]
+  },
+  {
+    "tool": "service",
+    "command": "service <service> start",
+    "desc": "starts a service using the service command",
+    "keywords": [
+      "start service",
+      "service command"
+    ]
+  },
+  {
+    "tool": "service",
+    "command": "service <service> stop",
+    "desc": "stops a running service",
+    "keywords": [
+      "stop service",
+      "service stop"
+    ]
+  },
+  {
+    "tool": "service",
+    "command": "service <service> restart",
+    "desc": "restarts a service using the service command",
+    "keywords": [
+      "restart service",
+      "service restart"
+    ]
+  },
+  {
+    "tool": "service",
+    "command": "service --status-all",
+    "desc": "lists all available services and their current status",
+    "keywords": [
+      "list services",
+      "service status all"
+    ]
+  },
+  {
+    "tool": "crontab",
+    "command": "crontab -e",
+    "desc": "opens the current user's cron jobs in the default editor",
+    "keywords": [
+      "edit cron jobs",
+      "crontab edit",
+      "scheduled tasks"
+    ]
+  },
+  {
+    "tool": "crontab",
+    "command": "crontab -l",
+    "desc": "lists all scheduled cron jobs for the current user",
+    "keywords": [
+      "list cron jobs",
+      "view crontab"
+    ]
+  },
+  {
+    "tool": "crontab",
+    "command": "crontab -r",
+    "desc": "removes all cron jobs for the current user",
+    "keywords": [
+      "delete cron jobs",
+      "remove crontab"
+    ]
+  },
+  {
+    "tool": "crontab",
+    "command": "crontab <file>",
+    "desc": "installs cron jobs from a specified file",
+    "keywords": [
+      "import crontab",
+      "cron schedule file"
+    ]
+  },
+  {
+    "tool": "useradd",
+    "command": "useradd <username>",
+    "desc": "creates a new user account using default settings",
+    "keywords": [
+      "create linux user",
+      "add user account"
+    ]
+  },
+  {
+    "tool": "useradd",
+    "command": "useradd -m <username>",
+    "desc": "creates a new user and automatically creates a home directory",
+    "keywords": [
+      "create user home directory",
+      "useradd home"
+    ]
+  },
+  {
+    "tool": "useradd",
+    "command": "useradd -G <group> <username>",
+    "desc": "creates a user and adds them to one or more supplementary groups",
+    "keywords": [
+      "user groups",
+      "useradd group"
+    ]
+  },
+  {
+    "tool": "usermod",
+    "command": "usermod -aG <group> <username>",
+    "desc": "adds an existing user to an additional group without removing current groups",
+    "keywords": [
+      "add user to group",
+      "usermod append group"
+    ]
+  },
+  {
+    "tool": "usermod",
+    "command": "usermod -l <newname> <oldname>",
+    "desc": "renames an existing user account",
+    "keywords": [
+      "rename user",
+      "usermod rename"
+    ]
+  },
+  {
+    "tool": "usermod",
+    "command": "usermod -s /bin/bash <username>",
+    "desc": "changes the default login shell for a user",
+    "keywords": [
+      "change shell",
+      "usermod shell"
+    ]
+  },
+  {
+    "tool": "passwd",
+    "command": "passwd",
+    "desc": "changes the password of the current logged-in user",
+    "keywords": [
+      "change password",
+      "linux password"
+    ]
+  },
+  {
+    "tool": "passwd",
+    "command": "passwd <username>",
+    "desc": "changes the password for another user as root",
+    "keywords": [
+      "reset user password",
+      "admin password"
+    ]
+  },
+  {
+    "tool": "passwd",
+    "command": "passwd -l <username>",
+    "desc": "locks a user account by disabling password login",
+    "keywords": [
+      "lock user account",
+      "disable login"
+    ]
+  },
+  {
+    "tool": "passwd",
+    "command": "passwd -u <username>",
+    "desc": "unlocks a previously locked user account",
+    "keywords": [
+      "unlock user account",
+      "enable login"
+    ]
+  },
+  {
+    "tool": "groupadd",
+    "command": "groupadd <groupname>",
+    "desc": "creates a new user group",
+    "keywords": [
+      "create group",
+      "linux group management"
+    ]
+  },
+  {
+    "tool": "groupadd",
+    "command": "groupadd -g <gid> <groupname>",
+    "desc": "creates a group using a specific group id",
+    "keywords": [
+      "custom gid",
+      "create group id"
+    ]
+  },
+  {
+    "tool": "mount",
+    "command": "mount",
+    "desc": "lists all currently mounted filesystems",
+    "keywords": [
+      "mounted disks",
+      "mounted partitions"
+    ]
+  },
+  {
+    "tool": "mount",
+    "command": "mount <device> <directory>",
+    "desc": "mounts a device or partition to a directory",
+    "keywords": [
+      "mount partition",
+      "mount drive"
+    ]
+  },
+  {
+    "tool": "mount",
+    "command": "mount -o ro <device> <directory>",
+    "desc": "mounts a filesystem in read-only mode",
+    "keywords": [
+      "read only mount",
+      "mount readonly"
+    ]
+  },
+  {
+    "tool": "umount",
+    "command": "umount <directory>",
+    "desc": "unmounts a mounted filesystem using its mount point",
+    "keywords": [
+      "unmount drive",
+      "remove mounted filesystem"
+    ]
+  },
+  {
+    "tool": "umount",
+    "command": "umount <device>",
+    "desc": "unmounts a mounted filesystem using its device name",
+    "keywords": [
+      "unmount partition",
+      "umount device"
+    ]
+  },
+  {
+    "tool": "umount",
+    "command": "umount -l <directory>",
+    "desc": "lazily unmounts a busy filesystem after it is no longer in use",
+    "keywords": [
+      "lazy unmount",
+      "busy filesystem"
+    ]
+  },
+  {
+    "tool": "lsblk",
+    "command": "lsblk",
+    "desc": "displays all available block storage devices and partitions",
+    "keywords": [
+      "disk list",
+      "block devices",
+      "storage devices"
+    ]
+  },
+  {
+    "tool": "lsblk",
+    "command": "lsblk -f",
+    "desc": "shows block devices along with filesystem types and uuid information",
+    "keywords": [
+      "filesystem uuid",
+      "lsblk filesystem"
+    ]
+  },
+  {
+    "tool": "fdisk",
+    "command": "fdisk -l",
+    "desc": "lists all detected disks and their partition tables",
+    "keywords": [
+      "disk partitions",
+      "fdisk list"
+    ]
+  },
+  {
+    "tool": "fdisk",
+    "command": "fdisk <device>",
+    "desc": "opens the interactive partition editor for a disk",
+    "keywords": [
+      "edit partitions",
+      "create partition"
+    ]
+  },
+  {
+    "tool": "mkfs",
+    "command": "mkfs.ext4 <device>",
+    "desc": "formats a partition using the ext4 filesystem",
+    "keywords": [
+      "format ext4",
+      "create filesystem"
+    ]
+  },
+  {
+    "tool": "mkfs",
+    "command": "mkfs.xfs <device>",
+    "desc": "formats a partition using the xfs filesystem",
+    "keywords": [
+      "xfs format",
+      "create xfs filesystem"
+    ]
+  },
+  {
+    "tool": "df",
+    "command": "df -h",
+    "desc": "displays disk space usage in a human-readable format",
+    "keywords": [
+      "disk usage",
+      "free disk space",
+      "df human readable"
+    ]
+  },
+  {
+    "tool": "df",
+    "command": "df -Th",
+    "desc": "displays disk usage along with filesystem types",
+    "keywords": [
+      "filesystem type",
+      "disk information"
+    ]
+  },
+  {
+    "tool": "du",
+    "command": "du -sh <directory>",
+    "desc": "shows the total size of a directory in a human-readable format",
+    "keywords": [
+      "folder size",
+      "disk usage directory"
+    ]
+  },
+  {
+    "tool": "du",
+    "command": "du -ah",
+    "desc": "displays sizes of all files and directories recursively",
+    "keywords": [
+      "recursive disk usage",
+      "file size"
+    ]
+  },
+  {
+    "tool": "free",
+    "command": "free -h",
+    "desc": "displays system memory and swap usage in a human-readable format",
+    "keywords": [
+      "ram usage",
+      "memory statistics",
+      "free command"
+    ]
+  },
+  {
+    "tool": "free",
+    "command": "free -m",
+    "desc": "displays memory usage in megabytes",
+    "keywords": [
+      "memory megabytes",
+      "ram info"
+    ]
+  },
+  {
+    "tool": "uptime",
+    "command": "uptime",
+    "desc": "displays how long the system has been running along with system load averages",
+    "keywords": [
+      "system uptime",
+      "load average",
+      "running time"
+    ]
+  },
+  {
+    "tool": "uptime",
+    "command": "uptime -p",
+    "desc": "displays uptime in a human-readable format",
+    "keywords": [
+      "pretty uptime",
+      "readable uptime"
+    ]
+  },
+  {
+    "tool": "hostnamectl",
+    "command": "hostnamectl",
+    "desc": "displays detailed information about the current system hostname and operating system",
+    "keywords": [
+      "hostname information",
+      "system details"
+    ]
+  },
+  {
+    "tool": "hostnamectl",
+    "command": "hostnamectl set-hostname <hostname>",
+    "desc": "changes the system hostname permanently",
+    "keywords": [
+      "change hostname",
+      "hostnamectl set"
+    ]
+  },
+  {
+    "tool": "timedatectl",
+    "command": "timedatectl",
+    "desc": "displays current date, time, timezone, and ntp synchronization status",
+    "keywords": [
+      "system time",
+      "timezone info",
+      "ntp status"
+    ]
+  },
+  {
+    "tool": "timedatectl",
+    "command": "timedatectl set-timezone <timezone>",
+    "desc": "changes the system timezone",
+    "keywords": [
+      "change timezone",
+      "timedatectl timezone"
+    ]
+  },
+  {
+    "tool": "timedatectl",
+    "command": "timedatectl set-ntp true",
+    "desc": "enables automatic network time synchronization",
+    "keywords": [
+      "enable ntp",
+      "synchronize system time"
+    ]
+  },
+  {
+    "tool": "hostname",
+    "command": "hostname",
+    "desc": "displays the current system hostname",
+    "keywords": [
+      "show hostname",
+      "current hostname"
+    ]
+  },
+  {
+    "tool": "hostname",
+    "command": "hostname -I",
+    "desc": "displays all assigned ip addresses of the system",
+    "keywords": [
+      "local ip address",
+      "hostname ip"
+    ]
+  },
+  {
+    "tool": "hostname",
+    "command": "hostname <newhostname>",
+    "desc": "temporarily changes the system hostname until the next reboot",
+    "keywords": [
+      "temporary hostname",
+      "change hostname"
+    ]
+  },
+  {
+    "tool": "data add",
+    "command": ":import data_add.txt",
+    "desc": "this command help u add any kind of command list u write erliar in data_add.txt file",
+    "keywords": [
+      "temporary hostname",
+      "change hostname"
+    ]
   }
 ]
