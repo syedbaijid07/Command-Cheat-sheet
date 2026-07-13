@@ -8410,5 +8410,371 @@
       "filesystem info",
       "stat filesystem"
     ]
+  },
+  {
+    "tool": "git",
+    "command": "git init",
+    "desc": "initializes a new Git repository in the current directory",
+    "keywords": [
+      "git initialize repository",
+      "create git repo",
+      "git init"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git init <directory>",
+    "desc": "creates a new Git repository inside the specified directory",
+    "keywords": [
+      "git init directory",
+      "initialize repository"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git clone <repository_url>",
+    "desc": "clones a remote repository to the local machine",
+    "keywords": [
+      "git clone repository",
+      "download repository",
+      "clone github repo"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git clone <repository_url> <directory>",
+    "desc": "clones a repository into a specific local directory",
+    "keywords": [
+      "clone repository custom folder",
+      "git clone directory"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git clone --depth 1 <repository_url>",
+    "desc": "performs a shallow clone by downloading only the latest commit",
+    "keywords": [
+      "shallow clone",
+      "git depth 1",
+      "clone latest commit"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git status",
+    "desc": "displays the current repository status including modified, staged, and untracked files",
+    "keywords": [
+      "git status",
+      "repository status",
+      "modified files"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git status -s",
+    "desc": "displays repository status in short format",
+    "keywords": [
+      "short git status",
+      "compact status"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git status --ignored",
+    "desc": "shows ignored files in addition to tracked and untracked files",
+    "keywords": [
+      "ignored files",
+      "git ignored"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git add <file>",
+    "desc": "stages a specific file for the next commit",
+    "keywords": [
+      "git stage file",
+      "add file",
+      "git add"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git add .",
+    "desc": "stages all modified and new files in the current directory",
+    "keywords": [
+      "stage all files",
+      "git add dot"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git add -A",
+    "desc": "stages all changes including new, modified, and deleted files",
+    "keywords": [
+      "stage everything",
+      "git add all"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git add -u",
+    "desc": "stages modifications and deletions but not new files",
+    "keywords": [
+      "git update tracked files",
+      "stage modified"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git add *.py",
+    "desc": "stages all python files in the current directory",
+    "keywords": [
+      "stage file pattern",
+      "git wildcard"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git commit -m \"<message>\"",
+    "desc": "creates a new commit with the specified commit message",
+    "keywords": [
+      "git commit message",
+      "save changes"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git commit",
+    "desc": "opens the default editor to write a commit message",
+    "keywords": [
+      "commit editor",
+      "git commit editor"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git commit -am \"<message>\"",
+    "desc": "stages tracked file changes and commits them in one command",
+    "keywords": [
+      "quick commit",
+      "tracked files commit"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git commit --amend",
+    "desc": "modifies the most recent commit without creating a new one",
+    "keywords": [
+      "amend commit",
+      "edit last commit"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git commit --amend --no-edit",
+    "desc": "updates the last commit without changing its message",
+    "keywords": [
+      "update last commit",
+      "amend no edit"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git log",
+    "desc": "displays the complete commit history",
+    "keywords": [
+      "git history",
+      "commit history",
+      "git log"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git log --oneline",
+    "desc": "displays commit history in a compact one-line format",
+    "keywords": [
+      "short git log",
+      "one line commits"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git log --graph",
+    "desc": "displays commit history as an ascii graph",
+    "keywords": [
+      "git graph",
+      "branch history"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git log --stat",
+    "desc": "shows commit history along with changed file statistics",
+    "keywords": [
+      "git log stats",
+      "commit files"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git log --author=\"<name>\"",
+    "desc": "filters commits made by a specific author",
+    "keywords": [
+      "git author history",
+      "commits by user"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git log --since=\"7 days ago\"",
+    "desc": "displays commits made within the specified time period",
+    "keywords": [
+      "recent commits",
+      "git since"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git diff",
+    "desc": "displays unstaged changes between the working directory and the staging area",
+    "keywords": [
+      "git diff unstaged",
+      "compare changes"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git diff --staged",
+    "desc": "displays staged changes that will be included in the next commit",
+    "keywords": [
+      "staged diff",
+      "git staged changes"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git diff HEAD",
+    "desc": "compares the working directory against the latest commit",
+    "keywords": [
+      "compare with head",
+      "git head diff"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git diff branch1..branch2",
+    "desc": "compares differences between two branches",
+    "keywords": [
+      "compare branches",
+      "git branch diff"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git fetch",
+    "desc": "downloads updates from the remote repository without merging them",
+    "keywords": [
+      "fetch remote",
+      "update remote repository"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git fetch origin",
+    "desc": "downloads updates from the origin remote",
+    "keywords": [
+      "fetch origin",
+      "git origin"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git fetch --all",
+    "desc": "downloads updates from all configured remote repositories",
+    "keywords": [
+      "fetch all remotes",
+      "git all"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git fetch --prune",
+    "desc": "removes references to deleted remote branches during fetch",
+    "keywords": [
+      "prune remote branches",
+      "git fetch prune"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git merge <branch>",
+    "desc": "merges the specified branch into the current branch",
+    "keywords": [
+      "merge branch",
+      "git merge"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git merge --no-ff <branch>",
+    "desc": "performs a merge while always creating a merge commit",
+    "keywords": [
+      "no fast forward merge",
+      "git merge commit"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git merge --abort",
+    "desc": "aborts an ongoing merge operation and restores the previous state",
+    "keywords": [
+      "cancel merge",
+      "abort merge"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git branch",
+    "desc": "lists all local branches",
+    "keywords": [
+      "git branches",
+      "list branches"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git branch <branch>",
+    "desc": "creates a new branch",
+    "keywords": [
+      "create branch",
+      "git new branch"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git branch -d <branch>",
+    "desc": "deletes a fully merged local branch",
+    "keywords": [
+      "delete branch",
+      "remove branch"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git branch -D <branch>",
+    "desc": "forcefully deletes a local branch",
+    "keywords": [
+      "force delete branch",
+      "git remove branch"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git branch -a",
+    "desc": "lists both local and remote branches",
+    "keywords": [
+      "all branches",
+      "remote branches"
+    ]
   }
 ]
