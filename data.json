@@ -9632,5 +9632,468 @@
       "unstage file",
       "git reset file"
     ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker version",
+    "desc": "displays the installed Docker client and server version information",
+    "keywords": [
+      "docker version",
+      "docker engine version"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker info",
+    "desc": "displays detailed information about the Docker installation and daemon",
+    "keywords": [
+      "docker info",
+      "docker daemon information",
+      "docker environment"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker images",
+    "desc": "lists all locally available Docker images",
+    "keywords": [
+      "docker images",
+      "list images",
+      "local images"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker image ls",
+    "desc": "lists all Docker images stored locally",
+    "keywords": [
+      "docker image list",
+      "image ls"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker pull <image>",
+    "desc": "downloads a Docker image from a container registry",
+    "keywords": [
+      "docker pull image",
+      "download image",
+      "docker hub"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker pull <image>:<tag>",
+    "desc": "downloads a specific version of a Docker image",
+    "keywords": [
+      "docker image tag",
+      "pull specific version"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker search <keyword>",
+    "desc": "searches Docker Hub for images matching a keyword",
+    "keywords": [
+      "docker search",
+      "search docker hub"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker image inspect <image>",
+    "desc": "displays detailed metadata about a Docker image",
+    "keywords": [
+      "inspect image",
+      "docker metadata"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker image history <image>",
+    "desc": "displays the layer history of a Docker image",
+    "keywords": [
+      "docker image history",
+      "image layers"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker image rm <image>",
+    "desc": "removes a Docker image from the local system",
+    "keywords": [
+      "delete image",
+      "remove docker image"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker rmi <image>",
+    "desc": "removes one or more Docker images",
+    "keywords": [
+      "docker rmi",
+      "delete images"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker image prune",
+    "desc": "removes dangling unused Docker images",
+    "keywords": [
+      "clean images",
+      "docker image prune"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker image prune -a",
+    "desc": "removes all unused Docker images",
+    "keywords": [
+      "remove unused images",
+      "clean docker images"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker build .",
+    "desc": "builds a Docker image from the Dockerfile in the current directory",
+    "keywords": [
+      "docker build",
+      "build image",
+      "dockerfile"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker build -t <image> .",
+    "desc": "builds an image and assigns a name",
+    "keywords": [
+      "build tagged image",
+      "docker tag build"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker build -t <image>:<tag> .",
+    "desc": "builds an image with a specific tag",
+    "keywords": [
+      "docker image tag",
+      "build version"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker build --no-cache .",
+    "desc": "builds an image without using cached layers",
+    "keywords": [
+      "docker no cache",
+      "fresh build"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker build -f <Dockerfile> .",
+    "desc": "builds an image using a custom Dockerfile",
+    "keywords": [
+      "custom dockerfile",
+      "build dockerfile"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker build --build-arg <name>=<value> .",
+    "desc": "passes build arguments to the Dockerfile",
+    "keywords": [
+      "docker build args",
+      "build variables"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker ps",
+    "desc": "lists all currently running containers",
+    "keywords": [
+      "docker running containers",
+      "docker ps"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker ps -a",
+    "desc": "lists all containers including stopped containers",
+    "keywords": [
+      "docker all containers",
+      "docker ps all"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker create <image>",
+    "desc": "creates a container without starting it",
+    "keywords": [
+      "create container",
+      "docker create"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker start <container>",
+    "desc": "starts an existing stopped container",
+    "keywords": [
+      "docker start",
+      "start container"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker stop <container>",
+    "desc": "gracefully stops a running container",
+    "keywords": [
+      "docker stop",
+      "stop container"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker restart <container>",
+    "desc": "restarts a running or stopped container",
+    "keywords": [
+      "restart docker container"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker pause <container>",
+    "desc": "pauses all processes running inside a container",
+    "keywords": [
+      "pause container",
+      "docker freeze"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker unpause <container>",
+    "desc": "resumes a paused container",
+    "keywords": [
+      "resume container",
+      "docker unpause"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker kill <container>",
+    "desc": "immediately terminates a running container",
+    "keywords": [
+      "force stop container",
+      "docker kill"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker rename <old> <new>",
+    "desc": "renames an existing Docker container",
+    "keywords": [
+      "rename container",
+      "docker rename"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker rm <container>",
+    "desc": "removes a stopped container",
+    "keywords": [
+      "remove container",
+      "delete container"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker rm -f <container>",
+    "desc": "forcefully stops and removes a container",
+    "keywords": [
+      "force remove container",
+      "docker rm force"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker container prune",
+    "desc": "removes all stopped containers",
+    "keywords": [
+      "clean stopped containers",
+      "docker prune"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run <image>",
+    "desc": "creates and starts a container from an image",
+    "keywords": [
+      "docker run",
+      "start container"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run -it <image>",
+    "desc": "starts an interactive container with a terminal",
+    "keywords": [
+      "interactive docker",
+      "docker terminal"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run --rm <image>",
+    "desc": "automatically removes the container after it exits",
+    "keywords": [
+      "temporary container",
+      "auto remove"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run -d <image>",
+    "desc": "runs a container in detached background mode",
+    "keywords": [
+      "background container",
+      "detached docker"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run --name <name> <image>",
+    "desc": "starts a container with a custom name",
+    "keywords": [
+      "named container",
+      "docker container name"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run -p 8080:80 <image>",
+    "desc": "maps host port 8080 to container port 80",
+    "keywords": [
+      "docker port mapping",
+      "expose port"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run -P <image>",
+    "desc": "automatically maps all exposed container ports",
+    "keywords": [
+      "automatic port mapping",
+      "publish ports"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run -v <host>:<container> <image>",
+    "desc": "mounts a host directory into the container",
+    "keywords": [
+      "docker bind mount",
+      "docker volume mount"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run --mount type=bind,source=<host>,target=<container> <image>",
+    "desc": "mounts a host directory using the modern mount syntax",
+    "keywords": [
+      "bind mount",
+      "docker mount"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run --network <network> <image>",
+    "desc": "starts a container connected to a specific Docker network",
+    "keywords": [
+      "docker network",
+      "connect network"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run -e KEY=value <image>",
+    "desc": "sets environment variables inside the container",
+    "keywords": [
+      "docker environment variable",
+      "env option"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run --restart unless-stopped <image>",
+    "desc": "automatically restarts the container unless manually stopped",
+    "keywords": [
+      "restart policy",
+      "docker auto restart"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run --cpus=2 --memory=2g <image>",
+    "desc": "limits cpu and memory resources available to the container",
+    "keywords": [
+      "docker resource limits",
+      "cpu memory limit"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run --hostname <hostname> <image>",
+    "desc": "assigns a custom hostname to the container",
+    "keywords": [
+      "docker hostname",
+      "container hostname"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run --privileged <image>",
+    "desc": "runs a container with extended Linux capabilities",
+    "keywords": [
+      "privileged container",
+      "docker privileged"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run --user <uid>:<gid> <image>",
+    "desc": "runs a container as a specific user and group",
+    "keywords": [
+      "docker user",
+      "run as user"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run --entrypoint <command> <image>",
+    "desc": "overrides the default container entrypoint",
+    "keywords": [
+      "custom entrypoint",
+      "docker entrypoint"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run -w /app <image>",
+    "desc": "sets the working directory inside the container",
+    "keywords": [
+      "docker working directory",
+      "workdir"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run --rm -it ubuntu bash",
+    "desc": "starts a temporary Ubuntu container with an interactive Bash shell",
+    "keywords": [
+      "ubuntu shell",
+      "docker bash",
+      "interactive ubuntu"
+    ]
   }
 ]
