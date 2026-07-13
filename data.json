@@ -7928,5 +7928,487 @@
       "temporary hostname",
       "change hostname"
     ]
+  },
+  {
+    "tool": "ps",
+    "command": "ps",
+    "desc": "displays running processes associated with the current terminal session",
+    "keywords": [
+      "process list",
+      "running processes",
+      "ps command"
+    ]
+  },
+  {
+    "tool": "ps",
+    "command": "ps aux",
+    "desc": "displays detailed information about all running processes on the system",
+    "keywords": [
+      "list all processes",
+      "process monitor",
+      "ps aux"
+    ]
+  },
+  {
+    "tool": "ps",
+    "command": "ps -ef",
+    "desc": "lists all running processes in full-format output",
+    "keywords": [
+      "full process list",
+      "linux processes",
+      "ps ef"
+    ]
+  },
+  {
+    "tool": "ps",
+    "command": "ps -u <username>",
+    "desc": "displays all processes owned by a specific user",
+    "keywords": [
+      "user processes",
+      "ps user"
+    ]
+  },
+  {
+    "tool": "top",
+    "command": "top",
+    "desc": "displays real-time information about cpu, memory usage, and running processes",
+    "keywords": [
+      "system monitor",
+      "cpu usage",
+      "memory usage",
+      "top command"
+    ]
+  },
+  {
+    "tool": "top",
+    "command": "top -u <username>",
+    "desc": "monitors only the processes owned by a specific user",
+    "keywords": [
+      "top user processes",
+      "monitor user"
+    ]
+  },
+  {
+    "tool": "htop",
+    "command": "htop",
+    "desc": "launches an interactive process viewer with cpu, memory, and process management features",
+    "keywords": [
+      "htop monitor",
+      "interactive task manager",
+      "process viewer"
+    ]
+  },
+  {
+    "tool": "htop",
+    "command": "htop -u <username>",
+    "desc": "displays only the processes owned by a specific user",
+    "keywords": [
+      "htop user filter",
+      "process monitor"
+    ]
+  },
+  {
+    "tool": "pgrep",
+    "command": "pgrep <process>",
+    "desc": "searches for the process id of a running process by name",
+    "keywords": [
+      "find pid",
+      "search process",
+      "pgrep"
+    ]
+  },
+  {
+    "tool": "pgrep",
+    "command": "pgrep -l <process>",
+    "desc": "displays matching process ids along with process names",
+    "keywords": [
+      "process name and pid",
+      "pgrep list"
+    ]
+  },
+  {
+    "tool": "pgrep",
+    "command": "pgrep -u <username>",
+    "desc": "finds processes belonging to a specific user",
+    "keywords": [
+      "user process ids",
+      "pgrep user"
+    ]
+  },
+  {
+    "tool": "pkill",
+    "command": "pkill <process>",
+    "desc": "terminates all running processes matching the specified name",
+    "keywords": [
+      "kill process by name",
+      "pkill"
+    ]
+  },
+  {
+    "tool": "pkill",
+    "command": "pkill -9 <process>",
+    "desc": "forcefully terminates matching processes using signal 9",
+    "keywords": [
+      "force kill process",
+      "pkill signal 9"
+    ]
+  },
+  {
+    "tool": "pkill",
+    "command": "pkill -u <username>",
+    "desc": "terminates all processes owned by a specific user",
+    "keywords": [
+      "kill user processes",
+      "pkill user"
+    ]
+  },
+  {
+    "tool": "killall",
+    "command": "killall <process>",
+    "desc": "terminates all running instances of a specified process",
+    "keywords": [
+      "kill all instances",
+      "process killer"
+    ]
+  },
+  {
+    "tool": "killall",
+    "command": "killall -9 <process>",
+    "desc": "forcefully terminates all matching processes",
+    "keywords": [
+      "force kill all",
+      "killall signal"
+    ]
+  },
+  {
+    "tool": "nice",
+    "command": "nice -n 10 <command>",
+    "desc": "starts a command with a lower cpu scheduling priority",
+    "keywords": [
+      "process priority",
+      "nice command",
+      "cpu priority"
+    ]
+  },
+  {
+    "tool": "nice",
+    "command": "nice -n -5 <command>",
+    "desc": "starts a command with a higher scheduling priority (requires appropriate privileges)",
+    "keywords": [
+      "increase priority",
+      "nice negative value"
+    ]
+  },
+  {
+    "tool": "renice",
+    "command": "renice 10 -p <pid>",
+    "desc": "changes the scheduling priority of a running process",
+    "keywords": [
+      "change process priority",
+      "renice pid"
+    ]
+  },
+  {
+    "tool": "renice",
+    "command": "renice -5 -u <username>",
+    "desc": "changes the priority of all processes owned by a user",
+    "keywords": [
+      "renice user",
+      "process priority"
+    ]
+  },
+  {
+    "tool": "jobs",
+    "command": "jobs",
+    "desc": "lists all background and suspended jobs in the current shell session",
+    "keywords": [
+      "background jobs",
+      "shell jobs",
+      "jobs command"
+    ]
+  },
+  {
+    "tool": "jobs",
+    "command": "jobs -l",
+    "desc": "displays background jobs with their process ids",
+    "keywords": [
+      "jobs pid",
+      "shell job list"
+    ]
+  },
+  {
+    "tool": "fg",
+    "command": "fg",
+    "desc": "brings the most recent background job to the foreground",
+    "keywords": [
+      "foreground job",
+      "resume background process"
+    ]
+  },
+  {
+    "tool": "fg",
+    "command": "fg %1",
+    "desc": "brings a specific background job to the foreground",
+    "keywords": [
+      "foreground specific job",
+      "fg percent"
+    ]
+  },
+  {
+    "tool": "bg",
+    "command": "bg",
+    "desc": "resumes the most recently suspended job in the background",
+    "keywords": [
+      "background suspended job",
+      "bg command"
+    ]
+  },
+  {
+    "tool": "bg",
+    "command": "bg %1",
+    "desc": "resumes a specific suspended job in the background",
+    "keywords": [
+      "bg specific job",
+      "resume shell job"
+    ]
+  },
+  {
+    "tool": "nohup",
+    "command": "nohup <command> &",
+    "desc": "runs a command in the background so it continues after logout",
+    "keywords": [
+      "persistent process",
+      "nohup background"
+    ]
+  },
+  {
+    "tool": "nohup",
+    "command": "nohup <command> > output.log 2>&1 &",
+    "desc": "runs a command in the background and saves all output to a log file",
+    "keywords": [
+      "nohup log file",
+      "background output"
+    ]
+  },
+  {
+    "tool": "ls",
+    "command": "ls",
+    "desc": "lists files and directories in the current directory",
+    "keywords": [
+      "list files",
+      "directory contents",
+      "ls"
+    ]
+  },
+  {
+    "tool": "ls",
+    "command": "ls -l",
+    "desc": "displays files in long format including permissions, owner, size, and modification time",
+    "keywords": [
+      "long listing",
+      "file permissions",
+      "ls long"
+    ]
+  },
+  {
+    "tool": "ls",
+    "command": "ls -la",
+    "desc": "lists all files including hidden files in long format",
+    "keywords": [
+      "hidden files",
+      "ls all",
+      "ls hidden"
+    ]
+  },
+  {
+    "tool": "ls",
+    "command": "ls -lh",
+    "desc": "displays file sizes in a human-readable format",
+    "keywords": [
+      "readable file size",
+      "ls human"
+    ]
+  },
+  {
+    "tool": "tree",
+    "command": "tree",
+    "desc": "displays directories and files in a tree-like structure",
+    "keywords": [
+      "directory tree",
+      "folder tree",
+      "tree command"
+    ]
+  },
+  {
+    "tool": "tree",
+    "command": "tree -L 2",
+    "desc": "limits the displayed directory tree to two levels deep",
+    "keywords": [
+      "tree depth",
+      "limited tree"
+    ]
+  },
+  {
+    "tool": "touch",
+    "command": "touch <file>",
+    "desc": "creates a new empty file or updates the timestamp of an existing file",
+    "keywords": [
+      "create file",
+      "touch command"
+    ]
+  },
+  {
+    "tool": "touch",
+    "command": "touch file1 file2",
+    "desc": "creates multiple empty files at once",
+    "keywords": [
+      "multiple files",
+      "touch multiple"
+    ]
+  },
+  {
+    "tool": "mkdir",
+    "command": "mkdir <directory>",
+    "desc": "creates a new directory",
+    "keywords": [
+      "create folder",
+      "make directory"
+    ]
+  },
+  {
+    "tool": "mkdir",
+    "command": "mkdir -p dir1/dir2/dir3",
+    "desc": "creates nested directories if they do not already exist",
+    "keywords": [
+      "recursive mkdir",
+      "nested folders"
+    ]
+  },
+  {
+    "tool": "rmdir",
+    "command": "rmdir <directory>",
+    "desc": "removes an empty directory",
+    "keywords": [
+      "delete empty folder",
+      "remove directory"
+    ]
+  },
+  {
+    "tool": "rmdir",
+    "command": "rmdir -p dir1/dir2",
+    "desc": "removes nested empty directories",
+    "keywords": [
+      "recursive empty directory removal"
+    ]
+  },
+  {
+    "tool": "mv",
+    "command": "mv <source> <destination>",
+    "desc": "moves a file or directory to another location",
+    "keywords": [
+      "move file",
+      "relocate directory"
+    ]
+  },
+  {
+    "tool": "mv",
+    "command": "mv <oldname> <newname>",
+    "desc": "renames a file or directory",
+    "keywords": [
+      "rename file",
+      "rename folder"
+    ]
+  },
+  {
+    "tool": "cp",
+    "command": "cp <source> <destination>",
+    "desc": "copies a file to another location",
+    "keywords": [
+      "copy file",
+      "cp command"
+    ]
+  },
+  {
+    "tool": "cp",
+    "command": "cp -r <source> <destination>",
+    "desc": "recursively copies a directory and all its contents",
+    "keywords": [
+      "copy directory",
+      "recursive copy"
+    ]
+  },
+  {
+    "tool": "rm",
+    "command": "rm <file>",
+    "desc": "deletes a file",
+    "keywords": [
+      "remove file",
+      "delete file"
+    ]
+  },
+  {
+    "tool": "rm",
+    "command": "rm -r <directory>",
+    "desc": "recursively removes a directory and its contents",
+    "keywords": [
+      "remove directory",
+      "recursive delete"
+    ]
+  },
+  {
+    "tool": "rm",
+    "command": "rm -rf <directory>",
+    "desc": "forcefully removes a directory and all files without prompting",
+    "keywords": [
+      "force delete directory",
+      "rm force"
+    ]
+  },
+  {
+    "tool": "ln",
+    "command": "ln <target> <link>",
+    "desc": "creates a hard link to a file",
+    "keywords": [
+      "hard link",
+      "ln command"
+    ]
+  },
+  {
+    "tool": "ln",
+    "command": "ln -s <target> <link>",
+    "desc": "creates a symbolic link pointing to a file or directory",
+    "keywords": [
+      "symbolic link",
+      "symlink",
+      "soft link"
+    ]
+  },
+  {
+    "tool": "realpath",
+    "command": "realpath <file>",
+    "desc": "displays the absolute path of a file or directory",
+    "keywords": [
+      "absolute path",
+      "canonical path"
+    ]
+  },
+  {
+    "tool": "stat",
+    "command": "stat <file>",
+    "desc": "displays detailed information including size, permissions, ownership, and timestamps of a file",
+    "keywords": [
+      "file metadata",
+      "file information",
+      "stat command"
+    ]
+  },
+  {
+    "tool": "stat",
+    "command": "stat -f <file>",
+    "desc": "displays filesystem information for the specified file",
+    "keywords": [
+      "filesystem info",
+      "stat filesystem"
+    ]
   }
 ]
