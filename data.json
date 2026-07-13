@@ -10909,5 +10909,448 @@
       "live reload",
       "development"
     ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker login",
+    "desc": "authenticates with a Docker registry using your credentials",
+    "keywords": [
+      "docker login",
+      "registry login",
+      "docker hub login"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker logout",
+    "desc": "signs out from the current Docker registry",
+    "keywords": [
+      "docker logout",
+      "registry logout"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker search <image>",
+    "desc": "searches Docker Hub for images matching a keyword",
+    "keywords": [
+      "docker search",
+      "docker hub search"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker pull <repository>:<tag>",
+    "desc": "downloads a specific image and tag from a registry",
+    "keywords": [
+      "docker pull image",
+      "download image"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker push <repository>:<tag>",
+    "desc": "uploads a local image to a Docker registry",
+    "keywords": [
+      "docker push",
+      "upload image"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker tag <image> <repository>:<tag>",
+    "desc": "creates a new tag for an existing Docker image",
+    "keywords": [
+      "docker tag",
+      "rename image",
+      "image tag"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker tag <image>:latest username/<image>:v1.0",
+    "desc": "tags an image for publishing to Docker Hub or another registry",
+    "keywords": [
+      "docker publish image",
+      "registry tag"
+    ]
+  },
+  {
+    "tool": "docker buildx",
+    "command": "docker buildx version",
+    "desc": "displays the installed Docker Buildx version",
+    "keywords": [
+      "docker buildx version",
+      "buildx"
+    ]
+  },
+  {
+    "tool": "docker buildx",
+    "command": "docker buildx ls",
+    "desc": "lists all available Buildx builders",
+    "keywords": [
+      "buildx builders",
+      "docker buildx list"
+    ]
+  },
+  {
+    "tool": "docker buildx",
+    "command": "docker buildx create --name mybuilder",
+    "desc": "creates a new Buildx builder instance",
+    "keywords": [
+      "create builder",
+      "docker buildx create"
+    ]
+  },
+  {
+    "tool": "docker buildx",
+    "command": "docker buildx use mybuilder",
+    "desc": "switches to the specified Buildx builder",
+    "keywords": [
+      "use builder",
+      "buildx switch"
+    ]
+  },
+  {
+    "tool": "docker buildx",
+    "command": "docker buildx inspect",
+    "desc": "displays information about the active Buildx builder",
+    "keywords": [
+      "inspect buildx",
+      "builder info"
+    ]
+  },
+  {
+    "tool": "docker buildx",
+    "command": "docker buildx build .",
+    "desc": "builds an image using Buildx",
+    "keywords": [
+      "buildx build",
+      "docker build"
+    ]
+  },
+  {
+    "tool": "docker buildx",
+    "command": "docker buildx build --platform linux/amd64,linux/arm64 .",
+    "desc": "builds a multi-platform Docker image",
+    "keywords": [
+      "multi platform build",
+      "docker arm64 amd64"
+    ]
+  },
+  {
+    "tool": "docker buildx",
+    "command": "docker buildx build --push .",
+    "desc": "builds an image and pushes it directly to the registry",
+    "keywords": [
+      "build and push",
+      "buildx push"
+    ]
+  },
+  {
+    "tool": "docker buildx",
+    "command": "docker buildx build --load .",
+    "desc": "loads the built image into the local Docker image store",
+    "keywords": [
+      "buildx load",
+      "local image"
+    ]
+  },
+  {
+    "tool": "docker buildx",
+    "command": "docker buildx rm mybuilder",
+    "desc": "removes a Buildx builder instance",
+    "keywords": [
+      "remove builder",
+      "delete buildx"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker context ls",
+    "desc": "lists all configured Docker contexts",
+    "keywords": [
+      "docker contexts",
+      "list contexts"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker context create <name>",
+    "desc": "creates a new Docker context",
+    "keywords": [
+      "create docker context",
+      "remote docker"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker context use <name>",
+    "desc": "switches to a different Docker context",
+    "keywords": [
+      "switch docker context",
+      "change context"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker context inspect <name>",
+    "desc": "displays information about a Docker context",
+    "keywords": [
+      "inspect context",
+      "docker context info"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker context rm <name>",
+    "desc": "removes a Docker context",
+    "keywords": [
+      "remove context",
+      "delete docker context"
+    ]
+  },
+  {
+    "tool": "docker swarm",
+    "command": "docker swarm init",
+    "desc": "initializes the current Docker Engine as a Swarm manager",
+    "keywords": [
+      "docker swarm init",
+      "create swarm"
+    ]
+  },
+  {
+    "tool": "docker swarm",
+    "command": "docker swarm join",
+    "desc": "joins a node to an existing Docker Swarm",
+    "keywords": [
+      "join swarm",
+      "docker cluster"
+    ]
+  },
+  {
+    "tool": "docker swarm",
+    "command": "docker swarm leave",
+    "desc": "removes the current node from the swarm cluster",
+    "keywords": [
+      "leave swarm",
+      "docker swarm leave"
+    ]
+  },
+  {
+    "tool": "docker swarm",
+    "command": "docker swarm join-token worker",
+    "desc": "displays the worker join token",
+    "keywords": [
+      "worker token",
+      "swarm join token"
+    ]
+  },
+  {
+    "tool": "docker swarm",
+    "command": "docker swarm join-token manager",
+    "desc": "displays the manager join token",
+    "keywords": [
+      "manager token",
+      "swarm manager join"
+    ]
+  },
+  {
+    "tool": "docker swarm",
+    "command": "docker swarm update",
+    "desc": "updates swarm configuration settings",
+    "keywords": [
+      "update swarm",
+      "docker swarm config"
+    ]
+  },
+  {
+    "tool": "docker service",
+    "command": "docker service ls",
+    "desc": "lists all swarm services",
+    "keywords": [
+      "docker services",
+      "swarm services"
+    ]
+  },
+  {
+    "tool": "docker service",
+    "command": "docker service create --name web nginx",
+    "desc": "creates a new swarm service",
+    "keywords": [
+      "create service",
+      "swarm create"
+    ]
+  },
+  {
+    "tool": "docker service",
+    "command": "docker service ps <service>",
+    "desc": "lists the tasks running for a swarm service",
+    "keywords": [
+      "service tasks",
+      "docker service ps"
+    ]
+  },
+  {
+    "tool": "docker service",
+    "command": "docker service logs <service>",
+    "desc": "displays logs for a swarm service",
+    "keywords": [
+      "service logs",
+      "swarm logs"
+    ]
+  },
+  {
+    "tool": "docker service",
+    "command": "docker service inspect <service>",
+    "desc": "displays detailed information about a swarm service",
+    "keywords": [
+      "inspect service",
+      "docker service info"
+    ]
+  },
+  {
+    "tool": "docker service",
+    "command": "docker service update <service>",
+    "desc": "updates a running swarm service",
+    "keywords": [
+      "update service",
+      "docker rolling update"
+    ]
+  },
+  {
+    "tool": "docker service",
+    "command": "docker service scale <service>=5",
+    "desc": "scales a swarm service to the specified number of replicas",
+    "keywords": [
+      "scale service",
+      "docker replicas"
+    ]
+  },
+  {
+    "tool": "docker service",
+    "command": "docker service rm <service>",
+    "desc": "removes a swarm service",
+    "keywords": [
+      "remove service",
+      "delete swarm service"
+    ]
+  },
+  {
+    "tool": "docker node",
+    "command": "docker node ls",
+    "desc": "lists all nodes in the swarm cluster",
+    "keywords": [
+      "swarm nodes",
+      "docker node list"
+    ]
+  },
+  {
+    "tool": "docker node",
+    "command": "docker node inspect <node>",
+    "desc": "displays detailed information about a swarm node",
+    "keywords": [
+      "inspect node",
+      "docker node info"
+    ]
+  },
+  {
+    "tool": "docker node",
+    "command": "docker node update <node>",
+    "desc": "updates the availability or role of a swarm node",
+    "keywords": [
+      "update node",
+      "swarm node management"
+    ]
+  },
+  {
+    "tool": "docker node",
+    "command": "docker node rm <node>",
+    "desc": "removes a node from the swarm cluster",
+    "keywords": [
+      "remove node",
+      "delete swarm node"
+    ]
+  },
+  {
+    "tool": "docker plugin",
+    "command": "docker plugin ls",
+    "desc": "lists installed Docker plugins",
+    "keywords": [
+      "docker plugins",
+      "list plugins"
+    ]
+  },
+  {
+    "tool": "docker plugin",
+    "command": "docker plugin install <plugin>",
+    "desc": "installs a Docker plugin",
+    "keywords": [
+      "install plugin",
+      "docker plugin install"
+    ]
+  },
+  {
+    "tool": "docker plugin",
+    "command": "docker plugin disable <plugin>",
+    "desc": "disables an installed Docker plugin",
+    "keywords": [
+      "disable plugin",
+      "docker plugin disable"
+    ]
+  },
+  {
+    "tool": "docker plugin",
+    "command": "docker plugin enable <plugin>",
+    "desc": "enables a Docker plugin",
+    "keywords": [
+      "enable plugin",
+      "docker plugin enable"
+    ]
+  },
+  {
+    "tool": "docker plugin",
+    "command": "docker plugin rm <plugin>",
+    "desc": "removes an installed Docker plugin",
+    "keywords": [
+      "remove plugin",
+      "docker plugin delete"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker checkpoint create <container> checkpoint1",
+    "desc": "creates a checkpoint of a running container for later restoration",
+    "keywords": [
+      "docker checkpoint",
+      "save container state"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker start --checkpoint checkpoint1 <container>",
+    "desc": "starts a container from a previously created checkpoint",
+    "keywords": [
+      "restore checkpoint",
+      "docker resume container"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker checkpoint ls <container>",
+    "desc": "lists checkpoints available for a container",
+    "keywords": [
+      "list checkpoints",
+      "docker checkpoint list"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker checkpoint rm <container> checkpoint1",
+    "desc": "removes a checkpoint from a container",
+    "keywords": [
+      "remove checkpoint",
+      "delete checkpoint"
+    ]
   }
 ]
