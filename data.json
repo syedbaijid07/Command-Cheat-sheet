@@ -9204,5 +9204,433 @@
       "unstage file",
       "git reset file"
     ]
+  },
+  {
+    "tool": "git",
+    "command": "git switch <branch>",
+    "desc": "switches to an existing branch",
+    "keywords": [
+      "git switch branch",
+      "change branch",
+      "checkout branch"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git switch -c <branch>",
+    "desc": "creates a new branch and switches to it immediately",
+    "keywords": [
+      "create branch and switch",
+      "new git branch"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git switch -",
+    "desc": "switches back to the previously checked out branch",
+    "keywords": [
+      "previous branch",
+      "git switch previous"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git restore <file>",
+    "desc": "restores a file in the working directory to its last committed state",
+    "keywords": [
+      "discard file changes",
+      "restore file",
+      "git restore"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git restore --staged <file>",
+    "desc": "removes a staged file from the staging area without deleting local changes",
+    "keywords": [
+      "unstage file",
+      "git restore staged"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git restore .",
+    "desc": "restores all modified files in the current directory",
+    "keywords": [
+      "restore all files",
+      "discard changes"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git rebase <branch>",
+    "desc": "reapplies the current branch commits on top of another branch",
+    "keywords": [
+      "git rebase",
+      "reapply commits",
+      "linear history"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git rebase -i HEAD~5",
+    "desc": "interactively edits the last five commits for squashing, reordering, or editing",
+    "keywords": [
+      "interactive rebase",
+      "squash commits"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git rebase --continue",
+    "desc": "continues a paused rebase after resolving conflicts",
+    "keywords": [
+      "continue rebase",
+      "resolve conflicts"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git rebase --abort",
+    "desc": "aborts the current rebase and restores the previous branch state",
+    "keywords": [
+      "abort rebase",
+      "cancel rebase"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git rebase --skip",
+    "desc": "skips the current commit during an interrupted rebase",
+    "keywords": [
+      "skip commit rebase",
+      "continue rebase"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git cherry-pick <commit>",
+    "desc": "applies the changes introduced by a specific commit onto the current branch",
+    "keywords": [
+      "apply specific commit",
+      "cherry pick commit"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git cherry-pick --continue",
+    "desc": "continues a cherry-pick operation after resolving conflicts",
+    "keywords": [
+      "continue cherry pick",
+      "resolve cherry pick"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git cherry-pick --abort",
+    "desc": "aborts an interrupted cherry-pick operation",
+    "keywords": [
+      "abort cherry pick",
+      "cancel cherry pick"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git reflog",
+    "desc": "displays a history of where the HEAD reference has pointed",
+    "keywords": [
+      "git reflog",
+      "recover commits",
+      "head history"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git reflog show",
+    "desc": "displays the reflog entries for the current branch",
+    "keywords": [
+      "reflog history",
+      "git head log"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git reflog expire --expire=30.days refs/heads/main",
+    "desc": "expires reflog entries older than thirty days for the specified branch",
+    "keywords": [
+      "clean reflog",
+      "expire reflog"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git blame <file>",
+    "desc": "shows who last modified each line of a file",
+    "keywords": [
+      "file author",
+      "line history",
+      "git blame"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git blame -L 20,40 <file>",
+    "desc": "displays blame information for a specific line range",
+    "keywords": [
+      "blame line range",
+      "git author lines"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git tag",
+    "desc": "lists all repository tags",
+    "keywords": [
+      "git tags",
+      "list tags"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git tag <tagname>",
+    "desc": "creates a lightweight tag",
+    "keywords": [
+      "create tag",
+      "lightweight tag"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git tag -a <tagname> -m \"<message>\"",
+    "desc": "creates an annotated tag with a message",
+    "keywords": [
+      "annotated tag",
+      "git release tag"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git tag -d <tagname>",
+    "desc": "deletes a local tag",
+    "keywords": [
+      "delete tag",
+      "remove git tag"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git push origin <tagname>",
+    "desc": "pushes a specific tag to the remote repository",
+    "keywords": [
+      "push tag",
+      "upload git tag"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git push origin --tags",
+    "desc": "pushes all local tags to the remote repository",
+    "keywords": [
+      "push all tags",
+      "git publish tags"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git remote",
+    "desc": "lists configured remote repositories",
+    "keywords": [
+      "git remotes",
+      "list remote repositories"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git remote -v",
+    "desc": "displays remote repository names and their urls",
+    "keywords": [
+      "remote urls",
+      "git remote verbose"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git remote add origin <repository_url>",
+    "desc": "adds a new remote repository named origin",
+    "keywords": [
+      "add remote",
+      "git remote add origin"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git remote remove origin",
+    "desc": "removes the configured origin remote repository",
+    "keywords": [
+      "remove remote",
+      "delete origin"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git remote rename origin upstream",
+    "desc": "renames an existing remote repository",
+    "keywords": [
+      "rename remote",
+      "git remote rename"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git remote set-url origin <repository_url>",
+    "desc": "changes the url of an existing remote repository",
+    "keywords": [
+      "update remote url",
+      "change git origin"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git remote show origin",
+    "desc": "displays detailed information about the origin remote repository",
+    "keywords": [
+      "remote details",
+      "git remote show"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git push",
+    "desc": "uploads local commits to the configured remote repository",
+    "keywords": [
+      "push commits",
+      "upload changes"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git push origin <branch>",
+    "desc": "pushes a specific branch to the origin remote",
+    "keywords": [
+      "push branch",
+      "git push origin"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git push -u origin <branch>",
+    "desc": "pushes a branch and sets it as the default upstream branch",
+    "keywords": [
+      "upstream branch",
+      "tracking branch"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git pull",
+    "desc": "fetches remote changes and merges them into the current branch",
+    "keywords": [
+      "pull changes",
+      "update repository"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git pull --rebase",
+    "desc": "fetches remote changes and rebases local commits on top of them",
+    "keywords": [
+      "pull with rebase",
+      "linear history"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git stash",
+    "desc": "temporarily saves uncommitted changes without creating a commit",
+    "keywords": [
+      "stash changes",
+      "temporary save"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git stash list",
+    "desc": "lists all saved stashes",
+    "keywords": [
+      "list stashes",
+      "git stash list"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git stash pop",
+    "desc": "restores the latest stash and removes it from the stash list",
+    "keywords": [
+      "restore stash",
+      "git stash pop"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git stash apply",
+    "desc": "restores the latest stash without removing it from the stash list",
+    "keywords": [
+      "apply stash",
+      "keep stash"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git stash drop",
+    "desc": "deletes the latest stash",
+    "keywords": [
+      "delete stash",
+      "remove stash"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git stash clear",
+    "desc": "removes all saved stashes",
+    "keywords": [
+      "clear stash",
+      "delete all stashes"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git reset --soft HEAD~1",
+    "desc": "removes the last commit while keeping changes staged",
+    "keywords": [
+      "soft reset",
+      "undo commit"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git reset --mixed HEAD~1",
+    "desc": "removes the last commit and unstages the changes",
+    "keywords": [
+      "mixed reset",
+      "unstage changes"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git reset --hard HEAD~1",
+    "desc": "removes the last commit and permanently discards all associated changes",
+    "keywords": [
+      "hard reset",
+      "discard commits"
+    ]
+  },
+  {
+    "tool": "git",
+    "command": "git reset <file>",
+    "desc": "unstages a specific file without modifying its contents",
+    "keywords": [
+      "unstage file",
+      "git reset file"
+    ]
   }
 ]
