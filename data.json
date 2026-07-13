@@ -10502,5 +10502,412 @@
       "clean build cache",
       "docker cache cleanup"
     ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker volume ls",
+    "desc": "lists all Docker volumes available on the local system",
+    "keywords": [
+      "docker volumes",
+      "list volumes",
+      "storage"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker volume create <volume>",
+    "desc": "creates a new Docker volume",
+    "keywords": [
+      "create volume",
+      "docker persistent storage"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker volume inspect <volume>",
+    "desc": "displays detailed information about a Docker volume",
+    "keywords": [
+      "inspect volume",
+      "volume details"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker volume rm <volume>",
+    "desc": "removes a Docker volume",
+    "keywords": [
+      "remove volume",
+      "delete volume"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker volume prune",
+    "desc": "removes all unused Docker volumes",
+    "keywords": [
+      "clean volumes",
+      "prune volumes"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker volume prune -f",
+    "desc": "removes unused Docker volumes without confirmation",
+    "keywords": [
+      "force prune volumes",
+      "docker cleanup"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker volume create --driver local <volume>",
+    "desc": "creates a volume using the local storage driver",
+    "keywords": [
+      "local volume",
+      "docker volume driver"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run -v <volume>:/data <image>",
+    "desc": "mounts a named Docker volume inside a container",
+    "keywords": [
+      "mount named volume",
+      "docker run volume"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker run --mount source=<volume>,target=/data <image>",
+    "desc": "mounts a named volume using the modern mount syntax",
+    "keywords": [
+      "docker mount volume",
+      "persistent storage"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker network ls",
+    "desc": "lists all Docker networks",
+    "keywords": [
+      "docker networks",
+      "list networks"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker network create <network>",
+    "desc": "creates a new Docker network",
+    "keywords": [
+      "create network",
+      "docker bridge"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker network inspect <network>",
+    "desc": "displays detailed information about a Docker network",
+    "keywords": [
+      "inspect network",
+      "network details"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker network connect <network> <container>",
+    "desc": "connects a running container to a Docker network",
+    "keywords": [
+      "connect container network",
+      "docker network connect"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker network disconnect <network> <container>",
+    "desc": "disconnects a container from a Docker network",
+    "keywords": [
+      "disconnect network",
+      "docker disconnect"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker network rm <network>",
+    "desc": "removes a Docker network",
+    "keywords": [
+      "delete network",
+      "remove docker network"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker network prune",
+    "desc": "removes all unused Docker networks",
+    "keywords": [
+      "clean networks",
+      "prune docker networks"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker network create --driver bridge <network>",
+    "desc": "creates a bridge network",
+    "keywords": [
+      "bridge network",
+      "docker bridge"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker network create --driver host <network>",
+    "desc": "creates a host network",
+    "keywords": [
+      "host network",
+      "docker host mode"
+    ]
+  },
+  {
+    "tool": "docker",
+    "command": "docker network create --driver overlay <network>",
+    "desc": "creates an overlay network for swarm services",
+    "keywords": [
+      "overlay network",
+      "docker swarm network"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose version",
+    "desc": "displays the installed Docker Compose version",
+    "keywords": [
+      "docker compose version",
+      "compose plugin"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose up",
+    "desc": "creates and starts all services defined in the compose file",
+    "keywords": [
+      "compose up",
+      "start compose services"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose up -d",
+    "desc": "starts all services in detached background mode",
+    "keywords": [
+      "detached compose",
+      "compose background"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose down",
+    "desc": "stops and removes all containers, networks, and default resources created by Compose",
+    "keywords": [
+      "compose down",
+      "stop compose"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose start",
+    "desc": "starts existing Compose services",
+    "keywords": [
+      "compose start",
+      "restart services"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose stop",
+    "desc": "stops running Compose services without removing them",
+    "keywords": [
+      "compose stop",
+      "stop containers"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose restart",
+    "desc": "restarts all Compose services",
+    "keywords": [
+      "compose restart",
+      "restart services"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose ps",
+    "desc": "lists containers managed by the current Compose project",
+    "keywords": [
+      "compose containers",
+      "compose ps"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose logs",
+    "desc": "displays logs from all Compose services",
+    "keywords": [
+      "compose logs",
+      "docker compose output"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose logs -f",
+    "desc": "follows logs from all Compose services in real time",
+    "keywords": [
+      "compose follow logs",
+      "realtime compose logs"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose exec <service> bash",
+    "desc": "opens an interactive bash shell inside a Compose service container",
+    "keywords": [
+      "compose exec bash",
+      "docker compose shell"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose exec <service> sh",
+    "desc": "opens an sh shell inside a Compose service container",
+    "keywords": [
+      "compose exec sh",
+      "shell service"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose run <service>",
+    "desc": "starts a one-time container for a specific service",
+    "keywords": [
+      "compose run",
+      "temporary service"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose pull",
+    "desc": "downloads the latest images for all Compose services",
+    "keywords": [
+      "compose pull images",
+      "update images"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose build",
+    "desc": "builds or rebuilds images for Compose services",
+    "keywords": [
+      "compose build",
+      "build services"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose build --no-cache",
+    "desc": "rebuilds service images without using cached layers",
+    "keywords": [
+      "compose no cache",
+      "fresh build"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose config",
+    "desc": "validates and displays the effective Compose configuration",
+    "keywords": [
+      "compose config",
+      "validate compose file"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose images",
+    "desc": "lists images used by the current Compose project",
+    "keywords": [
+      "compose images",
+      "service images"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose top",
+    "desc": "displays running processes inside Compose containers",
+    "keywords": [
+      "compose processes",
+      "docker compose top"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose events",
+    "desc": "streams real-time events from the current Compose project",
+    "keywords": [
+      "compose events",
+      "realtime events"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose pause",
+    "desc": "pauses all running Compose service containers",
+    "keywords": [
+      "pause compose services",
+      "docker compose pause"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose unpause",
+    "desc": "resumes paused Compose service containers",
+    "keywords": [
+      "unpause compose",
+      "resume services"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose kill",
+    "desc": "forcefully stops running Compose service containers",
+    "keywords": [
+      "compose kill",
+      "force stop services"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose rm",
+    "desc": "removes stopped Compose service containers",
+    "keywords": [
+      "remove compose containers",
+      "compose rm"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose create",
+    "desc": "creates Compose containers without starting them",
+    "keywords": [
+      "compose create",
+      "create services"
+    ]
+  },
+  {
+    "tool": "docker compose",
+    "command": "docker compose watch",
+    "desc": "watches source files and automatically rebuilds or syncs changes",
+    "keywords": [
+      "compose watch",
+      "live reload",
+      "development"
+    ]
   }
 ]
