@@ -14497,5 +14497,394 @@
       "verify cargo project",
       "manifest validation"
     ]
+  },
+  {
+    "tool": "aws",
+    "command": "aws --version",
+    "desc": "displays the installed AWS CLI version",
+    "keywords": [
+      "aws version",
+      "aws cli version"
+    ]
+  },
+  {
+    "tool": "aws",
+    "command": "aws configure",
+    "desc": "configures AWS CLI credentials, default region, and output format",
+    "keywords": [
+      "aws configure",
+      "aws credentials",
+      "setup aws cli"
+    ]
+  },
+  {
+    "tool": "aws",
+    "command": "aws configure list",
+    "desc": "displays the current AWS CLI configuration values",
+    "keywords": [
+      "aws config list",
+      "credentials info"
+    ]
+  },
+  {
+    "tool": "aws",
+    "command": "aws configure get region",
+    "desc": "displays the configured default AWS region",
+    "keywords": [
+      "aws region",
+      "get region"
+    ]
+  },
+  {
+    "tool": "aws",
+    "command": "aws configure set region us-east-1",
+    "desc": "sets the default AWS region",
+    "keywords": [
+      "set aws region",
+      "default region"
+    ]
+  },
+  {
+    "tool": "aws",
+    "command": "aws sts get-caller-identity",
+    "desc": "displays information about the currently authenticated AWS identity",
+    "keywords": [
+      "aws account id",
+      "current user",
+      "sts identity"
+    ]
+  },
+  {
+    "tool": "aws s3",
+    "command": "aws s3 ls",
+    "desc": "lists all S3 buckets in the AWS account",
+    "keywords": [
+      "aws s3 buckets",
+      "list buckets"
+    ]
+  },
+  {
+    "tool": "aws s3",
+    "command": "aws s3 ls s3://<bucket>",
+    "desc": "lists objects inside an S3 bucket",
+    "keywords": [
+      "list bucket contents",
+      "s3 files"
+    ]
+  },
+  {
+    "tool": "aws s3",
+    "command": "aws s3 mb s3://<bucket>",
+    "desc": "creates a new S3 bucket",
+    "keywords": [
+      "create s3 bucket",
+      "make bucket"
+    ]
+  },
+  {
+    "tool": "aws s3",
+    "command": "aws s3 rb s3://<bucket>",
+    "desc": "removes an empty S3 bucket",
+    "keywords": [
+      "delete bucket",
+      "remove s3 bucket"
+    ]
+  },
+  {
+    "tool": "aws s3",
+    "command": "aws s3 cp file.txt s3://<bucket>",
+    "desc": "uploads a file to an S3 bucket",
+    "keywords": [
+      "upload file",
+      "s3 copy"
+    ]
+  },
+  {
+    "tool": "aws s3",
+    "command": "aws s3 cp s3://<bucket>/file.txt .",
+    "desc": "downloads a file from an S3 bucket",
+    "keywords": [
+      "download s3 file",
+      "copy from bucket"
+    ]
+  },
+  {
+    "tool": "aws s3",
+    "command": "aws s3 sync . s3://<bucket>",
+    "desc": "synchronizes a local directory with an S3 bucket",
+    "keywords": [
+      "s3 sync upload",
+      "backup directory"
+    ]
+  },
+  {
+    "tool": "aws s3",
+    "command": "aws s3 sync s3://<bucket> .",
+    "desc": "synchronizes an S3 bucket to a local directory",
+    "keywords": [
+      "download bucket",
+      "s3 sync"
+    ]
+  },
+  {
+    "tool": "aws s3",
+    "command": "aws s3 mv file.txt s3://<bucket>",
+    "desc": "moves or uploads a file to an S3 bucket",
+    "keywords": [
+      "move file s3",
+      "upload move"
+    ]
+  },
+  {
+    "tool": "aws s3",
+    "command": "aws s3 rm s3://<bucket>/file.txt",
+    "desc": "deletes an object from an S3 bucket",
+    "keywords": [
+      "delete s3 object",
+      "remove file"
+    ]
+  },
+  {
+    "tool": "aws s3",
+    "command": "aws s3 rm s3://<bucket> --recursive",
+    "desc": "removes all objects from an S3 bucket",
+    "keywords": [
+      "delete bucket contents",
+      "recursive remove"
+    ]
+  },
+  {
+    "tool": "aws s3",
+    "command": "aws s3 presign s3://<bucket>/file.txt",
+    "desc": "generates a pre-signed URL for an S3 object",
+    "keywords": [
+      "presigned url",
+      "temporary download link"
+    ]
+  },
+  {
+    "tool": "aws ec2",
+    "command": "aws ec2 describe-instances",
+    "desc": "lists EC2 instances in the configured region",
+    "keywords": [
+      "ec2 instances",
+      "list virtual machines"
+    ]
+  },
+  {
+    "tool": "aws ec2",
+    "command": "aws ec2 describe-images",
+    "desc": "lists available Amazon Machine Images",
+    "keywords": [
+      "ec2 ami",
+      "amazon images"
+    ]
+  },
+  {
+    "tool": "aws ec2",
+    "command": "aws ec2 start-instances --instance-ids <instance-id>",
+    "desc": "starts one or more EC2 instances",
+    "keywords": [
+      "start ec2",
+      "power on instance"
+    ]
+  },
+  {
+    "tool": "aws ec2",
+    "command": "aws ec2 stop-instances --instance-ids <instance-id>",
+    "desc": "stops one or more EC2 instances",
+    "keywords": [
+      "stop ec2",
+      "shutdown instance"
+    ]
+  },
+  {
+    "tool": "aws ec2",
+    "command": "aws ec2 reboot-instances --instance-ids <instance-id>",
+    "desc": "reboots one or more EC2 instances",
+    "keywords": [
+      "reboot ec2",
+      "restart instance"
+    ]
+  },
+  {
+    "tool": "aws ec2",
+    "command": "aws ec2 terminate-instances --instance-ids <instance-id>",
+    "desc": "permanently terminates EC2 instances",
+    "keywords": [
+      "terminate ec2",
+      "delete instance"
+    ]
+  },
+  {
+    "tool": "aws ec2",
+    "command": "aws ec2 describe-security-groups",
+    "desc": "lists EC2 security groups",
+    "keywords": [
+      "security groups",
+      "firewall rules"
+    ]
+  },
+  {
+    "tool": "aws ec2",
+    "command": "aws ec2 describe-key-pairs",
+    "desc": "lists EC2 SSH key pairs",
+    "keywords": [
+      "ssh keys",
+      "ec2 keypairs"
+    ]
+  },
+  {
+    "tool": "aws ec2",
+    "command": "aws ec2 create-key-pair --key-name <name>",
+    "desc": "creates a new EC2 key pair",
+    "keywords": [
+      "create keypair",
+      "aws ssh key"
+    ]
+  },
+  {
+    "tool": "aws ec2",
+    "command": "aws ec2 describe-volumes",
+    "desc": "lists Amazon EBS volumes",
+    "keywords": [
+      "ebs volumes",
+      "storage volumes"
+    ]
+  },
+  {
+    "tool": "aws iam",
+    "command": "aws iam list-users",
+    "desc": "lists IAM users in the AWS account",
+    "keywords": [
+      "iam users",
+      "list users"
+    ]
+  },
+  {
+    "tool": "aws iam",
+    "command": "aws iam create-user --user-name <username>",
+    "desc": "creates a new IAM user",
+    "keywords": [
+      "create iam user",
+      "aws user"
+    ]
+  },
+  {
+    "tool": "aws iam",
+    "command": "aws iam delete-user --user-name <username>",
+    "desc": "deletes an IAM user",
+    "keywords": [
+      "remove iam user",
+      "delete user"
+    ]
+  },
+  {
+    "tool": "aws iam",
+    "command": "aws iam list-groups",
+    "desc": "lists IAM groups",
+    "keywords": [
+      "iam groups",
+      "list groups"
+    ]
+  },
+  {
+    "tool": "aws iam",
+    "command": "aws iam list-roles",
+    "desc": "lists IAM roles",
+    "keywords": [
+      "iam roles",
+      "aws roles"
+    ]
+  },
+  {
+    "tool": "aws iam",
+    "command": "aws iam attach-user-policy --user-name <username> --policy-arn <arn>",
+    "desc": "attaches an IAM policy to a user",
+    "keywords": [
+      "attach policy",
+      "iam permissions"
+    ]
+  },
+  {
+    "tool": "aws iam",
+    "command": "aws iam detach-user-policy --user-name <username> --policy-arn <arn>",
+    "desc": "detaches an IAM policy from a user",
+    "keywords": [
+      "remove policy",
+      "detach permissions"
+    ]
+  },
+  {
+    "tool": "aws iam",
+    "command": "aws iam create-access-key --user-name <username>",
+    "desc": "creates a new access key for an IAM user",
+    "keywords": [
+      "access key",
+      "aws api key"
+    ]
+  },
+  {
+    "tool": "aws iam",
+    "command": "aws iam list-access-keys --user-name <username>",
+    "desc": "lists access keys for an IAM user",
+    "keywords": [
+      "list api keys",
+      "iam access keys"
+    ]
+  },
+  {
+    "tool": "aws iam",
+    "command": "aws iam delete-access-key --user-name <username> --access-key-id <key-id>",
+    "desc": "deletes an IAM access key",
+    "keywords": [
+      "delete access key",
+      "revoke api key"
+    ]
+  },
+  {
+    "tool": "aws",
+    "command": "aws help",
+    "desc": "displays AWS CLI help information",
+    "keywords": [
+      "aws help",
+      "cli manual"
+    ]
+  },
+  {
+    "tool": "aws",
+    "command": "aws ec2 help",
+    "desc": "displays help for EC2 commands",
+    "keywords": [
+      "ec2 help",
+      "aws documentation"
+    ]
+  },
+  {
+    "tool": "aws",
+    "command": "aws s3 help",
+    "desc": "displays help for S3 commands",
+    "keywords": [
+      "s3 help",
+      "bucket documentation"
+    ]
+  },
+  {
+    "tool": "aws",
+    "command": "aws iam help",
+    "desc": "displays help for IAM commands",
+    "keywords": [
+      "iam help",
+      "identity management"
+    ]
+  },
+  {
+    "tool": "aws",
+    "command": "aws configure export-credentials",
+    "desc": "exports the currently configured AWS CLI credentials",
+    "keywords": [
+      "export aws credentials",
+      "cli credentials"
+    ]
   }
 ]
