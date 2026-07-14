@@ -12717,5 +12717,439 @@
       "poetry config",
       "configuration settings"
     ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm init",
+    "desc": "creates a new package.json file using the interactive setup wizard",
+    "keywords": [
+      "npm init",
+      "create package",
+      "package.json"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm init -y",
+    "desc": "creates a package.json file with default values",
+    "keywords": [
+      "npm init yes",
+      "quick package",
+      "default package"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm install",
+    "desc": "installs all dependencies listed in package.json",
+    "keywords": [
+      "npm install dependencies",
+      "install packages"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm install <package>",
+    "desc": "installs a package as a project dependency",
+    "keywords": [
+      "npm install package",
+      "add dependency"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm install <package>@latest",
+    "desc": "installs the latest version of a package",
+    "keywords": [
+      "npm latest package",
+      "newest version"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm install <package>@<version>",
+    "desc": "installs a specific version of a package",
+    "keywords": [
+      "npm install version",
+      "package version"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm install --save-dev <package>",
+    "desc": "installs a package as a development dependency",
+    "keywords": [
+      "npm dev dependency",
+      "save dev"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm install --save-optional <package>",
+    "desc": "installs a package as an optional dependency",
+    "keywords": [
+      "npm optional dependency"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm install --global <package>",
+    "desc": "installs a package globally on the system",
+    "keywords": [
+      "npm global install",
+      "npm g"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm install --no-save <package>",
+    "desc": "installs a package without updating package.json",
+    "keywords": [
+      "npm no save",
+      "temporary package"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm ci",
+    "desc": "installs dependencies exactly as specified in package-lock.json for reproducible builds",
+    "keywords": [
+      "npm ci",
+      "clean install",
+      "ci install"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm update",
+    "desc": "updates installed packages according to version ranges in package.json",
+    "keywords": [
+      "npm update",
+      "update dependencies"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm update <package>",
+    "desc": "updates a specific package",
+    "keywords": [
+      "npm update package",
+      "update dependency"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm outdated",
+    "desc": "lists installed packages with newer versions available",
+    "keywords": [
+      "npm outdated",
+      "package updates"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm uninstall <package>",
+    "desc": "removes a package from the project",
+    "keywords": [
+      "npm uninstall",
+      "remove dependency"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm uninstall --save-dev <package>",
+    "desc": "removes a development dependency",
+    "keywords": [
+      "remove dev dependency",
+      "npm uninstall dev"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm uninstall --global <package>",
+    "desc": "removes a globally installed package",
+    "keywords": [
+      "uninstall global package",
+      "npm remove global"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm list",
+    "desc": "lists installed project dependencies",
+    "keywords": [
+      "npm list packages",
+      "installed packages"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm list --depth=0",
+    "desc": "lists only top-level installed dependencies",
+    "keywords": [
+      "npm top level packages",
+      "dependency list"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm list --global",
+    "desc": "lists globally installed packages",
+    "keywords": [
+      "npm global packages",
+      "global list"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm show <package>",
+    "desc": "displays information about a package from the npm registry",
+    "keywords": [
+      "npm show",
+      "package information"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm view <package>",
+    "desc": "displays metadata for a package from the npm registry",
+    "keywords": [
+      "npm view package",
+      "registry info"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm info <package>",
+    "desc": "displays detailed information about a package",
+    "keywords": [
+      "npm info",
+      "package details"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm run <script>",
+    "desc": "executes a custom script defined in package.json",
+    "keywords": [
+      "npm run script",
+      "package scripts"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm run dev",
+    "desc": "runs the development script defined in package.json",
+    "keywords": [
+      "npm dev server",
+      "development script"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm run build",
+    "desc": "runs the build script defined in package.json",
+    "keywords": [
+      "npm build project",
+      "production build"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm run start",
+    "desc": "starts the application using the configured start script",
+    "keywords": [
+      "npm start application",
+      "start server"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm run test",
+    "desc": "runs the project's test script",
+    "keywords": [
+      "npm test",
+      "run tests"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm run lint",
+    "desc": "runs the linting script",
+    "keywords": [
+      "npm lint",
+      "code linting"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm cache verify",
+    "desc": "verifies the integrity of the local npm cache",
+    "keywords": [
+      "npm cache verify",
+      "cache integrity"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm cache clean --force",
+    "desc": "removes all cached npm package data",
+    "keywords": [
+      "clear npm cache",
+      "clean cache"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm cache ls",
+    "desc": "lists entries stored in the npm cache",
+    "keywords": [
+      "npm cache list",
+      "cached packages"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm audit",
+    "desc": "scans installed packages for known security vulnerabilities",
+    "keywords": [
+      "npm audit",
+      "dependency security"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm audit fix",
+    "desc": "automatically fixes vulnerabilities when possible",
+    "keywords": [
+      "npm audit fix",
+      "security update"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm dedupe",
+    "desc": "reduces duplicate packages in node_modules",
+    "keywords": [
+      "npm dedupe",
+      "remove duplicate dependencies"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm prune",
+    "desc": "removes packages that are not listed in package.json",
+    "keywords": [
+      "npm prune",
+      "clean node_modules"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm doctor",
+    "desc": "checks the npm installation and environment for common problems",
+    "keywords": [
+      "npm doctor",
+      "diagnose npm"
+    ]
+  },
+  {
+    "tool": "npm",
+    "command": "npm fund",
+    "desc": "displays funding information for installed packages",
+    "keywords": [
+      "npm fund",
+      "package funding"
+    ]
+  },
+  {
+    "tool": "npx",
+    "command": "npx <package>",
+    "desc": "downloads and runs a package without installing it globally",
+    "keywords": [
+      "npx run package",
+      "temporary package execution"
+    ]
+  },
+  {
+    "tool": "npx",
+    "command": "npx create-react-app my-app",
+    "desc": "creates a new React application using Create React App",
+    "keywords": [
+      "npx create react app",
+      "react starter"
+    ]
+  },
+  {
+    "tool": "npx",
+    "command": "npx create-next-app@latest my-app",
+    "desc": "creates a new Next.js application using the latest version",
+    "keywords": [
+      "nextjs project",
+      "create next app"
+    ]
+  },
+  {
+    "tool": "npx",
+    "command": "npx vite",
+    "desc": "launches the Vite project creation wizard",
+    "keywords": [
+      "npx vite",
+      "create vite project"
+    ]
+  },
+  {
+    "tool": "npx",
+    "command": "npx eslint .",
+    "desc": "runs ESLint on the current project",
+    "keywords": [
+      "npx eslint",
+      "lint javascript"
+    ]
+  },
+  {
+    "tool": "npx",
+    "command": "npx prettier --write .",
+    "desc": "formats project files using Prettier",
+    "keywords": [
+      "prettier format",
+      "npx prettier"
+    ]
+  },
+  {
+    "tool": "npx",
+    "command": "npx npm-check-updates -u",
+    "desc": "updates package.json dependency versions to the latest available",
+    "keywords": [
+      "npm-check-updates",
+      "update package versions"
+    ]
+  },
+  {
+    "tool": "npx",
+    "command": "npx cowsay \"Hello\"",
+    "desc": "runs the cowsay package without installing it globally",
+    "keywords": [
+      "npx example",
+      "temporary cli tool"
+    ]
+  },
+  {
+    "tool": "npx",
+    "command": "npx envinfo",
+    "desc": "displays detailed information about the current development environment",
+    "keywords": [
+      "environment info",
+      "node diagnostics"
+    ]
+  },
+  {
+    "tool": "npx",
+    "command": "npx serve .",
+    "desc": "starts a simple static web server for the current directory",
+    "keywords": [
+      "static file server",
+      "npx serve"
+    ]
   }
 ]
