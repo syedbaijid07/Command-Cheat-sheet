@@ -13151,5 +13151,466 @@
       "static file server",
       "npx serve"
     ]
+  },
+  {
+    "tool": "yarn",
+    "command": "yarn init",
+    "desc": "creates a new package.json file using the interactive setup wizard",
+    "keywords": [
+      "yarn init",
+      "create project",
+      "package.json"
+    ]
+  },
+  {
+    "tool": "yarn",
+    "command": "yarn init -y",
+    "desc": "creates a package.json file with default values",
+    "keywords": [
+      "yarn quick init",
+      "default package"
+    ]
+  },
+  {
+    "tool": "yarn",
+    "command": "yarn install",
+    "desc": "installs all dependencies listed in package.json",
+    "keywords": [
+      "yarn install",
+      "install dependencies"
+    ]
+  },
+  {
+    "tool": "yarn",
+    "command": "yarn add <package>",
+    "desc": "installs a package as a project dependency",
+    "keywords": [
+      "yarn add package",
+      "install dependency"
+    ]
+  },
+  {
+    "tool": "yarn",
+    "command": "yarn add -D <package>",
+    "desc": "installs a package as a development dependency",
+    "keywords": [
+      "yarn dev dependency",
+      "add dev package"
+    ]
+  },
+  {
+    "tool": "yarn",
+    "command": "yarn add -O <package>",
+    "desc": "installs a package as an optional dependency",
+    "keywords": [
+      "yarn optional dependency"
+    ]
+  },
+  {
+    "tool": "yarn",
+    "command": "yarn remove <package>",
+    "desc": "removes a dependency from the project",
+    "keywords": [
+      "yarn remove package",
+      "uninstall dependency"
+    ]
+  },
+  {
+    "tool": "yarn",
+    "command": "yarn upgrade",
+    "desc": "upgrades project dependencies",
+    "keywords": [
+      "yarn update packages",
+      "dependency upgrade"
+    ]
+  },
+  {
+    "tool": "yarn",
+    "command": "yarn upgrade <package>",
+    "desc": "upgrades a specific package",
+    "keywords": [
+      "yarn update package"
+    ]
+  },
+  {
+    "tool": "yarn",
+    "command": "yarn outdated",
+    "desc": "lists packages with newer versions available",
+    "keywords": [
+      "yarn outdated packages"
+    ]
+  },
+  {
+    "tool": "yarn",
+    "command": "yarn why <package>",
+    "desc": "explains why a package exists in the dependency tree",
+    "keywords": [
+      "yarn why",
+      "dependency tree"
+    ]
+  },
+  {
+    "tool": "yarn",
+    "command": "yarn list",
+    "desc": "lists installed project dependencies",
+    "keywords": [
+      "yarn list packages",
+      "installed packages"
+    ]
+  },
+  {
+    "tool": "yarn",
+    "command": "yarn cache clean",
+    "desc": "clears the local Yarn cache",
+    "keywords": [
+      "yarn cache clean",
+      "clear cache"
+    ]
+  },
+  {
+    "tool": "yarn",
+    "command": "yarn",
+    "desc": "installs dependencies or runs the default script",
+    "keywords": [
+      "yarn default command"
+    ]
+  },
+  {
+    "tool": "yarn",
+    "command": "yarn run <script>",
+    "desc": "runs a script defined in package.json",
+    "keywords": [
+      "yarn run script"
+    ]
+  },
+  {
+    "tool": "yarn",
+    "command": "yarn dev",
+    "desc": "runs the development server",
+    "keywords": [
+      "yarn dev server"
+    ]
+  },
+  {
+    "tool": "yarn",
+    "command": "yarn build",
+    "desc": "builds the project for production",
+    "keywords": [
+      "yarn build project"
+    ]
+  },
+  {
+    "tool": "yarn",
+    "command": "yarn start",
+    "desc": "starts the application",
+    "keywords": [
+      "yarn start application"
+    ]
+  },
+  {
+    "tool": "yarn",
+    "command": "yarn test",
+    "desc": "runs the project's test suite",
+    "keywords": [
+      "yarn test"
+    ]
+  },
+  {
+    "tool": "yarn",
+    "command": "yarn lint",
+    "desc": "runs the configured linter",
+    "keywords": [
+      "yarn lint"
+    ]
+  },
+  {
+    "tool": "pnpm",
+    "command": "pnpm init",
+    "desc": "creates a new package.json file",
+    "keywords": [
+      "pnpm init",
+      "create package"
+    ]
+  },
+  {
+    "tool": "pnpm",
+    "command": "pnpm install",
+    "desc": "installs project dependencies",
+    "keywords": [
+      "pnpm install dependencies"
+    ]
+  },
+  {
+    "tool": "pnpm",
+    "command": "pnpm add <package>",
+    "desc": "installs a package as a dependency",
+    "keywords": [
+      "pnpm add package"
+    ]
+  },
+  {
+    "tool": "pnpm",
+    "command": "pnpm add -D <package>",
+    "desc": "installs a package as a development dependency",
+    "keywords": [
+      "pnpm dev dependency"
+    ]
+  },
+  {
+    "tool": "pnpm",
+    "command": "pnpm remove <package>",
+    "desc": "removes a dependency from the project",
+    "keywords": [
+      "pnpm remove package"
+    ]
+  },
+  {
+    "tool": "pnpm",
+    "command": "pnpm update",
+    "desc": "updates installed dependencies",
+    "keywords": [
+      "pnpm update packages"
+    ]
+  },
+  {
+    "tool": "pnpm",
+    "command": "pnpm update <package>",
+    "desc": "updates a specific package",
+    "keywords": [
+      "pnpm update package"
+    ]
+  },
+  {
+    "tool": "pnpm",
+    "command": "pnpm list",
+    "desc": "lists installed dependencies",
+    "keywords": [
+      "pnpm list packages"
+    ]
+  },
+  {
+    "tool": "pnpm",
+    "command": "pnpm outdated",
+    "desc": "lists outdated dependencies",
+    "keywords": [
+      "pnpm outdated packages"
+    ]
+  },
+  {
+    "tool": "pnpm",
+    "command": "pnpm store path",
+    "desc": "displays the location of the global pnpm package store",
+    "keywords": [
+      "pnpm store path"
+    ]
+  },
+  {
+    "tool": "pnpm",
+    "command": "pnpm store prune",
+    "desc": "removes unused packages from the pnpm store",
+    "keywords": [
+      "pnpm prune store"
+    ]
+  },
+  {
+    "tool": "pnpm",
+    "command": "pnpm exec <command>",
+    "desc": "executes a command using locally installed project binaries",
+    "keywords": [
+      "pnpm exec"
+    ]
+  },
+  {
+    "tool": "pnpm",
+    "command": "pnpm dlx <package>",
+    "desc": "downloads and runs a package without permanently installing it",
+    "keywords": [
+      "pnpm dlx",
+      "temporary package execution"
+    ]
+  },
+  {
+    "tool": "pnpm",
+    "command": "pnpm audit",
+    "desc": "scans dependencies for known security vulnerabilities",
+    "keywords": [
+      "pnpm audit"
+    ]
+  },
+  {
+    "tool": "pnpm",
+    "command": "pnpm why <package>",
+    "desc": "explains why a dependency is installed",
+    "keywords": [
+      "pnpm why package"
+    ]
+  },
+  {
+    "tool": "pnpm",
+    "command": "pnpm run <script>",
+    "desc": "executes a script from package.json",
+    "keywords": [
+      "pnpm run script"
+    ]
+  },
+  {
+    "tool": "pnpm",
+    "command": "pnpm dev",
+    "desc": "starts the project's development server",
+    "keywords": [
+      "pnpm dev"
+    ]
+  },
+  {
+    "tool": "pnpm",
+    "command": "pnpm build",
+    "desc": "builds the project for production",
+    "keywords": [
+      "pnpm build"
+    ]
+  },
+  {
+    "tool": "vite",
+    "command": "npm create vite@latest",
+    "desc": "creates a new Vite project using npm",
+    "keywords": [
+      "create vite project",
+      "npm vite"
+    ]
+  },
+  {
+    "tool": "vite",
+    "command": "yarn create vite",
+    "desc": "creates a new Vite project using Yarn",
+    "keywords": [
+      "yarn vite create"
+    ]
+  },
+  {
+    "tool": "vite",
+    "command": "pnpm create vite",
+    "desc": "creates a new Vite project using pnpm",
+    "keywords": [
+      "pnpm vite create"
+    ]
+  },
+  {
+    "tool": "vite",
+    "command": "npm run dev",
+    "desc": "starts the Vite development server",
+    "keywords": [
+      "vite dev server"
+    ]
+  },
+  {
+    "tool": "vite",
+    "command": "npm run build",
+    "desc": "builds a Vite project for production",
+    "keywords": [
+      "vite build"
+    ]
+  },
+  {
+    "tool": "vite",
+    "command": "npm run preview",
+    "desc": "previews the production build locally",
+    "keywords": [
+      "vite preview"
+    ]
+  },
+  {
+    "tool": "vite",
+    "command": "npm run lint",
+    "desc": "runs the project's configured linter",
+    "keywords": [
+      "vite lint"
+    ]
+  },
+  {
+    "tool": "eslint",
+    "command": "npx eslint .",
+    "desc": "lints all supported files in the current project",
+    "keywords": [
+      "eslint project",
+      "lint javascript"
+    ]
+  },
+  {
+    "tool": "eslint",
+    "command": "npx eslint src",
+    "desc": "lints files inside the src directory",
+    "keywords": [
+      "eslint source directory"
+    ]
+  },
+  {
+    "tool": "eslint",
+    "command": "npx eslint file.js",
+    "desc": "lints a specific JavaScript file",
+    "keywords": [
+      "eslint single file"
+    ]
+  },
+  {
+    "tool": "eslint",
+    "command": "npx eslint . --fix",
+    "desc": "automatically fixes linting issues when possible",
+    "keywords": [
+      "eslint auto fix",
+      "fix lint"
+    ]
+  },
+  {
+    "tool": "eslint",
+    "command": "npx eslint --init",
+    "desc": "launches the ESLint configuration wizard",
+    "keywords": [
+      "eslint init",
+      "create config"
+    ]
+  },
+  {
+    "tool": "eslint",
+    "command": "npx eslint --print-config file.js",
+    "desc": "prints the effective ESLint configuration for a file",
+    "keywords": [
+      "eslint config",
+      "print config"
+    ]
+  },
+  {
+    "tool": "eslint",
+    "command": "npx eslint . --ext .js,.ts,.jsx,.tsx",
+    "desc": "lints JavaScript and TypeScript files with specified extensions",
+    "keywords": [
+      "eslint typescript",
+      "jsx tsx lint"
+    ]
+  },
+  {
+    "tool": "eslint",
+    "command": "npx eslint . --quiet",
+    "desc": "displays only errors and suppresses warnings",
+    "keywords": [
+      "eslint quiet mode"
+    ]
+  },
+  {
+    "tool": "eslint",
+    "command": "npx eslint . --max-warnings=0",
+    "desc": "exits with an error if any warnings are found",
+    "keywords": [
+      "eslint strict mode",
+      "warnings"
+    ]
+  },
+  {
+    "tool": "eslint",
+    "command": "npx eslint --cache .",
+    "desc": "caches lint results to improve performance on future runs",
+    "keywords": [
+      "eslint cache",
+      "faster lint"
+    ]
   }
 ]
