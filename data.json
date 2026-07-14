@@ -13612,5 +13612,457 @@
       "eslint cache",
       "faster lint"
     ]
+  },
+  {
+    "tool": "go",
+    "command": "go version",
+    "desc": "displays the installed Go version",
+    "keywords": [
+      "go version",
+      "golang version",
+      "check go"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go env",
+    "desc": "displays all Go environment variables",
+    "keywords": [
+      "go environment",
+      "golang env"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go env GOPATH",
+    "desc": "displays the current GOPATH value",
+    "keywords": [
+      "gopath",
+      "go workspace"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go env GOROOT",
+    "desc": "displays the Go installation directory",
+    "keywords": [
+      "goroot",
+      "go installation"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go mod init <module>",
+    "desc": "initializes a new Go module in the current directory",
+    "keywords": [
+      "go module",
+      "initialize project",
+      "go mod init"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go mod tidy",
+    "desc": "adds missing dependencies and removes unused ones",
+    "keywords": [
+      "go tidy",
+      "clean dependencies"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go mod download",
+    "desc": "downloads all dependencies defined in go.mod",
+    "keywords": [
+      "download dependencies",
+      "go modules"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go mod verify",
+    "desc": "verifies downloaded module dependencies",
+    "keywords": [
+      "verify modules",
+      "dependency integrity"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go mod graph",
+    "desc": "displays the dependency graph for the current module",
+    "keywords": [
+      "dependency graph",
+      "go modules"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go mod why <module>",
+    "desc": "explains why a dependency is required",
+    "keywords": [
+      "go dependency reason",
+      "go mod why"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go mod edit",
+    "desc": "edits the go.mod file programmatically",
+    "keywords": [
+      "edit go.mod",
+      "module configuration"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go mod vendor",
+    "desc": "copies dependencies into the vendor directory",
+    "keywords": [
+      "vendor dependencies",
+      "go vendor"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go run main.go",
+    "desc": "compiles and runs a Go program",
+    "keywords": [
+      "go run",
+      "execute go program"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go run .",
+    "desc": "builds and runs the current Go module",
+    "keywords": [
+      "run current project",
+      "go module run"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go run *.go",
+    "desc": "compiles and runs multiple Go source files",
+    "keywords": [
+      "multiple go files",
+      "run package"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go build",
+    "desc": "compiles the current package into an executable",
+    "keywords": [
+      "go build",
+      "compile project"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go build -o app",
+    "desc": "builds the application and saves it with a custom name",
+    "keywords": [
+      "output executable",
+      "custom binary"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go build ./...",
+    "desc": "builds all packages in the current module",
+    "keywords": [
+      "build all packages",
+      "recursive build"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "GOOS=linux GOARCH=amd64 go build",
+    "desc": "cross-compiles the application for Linux amd64",
+    "keywords": [
+      "cross compile linux",
+      "goos goarch"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "GOOS=windows GOARCH=amd64 go build",
+    "desc": "cross-compiles the application for Windows amd64",
+    "keywords": [
+      "cross compile windows",
+      "go binary"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "GOOS=darwin GOARCH=arm64 go build",
+    "desc": "cross-compiles the application for macOS Apple Silicon",
+    "keywords": [
+      "cross compile macos",
+      "arm64"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go test",
+    "desc": "runs tests in the current package",
+    "keywords": [
+      "go test",
+      "run tests"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go test ./...",
+    "desc": "runs tests in all packages recursively",
+    "keywords": [
+      "recursive tests",
+      "go packages"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go test -v",
+    "desc": "runs tests with verbose output",
+    "keywords": [
+      "verbose test",
+      "go testing"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go test -race",
+    "desc": "detects race conditions while running tests",
+    "keywords": [
+      "race detector",
+      "concurrency bugs"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go test -cover",
+    "desc": "displays code coverage information",
+    "keywords": [
+      "test coverage",
+      "go cover"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go test -coverprofile=coverage.out",
+    "desc": "generates a code coverage report file",
+    "keywords": [
+      "coverage profile",
+      "test report"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go tool cover -html=coverage.out",
+    "desc": "opens an HTML visualization of the coverage report",
+    "keywords": [
+      "html coverage",
+      "coverage viewer"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go benchmark ./...",
+    "desc": "executes benchmark tests recursively",
+    "keywords": [
+      "go benchmark",
+      "performance testing"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go test -bench=.",
+    "desc": "runs all benchmark functions",
+    "keywords": [
+      "benchmark tests",
+      "go bench"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go get <module>",
+    "desc": "downloads and adds a module dependency",
+    "keywords": [
+      "go get package",
+      "install dependency"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go get -u ./...",
+    "desc": "updates all dependencies to newer minor or patch versions",
+    "keywords": [
+      "update dependencies",
+      "go get update"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go list",
+    "desc": "lists packages in the current module",
+    "keywords": [
+      "list packages",
+      "go package list"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go list ./...",
+    "desc": "lists all packages recursively",
+    "keywords": [
+      "recursive packages",
+      "go list all"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go install",
+    "desc": "compiles and installs the current package",
+    "keywords": [
+      "go install package",
+      "install binary"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go install <module>@latest",
+    "desc": "installs the latest version of a Go tool or application",
+    "keywords": [
+      "install latest tool",
+      "go install latest"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go install <module>@v1.2.3",
+    "desc": "installs a specific version of a Go module",
+    "keywords": [
+      "install module version",
+      "go tool version"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go fmt",
+    "desc": "formats Go source files in the current package",
+    "keywords": [
+      "format code",
+      "go formatter"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go fmt ./...",
+    "desc": "formats all Go packages recursively",
+    "keywords": [
+      "recursive formatting",
+      "go fmt all"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go vet",
+    "desc": "reports suspicious constructs and common programming mistakes",
+    "keywords": [
+      "go vet",
+      "static analysis"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go fix",
+    "desc": "updates source code to use newer Go APIs",
+    "keywords": [
+      "update go code",
+      "go fix"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go doc <package>",
+    "desc": "displays documentation for a package",
+    "keywords": [
+      "go documentation",
+      "package docs"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go doc <package>.<symbol>",
+    "desc": "displays documentation for a specific function, type, or variable",
+    "keywords": [
+      "go function docs",
+      "symbol documentation"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go work init",
+    "desc": "creates a new Go workspace file",
+    "keywords": [
+      "go workspace",
+      "work init"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go work use .",
+    "desc": "adds the current module to the workspace",
+    "keywords": [
+      "workspace module",
+      "go work use"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go work sync",
+    "desc": "synchronizes workspace dependencies",
+    "keywords": [
+      "workspace sync",
+      "go work"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go clean",
+    "desc": "removes object files and cached build files",
+    "keywords": [
+      "clean build cache",
+      "go clean"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go clean -cache",
+    "desc": "removes the Go build cache",
+    "keywords": [
+      "clear build cache",
+      "go cache"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go clean -modcache",
+    "desc": "removes the downloaded module cache",
+    "keywords": [
+      "clear module cache",
+      "go modules cache"
+    ]
+  },
+  {
+    "tool": "go",
+    "command": "go clean -testcache",
+    "desc": "removes cached test results",
+    "keywords": [
+      "clear test cache",
+      "go testing cache"
+    ]
   }
 ]
