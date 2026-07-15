@@ -17671,5 +17671,199 @@
       "openssl aes gcm",
       "authenticated encryption"
     ]
+  },
+  {
+    "tool": "feroxbuster",
+    "command": "feroxbuster --help",
+    "desc": "displays the help menu and available options",
+    "keywords": [
+      "feroxbuster help",
+      "directory brute force"
+    ]
+  },
+  {
+    "tool": "feroxbuster",
+    "command": "feroxbuster -u https://example.com",
+    "desc": "scans a website for hidden files and directories",
+    "keywords": [
+      "feroxbuster scan",
+      "content discovery"
+    ]
+  },
+  {
+    "tool": "feroxbuster",
+    "command": "feroxbuster -u https://example.com -w wordlist.txt",
+    "desc": "scans using a custom wordlist",
+    "keywords": [
+      "feroxbuster custom wordlist",
+      "brute force"
+    ]
+  },
+  {
+    "tool": "feroxbuster",
+    "command": "feroxbuster -u https://example.com -x php,txt,js",
+    "desc": "searches for files with specific extensions",
+    "keywords": [
+      "feroxbuster extensions",
+      "php js txt"
+    ]
+  },
+  {
+    "tool": "feroxbuster",
+    "command": "feroxbuster -u https://example.com -C 404",
+    "desc": "filters responses with the specified status code",
+    "keywords": [
+      "feroxbuster filter status",
+      "ignore 404"
+    ]
+  },
+  {
+    "tool": "feroxbuster",
+    "command": "feroxbuster -u https://example.com -r",
+    "desc": "recursively scans discovered directories",
+    "keywords": [
+      "feroxbuster recursive",
+      "recursive scan"
+    ]
+  },
+  {
+    "tool": "feroxbuster",
+    "command": "feroxbuster -u https://example.com -t 100",
+    "desc": "increases the number of concurrent scan threads",
+    "keywords": [
+      "feroxbuster threads",
+      "fast scan"
+    ]
+  },
+  {
+    "tool": "feroxbuster",
+    "command": "feroxbuster -u https://example.com -o results.txt",
+    "desc": "saves scan results to a file",
+    "keywords": [
+      "feroxbuster output",
+      "save results"
+    ]
+  },
+  {
+    "tool": "dirsearch",
+    "command": "dirsearch -u https://example.com",
+    "desc": "scans a website for hidden directories and files",
+    "keywords": [
+      "dirsearch scan",
+      "directory brute force"
+    ]
+  },
+  {
+    "tool": "dirsearch",
+    "command": "dirsearch -u https://example.com -w wordlist.txt",
+    "desc": "uses a custom wordlist during the scan",
+    "keywords": [
+      "dirsearch wordlist",
+      "custom scan"
+    ]
+  },
+  {
+    "tool": "dirsearch",
+    "command": "dirsearch -u https://example.com -e php,html,txt",
+    "desc": "searches using specific file extensions",
+    "keywords": [
+      "dirsearch extensions",
+      "php html"
+    ]
+  },
+  {
+    "tool": "dirsearch",
+    "command": "dirsearch -u https://example.com -t 100",
+    "desc": "increases the number of concurrent threads",
+    "keywords": [
+      "dirsearch threads",
+      "fast enumeration"
+    ]
+  },
+  {
+    "tool": "dirsearch",
+    "command": "dirsearch -u https://example.com --random-agent",
+    "desc": "uses a random User-Agent for requests",
+    "keywords": [
+      "dirsearch random user agent"
+    ]
+  },
+  {
+    "tool": "dirsearch",
+    "command": "dirsearch -u https://example.com --exclude-status=404",
+    "desc": "ignores responses with specified status codes",
+    "keywords": [
+      "dirsearch exclude status",
+      "filter responses"
+    ]
+  },
+  {
+    "tool": "dirsearch",
+    "command": "dirsearch -u https://example.com -o output.txt",
+    "desc": "saves scan results to a file",
+    "keywords": [
+      "dirsearch output",
+      "save results"
+    ]
+  },
+  {
+    "tool": "hakrawler",
+    "command": "hakrawler -help",
+    "desc": "displays the available hakrawler options",
+    "keywords": [
+      "hakrawler help",
+      "crawler options"
+    ]
+  },
+  {
+    "tool": "hakrawler",
+    "command": "echo https://example.com | hakrawler",
+    "desc": "crawls a website and extracts discovered endpoints",
+    "keywords": [
+      "hakrawler crawl",
+      "endpoint discovery"
+    ]
+  },
+  {
+    "tool": "hakrawler",
+    "command": "echo https://example.com | hakrawler -depth 3",
+    "desc": "crawls up to the specified recursion depth",
+    "keywords": [
+      "hakrawler depth",
+      "recursive crawl"
+    ]
+  },
+  {
+    "tool": "hakrawler",
+    "command": "echo https://example.com | hakrawler -plain",
+    "desc": "outputs only discovered URLs without additional information",
+    "keywords": [
+      "hakrawler plain output"
+    ]
+  },
+  {
+    "tool": "hakrawler",
+    "command": "echo https://example.com | hakrawler -subs",
+    "desc": "includes subdomains during crawling",
+    "keywords": [
+      "hakrawler subdomains"
+    ]
+  },
+  {
+    "tool": "hakrawler",
+    "command": "echo https://example.com | hakrawler -json",
+    "desc": "outputs crawl results in JSON format",
+    "keywords": [
+      "hakrawler json output"
+    ]
+  },
+  {
+    "tool": "hakrawler",
+    "command": "cat urls.txt | hakrawler",
+    "desc": "crawls multiple target URLs from a file",
+    "keywords": [
+      "hakrawler multiple targets",
+      "batch crawl"
+    ]
   }
 ]
