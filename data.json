@@ -18053,5 +18053,276 @@
       "notify nuclei results",
       "vulnerability alerts"
     ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh --version",
+    "desc": "displays the installed GitHub CLI version",
+    "keywords": [
+      "github cli version",
+      "gh version"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh help",
+    "desc": "displays the GitHub CLI help menu",
+    "keywords": [
+      "gh help",
+      "github cli commands"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh auth login",
+    "desc": "authenticates GitHub CLI with your GitHub account",
+    "keywords": [
+      "github login",
+      "gh auth"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh auth status",
+    "desc": "displays the current authentication status",
+    "keywords": [
+      "github auth status",
+      "logged in account"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh auth token",
+    "desc": "prints the current authentication token",
+    "keywords": [
+      "github token",
+      "gh auth token"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh auth refresh",
+    "desc": "refreshes authentication credentials",
+    "keywords": [
+      "github refresh token",
+      "gh refresh"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh auth logout",
+    "desc": "signs out from GitHub CLI",
+    "keywords": [
+      "github logout",
+      "gh auth logout"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh repo create",
+    "desc": "creates a new GitHub repository interactively",
+    "keywords": [
+      "create github repository",
+      "gh repo create"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh repo clone <owner>/<repo>",
+    "desc": "clones a GitHub repository",
+    "keywords": [
+      "github clone",
+      "gh repo clone"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh repo view",
+    "desc": "displays information about the current repository",
+    "keywords": [
+      "github repository info",
+      "gh repo view"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh repo view <owner>/<repo>",
+    "desc": "displays information about a specific repository",
+    "keywords": [
+      "github repo details",
+      "repository information"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh repo list",
+    "desc": "lists repositories owned by the authenticated user",
+    "keywords": [
+      "github repositories",
+      "gh repo list"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh repo fork",
+    "desc": "forks the current repository",
+    "keywords": [
+      "github fork repository",
+      "gh fork"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh repo rename <new-name>",
+    "desc": "renames the current repository",
+    "keywords": [
+      "github rename repository"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh repo edit",
+    "desc": "edits repository settings interactively",
+    "keywords": [
+      "github repository settings",
+      "gh edit"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh repo delete <owner>/<repo>",
+    "desc": "permanently deletes a GitHub repository",
+    "keywords": [
+      "github delete repository",
+      "remove repo"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh repo sync",
+    "desc": "synchronizes a fork with its upstream repository",
+    "keywords": [
+      "github sync fork",
+      "update fork"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh browse",
+    "desc": "opens the current repository in the default web browser",
+    "keywords": [
+      "open github repository",
+      "gh browse"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh browse --branch main",
+    "desc": "opens a specific branch in the browser",
+    "keywords": [
+      "github browse branch"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh browse README.md",
+    "desc": "opens a repository file in the browser",
+    "keywords": [
+      "github browse file",
+      "readme"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh release list",
+    "desc": "lists releases in the current repository",
+    "keywords": [
+      "github releases",
+      "release list"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh release view",
+    "desc": "displays information about the latest release",
+    "keywords": [
+      "github latest release"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh release download",
+    "desc": "downloads assets from a GitHub release",
+    "keywords": [
+      "github download release",
+      "release assets"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh release create v1.0.0",
+    "desc": "creates a new GitHub release",
+    "keywords": [
+      "github create release",
+      "gh release create"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh release delete v1.0.0",
+    "desc": "deletes a GitHub release",
+    "keywords": [
+      "github delete release"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh gist list",
+    "desc": "lists your GitHub Gists",
+    "keywords": [
+      "github gists",
+      "gh gist list"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh gist create notes.txt",
+    "desc": "creates a new GitHub Gist from a file",
+    "keywords": [
+      "github create gist",
+      "gh gist create"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh gist view <gist-id>",
+    "desc": "displays a GitHub Gist",
+    "keywords": [
+      "github gist view"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh gist edit <gist-id>",
+    "desc": "edits an existing GitHub Gist",
+    "keywords": [
+      "github edit gist"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh gist clone <gist-id>",
+    "desc": "clones a GitHub Gist locally",
+    "keywords": [
+      "github gist clone"
+    ]
+  },
+  {
+    "tool": "gh",
+    "command": "gh gist delete <gist-id>",
+    "desc": "deletes a GitHub Gist",
+    "keywords": [
+      "github delete gist"
+    ]
   }
 ]
