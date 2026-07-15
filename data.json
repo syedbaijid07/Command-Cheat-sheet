@@ -16924,5 +16924,440 @@
       "continue boot",
       "exit fastboot"
     ]
+  },
+  {
+    "tool": "radare2",
+    "command": "r2 <binary>",
+    "desc": "opens a binary for analysis in radare2",
+    "keywords": [
+      "radare2 open binary",
+      "reverse engineering"
+    ]
+  },
+  {
+    "tool": "radare2",
+    "command": "r2 -A <binary>",
+    "desc": "opens a binary and performs automatic analysis",
+    "keywords": [
+      "radare2 auto analysis",
+      "analyze binary"
+    ]
+  },
+  {
+    "tool": "radare2",
+    "command": "r2 -AA <binary>",
+    "desc": "performs a deeper automatic analysis of the binary",
+    "keywords": [
+      "radare2 deep analysis",
+      "advanced analysis"
+    ]
+  },
+  {
+    "tool": "radare2",
+    "command": "r2 -d <binary>",
+    "desc": "starts the binary under the radare2 debugger",
+    "keywords": [
+      "radare2 debugger",
+      "debug binary"
+    ]
+  },
+  {
+    "tool": "radare2",
+    "command": "afl",
+    "desc": "lists discovered functions in the current binary",
+    "keywords": [
+      "radare2 functions",
+      "afl"
+    ]
+  },
+  {
+    "tool": "radare2",
+    "command": "pdf @ main",
+    "desc": "disassembles the main function",
+    "keywords": [
+      "radare2 disassemble main",
+      "pdf command"
+    ]
+  },
+  {
+    "tool": "radare2",
+    "command": "iz",
+    "desc": "lists strings found inside the binary",
+    "keywords": [
+      "radare2 strings",
+      "binary strings"
+    ]
+  },
+  {
+    "tool": "radare2",
+    "command": "iI",
+    "desc": "displays general information about the binary",
+    "keywords": [
+      "radare2 binary info",
+      "file information"
+    ]
+  },
+  {
+    "tool": "radare2",
+    "command": "ii",
+    "desc": "lists imported functions",
+    "keywords": [
+      "radare2 imports",
+      "imported symbols"
+    ]
+  },
+  {
+    "tool": "radare2",
+    "command": "iE",
+    "desc": "lists exported functions",
+    "keywords": [
+      "radare2 exports",
+      "exported symbols"
+    ]
+  },
+  {
+    "tool": "radare2",
+    "command": "aaa",
+    "desc": "performs full binary analysis",
+    "keywords": [
+      "radare2 analyze all",
+      "aaa"
+    ]
+  },
+  {
+    "tool": "radare2",
+    "command": "VV",
+    "desc": "opens the visual graph mode",
+    "keywords": [
+      "radare2 graph view",
+      "visual mode"
+    ]
+  },
+  {
+    "tool": "ghidra",
+    "command": "ghidraRun",
+    "desc": "launches the Ghidra reverse engineering suite",
+    "keywords": [
+      "start ghidra",
+      "reverse engineering"
+    ]
+  },
+  {
+    "tool": "ghidra",
+    "command": "analyzeHeadless <project_dir> <project_name> -import <binary>",
+    "desc": "imports and analyzes a binary without using the GUI",
+    "keywords": [
+      "ghidra headless",
+      "automated analysis"
+    ]
+  },
+  {
+    "tool": "ghidra",
+    "command": "analyzeHeadless <project_dir> <project_name> -process",
+    "desc": "analyzes an existing Ghidra project from the command line",
+    "keywords": [
+      "ghidra process project",
+      "headless mode"
+    ]
+  },
+  {
+    "tool": "gdb",
+    "command": "gdb <binary>",
+    "desc": "opens a binary in the GNU Debugger",
+    "keywords": [
+      "gdb debugger",
+      "debug executable"
+    ]
+  },
+  {
+    "tool": "gdb",
+    "command": "gdb -q <binary>",
+    "desc": "starts GDB in quiet mode",
+    "keywords": [
+      "gdb quiet mode"
+    ]
+  },
+  {
+    "tool": "gdb",
+    "command": "gdb --args <binary> <args>",
+    "desc": "starts debugging with command-line arguments",
+    "keywords": [
+      "gdb arguments",
+      "debug program"
+    ]
+  },
+  {
+    "tool": "gdb",
+    "command": "run",
+    "desc": "starts execution of the loaded program",
+    "keywords": [
+      "gdb run",
+      "execute program"
+    ]
+  },
+  {
+    "tool": "gdb",
+    "command": "start",
+    "desc": "starts execution and stops at main()",
+    "keywords": [
+      "gdb start",
+      "breakpoint main"
+    ]
+  },
+  {
+    "tool": "gdb",
+    "command": "break main",
+    "desc": "sets a breakpoint at the main function",
+    "keywords": [
+      "gdb breakpoint",
+      "break main"
+    ]
+  },
+  {
+    "tool": "gdb",
+    "command": "info breakpoints",
+    "desc": "lists all configured breakpoints",
+    "keywords": [
+      "gdb breakpoints",
+      "list breakpoints"
+    ]
+  },
+  {
+    "tool": "gdb",
+    "command": "delete breakpoints",
+    "desc": "removes all breakpoints",
+    "keywords": [
+      "gdb delete breakpoints"
+    ]
+  },
+  {
+    "tool": "gdb",
+    "command": "continue",
+    "desc": "resumes execution until the next breakpoint",
+    "keywords": [
+      "gdb continue",
+      "resume execution"
+    ]
+  },
+  {
+    "tool": "gdb",
+    "command": "next",
+    "desc": "executes the next source line without entering functions",
+    "keywords": [
+      "gdb next",
+      "step over"
+    ]
+  },
+  {
+    "tool": "gdb",
+    "command": "step",
+    "desc": "executes the next source line and enters called functions",
+    "keywords": [
+      "gdb step into",
+      "debugger"
+    ]
+  },
+  {
+    "tool": "gdb",
+    "command": "finish",
+    "desc": "runs until the current function returns",
+    "keywords": [
+      "gdb finish function"
+    ]
+  },
+  {
+    "tool": "gdb",
+    "command": "backtrace",
+    "desc": "displays the current function call stack",
+    "keywords": [
+      "gdb stack trace",
+      "backtrace"
+    ]
+  },
+  {
+    "tool": "gdb",
+    "command": "info registers",
+    "desc": "displays CPU register values",
+    "keywords": [
+      "gdb registers",
+      "cpu state"
+    ]
+  },
+  {
+    "tool": "gdb",
+    "command": "x/16x $rsp",
+    "desc": "examines memory near the stack pointer",
+    "keywords": [
+      "gdb memory examine",
+      "stack"
+    ]
+  },
+  {
+    "tool": "gdb",
+    "command": "disassemble main",
+    "desc": "disassembles the main function",
+    "keywords": [
+      "gdb disassembly",
+      "assembly code"
+    ]
+  },
+  {
+    "tool": "gdb",
+    "command": "quit",
+    "desc": "exits the debugger",
+    "keywords": [
+      "gdb quit",
+      "exit debugger"
+    ]
+  },
+  {
+    "tool": "pwndbg",
+    "command": "pwndbg",
+    "desc": "loads the pwndbg extension inside GDB",
+    "keywords": [
+      "pwndbg",
+      "gdb plugin"
+    ]
+  },
+  {
+    "tool": "pwndbg",
+    "command": "checksec",
+    "desc": "displays binary security protections",
+    "keywords": [
+      "pwndbg checksec",
+      "binary security"
+    ]
+  },
+  {
+    "tool": "pwndbg",
+    "command": "telescope $rsp",
+    "desc": "displays stack memory in a readable format",
+    "keywords": [
+      "pwndbg telescope",
+      "stack viewer"
+    ]
+  },
+  {
+    "tool": "pwndbg",
+    "command": "heap",
+    "desc": "displays heap information",
+    "keywords": [
+      "pwndbg heap analysis"
+    ]
+  },
+  {
+    "tool": "pwndbg",
+    "command": "vmmap",
+    "desc": "displays the process memory map",
+    "keywords": [
+      "pwndbg memory map"
+    ]
+  },
+  {
+    "tool": "pwndbg",
+    "command": "context",
+    "desc": "displays registers, stack, disassembly, and source together",
+    "keywords": [
+      "pwndbg context",
+      "debugger view"
+    ]
+  },
+  {
+    "tool": "gef",
+    "command": "gef",
+    "desc": "loads the GEF extension inside GDB",
+    "keywords": [
+      "gef",
+      "gdb enhanced features"
+    ]
+  },
+  {
+    "tool": "gef",
+    "command": "checksec",
+    "desc": "displays binary security protections",
+    "keywords": [
+      "gef checksec",
+      "binary mitigation"
+    ]
+  },
+  {
+    "tool": "gef",
+    "command": "vmmap",
+    "desc": "displays the current process memory layout",
+    "keywords": [
+      "gef vmmap",
+      "memory map"
+    ]
+  },
+  {
+    "tool": "gef",
+    "command": "heap chunks",
+    "desc": "displays heap chunk information",
+    "keywords": [
+      "gef heap",
+      "heap chunks"
+    ]
+  },
+  {
+    "tool": "gef",
+    "command": "registers",
+    "desc": "displays CPU registers in an enhanced format",
+    "keywords": [
+      "gef registers",
+      "cpu registers"
+    ]
+  },
+  {
+    "tool": "gef",
+    "command": "context",
+    "desc": "displays registers, disassembly, stack, and source simultaneously",
+    "keywords": [
+      "gef context",
+      "debugger layout"
+    ]
+  },
+  {
+    "tool": "gef",
+    "command": "dereference $rsp",
+    "desc": "recursively dereferences pointers from memory",
+    "keywords": [
+      "gef dereference",
+      "pointer analysis"
+    ]
+  },
+  {
+    "tool": "checksec",
+    "command": "checksec --file=<binary>",
+    "desc": "displays enabled security mitigations for a binary",
+    "keywords": [
+      "checksec binary",
+      "nx pie relro canary"
+    ]
+  },
+  {
+    "tool": "checksec",
+    "command": "checksec --dir=<directory>",
+    "desc": "scans all binaries inside a directory",
+    "keywords": [
+      "checksec directory scan"
+    ]
+  },
+  {
+    "tool": "checksec",
+    "command": "checksec --kernel",
+    "desc": "displays kernel security protection information",
+    "keywords": [
+      "kernel security",
+      "checksec kernel"
+    ]
+  },
+  {
+    "tool": "checksec",
+    "command": "checksec --proc=<pid>",
+    "desc": "checks security information for a running process",
+    "keywords": [
+      "process security",
+      "checksec process"
+    ]
   }
 ]
