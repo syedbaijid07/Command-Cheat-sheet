@@ -15309,5 +15309,350 @@
       "gcloud help",
       "cli documentation"
     ]
+  },
+  {
+    "tool": "mysql",
+    "command": "mysql --version",
+    "desc": "displays the installed MySQL client version",
+    "keywords": [
+      "mysql version",
+      "mysql client"
+    ]
+  },
+  {
+    "tool": "mysql",
+    "command": "mysql -u root -p",
+    "desc": "connects to a MySQL server as the root user",
+    "keywords": [
+      "mysql login",
+      "mysql root"
+    ]
+  },
+  {
+    "tool": "mysql",
+    "command": "mysql -u <user> -p -h <host>",
+    "desc": "connects to a remote MySQL server",
+    "keywords": [
+      "remote mysql",
+      "mysql host"
+    ]
+  },
+  {
+    "tool": "mysql",
+    "command": "mysql -u <user> -p <database>",
+    "desc": "connects directly to a specific database",
+    "keywords": [
+      "mysql database login"
+    ]
+  },
+  {
+    "tool": "mysql",
+    "command": "mysqladmin -u root -p status",
+    "desc": "displays MySQL server status",
+    "keywords": [
+      "mysql status",
+      "mysqladmin"
+    ]
+  },
+  {
+    "tool": "mysql",
+    "command": "mysqldump -u <user> -p <database> > backup.sql",
+    "desc": "creates a SQL backup of a database",
+    "keywords": [
+      "mysql backup",
+      "mysqldump"
+    ]
+  },
+  {
+    "tool": "mysql",
+    "command": "mysql -u <user> -p <database> < backup.sql",
+    "desc": "restores a database from a SQL backup",
+    "keywords": [
+      "mysql restore",
+      "import sql"
+    ]
+  },
+  {
+    "tool": "psql",
+    "command": "psql --version",
+    "desc": "displays the installed PostgreSQL client version",
+    "keywords": [
+      "psql version",
+      "postgres client"
+    ]
+  },
+  {
+    "tool": "psql",
+    "command": "psql -U postgres",
+    "desc": "connects to PostgreSQL as the postgres user",
+    "keywords": [
+      "postgres login",
+      "psql connect"
+    ]
+  },
+  {
+    "tool": "psql",
+    "command": "psql -U <user> -d <database>",
+    "desc": "connects to a specific PostgreSQL database",
+    "keywords": [
+      "postgres database",
+      "psql database"
+    ]
+  },
+  {
+    "tool": "psql",
+    "command": "psql -h <host> -U <user> -d <database>",
+    "desc": "connects to a remote PostgreSQL server",
+    "keywords": [
+      "remote postgres",
+      "psql host"
+    ]
+  },
+  {
+    "tool": "psql",
+    "command": "pg_dump <database> > backup.sql",
+    "desc": "creates a backup of a PostgreSQL database",
+    "keywords": [
+      "postgres backup",
+      "pg_dump"
+    ]
+  },
+  {
+    "tool": "psql",
+    "command": "pg_restore -d <database> backup.dump",
+    "desc": "restores a PostgreSQL backup",
+    "keywords": [
+      "postgres restore",
+      "pg_restore"
+    ]
+  },
+  {
+    "tool": "psql",
+    "command": "createdb <database>",
+    "desc": "creates a new PostgreSQL database",
+    "keywords": [
+      "create postgres database"
+    ]
+  },
+  {
+    "tool": "psql",
+    "command": "dropdb <database>",
+    "desc": "deletes a PostgreSQL database",
+    "keywords": [
+      "drop postgres database"
+    ]
+  },
+  {
+    "tool": "sqlite3",
+    "command": "sqlite3 database.db",
+    "desc": "opens or creates a SQLite database",
+    "keywords": [
+      "sqlite open database"
+    ]
+  },
+  {
+    "tool": "sqlite3",
+    "command": "sqlite3 database.db \".tables\"",
+    "desc": "lists all tables in a SQLite database",
+    "keywords": [
+      "sqlite tables",
+      "list tables"
+    ]
+  },
+  {
+    "tool": "sqlite3",
+    "command": "sqlite3 database.db \".schema\"",
+    "desc": "displays the database schema",
+    "keywords": [
+      "sqlite schema",
+      "database structure"
+    ]
+  },
+  {
+    "tool": "sqlite3",
+    "command": "sqlite3 database.db \".dump\"",
+    "desc": "exports the complete database as SQL",
+    "keywords": [
+      "sqlite dump",
+      "export database"
+    ]
+  },
+  {
+    "tool": "sqlite3",
+    "command": "sqlite3 database.db \".backup backup.db\"",
+    "desc": "creates a backup of the SQLite database",
+    "keywords": [
+      "sqlite backup"
+    ]
+  },
+  {
+    "tool": "sqlite3",
+    "command": "sqlite3 database.db \".read script.sql\"",
+    "desc": "executes SQL statements from a file",
+    "keywords": [
+      "sqlite execute sql",
+      "import script"
+    ]
+  },
+  {
+    "tool": "sqlite3",
+    "command": "sqlite3 database.db \".exit\"",
+    "desc": "exits the SQLite shell",
+    "keywords": [
+      "sqlite exit",
+      "quit sqlite"
+    ]
+  },
+  {
+    "tool": "mongosh",
+    "command": "mongosh",
+    "desc": "starts the MongoDB shell",
+    "keywords": [
+      "mongosh",
+      "mongodb shell"
+    ]
+  },
+  {
+    "tool": "mongosh",
+    "command": "mongosh mongodb://localhost:27017",
+    "desc": "connects to a local MongoDB server",
+    "keywords": [
+      "mongodb localhost",
+      "connect mongodb"
+    ]
+  },
+  {
+    "tool": "mongosh",
+    "command": "mongosh \"mongodb://<user>:<password>@<host>\"",
+    "desc": "connects to a remote MongoDB server",
+    "keywords": [
+      "mongodb authentication",
+      "remote mongodb"
+    ]
+  },
+  {
+    "tool": "mongosh",
+    "command": "mongosh --nodb",
+    "desc": "starts the MongoDB shell without connecting to a server",
+    "keywords": [
+      "mongodb offline shell"
+    ]
+  },
+  {
+    "tool": "mongosh",
+    "command": "mongosh --eval \"db.stats()\"",
+    "desc": "executes a JavaScript command directly from the command line",
+    "keywords": [
+      "mongodb eval",
+      "database stats"
+    ]
+  },
+  {
+    "tool": "mongosh",
+    "command": "mongosh --file script.js",
+    "desc": "executes JavaScript commands from a file",
+    "keywords": [
+      "mongodb script",
+      "mongosh file"
+    ]
+  },
+  {
+    "tool": "redis-cli",
+    "command": "redis-cli",
+    "desc": "connects to the local Redis server",
+    "keywords": [
+      "redis cli",
+      "redis shell"
+    ]
+  },
+  {
+    "tool": "redis-cli",
+    "command": "redis-cli -h <host> -p 6379",
+    "desc": "connects to a remote Redis server",
+    "keywords": [
+      "remote redis",
+      "redis host"
+    ]
+  },
+  {
+    "tool": "redis-cli",
+    "command": "redis-cli -a <password>",
+    "desc": "authenticates with a password when connecting to Redis",
+    "keywords": [
+      "redis password",
+      "redis auth"
+    ]
+  },
+  {
+    "tool": "redis-cli",
+    "command": "redis-cli ping",
+    "desc": "checks whether the Redis server is responding",
+    "keywords": [
+      "redis ping",
+      "redis server"
+    ]
+  },
+  {
+    "tool": "redis-cli",
+    "command": "redis-cli monitor",
+    "desc": "displays all commands processed by the Redis server in real time",
+    "keywords": [
+      "redis monitor",
+      "realtime redis"
+    ]
+  },
+  {
+    "tool": "redis-cli",
+    "command": "redis-cli info",
+    "desc": "displays Redis server information and statistics",
+    "keywords": [
+      "redis info",
+      "server stats"
+    ]
+  },
+  {
+    "tool": "redis-cli",
+    "command": "redis-cli flushdb",
+    "desc": "deletes all keys from the current Redis database",
+    "keywords": [
+      "redis flushdb",
+      "clear database"
+    ]
+  },
+  {
+    "tool": "redis-cli",
+    "command": "redis-cli flushall",
+    "desc": "deletes all keys from every Redis database",
+    "keywords": [
+      "redis flushall",
+      "remove all keys"
+    ]
+  },
+  {
+    "tool": "sql",
+    "command": "sqlcmd -S <server> -U <user> -P <password>",
+    "desc": "connects to a Microsoft SQL Server instance using sqlcmd",
+    "keywords": [
+      "sql server cli",
+      "sqlcmd login"
+    ]
+  },
+  {
+    "tool": "sql",
+    "command": "isql -v <dsn> <user> <password>",
+    "desc": "connects to an ODBC data source using isql",
+    "keywords": [
+      "odbc cli",
+      "isql connection"
+    ]
+  },
+  {
+    "tool": "db",
+    "command": "dbcli",
+    "desc": "launches a universal command-line database client if installed",
+    "keywords": [
+      "database cli",
+      "universal sql client"
+    ]
   }
 ]
