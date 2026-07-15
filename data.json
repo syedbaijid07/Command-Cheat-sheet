@@ -14886,5 +14886,428 @@
       "export aws credentials",
       "cli credentials"
     ]
+  },
+  {
+    "tool": "az",
+    "command": "az version",
+    "desc": "displays the installed Azure CLI version",
+    "keywords": [
+      "azure cli version",
+      "az version"
+    ]
+  },
+  {
+    "tool": "az",
+    "command": "az login",
+    "desc": "authenticates with an Azure account using the default web browser",
+    "keywords": [
+      "azure login",
+      "az login"
+    ]
+  },
+  {
+    "tool": "az",
+    "command": "az login --use-device-code",
+    "desc": "authenticates using a device code for headless or remote systems",
+    "keywords": [
+      "azure device login",
+      "remote login"
+    ]
+  },
+  {
+    "tool": "az",
+    "command": "az account show",
+    "desc": "displays information about the currently selected Azure subscription",
+    "keywords": [
+      "azure account",
+      "current subscription"
+    ]
+  },
+  {
+    "tool": "az",
+    "command": "az account list",
+    "desc": "lists all Azure subscriptions available to the authenticated account",
+    "keywords": [
+      "azure subscriptions",
+      "account list"
+    ]
+  },
+  {
+    "tool": "az",
+    "command": "az account set --subscription \"<subscription>\"",
+    "desc": "switches the active Azure subscription",
+    "keywords": [
+      "switch subscription",
+      "azure account set"
+    ]
+  },
+  {
+    "tool": "az",
+    "command": "az logout",
+    "desc": "signs out from the Azure CLI",
+    "keywords": [
+      "azure logout",
+      "az logout"
+    ]
+  },
+  {
+    "tool": "az group",
+    "command": "az group list",
+    "desc": "lists all Azure resource groups",
+    "keywords": [
+      "azure resource groups",
+      "group list"
+    ]
+  },
+  {
+    "tool": "az group",
+    "command": "az group create --name <group> --location eastus",
+    "desc": "creates a new Azure resource group",
+    "keywords": [
+      "create resource group",
+      "azure group"
+    ]
+  },
+  {
+    "tool": "az group",
+    "command": "az group delete --name <group>",
+    "desc": "deletes an Azure resource group and its resources",
+    "keywords": [
+      "delete resource group",
+      "remove group"
+    ]
+  },
+  {
+    "tool": "az group",
+    "command": "az group show --name <group>",
+    "desc": "displays information about a resource group",
+    "keywords": [
+      "resource group details",
+      "azure group info"
+    ]
+  },
+  {
+    "tool": "az vm",
+    "command": "az vm list",
+    "desc": "lists virtual machines in the current subscription",
+    "keywords": [
+      "azure vm list",
+      "virtual machines"
+    ]
+  },
+  {
+    "tool": "az vm",
+    "command": "az vm list -d",
+    "desc": "lists virtual machines with power state and public IP information",
+    "keywords": [
+      "vm status",
+      "azure instances"
+    ]
+  },
+  {
+    "tool": "az vm",
+    "command": "az vm show --name <vm> --resource-group <group>",
+    "desc": "displays detailed information about a virtual machine",
+    "keywords": [
+      "vm details",
+      "azure vm info"
+    ]
+  },
+  {
+    "tool": "az vm",
+    "command": "az vm start --name <vm> --resource-group <group>",
+    "desc": "starts an Azure virtual machine",
+    "keywords": [
+      "start vm",
+      "azure start"
+    ]
+  },
+  {
+    "tool": "az vm",
+    "command": "az vm stop --name <vm> --resource-group <group>",
+    "desc": "stops an Azure virtual machine",
+    "keywords": [
+      "stop vm",
+      "azure stop"
+    ]
+  },
+  {
+    "tool": "az vm",
+    "command": "az vm restart --name <vm> --resource-group <group>",
+    "desc": "restarts an Azure virtual machine",
+    "keywords": [
+      "restart vm",
+      "azure reboot"
+    ]
+  },
+  {
+    "tool": "az vm",
+    "command": "az vm deallocate --name <vm> --resource-group <group>",
+    "desc": "deallocates a virtual machine to stop compute billing",
+    "keywords": [
+      "deallocate vm",
+      "stop billing"
+    ]
+  },
+  {
+    "tool": "az vm",
+    "command": "az vm delete --name <vm> --resource-group <group>",
+    "desc": "permanently deletes a virtual machine",
+    "keywords": [
+      "delete vm",
+      "remove azure vm"
+    ]
+  },
+  {
+    "tool": "az storage",
+    "command": "az storage account list",
+    "desc": "lists Azure Storage accounts",
+    "keywords": [
+      "storage accounts",
+      "azure storage"
+    ]
+  },
+  {
+    "tool": "az storage",
+    "command": "az storage blob list --container-name <container>",
+    "desc": "lists blobs inside a storage container",
+    "keywords": [
+      "azure blobs",
+      "storage container"
+    ]
+  },
+  {
+    "tool": "az storage",
+    "command": "az storage blob upload --container-name <container> --file file.txt --name file.txt",
+    "desc": "uploads a file to Azure Blob Storage",
+    "keywords": [
+      "upload blob",
+      "azure storage upload"
+    ]
+  },
+  {
+    "tool": "az storage",
+    "command": "az storage blob download --container-name <container> --name file.txt --file file.txt",
+    "desc": "downloads a blob from Azure Storage",
+    "keywords": [
+      "download blob",
+      "azure storage"
+    ]
+  },
+  {
+    "tool": "az network",
+    "command": "az network vnet list",
+    "desc": "lists virtual networks in the current subscription",
+    "keywords": [
+      "virtual networks",
+      "azure vnet"
+    ]
+  },
+  {
+    "tool": "az network",
+    "command": "az network public-ip list",
+    "desc": "lists Azure public IP addresses",
+    "keywords": [
+      "public ip",
+      "azure networking"
+    ]
+  },
+  {
+    "tool": "az network",
+    "command": "az network nsg list",
+    "desc": "lists network security groups",
+    "keywords": [
+      "network security groups",
+      "azure firewall"
+    ]
+  },
+  {
+    "tool": "gcloud",
+    "command": "gcloud version",
+    "desc": "displays the installed Google Cloud CLI version",
+    "keywords": [
+      "gcloud version",
+      "google cloud cli"
+    ]
+  },
+  {
+    "tool": "gcloud",
+    "command": "gcloud init",
+    "desc": "initializes the Google Cloud CLI and selects a project",
+    "keywords": [
+      "gcloud init",
+      "setup google cloud"
+    ]
+  },
+  {
+    "tool": "gcloud",
+    "command": "gcloud auth login",
+    "desc": "authenticates with a Google Cloud account",
+    "keywords": [
+      "gcloud login",
+      "google authentication"
+    ]
+  },
+  {
+    "tool": "gcloud",
+    "command": "gcloud auth list",
+    "desc": "lists authenticated Google Cloud accounts",
+    "keywords": [
+      "authenticated accounts",
+      "gcloud auth"
+    ]
+  },
+  {
+    "tool": "gcloud",
+    "command": "gcloud config list",
+    "desc": "displays the current Google Cloud CLI configuration",
+    "keywords": [
+      "gcloud config",
+      "configuration"
+    ]
+  },
+  {
+    "tool": "gcloud",
+    "command": "gcloud config set project <project-id>",
+    "desc": "sets the active Google Cloud project",
+    "keywords": [
+      "set project",
+      "active project"
+    ]
+  },
+  {
+    "tool": "gcloud",
+    "command": "gcloud projects list",
+    "desc": "lists available Google Cloud projects",
+    "keywords": [
+      "google cloud projects",
+      "project list"
+    ]
+  },
+  {
+    "tool": "gcloud compute",
+    "command": "gcloud compute instances list",
+    "desc": "lists Compute Engine virtual machine instances",
+    "keywords": [
+      "gcp vm list",
+      "compute instances"
+    ]
+  },
+  {
+    "tool": "gcloud compute",
+    "command": "gcloud compute instances start <instance>",
+    "desc": "starts a Compute Engine virtual machine",
+    "keywords": [
+      "start gcp vm",
+      "compute start"
+    ]
+  },
+  {
+    "tool": "gcloud compute",
+    "command": "gcloud compute instances stop <instance>",
+    "desc": "stops a Compute Engine virtual machine",
+    "keywords": [
+      "stop gcp vm",
+      "compute stop"
+    ]
+  },
+  {
+    "tool": "gcloud compute",
+    "command": "gcloud compute instances describe <instance>",
+    "desc": "displays detailed information about a Compute Engine instance",
+    "keywords": [
+      "instance details",
+      "gcp vm info"
+    ]
+  },
+  {
+    "tool": "gcloud",
+    "command": "gcloud compute ssh <instance>",
+    "desc": "opens an SSH session to a Compute Engine instance",
+    "keywords": [
+      "ssh gcp vm",
+      "compute ssh"
+    ]
+  },
+  {
+    "tool": "gcloud storage",
+    "command": "gcloud storage buckets list",
+    "desc": "lists Cloud Storage buckets",
+    "keywords": [
+      "google storage buckets",
+      "bucket list"
+    ]
+  },
+  {
+    "tool": "gcloud storage",
+    "command": "gcloud storage cp file.txt gs://<bucket>",
+    "desc": "uploads a file to a Cloud Storage bucket",
+    "keywords": [
+      "upload storage bucket",
+      "gcp upload"
+    ]
+  },
+  {
+    "tool": "gcloud storage",
+    "command": "gcloud storage cp gs://<bucket>/file.txt .",
+    "desc": "downloads a file from a Cloud Storage bucket",
+    "keywords": [
+      "download storage object",
+      "gcp download"
+    ]
+  },
+  {
+    "tool": "gcloud storage",
+    "command": "gcloud storage rm gs://<bucket>/file.txt",
+    "desc": "deletes an object from a Cloud Storage bucket",
+    "keywords": [
+      "delete storage object",
+      "gcp remove"
+    ]
+  },
+  {
+    "tool": "gcloud",
+    "command": "gcloud container clusters list",
+    "desc": "lists Google Kubernetes Engine clusters",
+    "keywords": [
+      "gke clusters",
+      "kubernetes google"
+    ]
+  },
+  {
+    "tool": "gcloud",
+    "command": "gcloud container clusters get-credentials <cluster>",
+    "desc": "configures kubectl access to a GKE cluster",
+    "keywords": [
+      "gke credentials",
+      "kubectl gcloud"
+    ]
+  },
+  {
+    "tool": "gcloud",
+    "command": "gcloud services list",
+    "desc": "lists enabled Google Cloud APIs and services",
+    "keywords": [
+      "gcloud services",
+      "enabled apis"
+    ]
+  },
+  {
+    "tool": "gcloud",
+    "command": "gcloud components list",
+    "desc": "lists installed Google Cloud CLI components",
+    "keywords": [
+      "gcloud components",
+      "installed plugins"
+    ]
+  },
+  {
+    "tool": "gcloud",
+    "command": "gcloud help",
+    "desc": "displays Google Cloud CLI help",
+    "keywords": [
+      "gcloud help",
+      "cli documentation"
+    ]
   }
 ]
