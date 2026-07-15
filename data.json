@@ -17865,5 +17865,193 @@
       "hakrawler multiple targets",
       "batch crawl"
     ]
+  },
+  {
+    "tool": "uro",
+    "command": "uro --help",
+    "desc": "displays the available uro options",
+    "keywords": [
+      "uro help",
+      "url optimization"
+    ]
+  },
+  {
+    "tool": "uro",
+    "command": "cat urls.txt | uro",
+    "desc": "removes duplicate and low-value URLs from a list",
+    "keywords": [
+      "uro deduplicate urls",
+      "clean urls"
+    ]
+  },
+  {
+    "tool": "uro",
+    "command": "cat urls.txt | uro > clean_urls.txt",
+    "desc": "saves normalized URLs to a new file",
+    "keywords": [
+      "uro output file",
+      "normalized urls"
+    ]
+  },
+  {
+    "tool": "uro",
+    "command": "cat urls.txt | uro --filters hasparams",
+    "desc": "keeps only URLs containing query parameters",
+    "keywords": [
+      "uro filter parameters",
+      "parameter urls"
+    ]
+  },
+  {
+    "tool": "gf",
+    "command": "gf --help",
+    "desc": "displays available gf patterns and options",
+    "keywords": [
+      "gf help",
+      "pattern matching"
+    ]
+  },
+  {
+    "tool": "gf",
+    "command": "cat urls.txt | gf xss",
+    "desc": "filters URLs that match XSS-related patterns",
+    "keywords": [
+      "gf xss",
+      "xss parameters"
+    ]
+  },
+  {
+    "tool": "gf",
+    "command": "cat urls.txt | gf sqli",
+    "desc": "filters URLs matching SQL injection patterns",
+    "keywords": [
+      "gf sqli",
+      "sql injection"
+    ]
+  },
+  {
+    "tool": "gf",
+    "command": "cat urls.txt | gf ssrf",
+    "desc": "filters URLs matching SSRF-related parameters",
+    "keywords": [
+      "gf ssrf",
+      "server side request forgery"
+    ]
+  },
+  {
+    "tool": "gf",
+    "command": "cat urls.txt | gf redirect",
+    "desc": "filters URLs containing open redirect parameters",
+    "keywords": [
+      "gf redirect",
+      "open redirect"
+    ]
+  },
+  {
+    "tool": "gf",
+    "command": "cat urls.txt | gf lfi",
+    "desc": "filters URLs matching Local File Inclusion patterns",
+    "keywords": [
+      "gf lfi",
+      "file inclusion"
+    ]
+  },
+  {
+    "tool": "gf",
+    "command": "cat urls.txt | gf rce",
+    "desc": "filters URLs matching Remote Code Execution patterns",
+    "keywords": [
+      "gf rce",
+      "remote code execution"
+    ]
+  },
+  {
+    "tool": "gf",
+    "command": "cat urls.txt | gf idor",
+    "desc": "filters URLs that may contain IDOR parameters",
+    "keywords": [
+      "gf idor",
+      "insecure direct object reference"
+    ]
+  },
+  {
+    "tool": "gf",
+    "command": "cat urls.txt | gf debug_logic",
+    "desc": "filters URLs matching debug or development endpoints",
+    "keywords": [
+      "gf debug endpoints",
+      "development urls"
+    ]
+  },
+  {
+    "tool": "anew",
+    "command": "cat new.txt | anew master.txt",
+    "desc": "appends only unique lines to an existing file",
+    "keywords": [
+      "anew unique append",
+      "deduplicate"
+    ]
+  },
+  {
+    "tool": "anew",
+    "command": "cat urls.txt | anew urls_master.txt",
+    "desc": "stores only new URLs while ignoring duplicates",
+    "keywords": [
+      "anew urls",
+      "bug bounty workflow"
+    ]
+  },
+  {
+    "tool": "anew",
+    "command": "echo https://example.com | anew targets.txt",
+    "desc": "appends a new target if it does not already exist",
+    "keywords": [
+      "anew add unique target"
+    ]
+  },
+  {
+    "tool": "notify",
+    "command": "notify --help",
+    "desc": "displays available notification providers and options",
+    "keywords": [
+      "notify help",
+      "projectdiscovery notify"
+    ]
+  },
+  {
+    "tool": "notify",
+    "command": "notify -data \"Scan completed\"",
+    "desc": "sends a notification with custom text",
+    "keywords": [
+      "notify message",
+      "send notification"
+    ]
+  },
+  {
+    "tool": "notify",
+    "command": "cat results.txt | notify",
+    "desc": "sends each line from stdin as a notification",
+    "keywords": [
+      "notify stdin",
+      "pipeline notifications"
+    ]
+  },
+  {
+    "tool": "notify",
+    "command": "subfinder -d example.com | notify",
+    "desc": "sends discovered subdomains as notifications",
+    "keywords": [
+      "notify subfinder",
+      "bug bounty alerts"
+    ]
+  },
+  {
+    "tool": "notify",
+    "command": "nuclei -l urls.txt | notify",
+    "desc": "sends nuclei findings directly to configured notification providers",
+    "keywords": [
+      "notify nuclei results",
+      "vulnerability alerts"
+    ]
   }
 ]
