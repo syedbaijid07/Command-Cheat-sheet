@@ -17359,5 +17359,317 @@
       "process security",
       "checksec process"
     ]
+  },
+  {
+    "tool": "age",
+    "command": "age --version",
+    "desc": "displays the installed age version",
+    "keywords": [
+      "age version",
+      "encryption tool"
+    ]
+  },
+  {
+    "tool": "age",
+    "command": "age-keygen -o key.txt",
+    "desc": "generates a new age key pair and saves it to a file",
+    "keywords": [
+      "age keygen",
+      "generate key pair"
+    ]
+  },
+  {
+    "tool": "age",
+    "command": "age -e -r <public-key> file.txt > file.txt.age",
+    "desc": "encrypts a file using a recipient public key",
+    "keywords": [
+      "age encrypt file",
+      "public key encryption"
+    ]
+  },
+  {
+    "tool": "age",
+    "command": "age -d -i key.txt file.txt.age > file.txt",
+    "desc": "decrypts an encrypted file using a private key",
+    "keywords": [
+      "age decrypt file",
+      "private key"
+    ]
+  },
+  {
+    "tool": "age",
+    "command": "age -p secret.txt > secret.txt.age",
+    "desc": "encrypts a file using a passphrase",
+    "keywords": [
+      "age passphrase encryption"
+    ]
+  },
+  {
+    "tool": "age",
+    "command": "age -d secret.txt.age",
+    "desc": "decrypts a passphrase-protected file",
+    "keywords": [
+      "age passphrase decrypt"
+    ]
+  },
+  {
+    "tool": "age",
+    "command": "age -a -e -r <public-key> file.txt > file.txt.age",
+    "desc": "encrypts a file using ASCII armor output",
+    "keywords": [
+      "age ascii armor",
+      "armored encryption"
+    ]
+  },
+  {
+    "tool": "minisign",
+    "command": "minisign -G",
+    "desc": "generates a new Minisign key pair",
+    "keywords": [
+      "minisign keygen",
+      "signing keys"
+    ]
+  },
+  {
+    "tool": "minisign",
+    "command": "minisign -S -s secret.key -m file.txt",
+    "desc": "digitally signs a file using a private key",
+    "keywords": [
+      "minisign sign file",
+      "digital signature"
+    ]
+  },
+  {
+    "tool": "minisign",
+    "command": "minisign -V -p public.key -m file.txt",
+    "desc": "verifies a signed file using the public key",
+    "keywords": [
+      "minisign verify",
+      "signature verification"
+    ]
+  },
+  {
+    "tool": "minisign",
+    "command": "minisign -Vm file.txt",
+    "desc": "verifies a signed file using the default signature file",
+    "keywords": [
+      "minisign verify signature"
+    ]
+  },
+  {
+    "tool": "sops",
+    "command": "sops --version",
+    "desc": "displays the installed sops version",
+    "keywords": [
+      "sops version",
+      "encrypted secrets"
+    ]
+  },
+  {
+    "tool": "sops",
+    "command": "sops secrets.yaml",
+    "desc": "opens or creates an encrypted secrets file",
+    "keywords": [
+      "sops edit secrets",
+      "yaml encryption"
+    ]
+  },
+  {
+    "tool": "sops",
+    "command": "sops -e secrets.yaml",
+    "desc": "encrypts a file",
+    "keywords": [
+      "sops encrypt file"
+    ]
+  },
+  {
+    "tool": "sops",
+    "command": "sops -d secrets.yaml",
+    "desc": "decrypts an encrypted file",
+    "keywords": [
+      "sops decrypt file"
+    ]
+  },
+  {
+    "tool": "sops",
+    "command": "sops updatekeys secrets.yaml",
+    "desc": "updates encryption keys for an existing file",
+    "keywords": [
+      "sops update keys"
+    ]
+  },
+  {
+    "tool": "sops",
+    "command": "sops rotate secrets.yaml",
+    "desc": "rotates the data encryption key",
+    "keywords": [
+      "sops rotate encryption key"
+    ]
+  },
+  {
+    "tool": "sops",
+    "command": "sops exec-env secrets.yaml 'env'",
+    "desc": "loads decrypted secrets as environment variables",
+    "keywords": [
+      "sops environment variables"
+    ]
+  },
+  {
+    "tool": "sops",
+    "command": "sops exec-file secrets.yaml 'cat {}'",
+    "desc": "executes a command using a temporary decrypted file",
+    "keywords": [
+      "sops temporary file"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl dgst -sha256 file.txt",
+    "desc": "calculates the SHA-256 hash of a file",
+    "keywords": [
+      "openssl sha256",
+      "file hash"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl dgst -sha1 file.txt",
+    "desc": "calculates the SHA-1 hash of a file",
+    "keywords": [
+      "openssl sha1 hash"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl dgst -md5 file.txt",
+    "desc": "calculates the MD5 hash of a file",
+    "keywords": [
+      "openssl md5 checksum"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl dgst -sha512 file.txt",
+    "desc": "calculates the SHA-512 hash of a file",
+    "keywords": [
+      "openssl sha512",
+      "checksum"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl dgst -sha256 -sign private.pem file.txt > file.sig",
+    "desc": "signs a file using a private RSA key",
+    "keywords": [
+      "openssl sign file",
+      "rsa signature"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl dgst -sha256 -verify public.pem -signature file.sig file.txt",
+    "desc": "verifies a digital signature using a public RSA key",
+    "keywords": [
+      "openssl verify signature"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl rand -hex 16",
+    "desc": "generates 16 random bytes encoded as hexadecimal",
+    "keywords": [
+      "openssl random hex",
+      "generate random"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl rand -base64 32",
+    "desc": "generates 32 random bytes encoded as Base64",
+    "keywords": [
+      "openssl random base64"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl rand 32 > random.bin",
+    "desc": "generates 32 random bytes and saves them to a binary file",
+    "keywords": [
+      "openssl random binary"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl genrsa -out private.pem 2048",
+    "desc": "generates a 2048-bit RSA private key",
+    "keywords": [
+      "openssl rsa private key"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl rsa -in private.pem -pubout -out public.pem",
+    "desc": "extracts the public key from an RSA private key",
+    "keywords": [
+      "openssl public key"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl genpkey -algorithm RSA -out private.pem",
+    "desc": "generates a private key using the modern OpenSSL interface",
+    "keywords": [
+      "openssl genpkey"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl ecparam -genkey -name prime256v1 -out ec_private.pem",
+    "desc": "generates an elliptic curve private key",
+    "keywords": [
+      "openssl ec key",
+      "elliptic curve"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl base64 -in file.bin -out file.b64",
+    "desc": "encodes a file using Base64",
+    "keywords": [
+      "openssl base64 encode"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl base64 -d -in file.b64 -out file.bin",
+    "desc": "decodes a Base64-encoded file",
+    "keywords": [
+      "openssl base64 decode"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl enc -aes-256-cbc -salt -in file.txt -out file.enc",
+    "desc": "encrypts a file using AES-256-CBC",
+    "keywords": [
+      "openssl aes encryption"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl enc -d -aes-256-cbc -in file.enc -out file.txt",
+    "desc": "decrypts an AES-256-CBC encrypted file",
+    "keywords": [
+      "openssl aes decryption"
+    ]
+  },
+  {
+    "tool": "openssl",
+    "command": "openssl enc -aes-256-gcm -in file.txt -out file.enc",
+    "desc": "encrypts a file using AES-256-GCM (authenticated encryption)",
+    "keywords": [
+      "openssl aes gcm",
+      "authenticated encryption"
+    ]
   }
 ]
