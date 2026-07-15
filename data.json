@@ -16038,5 +16038,451 @@
       "revoke certificate",
       "lets encrypt revoke"
     ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Get-Process",
+    "desc": "lists all running processes",
+    "keywords": [
+      "powershell processes",
+      "running processes"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Get-Process <name>",
+    "desc": "displays information about a specific process",
+    "keywords": [
+      "powershell process info",
+      "get process"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Stop-Process -Name <name>",
+    "desc": "terminates a process by name",
+    "keywords": [
+      "stop process",
+      "kill process"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Stop-Process -Id <pid>",
+    "desc": "terminates a process by process ID",
+    "keywords": [
+      "stop process id",
+      "kill pid"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Start-Process notepad.exe",
+    "desc": "starts a new process",
+    "keywords": [
+      "start process",
+      "launch application"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Get-Process | Sort-Object CPU -Descending",
+    "desc": "sorts running processes by CPU usage",
+    "keywords": [
+      "cpu usage",
+      "powershell sort process"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Get-Service",
+    "desc": "lists all Windows services",
+    "keywords": [
+      "powershell services",
+      "windows services"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Get-Service <name>",
+    "desc": "displays information about a specific service",
+    "keywords": [
+      "service info",
+      "get service"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Start-Service <name>",
+    "desc": "starts a Windows service",
+    "keywords": [
+      "start service",
+      "windows service"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Stop-Service <name>",
+    "desc": "stops a Windows service",
+    "keywords": [
+      "stop service",
+      "windows service"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Restart-Service <name>",
+    "desc": "restarts a Windows service",
+    "keywords": [
+      "restart service"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Set-Service <name> -StartupType Automatic",
+    "desc": "configures a service to start automatically",
+    "keywords": [
+      "automatic service",
+      "startup type"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Get-ChildItem",
+    "desc": "lists files and folders in the current directory",
+    "keywords": [
+      "powershell ls",
+      "list files"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Get-ChildItem -Recurse",
+    "desc": "recursively lists files and folders",
+    "keywords": [
+      "recursive files",
+      "powershell recurse"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Get-ChildItem -Force",
+    "desc": "displays hidden files and folders",
+    "keywords": [
+      "hidden files",
+      "powershell force"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Get-Location",
+    "desc": "displays the current working directory",
+    "keywords": [
+      "current directory",
+      "pwd powershell"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Set-Location <path>",
+    "desc": "changes the current working directory",
+    "keywords": [
+      "change directory",
+      "cd powershell"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "New-Item -ItemType Directory <folder>",
+    "desc": "creates a new directory",
+    "keywords": [
+      "create directory",
+      "mkdir powershell"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Test-NetConnection google.com",
+    "desc": "tests network connectivity to a remote host",
+    "keywords": [
+      "test connection",
+      "ping powershell"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Test-NetConnection google.com -Port 443",
+    "desc": "tests connectivity to a specific TCP port",
+    "keywords": [
+      "test tcp port",
+      "powershell port check"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Resolve-DnsName example.com",
+    "desc": "resolves DNS records for a domain",
+    "keywords": [
+      "dns lookup",
+      "resolve hostname"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Get-NetIPAddress",
+    "desc": "displays network interface IP addresses",
+    "keywords": [
+      "powershell ip address",
+      "network interfaces"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Get-NetTCPConnection",
+    "desc": "lists active TCP connections",
+    "keywords": [
+      "tcp connections",
+      "network sockets"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Invoke-WebRequest https://example.com",
+    "desc": "downloads content from a web server",
+    "keywords": [
+      "powershell web request",
+      "http request"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Invoke-WebRequest https://example.com -OutFile file.html",
+    "desc": "downloads a file from the internet",
+    "keywords": [
+      "powershell download file"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Invoke-RestMethod https://example.com/api",
+    "desc": "sends an HTTP request and parses JSON responses",
+    "keywords": [
+      "powershell api request",
+      "rest api"
+    ]
+  },
+  {
+    "tool": "powershell",
+    "command": "Invoke-WebRequest https://example.com -Method POST",
+    "desc": "sends an HTTP POST request",
+    "keywords": [
+      "powershell post request"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "tasklist",
+    "desc": "lists all running processes",
+    "keywords": [
+      "tasklist",
+      "running processes"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "tasklist /svc",
+    "desc": "displays services associated with each running process",
+    "keywords": [
+      "tasklist services",
+      "process services"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "taskkill /PID <pid> /F",
+    "desc": "forcefully terminates a process by PID",
+    "keywords": [
+      "taskkill pid",
+      "kill process"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "taskkill /IM notepad.exe /F",
+    "desc": "forcefully terminates a process by image name",
+    "keywords": [
+      "taskkill image",
+      "kill application"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "ipconfig",
+    "desc": "displays IP configuration for all network adapters",
+    "keywords": [
+      "ipconfig",
+      "network configuration"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "ipconfig /all",
+    "desc": "displays detailed network configuration",
+    "keywords": [
+      "ipconfig all",
+      "adapter details"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "ipconfig /release",
+    "desc": "releases the current DHCP IP address",
+    "keywords": [
+      "release ip",
+      "dhcp release"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "ipconfig /renew",
+    "desc": "requests a new DHCP IP address",
+    "keywords": [
+      "renew ip",
+      "dhcp renew"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "ipconfig /flushdns",
+    "desc": "clears the local DNS resolver cache",
+    "keywords": [
+      "flush dns",
+      "clear dns cache"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "ipconfig /displaydns",
+    "desc": "displays cached DNS records",
+    "keywords": [
+      "dns cache",
+      "display dns"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "net user",
+    "desc": "lists local user accounts",
+    "keywords": [
+      "windows users",
+      "net user"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "net user <username>",
+    "desc": "displays information about a local user account",
+    "keywords": [
+      "user information",
+      "windows account"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "net user <username> <password> /add",
+    "desc": "creates a new local user account",
+    "keywords": [
+      "create windows user",
+      "add account"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "net user <username> /delete",
+    "desc": "deletes a local user account",
+    "keywords": [
+      "delete windows user"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "net localgroup",
+    "desc": "lists local groups on the computer",
+    "keywords": [
+      "local groups",
+      "windows groups"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "net localgroup Administrators",
+    "desc": "displays members of the Administrators group",
+    "keywords": [
+      "administrators group",
+      "localgroup"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "net localgroup Administrators <username> /add",
+    "desc": "adds a user to the Administrators group",
+    "keywords": [
+      "add administrator",
+      "admin group"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "net localgroup Administrators <username> /delete",
+    "desc": "removes a user from the Administrators group",
+    "keywords": [
+      "remove administrator",
+      "admin privileges"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "systeminfo",
+    "desc": "displays detailed Windows system information",
+    "keywords": [
+      "windows information",
+      "system details"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "hostname",
+    "desc": "displays the computer hostname",
+    "keywords": [
+      "hostname",
+      "computer name"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "whoami",
+    "desc": "displays the currently logged-in user",
+    "keywords": [
+      "current user",
+      "whoami windows"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "driverquery",
+    "desc": "lists installed device drivers",
+    "keywords": [
+      "windows drivers",
+      "driver list"
+    ]
+  },
+  {
+    "tool": "cmd",
+    "command": "netstat -ano",
+    "desc": "displays active network connections and listening ports",
+    "keywords": [
+      "netstat windows",
+      "open ports"
+    ]
   }
 ]
