@@ -16484,5 +16484,445 @@
       "netstat windows",
       "open ports"
     ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb version",
+    "desc": "displays the installed Android Debug Bridge version",
+    "keywords": [
+      "adb version",
+      "android debug bridge"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb devices",
+    "desc": "lists all connected Android devices",
+    "keywords": [
+      "adb devices",
+      "connected phones"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb devices -l",
+    "desc": "lists connected devices with detailed information",
+    "keywords": [
+      "adb device details",
+      "serial number"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb start-server",
+    "desc": "starts the ADB server",
+    "keywords": [
+      "start adb server",
+      "adb daemon"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb kill-server",
+    "desc": "stops the ADB server",
+    "keywords": [
+      "stop adb server",
+      "kill adb"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb reconnect",
+    "desc": "reconnects all connected devices",
+    "keywords": [
+      "reconnect adb",
+      "refresh connection"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb tcpip 5555",
+    "desc": "enables ADB over TCP/IP on port 5555",
+    "keywords": [
+      "adb wireless",
+      "tcpip mode"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb connect <ip>:5555",
+    "desc": "connects to an Android device over Wi-Fi",
+    "keywords": [
+      "adb wifi",
+      "wireless debugging"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb disconnect",
+    "desc": "disconnects all wireless ADB connections",
+    "keywords": [
+      "adb disconnect",
+      "wireless adb"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb shell",
+    "desc": "opens an interactive shell on the Android device",
+    "keywords": [
+      "adb shell",
+      "android terminal"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb shell <command>",
+    "desc": "executes a shell command on the Android device",
+    "keywords": [
+      "adb execute command",
+      "remote shell"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb push <local> <remote>",
+    "desc": "copies a file from the computer to the Android device",
+    "keywords": [
+      "adb push",
+      "upload file"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb pull <remote> <local>",
+    "desc": "copies a file from the Android device to the computer",
+    "keywords": [
+      "adb pull",
+      "download file"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb sync",
+    "desc": "synchronizes files between the host and the device",
+    "keywords": [
+      "adb sync",
+      "synchronize files"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb root",
+    "desc": "restarts adbd with root privileges if supported",
+    "keywords": [
+      "adb root",
+      "root shell"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb unroot",
+    "desc": "restarts adbd without root privileges",
+    "keywords": [
+      "adb unroot",
+      "normal adb"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb install app.apk",
+    "desc": "installs an APK on the connected device",
+    "keywords": [
+      "adb install apk",
+      "install application"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb install -r app.apk",
+    "desc": "reinstalls an application while preserving user data",
+    "keywords": [
+      "reinstall apk",
+      "adb install replace"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb uninstall <package>",
+    "desc": "uninstalls an application from the device",
+    "keywords": [
+      "adb uninstall app",
+      "remove package"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb uninstall -k <package>",
+    "desc": "uninstalls an app while keeping its data and cache",
+    "keywords": [
+      "uninstall keep data",
+      "adb uninstall k"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb shell pm list packages",
+    "desc": "lists all installed application packages",
+    "keywords": [
+      "installed packages",
+      "package manager"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb shell pm clear <package>",
+    "desc": "clears an application's data and cache",
+    "keywords": [
+      "clear app data",
+      "adb pm clear"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb reboot",
+    "desc": "reboots the Android device",
+    "keywords": [
+      "adb reboot",
+      "restart device"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb reboot recovery",
+    "desc": "reboots the device into recovery mode",
+    "keywords": [
+      "adb recovery",
+      "recovery reboot"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb reboot bootloader",
+    "desc": "reboots the device into bootloader or fastboot mode",
+    "keywords": [
+      "adb bootloader",
+      "fastboot reboot"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb sideload update.zip",
+    "desc": "installs an update package from recovery mode",
+    "keywords": [
+      "adb sideload",
+      "install ota"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb backup -apk -shared -all -f backup.ab",
+    "desc": "creates a backup of applications and shared storage (legacy Android versions)",
+    "keywords": [
+      "adb backup",
+      "android backup"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb restore backup.ab",
+    "desc": "restores a backup created with adb backup",
+    "keywords": [
+      "adb restore",
+      "restore backup"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb logcat",
+    "desc": "displays the Android system log in real time",
+    "keywords": [
+      "adb logcat",
+      "android logs"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb logcat -c",
+    "desc": "clears the logcat buffer",
+    "keywords": [
+      "clear logcat",
+      "reset logs"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb bugreport",
+    "desc": "generates a complete Android bug report",
+    "keywords": [
+      "adb bugreport",
+      "diagnostics"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb shell screencap -p /sdcard/screen.png",
+    "desc": "captures a screenshot on the Android device",
+    "keywords": [
+      "adb screenshot",
+      "screencap"
+    ]
+  },
+  {
+    "tool": "adb",
+    "command": "adb shell screenrecord /sdcard/video.mp4",
+    "desc": "records the device screen as a video",
+    "keywords": [
+      "adb screenrecord",
+      "record screen"
+    ]
+  },
+  {
+    "tool": "fastboot",
+    "command": "fastboot --version",
+    "desc": "displays the installed Fastboot version",
+    "keywords": [
+      "fastboot version",
+      "android fastboot"
+    ]
+  },
+  {
+    "tool": "fastboot",
+    "command": "fastboot devices",
+    "desc": "lists connected devices in fastboot mode",
+    "keywords": [
+      "fastboot devices",
+      "bootloader devices"
+    ]
+  },
+  {
+    "tool": "fastboot",
+    "command": "fastboot reboot",
+    "desc": "reboots the device from fastboot mode",
+    "keywords": [
+      "fastboot reboot",
+      "restart device"
+    ]
+  },
+  {
+    "tool": "fastboot",
+    "command": "fastboot reboot bootloader",
+    "desc": "reboots back into the bootloader",
+    "keywords": [
+      "reboot bootloader",
+      "fastboot mode"
+    ]
+  },
+  {
+    "tool": "fastboot",
+    "command": "fastboot boot boot.img",
+    "desc": "temporarily boots a kernel or recovery image without flashing it",
+    "keywords": [
+      "fastboot boot image",
+      "temporary boot"
+    ]
+  },
+  {
+    "tool": "fastboot",
+    "command": "fastboot flash boot boot.img",
+    "desc": "flashes a boot image to the boot partition",
+    "keywords": [
+      "flash boot image",
+      "fastboot flash"
+    ]
+  },
+  {
+    "tool": "fastboot",
+    "command": "fastboot flash recovery recovery.img",
+    "desc": "flashes a recovery image",
+    "keywords": [
+      "flash recovery",
+      "custom recovery"
+    ]
+  },
+  {
+    "tool": "fastboot",
+    "command": "fastboot flash system system.img",
+    "desc": "flashes a system image",
+    "keywords": [
+      "flash system image",
+      "android firmware"
+    ]
+  },
+  {
+    "tool": "fastboot",
+    "command": "fastboot erase userdata",
+    "desc": "erases the userdata partition",
+    "keywords": [
+      "fastboot wipe data",
+      "factory reset"
+    ]
+  },
+  {
+    "tool": "fastboot",
+    "command": "fastboot erase cache",
+    "desc": "erases the cache partition",
+    "keywords": [
+      "fastboot clear cache"
+    ]
+  },
+  {
+    "tool": "fastboot",
+    "command": "fastboot format userdata",
+    "desc": "formats the userdata partition",
+    "keywords": [
+      "format userdata",
+      "wipe storage"
+    ]
+  },
+  {
+    "tool": "fastboot",
+    "command": "fastboot getvar all",
+    "desc": "displays bootloader variables and device information",
+    "keywords": [
+      "fastboot device info",
+      "bootloader variables"
+    ]
+  },
+  {
+    "tool": "fastboot",
+    "command": "fastboot flashing unlock",
+    "desc": "unlocks the bootloader on supported devices",
+    "keywords": [
+      "unlock bootloader",
+      "fastboot unlock"
+    ]
+  },
+  {
+    "tool": "fastboot",
+    "command": "fastboot flashing lock",
+    "desc": "locks the bootloader on supported devices",
+    "keywords": [
+      "lock bootloader",
+      "fastboot relock"
+    ]
+  },
+  {
+    "tool": "fastboot",
+    "command": "fastboot oem device-info",
+    "desc": "displays bootloader lock status on supported devices",
+    "keywords": [
+      "bootloader status",
+      "oem device info"
+    ]
+  },
+  {
+    "tool": "fastboot",
+    "command": "fastboot continue",
+    "desc": "exits fastboot mode and continues normal boot",
+    "keywords": [
+      "continue boot",
+      "exit fastboot"
+    ]
   }
 ]
